@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/ad_list_selector_p"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_start_percent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_end_percent" />
+    <include
+        android:id="@id/parentSearchView"
+        android:background="@drawable/white_search_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/search_bar_height"
+        android:paddingStart="12.0dip"
+        android:paddingEnd="12.0dip"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/parent_white_search_bar_layout" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/rvAllowList"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="10.0dip"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/parentSearchView" />
+    <include
+        android:id="@id/layoutSearchNoResult"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parentSearchView"
+        app:layout_constraintVertical_bias="0.45"
+        app:layout_constraintVertical_chainStyle="packed"
+        layout="@layout/search_no_result" />
+    <ProgressBar
+        android:id="@id/progress"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <include
+        android:id="@id/layoutNoNetwork"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parentSearchView"
+        app:layout_constraintVertical_bias="0.45"
+        app:layout_constraintVertical_chainStyle="packed"
+        layout="@layout/layout_no_network" />
+</androidx.constraintlayout.widget.ConstraintLayout>

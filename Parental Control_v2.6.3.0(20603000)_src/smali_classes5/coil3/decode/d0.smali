@@ -1,0 +1,16 @@
+.class public final synthetic Lcoil3/decode/d0;
+.super Ljava/lang/Object;
+.source "R8$$SyntheticClass"
+
+
+# direct methods
+.method public static bridge synthetic a(Landroid/graphics/ImageDecoder;Z)V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-virtual {p0, p1}, Landroid/graphics/ImageDecoder;->setUnpremultipliedRequired(Z)V
+
+    .line 4
+    return-void
+.end method

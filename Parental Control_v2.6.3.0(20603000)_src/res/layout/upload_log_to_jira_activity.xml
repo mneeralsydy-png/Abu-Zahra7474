@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:id="@id/rlRoot"
+    android:background="@color/ad_page_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/include"
+        layout="@layout/app_bar" />
+    <ScrollView
+        android:id="@id/home"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="20.0dip">
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:id="@id/llJIRAInfo"
+                android:background="#ffe7f8ec"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip">
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="#ff6d7c8f"
+                    android:id="@id/tvJIRAInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:text="Please fill JIRA Product abbr. and Number"
+                    android:layout_marginStart="10.0dip"
+                    android:layout_marginEnd="10.0dip" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:layout_marginStart="20.0dip"
+                    android:layout_marginEnd="10.0dip">
+                    <EditText
+                        android:textSize="20.0sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:id="@id/etJIRAProduct"
+                        android:background="#ffffffff"
+                        android:layout_width="50.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="AM"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:maxLength="6"
+                        android:inputType="textCapCharacters"
+                        android:textAllCaps="true" />
+                    <TextView
+                        android:textSize="16.0sp"
+                        android:textColor="#de000000"
+                        android:layout_gravity="center_vertical"
+                        android:id="@id/tvJIRAInfoHyphen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:layout_marginStart="10.0dip" />
+                    <EditText
+                        android:textSize="20.0sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:id="@id/etJIRANumber"
+                        android:background="#ffffffff"
+                        android:layout_width="80.0dip"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:maxLength="6"
+                        android:inputType="number"
+                        android:layout_marginStart="10.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:id="@id/llLogInfo"
+                android:background="#ffe7f8ec"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_marginTop="20.0dip"
+                android:layout_marginBottom="20.0dip"
+                android:layout_weight="1.0">
+                <TextView
+                    android:textSize="14.0sp"
+                    android:textColor="#ff6d7c8f"
+                    android:id="@id/tvDateTimeInfor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:text="Please check Log Date and Time information. (Get current system time)"
+                    android:layout_marginStart="10.0dip"
+                    android:layout_marginEnd="10.0dip" />
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:id="@id/llJiraV2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginStart="10.0dip"
+                    android:layout_marginEnd="10.0dip">
+                    <TextView
+                        android:textSize="20.0sp"
+                        android:textColor="#ff42c662"
+                        android:layout_gravity="center_vertical"
+                        android:id="@id/tvJiraV2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10.0dip"
+                        android:text="@string/debug_upload_log_to_jira_v2" />
+                    <ToggleButton
+                        android:id="@id/tbJiraV2"
+                        android:background="@drawable/toggle_button"
+                        android:padding="2.0dip"
+                        android:focusable="true"
+                        android:saveEnabled="false"
+                        android:layout_width="42.0dip"
+                        android:layout_height="24.0dip"
+                        android:layout_margin="10.0dip"
+                        android:checked="true"
+                        android:textOn=""
+                        android:textOff="" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginStart="10.0dip"
+                    android:layout_marginEnd="10.0dip">
+                    <Button
+                        android:textSize="14.0sp"
+                        android:textColor="#ffffffff"
+                        android:layout_gravity="center"
+                        android:id="@id/btChangeDate"
+                        android:background="#ff42c662"
+                        android:nextFocusDown="@id/button_pass"
+                        android:layout_width="150.0dip"
+                        android:layout_height="40.0dip"
+                        android:layout_margin="10.0dip"
+                        android:text="Change issue Date"
+                        android:layout_below="@id/rlCodeBar"
+                        android:layout_centerHorizontal="true"
+                        style="?android:borderlessButtonStyle" />
+                    <TextView
+                        android:textSize="20.0sp"
+                        android:textColor="#ff42c662"
+                        android:layout_gravity="center_vertical"
+                        android:id="@id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15.0dip"
+                        android:text="2021.02.01" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginStart="10.0dip"
+                    android:layout_marginEnd="10.0dip">
+                    <Button
+                        android:textSize="14.0sp"
+                        android:textColor="#ffffffff"
+                        android:layout_gravity="center"
+                        android:id="@id/btChangeTime"
+                        android:background="#ff42c662"
+                        android:nextFocusDown="@id/button_pass"
+                        android:layout_width="150.0dip"
+                        android:layout_height="40.0dip"
+                        android:layout_margin="10.0dip"
+                        android:text="Change issue Time"
+                        android:layout_below="@id/rlCodeBar"
+                        android:layout_centerHorizontal="true"
+                        style="?android:borderlessButtonStyle" />
+                    <TextView
+                        android:textSize="20.0sp"
+                        android:textColor="#ff42c662"
+                        android:layout_gravity="center_vertical"
+                        android:id="@id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15.0dip"
+                        android:text="12:00" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="16.0sp"
+                        android:textColor="#de000000"
+                        android:id="@id/tvLogFileNameTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.0dip"
+                        android:layout_marginBottom="20.0dip"
+                        android:text="Upload Log file :"
+                        android:layout_marginStart="10.0dip" />
+                    <TextView
+                        android:textSize="16.0sp"
+                        android:textColor="#de000000"
+                        android:id="@id/tvLogFileName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10.0dip"
+                        android:text="" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@id/llAddAFile"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20.0dip">
+                    <TextView
+                        android:textSize="16.0sp"
+                        android:textColor="#de0000ff"
+                        android:id="@id/tvAddAFile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.0dip"
+                        android:text="Add a file"
+                        android:layout_marginStart="10.0dip" />
+                    <ListView
+                        android:id="@id/lvFileList"
+                        android:background="@color/white_f1f1f2"
+                        android:visibility="gone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="150.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:fastScrollEnabled="true" />
+                </LinearLayout>
+                <Button
+                    android:textSize="16.0sp"
+                    android:textColor="#ffffffff"
+                    android:layout_gravity="center"
+                    android:id="@id/btUploadLog"
+                    android:background="#ff42c662"
+                    android:layout_width="@dimen/rs_shared_code"
+                    android:layout_height="40.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:text="Upload Log"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="20.0dip"
+                    android:layout_marginEnd="20.0dip"
+                    style="?android:borderlessButtonStyle" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_weight="1.0">
+                    <TextView
+                        android:textSize="16.0sp"
+                        android:textColor="#de000000"
+                        android:id="@id/tvUploadLogStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.0dip"
+                        android:layout_marginBottom="30.0dip"
+                        android:text="Upload Log Status : "
+                        android:layout_marginStart="10.0dip"
+                        android:layout_marginEnd="10.0dip" />
+                    <TextView
+                        android:textSize="16.0sp"
+                        android:textColor="#de000000"
+                        android:id="@id/tvLogStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10.0dip"
+                        android:text="" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

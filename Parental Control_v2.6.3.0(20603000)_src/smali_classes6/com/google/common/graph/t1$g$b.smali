@@ -1,0 +1,109 @@
+.class Lcom/google/common/graph/t1$g$b;
+.super Lcom/google/common/graph/t1$g;
+.source "Traverser.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/google/common/graph/t1$g;->c(Lcom/google/common/graph/s1;)Lcom/google/common/graph/t1$g;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/google/common/graph/t1$g<",
+        "TN;>;"
+    }
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Lcom/google/common/graph/s1;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "successorFunction"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-direct {p0, p1}, Lcom/google/common/graph/t1$g;-><init>(Lcom/google/common/graph/s1;)V
+
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method g(Ljava/util/Deque;)Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "horizon"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Deque<",
+            "Ljava/util/Iterator<",
+            "+TN;>;>;)TN;"
+        }
+    .end annotation
+
+    .annotation runtime Ljh/a;
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-interface {p1}, Ljava/util/Deque;->getFirst()Ljava/lang/Object;
+
+    .line 4
+    move-result-object v0
+
+    .line 5
+    check-cast v0, Ljava/util/Iterator;
+
+    .line 7
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 10
+    move-result v1
+
+    .line 11
+    if-eqz v1, :cond_0
+
+    .line 13
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 16
+    move-result-object p1
+
+    .line 17
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 20
+    return-object p1
+
+    .line 21
+    :cond_0
+    invoke-interface {p1}, Ljava/util/Deque;->removeFirst()Ljava/lang/Object;
+
+    .line 24
+    const/4 p1, 0x0
+
+    .line 25
+    return-object p1
+.end method

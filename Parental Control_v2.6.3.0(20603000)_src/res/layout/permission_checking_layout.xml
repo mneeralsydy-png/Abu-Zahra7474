@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/white_ffffff"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@id/lavConnecting"
+        android:layout_width="160.0dip"
+        android:layout_height="104.0dip"
+        android:layout_marginBottom="20.0dip"
+        app:layout_constraintBottom_toTopOf="@id/tvCheckTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="In_progress.json"
+        app:lottie_loop="true" />
+    <TextView
+        android:textSize="18.0sp"
+        android:textColor="@color/black_282930"
+        android:id="@id/tvCheckTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:text="@string/Parent_Permission_Checking"
+        app:fontFamily="@font/font_family_semi_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

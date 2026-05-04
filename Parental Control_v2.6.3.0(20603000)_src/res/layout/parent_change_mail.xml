@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_gravity="center_horizontal"
+    android:background="@android:color/white"
+    android:paddingLeft="20.0dip"
+    android:paddingRight="20.0dip"
+    android:paddingBottom="35.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:maxWidth="@dimen/tablet_max_width"
+    android:paddingHorizontal="20.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:textSize="22.0sp"
+        android:textColor="@color/text_100"
+        android:id="@id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/parent_app_name"
+        app:fontFamily="@font/font_family_semi_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/text_100"
+        android:id="@id/tvNewMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30.0dip"
+        android:text="@string/Common_account_verification_newmail"
+        app:fontFamily="@font/font_family_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+    <com.sand.airdroidkid.common.ui.base.NewCleanableEditText
+        android:id="@id/etEmail"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:hint="@string/Profile_Feedback_EnterEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNewMail" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/text_100"
+        android:id="@id/tvPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24.0dip"
+        android:text="@string/Common_account_verification_password"
+        app:fontFamily="@font/font_family_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEmail" />
+    <com.sand.airdroidkid.common.ui.base.NewCleanableEditText
+        android:id="@id/etPassword"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:hint="@string/Parent_Setting_Unbind_Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPassword"
+        app:maxChars="48"
+        app:newPassword="true"
+        app:textPassword="true" />
+    <Button
+        android:textSize="16.0sp"
+        android:textColor="@color/text_600"
+        android:id="@id/btNext"
+        android:background="@drawable/kid_blue_button_style"
+        android:layout_marginTop="40.0dip"
+        android:text="@string/Common_account_verification_next"
+        app:fontFamily="@font/font_family_semi_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        style="@style/parent_edit_text_base_btn_padding" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/clRoot"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sand.airdroidkidp.ui.custom.ParentProfileToolbar
+        android:id="@id/tbUsageTime"
+        android:background="@drawable/bg_150_box"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:isDividerVisible="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rightIcon="@drawable/select_all"
+        app:title=""
+        app:toolbarMode="1" />
+    <androidx.fragment.app.FragmentContainerView
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:id="@id/fcvUsageTime"
+        android:background="@drawable/parent_usage_time_container_background"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbUsageTime"
+        app:navGraph="@navigation/usage_limit_navigation" />
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@id/cpLoading"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <include
+        android:id="@id/subscribeBanner"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginHorizontal="20.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbUsageTime"
+        layout="@layout/subscribe_banner" />
+</androidx.constraintlayout.widget.ConstraintLayout>

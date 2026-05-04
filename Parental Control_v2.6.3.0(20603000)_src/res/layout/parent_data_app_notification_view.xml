@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_start_percent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_end_percent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/clContent"
+        android:background="@drawable/parent_data_app_notification_item_bg"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/list_item_divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@id/ivAppNotificationIcon"
+            android:background="@drawable/icon_app_bg"
+            android:padding="1.0dip"
+            android:layout_width="16.0dip"
+            android:layout_height="16.0dip"
+            android:layout_marginTop="16.0dip"
+            android:src="@drawable/ic_noapp"
+            android:layout_marginStart="16.0dip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@id/vNotReadDot"
+            android:background="@drawable/dot_shape_red"
+            android:layout_width="6.0dip"
+            android:layout_height="6.0dip"
+            app:layout_constraintStart_toStartOf="@id/ivAppNotificationIcon"
+            app:layout_constraintTop_toTopOf="@id/ivAppNotificationIcon" />
+        <TextView
+            android:textSize="13.0sp"
+            android:textColor="@color/gray_464f60"
+            android:id="@id/tvAppNotificationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textDirection="locale"
+            android:layout_marginStart="6.0dip"
+            android:layout_marginEnd="6.0dip"
+            app:fontFamily="@font/font_family_medium"
+            app:layout_constraintBottom_toBottomOf="@id/ivAppNotificationIcon"
+            app:layout_constraintStart_toEndOf="@id/ivAppNotificationIcon"
+            app:layout_constraintTop_toTopOf="@id/ivAppNotificationIcon" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/gray_a4a8b3"
+            android:ellipsize="start"
+            android:gravity="end"
+            android:id="@id/tvAppNotificationTime"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:layout_marginStart="10.0dip"
+            android:layout_marginEnd="14.0dip"
+            android:layout_alignParentEnd="true"
+            app:layout_constraintBottom_toBottomOf="@id/ivAppNotificationIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvAppNotificationName"
+            app:layout_constraintTop_toTopOf="@id/ivAppNotificationIcon" />
+        <RelativeLayout
+            android:id="@id/content_info_box"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:paddingStart="16.0dip"
+            android:paddingEnd="10.0dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivAppNotificationIcon">
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/black_282930"
+                android:id="@id/tvAppNotificationTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11.0dip"
+                android:textIsSelectable="true"
+                android:textDirection="locale"
+                android:layout_marginEnd="40.0dip"
+                app:fontFamily="@font/font_family_medium" />
+            <TextView
+                android:textSize="13.0sp"
+                android:textColor="@color/gray_666b75"
+                android:id="@id/tvAppNotificationContent"
+                android:paddingBottom="16.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.0dip"
+                android:maxEms="24"
+                android:layout_below="@id/tvAppNotificationTitle"
+                android:textIsSelectable="true"
+                android:textDirection="locale"
+                android:layout_marginEnd="40.0dip" />
+            <ImageView
+                android:id="@id/ivAction"
+                android:padding="4.0dip"
+                android:visibility="gone"
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:layout_marginTop="11.0dip"
+                android:src="@drawable/more_2_gray_svg"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <ImageView
+            android:id="@id/fake_blur_before_s"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:src="@drawable/notice_free_blurmask"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@id/content_info_box"
+            app:layout_constraintEnd_toEndOf="@id/content_info_box"
+            app:layout_constraintStart_toStartOf="@id/content_info_box"
+            app:layout_constraintTop_toTopOf="@id/content_info_box" />
+        <include
+            android:id="@id/pro_tag_after_s"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            app:layout_constraintBottom_toBottomOf="@id/content_info_box"
+            app:layout_constraintEnd_toEndOf="@id/content_info_box"
+            app:layout_constraintStart_toStartOf="@id/content_info_box"
+            app:layout_constraintTop_toTopOf="@id/content_info_box"
+            layout="@layout/pro_tag_for_notification" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

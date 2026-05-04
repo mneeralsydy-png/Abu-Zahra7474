@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/clRoot"
+    android:background="@color/white_fff5f5f5"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:minHeight="?actionBarSize"
+        android:elevation="0.0dip"
+        app:contentInsetStartWithNavigation="0.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="@string/Parental_Device_Browser"
+        app:titleMargin="0.0dip"
+        app:titleTextAppearance="@style/CommonAppTheme.ToolBarTitleTextAppearance"
+        app:titleTextColor="@color/black_282930" />
+    <androidx.core.widget.NestedScrollView
+        android:id="@id/nsvContent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:layout_constrainedHeight="true">
+            <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:id="@id/glStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="@dimen/global_start_percent" />
+            <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:id="@id/glEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="@dimen/global_end_percent" />
+            <TextView
+                android:textSize="13.0sp"
+                android:textColor="@color/gray_666b75"
+                android:id="@id/tvSafeBrowserHint"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="@string/parental_safe_browser_better_management"
+                android:textAlignment="viewStart"
+                app:fontFamily="@font/font_family_medium"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toStartOf="@id/ivSafeBrowserHelp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@id/glStart"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@id/ivSafeBrowserHelp"
+                android:padding="4.0dip"
+                android:visibility="gone"
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:src="@drawable/ic_help_a4a8b3"
+                android:contentDescription="@null"
+                android:layout_marginStart="4.0dip"
+                app:layout_constraintBottom_toBottomOf="@id/tvSafeBrowserHint"
+                app:layout_constraintEnd_toEndOf="@id/glEnd"
+                app:layout_constraintStart_toEndOf="@id/tvSafeBrowserHint"
+                app:layout_constraintTop_toTopOf="@id/tvSafeBrowserHint" />
+            <include
+                android:id="@id/layoutRecommendItem"
+                android:visibility="gone"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14.0dip"
+                app:layout_constraintEnd_toEndOf="@id/glEnd"
+                app:layout_constraintStart_toStartOf="@id/glStart"
+                app:layout_constraintTop_toBottomOf="@id/tvSafeBrowserHint"
+                layout="@layout/parent_safe_browser_recommend_item_layout" />
+            <include
+                android:id="@id/rule"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                app:layout_constraintEnd_toEndOf="@id/glEnd"
+                app:layout_constraintStart_toStartOf="@id/glStart"
+                app:layout_constraintTop_toBottomOf="@id/layoutRecommendItem"
+                app:layout_goneMarginTop="14.0dip"
+                layout="@layout/parent_safe_browser_rule_manager" />
+            <TextView
+                android:textSize="13.0sp"
+                android:textColor="@color/gray_666b75"
+                android:id="@id/tvHistoryTitle"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:text="@string/Parent_Safe_Browser_Manage_History_Title"
+                android:layout_marginStart="16.0dip"
+                app:layout_constraintEnd_toStartOf="@id/tvHistoryCheckAll"
+                app:layout_constraintStart_toStartOf="@id/rule"
+                app:layout_constraintTop_toBottomOf="@id/rule" />
+            <TextView
+                android:textSize="13.0sp"
+                android:textColor="@color/blue_446efc"
+                android:id="@id/tvHistoryCheckAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Parent_Safe_Browser_Manage_History_All"
+                android:layout_marginEnd="16.0dip"
+                app:layout_constraintEnd_toEndOf="@id/rule"
+                app:layout_constraintStart_toEndOf="@id/tvHistoryTitle"
+                app:layout_constraintTop_toTopOf="@id/tvHistoryTitle" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/rvHistory"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginBottom="10.0dip"
+                app:layout_constrainedHeight="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHistoryTitle" />
+            <include
+                android:id="@id/layoutEmptyData"
+                android:visibility="gone"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHistoryTitle"
+                layout="@layout/layout_empty_detection_data" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <ProgressBar
+        android:id="@id/progressBar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <include
+        android:id="@id/subscribeBanner"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginHorizontal="20.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        layout="@layout/subscribe_banner" />
+</androidx.constraintlayout.widget.ConstraintLayout>

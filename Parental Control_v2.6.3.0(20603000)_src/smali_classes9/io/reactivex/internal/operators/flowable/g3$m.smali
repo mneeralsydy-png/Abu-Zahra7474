@@ -1,0 +1,71 @@
+.class final Lio/reactivex/internal/operators/flowable/g3$m;
+.super Lio/reactivex/internal/operators/flowable/g3$a;
+.source "FlowableReplay.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lio/reactivex/internal/operators/flowable/g3;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = "m"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lio/reactivex/internal/operators/flowable/g3$a<",
+        "TT;>;"
+    }
+.end annotation
+
+
+# static fields
+.field private static final m:J = -0x51dae9f17ccbb88eL
+
+
+# instance fields
+.field final l:I
+
+
+# direct methods
+.method constructor <init>(I)V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Lio/reactivex/internal/operators/flowable/g3$a;-><init>()V
+
+    .line 4
+    iput p1, p0, Lio/reactivex/internal/operators/flowable/g3$m;->l:I
+
+    .line 6
+    return-void
+.end method
+
+
+# virtual methods
+.method o()V
+    .locals 2
+
+    .prologue
+    .line 1
+    iget v0, p0, Lio/reactivex/internal/operators/flowable/g3$a;->d:I
+
+    .line 3
+    iget v1, p0, Lio/reactivex/internal/operators/flowable/g3$m;->l:I
+
+    .line 5
+    if-le v0, v1, :cond_0
+
+    .line 7
+    invoke-virtual {p0}, Lio/reactivex/internal/operators/flowable/g3$a;->k()V
+
+    .line 10
+    :cond_0
+    return-void
+.end method

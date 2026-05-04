@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BottomLeftRoundedCardView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">0.0dip</item>
+        <item name="cornerSizeBottomRight">16.0dip</item>
+        <item name="cornerSizeTopLeft">0.0dip</item>
+        <item name="cornerSizeTopRight">0.0dip</item>
+    </style>
+</resources>

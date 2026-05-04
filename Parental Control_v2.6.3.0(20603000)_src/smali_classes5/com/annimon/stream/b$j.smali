@@ -1,0 +1,110 @@
+.class final Lcom/annimon/stream/b$j;
+.super Ljava/lang/Object;
+.source "Collectors.java"
+
+# interfaces
+.implements Lcom/annimon/stream/function/a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/annimon/stream/b;->d(Lcom/annimon/stream/function/s1;)Lcom/annimon/stream/a;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/annimon/stream/function/a<",
+        "[DTT;>;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/annimon/stream/function/s1;
+
+
+# direct methods
+.method constructor <init>(Lcom/annimon/stream/function/s1;)V
+    .locals 0
+
+    .prologue
+    .line 1
+    iput-object p1, p0, Lcom/annimon/stream/b$j;->a:Lcom/annimon/stream/function/s1;
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    return-void
+.end method
+
+
+# virtual methods
+.method public a([DLjava/lang/Object;)V
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([DTT;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    aget-wide v1, p1, v0
+
+    .line 4
+    const-wide/high16 v3, 0x3ff0000000000000L    # 1.0
+
+    .line 6
+    add-double/2addr v1, v3
+
+    .line 7
+    aput-wide v1, p1, v0
+
+    .line 9
+    const/4 v0, 0x1
+
+    .line 10
+    aget-wide v1, p1, v0
+
+    .line 12
+    iget-object v3, p0, Lcom/annimon/stream/b$j;->a:Lcom/annimon/stream/function/s1;
+
+    .line 14
+    invoke-interface {v3, p2}, Lcom/annimon/stream/function/s1;->a(Ljava/lang/Object;)D
+
+    .line 17
+    move-result-wide v3
+
+    .line 18
+    add-double/2addr v3, v1
+
+    .line 19
+    aput-wide v3, p1, v0
+
+    .line 21
+    return-void
+.end method
+
+.method public bridge synthetic accept(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    .prologue
+    .line 1
+    check-cast p1, [D
+
+    .line 3
+    invoke-virtual {p0, p1, p2}, Lcom/annimon/stream/b$j;->a([DLjava/lang/Object;)V
+
+    .line 6
+    return-void
+.end method

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/clRoot"
+    android:background="@drawable/guide_page_item_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@id/viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="20.0dip"
+        app:layout_constraintBottom_toTopOf="@id/clThirdPartLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSkip"
+        app:layout_constraintVertical_weight="1.0" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/clThirdPartLogin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewPager">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/clDotList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            app:layout_constraintEnd_toEndOf="@id/composeBindMainButton"
+            app:layout_constraintStart_toStartOf="@id/composeBindMainButton"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@id/ivDot1"
+                android:layout_width="@dimen/parent_guide_viewpager_dot_size"
+                android:layout_height="@dimen/parent_guide_viewpager_dot_size"
+                android:contentDescription="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/dot_shape_orange" />
+            <ImageView
+                android:id="@id/ivDot2"
+                android:layout_width="@dimen/parent_guide_viewpager_dot_size"
+                android:layout_height="@dimen/parent_guide_viewpager_dot_size"
+                android:contentDescription="@null"
+                android:layout_marginStart="6.0dip"
+                app:layout_constraintStart_toEndOf="@id/ivDot1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/dot_shape_gray" />
+            <ImageView
+                android:id="@id/ivDot3"
+                android:layout_width="@dimen/parent_guide_viewpager_dot_size"
+                android:layout_height="@dimen/parent_guide_viewpager_dot_size"
+                android:contentDescription="@null"
+                android:layout_marginStart="6.0dip"
+                app:layout_constraintStart_toEndOf="@id/ivDot2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/dot_shape_gray" />
+            <ImageView
+                android:id="@id/ivDot4"
+                android:layout_width="@dimen/parent_guide_viewpager_dot_size"
+                android:layout_height="@dimen/parent_guide_viewpager_dot_size"
+                android:contentDescription="@null"
+                android:layout_marginStart="6.0dip"
+                app:layout_constraintStart_toEndOf="@id/ivDot3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/dot_shape_gray" />
+            <ImageView
+                android:id="@id/ivDot5"
+                android:layout_width="@dimen/parent_guide_viewpager_dot_size"
+                android:layout_height="@dimen/parent_guide_viewpager_dot_size"
+                android:contentDescription="@null"
+                android:layout_marginStart="6.0dip"
+                app:layout_constraintStart_toEndOf="@id/ivDot4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/dot_shape_gray" />
+            <ImageView
+                android:id="@id/ivDot6"
+                android:layout_width="@dimen/parent_guide_viewpager_dot_size"
+                android:layout_height="@dimen/parent_guide_viewpager_dot_size"
+                android:contentDescription="@null"
+                android:layout_marginStart="6.0dip"
+                app:layout_constraintStart_toEndOf="@id/ivDot5"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/dot_shape_gray" />
+            <ImageView
+                android:id="@id/ivDot7"
+                android:layout_width="@dimen/parent_guide_viewpager_dot_size"
+                android:layout_height="@dimen/parent_guide_viewpager_dot_size"
+                android:contentDescription="@null"
+                android:layout_marginStart="6.0dip"
+                app:layout_constraintStart_toEndOf="@id/ivDot6"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/dot_shape_gray" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.compose.ui.platform.ComposeView
+            android:id="@id/composeBindMainButton"
+            android:layout_width="0.0dip"
+            android:layout_height="44.0dip"
+            android:layout_marginTop="@dimen/parent_guide_third_party_login_button_margin_top"
+            app:layout_constraintEnd_toEndOf="@id/tvPolicy"
+            app:layout_constraintStart_toStartOf="@id/tvPolicy"
+            app:layout_constraintTop_toBottomOf="@id/clDotList" />
+        <androidx.compose.ui.platform.ComposeView
+            android:id="@id/composeBindMail"
+            android:layout_width="0.0dip"
+            android:layout_height="44.0dip"
+            android:layout_marginTop="12.0dip"
+            android:layout_marginStart="12.0dip"
+            app:layout_constraintEnd_toEndOf="@id/tvPolicy"
+            app:layout_constraintStart_toEndOf="@id/composeBindSecondButton"
+            app:layout_constraintTop_toBottomOf="@id/composeBindMainButton"
+            app:layout_goneMarginStart="0.0dip"
+            app:layout_goneMarginTop="@dimen/parent_guide_third_party_login_button_margin_top" />
+        <androidx.compose.ui.platform.ComposeView
+            android:id="@id/composeBindSecondButton"
+            android:layout_width="0.0dip"
+            android:layout_height="44.0dip"
+            android:layout_marginTop="12.0dip"
+            app:layout_constraintEnd_toStartOf="@id/composeBindMail"
+            app:layout_constraintStart_toStartOf="@id/tvPolicy"
+            app:layout_constraintTop_toBottomOf="@id/composeBindMainButton"
+            app:layout_goneMarginTop="@dimen/parent_guide_third_party_login_button_margin_top" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/gray_878d9a"
+            android:gravity="center"
+            android:id="@id/tvPolicy"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.0dip"
+            android:text="@string/parent_signup_policy"
+            android:layout_marginStart="20.0dip"
+            android:layout_marginEnd="20.0dip"
+            android:breakStrategy="simple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/composeBindMail"
+            app:layout_constraintWidth_max="@dimen/tablet_max_width" />
+        <TextView
+            android:textSize="13.0sp"
+            android:textColor="@color/black_666B75"
+            android:gravity="center"
+            android:id="@id/tvHint"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dip"
+            android:layout_marginBottom="20.0dip"
+            android:text="@string/Parent_Signup_Subtitle1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/tvPolicy"
+            app:layout_constraintStart_toStartOf="@id/tvPolicy"
+            app:layout_constraintTop_toBottomOf="@id/tvPolicy" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/gray_666b75"
+        android:gravity="center"
+        android:id="@id/tvSkip"
+        android:paddingLeft="6.0dip"
+        android:paddingTop="6.0dip"
+        android:paddingRight="6.0dip"
+        android:paddingBottom="6.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6.0dip"
+        android:text="@string/gb_skip"
+        android:layout_marginEnd="12.0dip"
+        android:paddingHorizontal="6.0dip"
+        android:paddingVertical="6.0dip"
+        app:fontFamily="@font/inter_semi_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

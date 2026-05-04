@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:gravity="center_vertical"
+    android:background="@null"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/llContainer"
+        android:background="@drawable/ad_base_list_item_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:id="@id/rlContain"
+            android:paddingTop="11.0dip"
+            android:paddingBottom="11.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="58.0dip"
+            android:paddingStart="17.0dip"
+            android:paddingEnd="10.0dip">
+            <ImageView
+                android:id="@id/ivIcon"
+                android:visibility="visible"
+                android:clickable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_sms"
+                android:scaleType="centerInside"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="14.0dip" />
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="#de000000"
+                android:id="@id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="title"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/ivIcon" />
+            <ImageView
+                android:id="@id/ivHintIcon"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.0dip"
+                android:src="@drawable/ic_sms"
+                android:layout_marginStart="8.0dip"
+                android:layout_toEndOf="@id/tvTitle" />
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:id="@id/llSubTitle"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tvTitle"
+                android:layout_alignBottom="@id/tvTitle"
+                android:layout_marginStart="10.0dip"
+                android:layout_marginEnd="10.0dip"
+                android:layout_toEndOf="@id/tvTitle">
+                <ImageView
+                    android:id="@id/ivSubIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_sms" />
+                <TextView
+                    android:textSize="12.0sp"
+                    android:textColor="#fff34b4b"
+                    android:id="@id/tvSubTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="subtitle" />
+            </LinearLayout>
+            <TextView
+                android:textSize="13.0sp"
+                android:textColor="#8a000000"
+                android:id="@id/tvDescription"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="desc"
+                android:minLines="2"
+                android:layout_below="@id/tvTitle"
+                android:layout_marginEnd="10.0dip"
+                android:layout_toStartOf="@id/btSwitch"
+                android:layout_alignStart="@id/tvTitle" />
+            <ToggleButton
+                android:id="@id/btSwitch"
+                android:background="@drawable/ic_sms"
+                android:visibility="gone"
+                android:layout_width="40.0dip"
+                android:layout_height="20.0dip"
+                android:checked="false"
+                android:textOn=""
+                android:textOff=""
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/ivArrow" />
+            <ImageView
+                android:id="@id/ivWarning"
+                android:visibility="gone"
+                android:layout_width="40.0dip"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_sms"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/ivArrow" />
+            <ImageView
+                android:id="@id/ivArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_right"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="11.0dip"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <ImageView
+            android:id="@id/ivDivider"
+            android:background="#fff5f5f5"
+            android:visibility="visible"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip" />
+    </LinearLayout>
+</merge>

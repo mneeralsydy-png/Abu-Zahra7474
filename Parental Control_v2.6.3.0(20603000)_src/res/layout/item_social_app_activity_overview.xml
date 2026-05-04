@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/clRoot"
+    android:background="@drawable/bg_item_radius_16_all"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/black_ff282930"
+        android:id="@id/tvAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginStart="16.0dip"
+        app:fontFamily="@font/font_family_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/ivEnter"
+        android:background="@drawable/ic_more_right"
+        android:layout_width="14.0dip"
+        android:layout_height="14.0dip"
+        android:contentDescription="@null"
+        android:layout_marginEnd="20.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/tvAppName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvAppName" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/clContent"
+        android:background="@drawable/bg_radius_8_white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginBottom="20.0dip"
+        android:backgroundTint="@color/gray_f5f7f9"
+        android:layout_marginHorizontal="20.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAppName">
+        <TextView
+            android:gravity="center"
+            android:id="@id/tvMsg"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="36.0dip"
+            android:layout_marginStart="10.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/social_app_activity_overview_small_text" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/glVerticalCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.5" />
+        <TextView
+            android:ellipsize="end"
+            android:id="@id/tvTitleView"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:text="@string/Parental_Detect_Activity_Video"
+            android:maxLines="2"
+            android:layout_marginStart="10.0dip"
+            android:layout_marginEnd="5.0dip"
+            app:layout_constraintBottom_toTopOf="@id/barrierTitleBottom"
+            app:layout_constraintEnd_toEndOf="@id/glVerticalCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/social_app_activity_overview_small_text" />
+        <TextView
+            android:ellipsize="end"
+            android:id="@id/tvTitleTime"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:text="@string/Parental_Detect_Activity_Video_Time"
+            android:maxLines="2"
+            android:layout_marginStart="5.0dip"
+            android:layout_marginEnd="10.0dip"
+            app:layout_constraintBottom_toTopOf="@id/barrierTitleBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/glVerticalCenter"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/social_app_activity_overview_small_text" />
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@id/barrierTitleBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tvTitleView, tvTitleTime" />
+        <TextView
+            android:textSize="22.0sp"
+            android:textColor="@color/black_ff282930"
+            android:id="@id/tvViewedCount"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:layout_marginStart="10.0dip"
+            android:layout_marginEnd="5.0dip"
+            app:fontFamily="@font/font_family_semi_bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/glVerticalCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierTitleBottom" />
+        <TextView
+            android:textSize="22.0sp"
+            android:textColor="@color/black_ff282930"
+            android:id="@id/tvUsageTime"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip"
+            android:layout_marginBottom="10.0dip"
+            android:layout_marginStart="5.0dip"
+            android:layout_marginEnd="10.0dip"
+            app:fontFamily="@font/font_family_semi_bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/glVerticalCenter"
+            app:layout_constraintTop_toBottomOf="@id/barrierTitleBottom" />
+        <androidx.constraintlayout.widget.Group
+            android:id="@id/groupData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tvTitleView, tvTitleTime, tvViewedCount, tvUsageTime" />
+        <ImageView
+            android:id="@id/ivIcon"
+            android:layout_width="56.0dip"
+            android:layout_height="0.0dip"
+            android:src="@drawable/pic_app_youtube"
+            android:scaleType="fitStart"
+            android:contentDescription="@null"
+            app:layout_constraintEnd_toEndOf="@id/clContent"
+            app:layout_constraintHeight_percent="1.22"
+            app:layout_constraintTop_toTopOf="@id/clContent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

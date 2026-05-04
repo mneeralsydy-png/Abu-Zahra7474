@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Button
+        android:textSize="16.0sp"
+        android:textColor="@color/black_ff464f60"
+        android:id="@id/btDialogItem"
+        android:background="@android:color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="57.0dip"
+        android:singleLine="true"
+        android:paddingStart="20.0dip"
+        android:paddingEnd="20.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/ad_borderless_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>

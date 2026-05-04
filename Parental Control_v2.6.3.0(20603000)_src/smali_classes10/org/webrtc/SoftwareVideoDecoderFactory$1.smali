@@ -1,0 +1,67 @@
+.class Lorg/webrtc/SoftwareVideoDecoderFactory$1;
+.super Lorg/webrtc/WrappedNativeVideoDecoder;
+.source "SoftwareVideoDecoderFactory.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lorg/webrtc/SoftwareVideoDecoderFactory;->createDecoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoDecoder;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lorg/webrtc/SoftwareVideoDecoderFactory;
+
+.field final synthetic val$info:Lorg/webrtc/VideoCodecInfo;
+
+
+# direct methods
+.method constructor <init>(Lorg/webrtc/SoftwareVideoDecoderFactory;Lorg/webrtc/VideoCodecInfo;)V
+    .locals 0
+
+    .prologue
+    .line 1
+    iput-object p1, p0, Lorg/webrtc/SoftwareVideoDecoderFactory$1;->this$0:Lorg/webrtc/SoftwareVideoDecoderFactory;
+
+    .line 3
+    iput-object p2, p0, Lorg/webrtc/SoftwareVideoDecoderFactory$1;->val$info:Lorg/webrtc/VideoCodecInfo;
+
+    .line 5
+    invoke-direct {p0}, Lorg/webrtc/WrappedNativeVideoDecoder;-><init>()V
+
+    .line 8
+    return-void
+.end method
+
+
+# virtual methods
+.method public createNative(J)J
+    .locals 3
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Lorg/webrtc/SoftwareVideoDecoderFactory$1;->this$0:Lorg/webrtc/SoftwareVideoDecoderFactory;
+
+    .line 3
+    invoke-static {v0}, Lorg/webrtc/SoftwareVideoDecoderFactory;->a(Lorg/webrtc/SoftwareVideoDecoderFactory;)J
+
+    .line 6
+    move-result-wide v0
+
+    .line 7
+    iget-object v2, p0, Lorg/webrtc/SoftwareVideoDecoderFactory$1;->val$info:Lorg/webrtc/VideoCodecInfo;
+
+    .line 9
+    invoke-static {v0, v1, p1, p2, v2}, Lorg/webrtc/SoftwareVideoDecoderFactory;->b(JJLorg/webrtc/VideoCodecInfo;)J
+
+    .line 12
+    move-result-wide p1
+
+    .line 13
+    return-wide p1
+.end method

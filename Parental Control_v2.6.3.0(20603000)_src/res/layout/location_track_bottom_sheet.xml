@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="vertical"
+        android:id="@id/locationTrackBottomSheet"
+        android:background="@drawable/device_track_bg"
+        android:paddingTop="5.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:behavior_draggable="true"
+        app:behavior_hideable="false"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+        <ImageView
+            android:gravity="center"
+            android:id="@id/ivPullUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:src="@drawable/bottom_sheet_mark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/clDevice"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22.0dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivPullUp">
+            <ImageView
+                android:id="@id/ivPreviousChild"
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:src="@drawable/more_big_left"
+                android:layout_marginStart="20.0dip"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@id/clInfo"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10.0dip"
+                android:layout_marginEnd="10.0dip"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivFollowingChild"
+                app:layout_constraintStart_toEndOf="@id/ivPreviousChild"
+                app:layout_constraintTop_toTopOf="parent">
+                <ImageView
+                    android:id="@id/ivAvatar"
+                    android:layout_width="28.0dip"
+                    android:layout_height="28.0dip"
+                    android:src="@drawable/account"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvName"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:textSize="18.0sp"
+                    android:textColor="@color/black_282930"
+                    android:ellipsize="end"
+                    android:id="@id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_marginStart="10.0dip"
+                    app:fontFamily="@font/font_family_semi_bold"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivAvatar"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@id/ivFollowingChild"
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:src="@drawable/more_big_right"
+                android:layout_marginEnd="20.0dip"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@id/divider3"
+            android:background="@color/gray_fffefefe"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_marginTop="22.0dip"
+            app:layout_constraintTop_toBottomOf="@id/clDevice" />
+        <ImageView
+            android:id="@id/ivStateIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30.0dip"
+            app:layout_constraintBottom_toTopOf="@id/tvStateMsg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider3"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="packed" />
+        <TextView
+            android:gravity="center"
+            android:id="@id/tvStateMsg"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20.0dip"
+            android:layout_marginTop="20.0dip"
+            android:layout_marginRight="20.0dip"
+            android:layout_marginBottom="30.0dip"
+            android:text="@string/Parent_Position_Retrieving"
+            android:layout_marginHorizontal="20.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivStateIcon" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@id/rvTrackLocationList"
+            android:paddingBottom="20.0dip"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

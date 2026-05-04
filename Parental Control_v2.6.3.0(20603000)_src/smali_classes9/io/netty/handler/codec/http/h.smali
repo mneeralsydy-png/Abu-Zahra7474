@@ -1,0 +1,601 @@
+.class public Lio/netty/handler/codec/http/h;
+.super Lio/netty/handler/codec/http/cookie/h;
+.source "DefaultCookie.java"
+
+# interfaces
+.implements Lio/netty/handler/codec/http/e;
+
+
+# annotations
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
+
+# instance fields
+.field private comment:Ljava/lang/String;
+
+.field private commentUrl:Ljava/lang/String;
+
+.field private discard:Z
+
+.field private ports:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private unmodifiablePorts:Ljava/util/Set;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Set<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private version:I
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-direct {p0, p1, p2}, Lio/netty/handler/codec/http/cookie/h;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 4
+    invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
+
+    .line 7
+    move-result-object p1
+
+    .line 8
+    iput-object p1, p0, Lio/netty/handler/codec/http/h;->ports:Ljava/util/Set;
+
+    .line 10
+    iput-object p1, p0, Lio/netty/handler/codec/http/h;->unmodifiablePorts:Ljava/util/Set;
+
+    .line 12
+    return-void
+.end method
+
+
+# virtual methods
+.method public comment()Ljava/lang/String;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Lio/netty/handler/codec/http/h;->comment:Ljava/lang/String;
+
+    .line 3
+    return-object v0
+.end method
+
+.method public commentUrl()Ljava/lang/String;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Lio/netty/handler/codec/http/h;->commentUrl:Ljava/lang/String;
+
+    .line 3
+    return-object v0
+.end method
+
+.method public getComment()Ljava/lang/String;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-virtual {p0}, Lio/netty/handler/codec/http/h;->comment()Ljava/lang/String;
+
+    .line 4
+    move-result-object v0
+
+    .line 5
+    return-object v0
+.end method
+
+.method public getCommentUrl()Ljava/lang/String;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-virtual {p0}, Lio/netty/handler/codec/http/h;->commentUrl()Ljava/lang/String;
+
+    .line 4
+    move-result-object v0
+
+    .line 5
+    return-object v0
+.end method
+
+.method public getDomain()Ljava/lang/String;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-virtual {p0}, Lio/netty/handler/codec/http/cookie/h;->domain()Ljava/lang/String;
+
+    .line 4
+    move-result-object v0
+
+    .line 5
+    return-object v0
+.end method
+
+.method public getMaxAge()J
+    .locals 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-virtual {p0}, Lio/netty/handler/codec/http/cookie/h;->maxAge()J
+
+    .line 4
+    move-result-wide v0
+
+    .line 5
+    return-wide v0
+.end method
+
+.method public getName()Ljava/lang/String;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-virtual {p0}, Lio/netty/handler/codec/http/cookie/h;->name()Ljava/lang/String;
+
+    .line 4
+    move-result-object v0
+
+    .line 5
+    return-object v0
+.end method
+
+.method public getPath()Ljava/lang/String;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-virtual {p0}, Lio/netty/handler/codec/http/cookie/h;->path()Ljava/lang/String;
+
+    .line 4
+    move-result-object v0
+
+    .line 5
+    return-object v0
+.end method
+
+.method public getPorts()Ljava/util/Set;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Set<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-virtual {p0}, Lio/netty/handler/codec/http/h;->ports()Ljava/util/Set;
+
+    .line 4
+    move-result-object v0
+
+    .line 5
+    return-object v0
+.end method
+
+.method public getValue()Ljava/lang/String;
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-virtual {p0}, Lio/netty/handler/codec/http/cookie/h;->value()Ljava/lang/String;
+
+    .line 4
+    move-result-object v0
+
+    .line 5
+    return-object v0
+.end method
+
+.method public getVersion()I
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-virtual {p0}, Lio/netty/handler/codec/http/h;->version()I
+
+    .line 4
+    move-result v0
+
+    .line 5
+    return v0
+.end method
+
+.method public isDiscard()Z
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    iget-boolean v0, p0, Lio/netty/handler/codec/http/h;->discard:Z
+
+    .line 3
+    return v0
+.end method
+
+.method public ports()Ljava/util/Set;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Set<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Lio/netty/handler/codec/http/h;->unmodifiablePorts:Ljava/util/Set;
+
+    .line 3
+    if-nez v0, :cond_0
+
+    .line 5
+    iget-object v0, p0, Lio/netty/handler/codec/http/h;->ports:Ljava/util/Set;
+
+    .line 7
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+
+    .line 10
+    move-result-object v0
+
+    .line 11
+    iput-object v0, p0, Lio/netty/handler/codec/http/h;->unmodifiablePorts:Ljava/util/Set;
+
+    .line 13
+    :cond_0
+    iget-object v0, p0, Lio/netty/handler/codec/http/h;->unmodifiablePorts:Ljava/util/Set;
+
+    .line 15
+    return-object v0
+.end method
+
+.method public setComment(Ljava/lang/String;)V
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    const-string v0, "\u9408\u0001"
+
+    invoke-static {v0}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 3
+    invoke-virtual {p0, v0, p1}, Lio/netty/handler/codec/http/cookie/h;->validateValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 6
+    move-result-object p1
+
+    .line 7
+    iput-object p1, p0, Lio/netty/handler/codec/http/h;->comment:Ljava/lang/String;
+
+    .line 9
+    return-void
+.end method
+
+.method public setCommentUrl(Ljava/lang/String;)V
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    const-string v0, "\u9409\u0001"
+
+    invoke-static {v0}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 3
+    invoke-virtual {p0, v0, p1}, Lio/netty/handler/codec/http/cookie/h;->validateValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 6
+    move-result-object p1
+
+    .line 7
+    iput-object p1, p0, Lio/netty/handler/codec/http/h;->commentUrl:Ljava/lang/String;
+
+    .line 9
+    return-void
+.end method
+
+.method public setDiscard(Z)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    iput-boolean p1, p0, Lio/netty/handler/codec/http/h;->discard:Z
+
+    .line 3
+    return-void
+.end method
+
+.method public setPorts(Ljava/lang/Iterable;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Iterable<",
+            "Ljava/lang/Integer;",
+            ">;)V"
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 17
+    new-instance v0, Ljava/util/TreeSet;
+
+    invoke-direct {v0}, Ljava/util/TreeSet;-><init>()V
+
+    .line 18
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Integer;
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    if-lez v2, :cond_0
+
+    const v3, 0xffff
+
+    if-gt v2, v3, :cond_0
+
+    .line 19
+    invoke-virtual {v0, v1}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    .line 20
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "\u940a\u0001"
+
+    invoke-static {v0}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 21
+    invoke-static {v0, v2}, Landroid/support/v4/media/a;->a(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 22
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 23
+    :cond_1
+    invoke-virtual {v0}, Ljava/util/TreeSet;->isEmpty()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    .line 24
+    invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/netty/handler/codec/http/h;->ports:Ljava/util/Set;
+
+    iput-object p1, p0, Lio/netty/handler/codec/http/h;->unmodifiablePorts:Ljava/util/Set;
+
+    goto :goto_1
+
+    .line 25
+    :cond_2
+    iput-object v0, p0, Lio/netty/handler/codec/http/h;->ports:Ljava/util/Set;
+
+    const/4 p1, 0x0
+
+    .line 26
+    iput-object p1, p0, Lio/netty/handler/codec/http/h;->unmodifiablePorts:Ljava/util/Set;
+
+    :goto_1
+    return-void
+.end method
+
+.method public varargs setPorts([I)V
+    .locals 5
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    const-string v0, "\u940b\u0001"
+
+    invoke-static {v0}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lio/netty/util/internal/c0;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 2
+    invoke-virtual {p1}, [I->clone()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [I
+
+    .line 3
+    array-length v0, p1
+
+    if-nez v0, :cond_0
+
+    .line 4
+    invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lio/netty/handler/codec/http/h;->ports:Ljava/util/Set;
+
+    iput-object p1, p0, Lio/netty/handler/codec/http/h;->unmodifiablePorts:Ljava/util/Set;
+
+    goto :goto_1
+
+    .line 5
+    :cond_0
+    new-instance v0, Ljava/util/TreeSet;
+
+    invoke-direct {v0}, Ljava/util/TreeSet;-><init>()V
+
+    .line 6
+    array-length v1, p1
+
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_2
+
+    aget v3, p1, v2
+
+    if-lez v3, :cond_1
+
+    const v4, 0xffff
+
+    if-gt v3, v4, :cond_1
+
+    .line 7
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    .line 8
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "\u940c\u0001"
+
+    invoke-static {v0}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 9
+    invoke-static {v0, v3}, Landroid/support/v4/media/a;->a(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 10
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 11
+    :cond_2
+    iput-object v0, p0, Lio/netty/handler/codec/http/h;->ports:Ljava/util/Set;
+
+    const/4 p1, 0x0
+
+    .line 12
+    iput-object p1, p0, Lio/netty/handler/codec/http/h;->unmodifiablePorts:Ljava/util/Set;
+
+    :goto_1
+    return-void
+.end method
+
+.method public setVersion(I)V
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    iput p1, p0, Lio/netty/handler/codec/http/h;->version:I
+
+    .line 3
+    return-void
+.end method
+
+.method public version()I
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    iget v0, p0, Lio/netty/handler/codec/http/h;->version:I
+
+    .line 3
+    return v0
+.end method

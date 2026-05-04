@@ -1,0 +1,16 @@
+.class public final synthetic Lcom/google/android/material/bottomappbar/a;
+.super Ljava/lang/Object;
+.source "R8$$SyntheticClass"
+
+
+# direct methods
+.method public static bridge synthetic a(Lcom/google/android/material/bottomappbar/BottomAppBar;I)V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setOutlineAmbientShadowColor(I)V
+
+    .line 4
+    return-void
+.end method

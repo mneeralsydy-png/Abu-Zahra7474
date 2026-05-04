@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#ffffffff"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ad_crash_bug_cartoon" />
+    <TextView
+        android:id="@id/tvDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello, i am just a bug" />
+    <Button
+        android:id="@id/btRestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30.0dip"
+        android:text="Restart"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@id/btCrashedInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CrashedInfo"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@id/btUploadLogToJIRA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload log to JIRA"
+        android:textAllCaps="false" />
+</LinearLayout>

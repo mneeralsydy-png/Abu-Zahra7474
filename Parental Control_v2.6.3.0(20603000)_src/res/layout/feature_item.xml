@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="vertical"
+        android:id="@id/clContainer"
+        android:background="@drawable/normal_item_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:id="@id/glTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="12.0dip" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:id="@id/glBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_end="12.0dip" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/glImageStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="16.0dip" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/glImageEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_end="14.0dip" />
+        <ImageView
+            android:id="@id/ivIcon"
+            android:layout_width="26.0dip"
+            android:layout_height="wrap_content"
+            android:src="@drawable/notifiy_center_black"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="@id/glBottom"
+            app:layout_constraintStart_toStartOf="@id/glImageStart"
+            app:layout_constraintTop_toTopOf="@id/glTop" />
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@color/feature_item_title_color"
+            android:id="@id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Parent_Device_Alert_Title"
+            android:layout_marginStart="14.0dip"
+            android:layout_marginEnd="10.0dip"
+            app:fontFamily="@font/font_family_medium"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@id/tvSubtitle"
+            app:layout_constraintEnd_toStartOf="@id/tvSummary"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toEndOf="@id/ivIcon"
+            app:layout_constraintTop_toTopOf="@id/glTop"
+            app:layout_goneMarginStart="0.0dip" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/gray_666b75"
+            android:id="@id/tvSubtitle"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2.0dip"
+            android:layout_marginStart="14.0dip"
+            android:layout_marginEnd="10.0dip"
+            app:fontFamily="@font/font_family_regular"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/glBottom"
+            app:layout_constraintEnd_toStartOf="@id/tvSummary"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toEndOf="@id/ivIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_goneMarginStart="0.0dip" />
+        <ImageView
+            android:id="@id/ivEnter"
+            android:background="@drawable/more"
+            android:layout_width="12.0dip"
+            android:layout_height="12.0dip"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="@id/ivIcon"
+            app:layout_constraintEnd_toEndOf="@id/glImageEnd"
+            app:layout_constraintTop_toTopOf="@id/ivIcon" />
+        <View
+            android:id="@id/vSmallNotify"
+            android:background="@drawable/red_e13e3e_radius"
+            android:visibility="invisible"
+            android:layout_width="10.0dip"
+            android:layout_height="10.0dip"
+            android:layout_marginEnd="8.0dip"
+            app:layout_constraintBottom_toBottomOf="@id/ivIcon"
+            app:layout_constraintEnd_toStartOf="@id/ivEnter"
+            app:layout_constraintTop_toTopOf="@id/ivIcon" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/color_white"
+            android:gravity="center"
+            android:id="@id/tvNotify"
+            android:background="@drawable/red_e13e3e_radius"
+            android:paddingLeft="4.0dip"
+            android:paddingRight="4.0dip"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="20.0dip"
+            android:minHeight="20.0dip"
+            android:layout_marginEnd="8.0dip"
+            android:paddingHorizontal="4.0dip"
+            app:layout_constraintBottom_toBottomOf="@id/ivIcon"
+            app:layout_constraintEnd_toStartOf="@id/ivEnter"
+            app:layout_constraintTop_toTopOf="@id/ivIcon" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/gray_a4a8b3"
+            android:gravity="end"
+            android:id="@id/tvSummary"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6.0dip"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/ivIcon"
+            app:layout_constraintEnd_toStartOf="@id/barrierEnd"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@id/tvTitle"
+            app:layout_constraintTop_toTopOf="@id/ivIcon"
+            app:layout_constraintWidth_min="90.0dip" />
+        <ImageView
+            android:id="@id/ivDivider"
+            android:background="@color/parent_divider_bg"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="1.0dip"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/glImageEnd"
+            app:layout_constraintStart_toStartOf="@id/glImageStart" />
+        <ImageView
+            android:id="@id/ivSuperviseLock"
+            android:visibility="gone"
+            android:layout_width="11.0dip"
+            android:layout_height="13.0dip"
+            android:src="@drawable/locking_gray"
+            android:contentDescription="@null"
+            android:layout_marginEnd="8.0dip"
+            app:layout_constraintBottom_toBottomOf="@id/ivIcon"
+            app:layout_constraintEnd_toStartOf="@id/ivEnter"
+            app:layout_constraintTop_toTopOf="@id/ivIcon" />
+        <ToggleButton
+            android:id="@id/tbSwitch"
+            android:background="@drawable/toggle_button"
+            android:visibility="gone"
+            android:layout_width="42.0dip"
+            android:layout_height="24.0dip"
+            android:checked="false"
+            android:textOn=""
+            android:textOff=""
+            app:layout_constraintBottom_toBottomOf="@id/ivIcon"
+            app:layout_constraintEnd_toEndOf="@id/glImageEnd"
+            app:layout_constraintTop_toTopOf="@id/ivIcon" />
+        <ImageView
+            android:id="@id/ivProTag"
+            android:visibility="gone"
+            android:layout_width="36.0dip"
+            android:layout_height="10.0dip"
+            android:src="@drawable/tag_pro_2"
+            app:layout_constraintBottom_toBottomOf="@id/ivIcon"
+            app:layout_constraintEnd_toEndOf="@id/glImageEnd"
+            app:layout_constraintTop_toTopOf="@id/ivIcon" />
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@id/barrierEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="start"
+            app:constraint_referenced_ids="ivSuperviseLock, tvNotify, tbSwitch, vSmallNotify, ivProTag" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

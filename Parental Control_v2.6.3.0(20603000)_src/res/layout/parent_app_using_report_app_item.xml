@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/normal_item_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="20.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="20.0dip" />
+    <ImageView
+        android:id="@id/ivAppListIcon"
+        android:background="@drawable/icon_app_bg"
+        android:padding="1.0dip"
+        android:layout_width="30.0dip"
+        android:layout_height="30.0dip"
+        android:src="@drawable/ic_noapp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:textSize="15.0sp"
+        android:textColor="@color/black_282930"
+        android:ellipsize="end"
+        android:id="@id/tvAppListName"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:maxLines="1"
+        android:textDirection="locale"
+        android:layout_marginStart="14.0dip"
+        android:layout_marginEnd="11.0dip"
+        android:layout_toStartOf="@id/llAppUsingProgress"
+        android:layout_toEndOf="@id/ivAppListIcon"
+        app:fontFamily="@font/font_family_medium"
+        app:layout_constraintEnd_toStartOf="@id/ivAppListRight"
+        app:layout_constraintStart_toEndOf="@id/ivAppListIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/llAppUsingProgress"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4.0dip"
+        android:layout_marginBottom="16.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tvAppListName"
+        app:layout_constraintStart_toStartOf="@id/tvAppListName"
+        app:layout_constraintTop_toBottomOf="@id/tvAppListName">
+        <ImageView
+            android:id="@id/ivAppUsingRate"
+            android:background="@drawable/app_using_report_app_item_pg_bg"
+            android:layout_width="200.0dip"
+            android:layout_height="6.0dip"
+            android:maxWidth="200.0dip"
+            android:alpha="0.3" />
+        <TextView
+            android:textSize="13.0sp"
+            android:textColor="@color/gray_666b75"
+            android:id="@id/tvAppUsingDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageView
+        android:id="@id/ivAppListRight"
+        android:layout_width="12.0dip"
+        android:layout_height="12.0dip"
+        android:src="@drawable/ic_more_right"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:background="@color/gray_ececee"
+        android:layout_width="0.0dip"
+        android:layout_height="1.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart" />
+</androidx.constraintlayout.widget.ConstraintLayout>

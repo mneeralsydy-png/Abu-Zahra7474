@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:scrollbars="vertical"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:fillViewport="true"
+        android:fadeScrollbars="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <ImageView
+                    android:id="@id/ivPicture"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/Parent_Guide_Title1"
+                    app:layout_constraintEnd_toEndOf="@id/tvTitle"
+                    app:layout_constraintStart_toStartOf="@id/tvTitle"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/pic_guide_01" />
+                <TextView
+                    android:textSize="22.0sp"
+                    android:textColor="@color/black_ff282930"
+                    android:gravity="center_horizontal"
+                    android:id="@id/tvTitle"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.0dip"
+                    android:text="@string/Parent_Guide_Title1"
+                    android:layout_marginStart="20.0dip"
+                    android:layout_marginEnd="20.0dip"
+                    app:fontFamily="@font/font_family_semi_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivPicture"
+                    app:layout_constraintWidth_max="@dimen/tablet_max_width" />
+                <TextView
+                    android:textSize="15.0sp"
+                    android:textColor="@color/black_464F60"
+                    android:gravity="center"
+                    android:id="@id/tvContent"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14.0dip"
+                    android:text="@string/Parent_Guide_Content1"
+                    app:layout_constraintEnd_toEndOf="@id/tvTitle"
+                    app:layout_constraintStart_toStartOf="@id/tvTitle"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

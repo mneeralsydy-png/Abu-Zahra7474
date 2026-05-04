@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@android:color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/glStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="20.0dip" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/glEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_end="20.0dip" />
+        <ImageView
+            android:id="@id/ivStep"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30.0dip"
+            android:contentDescription="@string/Parent_Bind_Step1_Title"
+            app:layout_constraintEnd_toStartOf="@id/glEnd"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/pic_success" />
+        <TextView
+            android:gravity="center_horizontal"
+            android:id="@id/tvTitle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:text="@string/Parent_Bind_Step3_Title"
+            app:layout_constraintEnd_toStartOf="@id/glEnd"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintTop_toBottomOf="@id/ivStep"
+            style="@style/binding_page_title" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/black_ff464f60"
+            android:gravity="center_horizontal"
+            android:id="@id/tvContent"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9.0dip"
+            android:text="@string/Parent_Bind_Step3_Subtitle"
+            app:layout_constraintEnd_toStartOf="@id/glEnd"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintWidth_max="@dimen/tablet_max_width" />
+        <TextView
+            android:textSize="13.0sp"
+            android:textColor="@color/gray_878d9a"
+            android:gravity="center_horizontal"
+            android:id="@id/tvContent2"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:text="@string/Parent_Bind_Success_Subtitle2"
+            app:layout_constraintEnd_toStartOf="@id/glEnd"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintTop_toBottomOf="@id/tvContent"
+            app:layout_constraintWidth_max="@dimen/tablet_max_width" />
+        <TextView
+            android:textSize="16.0sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:id="@id/tvNext"
+            android:background="@drawable/kid_blue_button_style"
+            android:paddingTop="10.0dip"
+            android:paddingBottom="10.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30.0dip"
+            android:layout_marginBottom="30.0dip"
+            android:minWidth="110.0dip"
+            android:text="@string/Common_Complete"
+            android:paddingStart="10.0dip"
+            android:paddingEnd="10.0dip"
+            android:paddingVertical="10.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/nav_next" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/black_ff282930"
+            android:id="@id/tvSkip"
+            android:padding="6.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Parent_Bind_Success_Bind_Next"
+            app:fontFamily="@font/font_family_medium"
+            app:layout_constraintBottom_toBottomOf="@id/tvNext"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintTop_toTopOf="@id/tvNext" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

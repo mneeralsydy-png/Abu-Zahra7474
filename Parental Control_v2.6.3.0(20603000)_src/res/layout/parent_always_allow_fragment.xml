@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/white_fff5f5f5"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_start_percent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_end_percent" />
+    <RadioGroup
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@id/rgAlwaysAllow"
+        android:background="@drawable/switch_group_background"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15.0dip"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="parent">
+        <RadioButton
+            android:textStyle="bold"
+            android:textColor="@drawable/parent_today_event_item_text_color_selector"
+            android:gravity="center"
+            android:id="@id/rbApps"
+            android:background="@drawable/switch_button_background"
+            android:paddingLeft="16.0dip"
+            android:paddingTop="4.0dip"
+            android:paddingRight="16.0dip"
+            android:paddingBottom="4.0dip"
+            android:checked="true"
+            android:button="@drawable/switch_button_background"
+            android:text="@string/kid_restrictions_content_app"
+            android:paddingHorizontal="16.0dip"
+            android:paddingVertical="4.0dip"
+            style="@style/switch_button_style" />
+        <RadioButton
+            android:textColor="@drawable/parent_today_event_item_text_color_selector"
+            android:gravity="center"
+            android:id="@id/rbUrlWhiteList"
+            android:background="@drawable/switch_button_background"
+            android:paddingLeft="16.0dip"
+            android:paddingTop="4.0dip"
+            android:paddingRight="16.0dip"
+            android:paddingBottom="4.0dip"
+            android:checked="false"
+            android:button="@drawable/switch_button_background"
+            android:text="@string/Parent_AlwaysAllowed_Websites"
+            android:paddingHorizontal="16.0dip"
+            android:paddingVertical="4.0dip"
+            style="@style/switch_button_style" />
+    </RadioGroup>
+    <ImageView
+        android:id="@id/url_pro_tag"
+        android:visibility="gone"
+        android:layout_width="49.0dip"
+        android:layout_height="26.0dip"
+        android:layout_marginBottom="27.0dip"
+        android:src="@drawable/map_pro"
+        android:contentDescription="@string/Parent_Geofence"
+        app:layout_constraintBottom_toBottomOf="@id/rgAlwaysAllow"
+        app:layout_constraintEnd_toEndOf="@id/rgAlwaysAllow" />
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@id/viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="20.0dip"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgAlwaysAllow" />
+</androidx.constraintlayout.widget.ConstraintLayout>

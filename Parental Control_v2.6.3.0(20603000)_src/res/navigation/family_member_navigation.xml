@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    android:id="@id/family_member_navigation"
+    app:startDestination="@id/parentFamilyMemberListFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment
+        android:name="com.sand.airdroidkidp.feature.familymember.ParentFamilyMemberEmptyFragment"
+        android:id="@id/parentFamilyMemberEmptyFragment">
+        <action
+            android:id="@id/action_parentFamilyMemberEmptyFragment_to_parentFamilyMemberListFragment"
+            app:destination="@id/parentFamilyMemberListFragment"
+            app:popUpTo="@id/parentFamilyMemberEmptyFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:name="com.sand.airdroidkidp.feature.familymember.ParentFamilyMemberFailedFragment"
+        android:id="@id/parentFamilyMemberFailedFragment">
+        <action
+            android:id="@id/action_parentFamilyMemberFailedFragment_to_parentFamilyMemberListFragment"
+            app:destination="@id/parentFamilyMemberListFragment"
+            app:popUpTo="@id/parentFamilyMemberFailedFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:name="com.sand.airdroidkidp.feature.familymember.ParentFamilyMemberListFragment"
+        android:id="@id/parentFamilyMemberListFragment">
+        <action
+            android:id="@id/action_parentFamilyMemberListFragment_to_parentFamilyMemberFailedFragment"
+            app:destination="@id/parentFamilyMemberFailedFragment"
+            app:popUpTo="@id/parentFamilyMemberListFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@id/action_parentFamilyMemberListFragment_to_parentFamilyMemberEmptyFragment"
+            app:destination="@id/parentFamilyMemberEmptyFragment"
+            app:popUpTo="@id/parentFamilyMemberListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

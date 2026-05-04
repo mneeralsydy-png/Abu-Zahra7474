@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/clRoot"
+    android:background="@color/grey_f4f4f4"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/appBar"
+        layout="@layout/app_bar" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@id/glTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="79.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@id/glBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="30.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="16.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="16.0dip" />
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="@color/gray_ff878d9a"
+        android:id="@id/tvContent"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/Payment_Unbind_Retain_Detail"
+        app:layout_constraintEnd_toEndOf="@id/glRight"
+        app:layout_constraintStart_toStartOf="@id/glLeft"
+        app:layout_constraintTop_toBottomOf="@id/glTop"
+        app:layout_constraintWidth_max="@dimen/tablet_max_width" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/gray_666b75"
+        android:id="@id/tvUnbindTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15.0dip"
+        android:text="@string/Payment_Unbind_Retain_Choice"
+        app:layout_constraintEnd_toEndOf="@id/glRight"
+        app:layout_constraintStart_toStartOf="@id/glLeft"
+        app:layout_constraintTop_toBottomOf="@id/tvContent"
+        app:layout_constraintWidth_max="@dimen/tablet_max_width" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/rvDevices"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="3.0dip"
+        android:layout_marginBottom="16.0dip"
+        app:layout_constraintBottom_toTopOf="@id/btDone"
+        app:layout_constraintEnd_toEndOf="@id/glRight"
+        app:layout_constraintStart_toStartOf="@id/glLeft"
+        app:layout_constraintTop_toBottomOf="@id/tvUnbindTitle"
+        app:layout_constraintWidth_max="@dimen/tablet_max_width" />
+    <Button
+        android:enabled="true"
+        android:textSize="16.0sp"
+        android:textColor="@android:color/white"
+        android:ellipsize="end"
+        android:id="@id/btDone"
+        android:background="@drawable/kid_blue_button_style"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/Payment_Unbind_Retain"
+        android:maxLines="1"
+        android:textAllCaps="false"
+        app:fontFamily="@font/font_family_semi_bold"
+        app:layout_constraintBottom_toBottomOf="@id/glBottom"
+        app:layout_constraintEnd_toEndOf="@id/glRight"
+        app:layout_constraintStart_toStartOf="@id/glLeft"
+        app:layout_constraintWidth_max="@dimen/tablet_max_width" />
+</androidx.constraintlayout.widget.ConstraintLayout>

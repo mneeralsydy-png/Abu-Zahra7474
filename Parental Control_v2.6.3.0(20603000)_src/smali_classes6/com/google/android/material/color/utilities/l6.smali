@@ -1,0 +1,123 @@
+.class public Lcom/google/android/material/color/utilities/l6;
+.super Lcom/google/android/material/color/utilities/k;
+.source "SchemeRainbow.java"
+
+
+# annotations
+.annotation build Landroidx/annotation/c1;
+    value = {
+        .enum Landroidx/annotation/c1$a;->LIBRARY_GROUP:Landroidx/annotation/c1$a;
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/material/color/utilities/l;ZD)V
+    .locals 11
+
+    .prologue
+    .line 1
+    sget-object v2, Lcom/google/android/material/color/utilities/v6;->RAINBOW:Lcom/google/android/material/color/utilities/v6;
+
+    .line 3
+    invoke-virtual {p1}, Lcom/google/android/material/color/utilities/l;->d()D
+
+    .line 6
+    move-result-wide v0
+
+    .line 7
+    const-wide/high16 v3, 0x4048000000000000L    # 48.0
+
+    .line 9
+    invoke-static {v0, v1, v3, v4}, Lcom/google/android/material/color/utilities/s6;->c(DD)Lcom/google/android/material/color/utilities/s6;
+
+    .line 12
+    move-result-object v6
+
+    .line 13
+    invoke-virtual {p1}, Lcom/google/android/material/color/utilities/l;->d()D
+
+    .line 16
+    move-result-wide v0
+
+    .line 17
+    const-wide/high16 v3, 0x4030000000000000L    # 16.0
+
+    .line 19
+    invoke-static {v0, v1, v3, v4}, Lcom/google/android/material/color/utilities/s6;->c(DD)Lcom/google/android/material/color/utilities/s6;
+
+    .line 22
+    move-result-object v7
+
+    .line 23
+    invoke-virtual {p1}, Lcom/google/android/material/color/utilities/l;->d()D
+
+    .line 26
+    move-result-wide v0
+
+    .line 27
+    const-wide/high16 v3, 0x404e000000000000L    # 60.0
+
+    .line 29
+    add-double/2addr v0, v3
+
+    .line 30
+    invoke-static {v0, v1}, Lcom/google/android/material/color/utilities/v5;->g(D)D
+
+    .line 33
+    move-result-wide v0
+
+    .line 34
+    const-wide/high16 v3, 0x4038000000000000L    # 24.0
+
+    .line 36
+    invoke-static {v0, v1, v3, v4}, Lcom/google/android/material/color/utilities/s6;->c(DD)Lcom/google/android/material/color/utilities/s6;
+
+    .line 39
+    move-result-object v8
+
+    .line 40
+    invoke-virtual {p1}, Lcom/google/android/material/color/utilities/l;->d()D
+
+    .line 43
+    move-result-wide v0
+
+    .line 44
+    const-wide/16 v3, 0x0
+
+    .line 46
+    invoke-static {v0, v1, v3, v4}, Lcom/google/android/material/color/utilities/s6;->c(DD)Lcom/google/android/material/color/utilities/s6;
+
+    .line 49
+    move-result-object v9
+
+    .line 50
+    invoke-virtual {p1}, Lcom/google/android/material/color/utilities/l;->d()D
+
+    .line 53
+    move-result-wide v0
+
+    .line 54
+    invoke-static {v0, v1, v3, v4}, Lcom/google/android/material/color/utilities/s6;->c(DD)Lcom/google/android/material/color/utilities/s6;
+
+    .line 57
+    move-result-object v10
+
+    .line 58
+    move-object v0, p0
+
+    .line 59
+    move-object v1, p1
+
+    .line 60
+    move v3, p2
+
+    .line 61
+    move-wide v4, p3
+
+    .line 62
+    invoke-direct/range {v0 .. v10}, Lcom/google/android/material/color/utilities/k;-><init>(Lcom/google/android/material/color/utilities/l;Lcom/google/android/material/color/utilities/v6;ZDLcom/google/android/material/color/utilities/s6;Lcom/google/android/material/color/utilities/s6;Lcom/google/android/material/color/utilities/s6;Lcom/google/android/material/color/utilities/s6;Lcom/google/android/material/color/utilities/s6;)V
+
+    .line 65
+    return-void
+.end method

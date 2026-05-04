@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_start_percent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_end_percent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/clRoot"
+        android:background="@drawable/item_social_app_bg"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@id/imgIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/social_app_app_activity_list_overview_icon_style" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/glVerticalCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.5" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/white_ffffff"
+            android:ellipsize="end"
+            android:id="@id/tvTitleView"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dip"
+            android:text="@string/Parental_Detect_Activity_Video"
+            android:maxLines="2"
+            android:layout_marginStart="16.0dip"
+            android:layout_marginEnd="10.0dip"
+            app:layout_constraintBottom_toTopOf="@id/barrierTitleBottom"
+            app:layout_constraintEnd_toEndOf="@id/glVerticalCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/white_ffffff"
+            android:ellipsize="end"
+            android:id="@id/tvTitleTime"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dip"
+            android:text="@string/Parental_Detect_Activity_Video_Time"
+            android:maxLines="2"
+            android:layout_marginStart="5.0dip"
+            android:layout_marginEnd="16.0dip"
+            app:layout_constraintBottom_toTopOf="@id/barrierTitleBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/glVerticalCenter"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@id/barrierTitleBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tvTitleView, tvTitleTime" />
+        <TextView
+            android:textSize="24.0sp"
+            android:textColor="@color/white_ffffff"
+            android:id="@id/tvViewedCount"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip"
+            android:layout_marginBottom="16.0dip"
+            android:layout_marginStart="16.0dip"
+            android:layout_marginEnd="10.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/glVerticalCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierTitleBottom" />
+        <TextView
+            android:textSize="24.0sp"
+            android:textColor="@color/white_ffffff"
+            android:id="@id/tvUsageTime"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip"
+            android:layout_marginBottom="16.0dip"
+            android:layout_marginStart="5.0dip"
+            android:layout_marginEnd="16.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/glVerticalCenter"
+            app:layout_constraintTop_toBottomOf="@id/barrierTitleBottom" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@id/flContainer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout
+        android:id="@id/flContent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <com.sand.airdroidkid.common.base.SandWebView
+            android:id="@id/webView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </FrameLayout>
+</FrameLayout>

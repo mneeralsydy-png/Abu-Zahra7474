@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="@color/gray_666b75"
+        android:id="@id/tvMainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Parent_TodayEvent_Most_Usage_Apps_Title"
+        android:layout_marginStart="20.0dip" />
+    <com.sand.airdroidkidp.ui.custom.ClipBackgroundConstraintLayout
+        android:orientation="vertical"
+        android:background="@drawable/e8e8e8_stroke_16_radius_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip">
+        <RelativeLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@id/app_block"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:id="@id/llEmpty"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.0dip"
+                    android:layout_marginBottom="20.0dip"
+                    android:layout_marginStart="20.0dip"
+                    android:layout_marginEnd="20.0dip"
+                    app:layout_constraintBottom_toTopOf="@id/llContent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <ImageView
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:src="@drawable/ic_noapp" />
+                    <TextView
+                        android:textSize="13.0sp"
+                        android:textColor="@color/gray_878d9a"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Parent_TodayEvent_No_Usage_Apps"
+                        android:layout_marginStart="14.0dip" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@id/llContent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textDirection="locale"
+                    app:layout_constraintBottom_toTopOf="@id/tvShowMore"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/llEmpty" />
+                <TextView
+                    android:textSize="13.0sp"
+                    android:textColor="@color/black_ff464f60"
+                    android:layout_gravity="center"
+                    android:id="@id/tvShowMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14.0dip"
+                    android:layout_marginBottom="14.0dip"
+                    android:text="@string/Parent_TodayEvent_Look_More"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/llContent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <include
+                android:id="@id/proTag"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                layout="@layout/daily_pro_tag" />
+        </RelativeLayout>
+    </com.sand.airdroidkidp.ui.custom.ClipBackgroundConstraintLayout>
+</LinearLayout>

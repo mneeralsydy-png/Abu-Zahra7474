@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/clRoot"
+    android:background="@color/white_f5f5f5"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView
+        android:id="@id/nsvMain"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="20.0dip">
+            <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:id="@id/glStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="@dimen/global_start_percent" />
+            <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:id="@id/glEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="@dimen/global_end_percent" />
+            <include
+                android:id="@id/showAppInfo"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                app:layout_constraintEnd_toEndOf="@id/glEnd"
+                app:layout_constraintStart_toStartOf="@id/glStart"
+                app:layout_constraintTop_toTopOf="parent"
+                layout="@layout/parent_app_using_report_single_app_info_component" />
+            <include
+                android:id="@id/showAppIntroduce"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                app:layout_constraintEnd_toEndOf="@id/glEnd"
+                app:layout_constraintStart_toStartOf="@id/glStart"
+                app:layout_constraintTop_toBottomOf="@id/showAppInfo"
+                layout="@layout/item_app_introduction" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@id/toolbar"
+        android:background="@color/white_f5f5f5"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:elevation="0.0dip"
+        app:contentInsetStartWithNavigation="0.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="Facebook"
+        app:titleMargin="0.0dip"
+        app:titleTextAppearance="@style/CommonAppTheme.ToolBarTitleTextAppearance"
+        app:titleTextColor="@color/black_282930" />
+</androidx.constraintlayout.widget.ConstraintLayout>

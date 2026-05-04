@@ -1,0 +1,52 @@
+.class public Landroidx/work/impl/utils/b0;
+.super Ljava/lang/Object;
+.source "SynchronousExecutor.java"
+
+# interfaces
+.implements Ljava/util/concurrent/Executor;
+
+
+# annotations
+.annotation build Landroidx/annotation/c1;
+    value = {
+        .enum Landroidx/annotation/c1$a;->LIBRARY_GROUP:Landroidx/annotation/c1$a;
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method public execute(Ljava/lang/Runnable;)V
+    .locals 0
+    .param p1    # Ljava/lang/Runnable;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "command"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    .line 4
+    return-void
+.end method

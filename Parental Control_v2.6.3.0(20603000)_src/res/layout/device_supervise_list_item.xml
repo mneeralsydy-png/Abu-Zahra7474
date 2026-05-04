@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/layoutTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.sand.airdroidkidp.ui.custom.FeatureTitleItem
+            android:id="@id/ftiTitle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10.0dip"
+            app:layout_constraintBottom_toBottomOf="@id/textLimitSchedule"
+            app:layout_constraintEnd_toStartOf="@id/textLimitSchedule"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/textLimitSchedule"
+            app:title="@string/Parental_Device_Supervised_Title" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/text_300"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:id="@id/textLimitSchedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="90.0dip"
+            android:text="@string/schedule_titile"
+            android:maxLines="2"
+            android:fontFamily="@font/font_family_regular"
+            android:layout_marginEnd="4.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imgLimitSchedule"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@id/imgLimitSchedule"
+            android:background="@drawable/more"
+            android:layout_width="12.0dip"
+            android:layout_height="12.0dip"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="@id/textLimitSchedule"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/textLimitSchedule" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.sand.airdroidkidp.ui.custom.ClipBackgroundConstraintLayout
+        android:background="@drawable/bg_radius_16_stroke_1"
+        android:paddingTop="4.0dip"
+        android:paddingBottom="4.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12.0dip"
+        android:paddingVertical="4.0dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutTitle">
+        <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+            android:id="@id/fipInstantBlock"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:enterVisible="false"
+            app:icon="@drawable/immediately"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:switchVisible="true"
+            app:title="@string/Parent_UsageLimit_Forbid_All_Title" />
+        <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+            android:id="@id/fipSuspendTime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/deactivate_time_svg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fipInstantBlock"
+            app:title="@string/Kid_Home_Downtime" />
+        <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+            android:id="@id/fipAlwaysAllow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/allow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fipSuspendTime"
+            app:title="@string/Parent_UsageLimit_AlwaysAllow_Title" />
+        <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+            android:id="@id/fipAppRestriction"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/app_limited"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fipAlwaysAllow"
+            app:title="@string/Parent_UsageLimit_AppTime_Title" />
+        <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+            android:id="@id/fipSystemRestriction"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/mdm_setting"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fipAppRestriction"
+            app:title="@string/Parental_Device_System_Limit" />
+        <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+            android:id="@id/fipContentDetection"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/detect"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fipSystemRestriction"
+            app:title="@string/Parent_Keyword_Detect" />
+        <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+            android:id="@id/fipImageDetect"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/image_detection"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fipContentDetection"
+            app:title="@string/Kid_NSFW_title" />
+        <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+            android:id="@id/fipWebRestriction"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/web"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fipImageDetect"
+            app:title="@string/Parent_WebsiteRestrictions_title" />
+        <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+            android:id="@id/fipBrowserManagement"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/web_protection"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fipWebRestriction"
+            app:title="@string/Parental_Device_Browser" />
+        <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+            android:id="@id/fipCommunicationSecurity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/communication_safe"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fipBrowserManagement"
+            app:title="@string/Parent_Communicate_Safe_Title" />
+    </com.sand.airdroidkidp.ui.custom.ClipBackgroundConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

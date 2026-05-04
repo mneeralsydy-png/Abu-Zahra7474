@@ -1,0 +1,1075 @@
+.class public final Lcom/google/crypto/tink/hybrid/u;
+.super Lcom/google/crypto/tink/hybrid/i0;
+.source "HpkePublicKey.java"
+
+
+# annotations
+.annotation runtime Lz6/j;
+.end annotation
+
+
+# instance fields
+.field private final a:Lcom/google/crypto/tink/hybrid/l;
+
+.field private final b:Ly6/a;
+
+.field private final c:Ly6/a;
+
+.field private final d:Ljava/lang/Integer;
+    .annotation runtime Ljh/h;
+    .end annotation
+.end field
+
+
+# direct methods
+.method private constructor <init>(Lcom/google/crypto/tink/hybrid/l;Ly6/a;Ly6/a;Ljava/lang/Integer;)V
+    .locals 0
+    .param p4    # Ljava/lang/Integer;
+        .annotation runtime Ljh/h;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "parameters",
+            "publicKeyBytes",
+            "outputPrefix",
+            "idRequirement"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Lcom/google/crypto/tink/x0;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Lcom/google/crypto/tink/hybrid/u;->a:Lcom/google/crypto/tink/hybrid/l;
+
+    .line 6
+    iput-object p2, p0, Lcom/google/crypto/tink/hybrid/u;->b:Ly6/a;
+
+    .line 8
+    iput-object p3, p0, Lcom/google/crypto/tink/hybrid/u;->c:Ly6/a;
+
+    .line 10
+    iput-object p4, p0, Lcom/google/crypto/tink/hybrid/u;->d:Ljava/lang/Integer;
+
+    .line 12
+    return-void
+.end method
+
+.method public static f(Lcom/google/crypto/tink/hybrid/l;Ly6/a;Ljava/lang/Integer;)Lcom/google/crypto/tink/hybrid/u;
+    .locals 2
+    .param p2    # Ljava/lang/Integer;
+        .annotation runtime Ljh/h;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0,
+            0x0
+        }
+        names = {
+            "parameters",
+            "publicKeyBytes",
+            "idRequirement"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/GeneralSecurityException;
+        }
+    .end annotation
+
+    .annotation build Lz6/t;
+        allowedOnPath = ".*Test\\.java"
+        allowlistAnnotations = {
+            Lcom/google/crypto/tink/a;
+        }
+        explanation = "Accessing parts of keys can produce unexpected incompatibilities, annotate the function with @AccessesPartialKey"
+        link = "https://developers.google.com/tink/design/access_control#accessing_partial_keys"
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-virtual {p0}, Lcom/google/crypto/tink/hybrid/l;->f()Lcom/google/crypto/tink/hybrid/l$g;
+
+    .line 4
+    move-result-object v0
+
+    .line 5
+    invoke-static {v0, p2}, Lcom/google/crypto/tink/hybrid/u;->m(Lcom/google/crypto/tink/hybrid/l$g;Ljava/lang/Integer;)V
+
+    .line 8
+    invoke-virtual {p0}, Lcom/google/crypto/tink/hybrid/l;->e()Lcom/google/crypto/tink/hybrid/l$f;
+
+    .line 11
+    move-result-object v0
+
+    .line 12
+    invoke-static {v0, p1}, Lcom/google/crypto/tink/hybrid/u;->n(Lcom/google/crypto/tink/hybrid/l$f;Ly6/a;)V
+
+    .line 15
+    invoke-virtual {p0}, Lcom/google/crypto/tink/hybrid/l;->f()Lcom/google/crypto/tink/hybrid/l$g;
+
+    .line 18
+    move-result-object v0
+
+    .line 19
+    invoke-static {v0, p2}, Lcom/google/crypto/tink/hybrid/u;->g(Lcom/google/crypto/tink/hybrid/l$g;Ljava/lang/Integer;)Ly6/a;
+
+    .line 22
+    move-result-object v0
+
+    .line 23
+    new-instance v1, Lcom/google/crypto/tink/hybrid/u;
+
+    .line 25
+    invoke-direct {v1, p0, p1, v0, p2}, Lcom/google/crypto/tink/hybrid/u;-><init>(Lcom/google/crypto/tink/hybrid/l;Ly6/a;Ly6/a;Ljava/lang/Integer;)V
+
+    .line 28
+    return-object v1
+.end method
+
+.method private static g(Lcom/google/crypto/tink/hybrid/l$g;Ljava/lang/Integer;)Ly6/a;
+    .locals 2
+    .param p1    # Ljava/lang/Integer;
+        .annotation runtime Ljh/h;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "variant",
+            "idRequirement"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    sget-object v0, Lcom/google/crypto/tink/hybrid/l$g;->d:Lcom/google/crypto/tink/hybrid/l$g;
+
+    .line 3
+    if-ne p0, v0, :cond_0
+
+    .line 5
+    sget-object p0, Lcom/google/crypto/tink/internal/g0;->d:Ly6/a;
+
+    .line 7
+    return-object p0
+
+    .line 8
+    :cond_0
+    if-eqz p1, :cond_3
+
+    .line 10
+    sget-object v0, Lcom/google/crypto/tink/hybrid/l$g;->c:Lcom/google/crypto/tink/hybrid/l$g;
+
+    .line 12
+    if-ne p0, v0, :cond_1
+
+    .line 14
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    .line 17
+    move-result p0
+
+    .line 18
+    invoke-static {p0}, Lcom/google/crypto/tink/internal/g0;->a(I)Ly6/a;
+
+    .line 21
+    move-result-object p0
+
+    .line 22
+    return-object p0
+
+    .line 23
+    :cond_1
+    sget-object v0, Lcom/google/crypto/tink/hybrid/l$g;->b:Lcom/google/crypto/tink/hybrid/l$g;
+
+    .line 25
+    if-ne p0, v0, :cond_2
+
+    .line 27
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    .line 30
+    move-result p0
+
+    .line 31
+    invoke-static {p0}, Lcom/google/crypto/tink/internal/g0;->b(I)Ly6/a;
+
+    .line 34
+    move-result-object p0
+
+    .line 35
+    return-object p0
+
+    .line 36
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    .line 38
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 40
+    const-string v1, "\u6aa0"
+
+    invoke-static {v1}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 42
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 45
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 48
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 51
+    move-result-object p0
+
+    .line 52
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    .line 55
+    throw p1
+
+    .line 56
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    .line 58
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 60
+    const-string v1, "\u6aa1"
+
+    invoke-static {v1}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 62
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 65
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 68
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 71
+    move-result-object p0
+
+    .line 72
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    .line 75
+    throw p1
+.end method
+
+.method private static h(Lcom/google/crypto/tink/hybrid/l$f;)Ljava/security/spec/EllipticCurve;
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "kemId"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    sget-object v0, Lcom/google/crypto/tink/hybrid/l$f;->c:Lcom/google/crypto/tink/hybrid/l$f;
+
+    .line 3
+    if-ne p0, v0, :cond_0
+
+    .line 5
+    sget-object p0, Lcom/google/crypto/tink/internal/g;->a:Ljava/security/spec/ECParameterSpec;
+
+    .line 7
+    invoke-virtual {p0}, Ljava/security/spec/ECParameterSpec;->getCurve()Ljava/security/spec/EllipticCurve;
+
+    .line 10
+    move-result-object p0
+
+    .line 11
+    return-object p0
+
+    .line 12
+    :cond_0
+    sget-object v0, Lcom/google/crypto/tink/hybrid/l$f;->d:Lcom/google/crypto/tink/hybrid/l$f;
+
+    .line 14
+    if-ne p0, v0, :cond_1
+
+    .line 16
+    sget-object p0, Lcom/google/crypto/tink/internal/g;->b:Ljava/security/spec/ECParameterSpec;
+
+    .line 18
+    invoke-virtual {p0}, Ljava/security/spec/ECParameterSpec;->getCurve()Ljava/security/spec/EllipticCurve;
+
+    .line 21
+    move-result-object p0
+
+    .line 22
+    return-object p0
+
+    .line 23
+    :cond_1
+    sget-object v0, Lcom/google/crypto/tink/hybrid/l$f;->e:Lcom/google/crypto/tink/hybrid/l$f;
+
+    .line 25
+    if-ne p0, v0, :cond_2
+
+    .line 27
+    sget-object p0, Lcom/google/crypto/tink/internal/g;->c:Ljava/security/spec/ECParameterSpec;
+
+    .line 29
+    invoke-virtual {p0}, Ljava/security/spec/ECParameterSpec;->getCurve()Ljava/security/spec/EllipticCurve;
+
+    .line 32
+    move-result-object p0
+
+    .line 33
+    return-object p0
+
+    .line 34
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    .line 36
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    .line 38
+    const-string v2, "\u6aa2"
+
+    invoke-static {v2}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 40
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 43
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 46
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 49
+    move-result-object p0
+
+    .line 50
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    .line 53
+    throw v0
+.end method
+
+.method private static l(Lcom/google/crypto/tink/hybrid/l$f;)Z
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "kemId"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    sget-object v0, Lcom/google/crypto/tink/hybrid/l$f;->c:Lcom/google/crypto/tink/hybrid/l$f;
+
+    .line 3
+    if-eq p0, v0, :cond_1
+
+    .line 5
+    sget-object v0, Lcom/google/crypto/tink/hybrid/l$f;->d:Lcom/google/crypto/tink/hybrid/l$f;
+
+    .line 7
+    if-eq p0, v0, :cond_1
+
+    .line 9
+    sget-object v0, Lcom/google/crypto/tink/hybrid/l$f;->e:Lcom/google/crypto/tink/hybrid/l$f;
+
+    .line 11
+    if-ne p0, v0, :cond_0
+
+    .line 13
+    goto :goto_0
+
+    .line 14
+    :cond_0
+    const/4 p0, 0x0
+
+    .line 15
+    goto :goto_1
+
+    .line 16
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    .line 17
+    :goto_1
+    return p0
+.end method
+
+.method private static m(Lcom/google/crypto/tink/hybrid/l$g;Ljava/lang/Integer;)V
+    .locals 2
+    .param p1    # Ljava/lang/Integer;
+        .annotation runtime Ljh/h;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "variant",
+            "idRequirement"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/GeneralSecurityException;
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    sget-object v0, Lcom/google/crypto/tink/hybrid/l$g;->d:Lcom/google/crypto/tink/hybrid/l$g;
+
+    .line 3
+    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 6
+    move-result v1
+
+    .line 7
+    if-nez v1, :cond_1
+
+    .line 9
+    if-eqz p1, :cond_0
+
+    .line 11
+    goto :goto_0
+
+    .line 12
+    :cond_0
+    new-instance p1, Ljava/security/GeneralSecurityException;
+
+    .line 14
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 16
+    const-string v1, "\u6aa3"
+
+    invoke-static {v1}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 18
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 21
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 24
+    const-string p0, "\u6aa4"
+
+    invoke-static {p0}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 26
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 29
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 32
+    move-result-object p0
+
+    .line 33
+    invoke-direct {p1, p0}, Ljava/security/GeneralSecurityException;-><init>(Ljava/lang/String;)V
+
+    .line 36
+    throw p1
+
+    .line 37
+    :cond_1
+    :goto_0
+    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    .line 40
+    move-result p0
+
+    .line 41
+    if-eqz p0, :cond_3
+
+    .line 43
+    if-nez p1, :cond_2
+
+    .line 45
+    goto :goto_1
+
+    .line 46
+    :cond_2
+    new-instance p0, Ljava/security/GeneralSecurityException;
+
+    .line 48
+    const-string p1, "\u6aa5"
+
+    invoke-static {p1}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 50
+    invoke-direct {p0, p1}, Ljava/security/GeneralSecurityException;-><init>(Ljava/lang/String;)V
+
+    .line 53
+    throw p0
+
+    .line 54
+    :cond_3
+    :goto_1
+    return-void
+.end method
+
+.method private static n(Lcom/google/crypto/tink/hybrid/l$f;Ly6/a;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "kemId",
+            "publicKeyBytes"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/GeneralSecurityException;
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-static {p0, p1}, Lcom/google/crypto/tink/hybrid/u;->o(Lcom/google/crypto/tink/hybrid/l$f;Ly6/a;)V
+
+    .line 4
+    invoke-static {p0, p1}, Lcom/google/crypto/tink/hybrid/u;->p(Lcom/google/crypto/tink/hybrid/l$f;Ly6/a;)V
+
+    .line 7
+    return-void
+.end method
+
+.method private static o(Lcom/google/crypto/tink/hybrid/l$f;Ly6/a;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "kemId",
+            "publicKeyBytes"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/GeneralSecurityException;
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-virtual {p1}, Ly6/a;->c()I
+
+    .line 4
+    move-result p1
+
+    .line 5
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 7
+    const-string v1, "\u6aa6"
+
+    invoke-static {v1}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 9
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 12
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 15
+    const-string v1, "\u6aa7"
+
+    invoke-static {v1}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 17
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 20
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 23
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 26
+    move-result-object v0
+
+    .line 27
+    sget-object v1, Lcom/google/crypto/tink/hybrid/l$f;->c:Lcom/google/crypto/tink/hybrid/l$f;
+
+    .line 29
+    if-ne p0, v1, :cond_1
+
+    .line 31
+    const/16 p0, 0x41
+
+    .line 33
+    if-ne p1, p0, :cond_0
+
+    .line 35
+    return-void
+
+    .line 36
+    :cond_0
+    new-instance p1, Ljava/security/GeneralSecurityException;
+
+    .line 38
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 41
+    move-result-object p0
+
+    .line 42
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    .line 45
+    move-result-object p0
+
+    .line 46
+    invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 49
+    move-result-object p0
+
+    .line 50
+    invoke-direct {p1, p0}, Ljava/security/GeneralSecurityException;-><init>(Ljava/lang/String;)V
+
+    .line 53
+    throw p1
+
+    .line 54
+    :cond_1
+    sget-object v1, Lcom/google/crypto/tink/hybrid/l$f;->d:Lcom/google/crypto/tink/hybrid/l$f;
+
+    .line 56
+    if-ne p0, v1, :cond_3
+
+    .line 58
+    const/16 p0, 0x61
+
+    .line 60
+    if-ne p1, p0, :cond_2
+
+    .line 62
+    return-void
+
+    .line 63
+    :cond_2
+    new-instance p1, Ljava/security/GeneralSecurityException;
+
+    .line 65
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 68
+    move-result-object p0
+
+    .line 69
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    .line 72
+    move-result-object p0
+
+    .line 73
+    invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 76
+    move-result-object p0
+
+    .line 77
+    invoke-direct {p1, p0}, Ljava/security/GeneralSecurityException;-><init>(Ljava/lang/String;)V
+
+    .line 80
+    throw p1
+
+    .line 81
+    :cond_3
+    sget-object v1, Lcom/google/crypto/tink/hybrid/l$f;->e:Lcom/google/crypto/tink/hybrid/l$f;
+
+    .line 83
+    if-ne p0, v1, :cond_5
+
+    .line 85
+    const/16 p0, 0x85
+
+    .line 87
+    if-ne p1, p0, :cond_4
+
+    .line 89
+    return-void
+
+    .line 90
+    :cond_4
+    new-instance p1, Ljava/security/GeneralSecurityException;
+
+    .line 92
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 95
+    move-result-object p0
+
+    .line 96
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    .line 99
+    move-result-object p0
+
+    .line 100
+    invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 103
+    move-result-object p0
+
+    .line 104
+    invoke-direct {p1, p0}, Ljava/security/GeneralSecurityException;-><init>(Ljava/lang/String;)V
+
+    .line 107
+    throw p1
+
+    .line 108
+    :cond_5
+    sget-object v1, Lcom/google/crypto/tink/hybrid/l$f;->f:Lcom/google/crypto/tink/hybrid/l$f;
+
+    .line 110
+    if-ne p0, v1, :cond_7
+
+    .line 112
+    const/16 p0, 0x20
+
+    .line 114
+    if-ne p1, p0, :cond_6
+
+    .line 116
+    return-void
+
+    .line 117
+    :cond_6
+    new-instance p1, Ljava/security/GeneralSecurityException;
+
+    .line 119
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    .line 122
+    move-result-object p0
+
+    .line 123
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    .line 126
+    move-result-object p0
+
+    .line 127
+    invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 130
+    move-result-object p0
+
+    .line 131
+    invoke-direct {p1, p0}, Ljava/security/GeneralSecurityException;-><init>(Ljava/lang/String;)V
+
+    .line 134
+    throw p1
+
+    .line 135
+    :cond_7
+    new-instance p1, Ljava/security/GeneralSecurityException;
+
+    .line 137
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 139
+    const-string v1, "\u6aa8"
+
+    invoke-static {v1}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 141
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 144
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 147
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 150
+    move-result-object p0
+
+    .line 151
+    invoke-direct {p1, p0}, Ljava/security/GeneralSecurityException;-><init>(Ljava/lang/String;)V
+
+    .line 154
+    throw p1
+.end method
+
+.method private static p(Lcom/google/crypto/tink/hybrid/l$f;Ly6/a;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "kemId",
+            "publicKeyBytes"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/GeneralSecurityException;
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-static {p0}, Lcom/google/crypto/tink/hybrid/u;->l(Lcom/google/crypto/tink/hybrid/l$f;)Z
+
+    .line 4
+    move-result v0
+
+    .line 5
+    if-nez v0, :cond_0
+
+    .line 7
+    return-void
+
+    .line 8
+    :cond_0
+    invoke-static {p0}, Lcom/google/crypto/tink/hybrid/u;->h(Lcom/google/crypto/tink/hybrid/l$f;)Ljava/security/spec/EllipticCurve;
+
+    .line 11
+    move-result-object p0
+
+    .line 12
+    sget-object v0, Lcom/google/crypto/tink/subtle/s$d;->UNCOMPRESSED:Lcom/google/crypto/tink/subtle/s$d;
+
+    .line 14
+    invoke-virtual {p1}, Ly6/a;->d()[B
+
+    .line 17
+    move-result-object p1
+
+    .line 18
+    invoke-static {p0, v0, p1}, Lcom/google/crypto/tink/subtle/s;->D(Ljava/security/spec/EllipticCurve;Lcom/google/crypto/tink/subtle/s$d;[B)Ljava/security/spec/ECPoint;
+
+    .line 21
+    move-result-object p1
+
+    .line 22
+    invoke-static {p1, p0}, Lcom/google/crypto/tink/internal/g;->b(Ljava/security/spec/ECPoint;Ljava/security/spec/EllipticCurve;)V
+
+    .line 25
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Lcom/google/crypto/tink/x0;)Z
+    .locals 3
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "o"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    instance-of v0, p1, Lcom/google/crypto/tink/hybrid/u;
+
+    .line 3
+    const/4 v1, 0x0
+
+    .line 4
+    if-nez v0, :cond_0
+
+    .line 6
+    return v1
+
+    .line 7
+    :cond_0
+    check-cast p1, Lcom/google/crypto/tink/hybrid/u;
+
+    .line 9
+    iget-object v0, p0, Lcom/google/crypto/tink/hybrid/u;->a:Lcom/google/crypto/tink/hybrid/l;
+
+    .line 11
+    iget-object v2, p1, Lcom/google/crypto/tink/hybrid/u;->a:Lcom/google/crypto/tink/hybrid/l;
+
+    .line 13
+    invoke-virtual {v0, v2}, Lcom/google/crypto/tink/hybrid/l;->equals(Ljava/lang/Object;)Z
+
+    .line 16
+    move-result v0
+
+    .line 17
+    if-eqz v0, :cond_1
+
+    .line 19
+    iget-object v0, p0, Lcom/google/crypto/tink/hybrid/u;->b:Ly6/a;
+
+    .line 21
+    iget-object v2, p1, Lcom/google/crypto/tink/hybrid/u;->b:Ly6/a;
+
+    .line 23
+    invoke-virtual {v0, v2}, Ly6/a;->equals(Ljava/lang/Object;)Z
+
+    .line 26
+    move-result v0
+
+    .line 27
+    if-eqz v0, :cond_1
+
+    .line 29
+    iget-object v0, p0, Lcom/google/crypto/tink/hybrid/u;->d:Ljava/lang/Integer;
+
+    .line 31
+    iget-object p1, p1, Lcom/google/crypto/tink/hybrid/u;->d:Ljava/lang/Integer;
+
+    .line 33
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 36
+    move-result p1
+
+    .line 37
+    if-eqz p1, :cond_1
+
+    .line 39
+    const/4 v1, 0x1
+
+    .line 40
+    :cond_1
+    return v1
+.end method
+
+.method public b()Ljava/lang/Integer;
+    .locals 1
+    .annotation runtime Ljh/h;
+    .end annotation
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Lcom/google/crypto/tink/hybrid/u;->d:Ljava/lang/Integer;
+
+    .line 3
+    return-object v0
+.end method
+
+.method public c()Lcom/google/crypto/tink/o1;
+    .locals 1
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Lcom/google/crypto/tink/hybrid/u;->a:Lcom/google/crypto/tink/hybrid/l;
+
+    .line 3
+    return-object v0
+.end method
+
+.method public d()Ly6/a;
+    .locals 1
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Lcom/google/crypto/tink/hybrid/u;->c:Ly6/a;
+
+    .line 3
+    return-object v0
+.end method
+
+.method public e()Lcom/google/crypto/tink/hybrid/g0;
+    .locals 1
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Lcom/google/crypto/tink/hybrid/u;->a:Lcom/google/crypto/tink/hybrid/l;
+
+    .line 3
+    return-object v0
+.end method
+
+.method public j()Lcom/google/crypto/tink/hybrid/l;
+    .locals 1
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Lcom/google/crypto/tink/hybrid/u;->a:Lcom/google/crypto/tink/hybrid/l;
+
+    .line 3
+    return-object v0
+.end method
+
+.method public k()Ly6/a;
+    .locals 1
+    .annotation build Lz6/t;
+        allowedOnPath = ".*Test\\.java"
+        allowlistAnnotations = {
+            Lcom/google/crypto/tink/a;
+        }
+        explanation = "Accessing parts of keys can produce unexpected incompatibilities, annotate the function with @AccessesPartialKey"
+        link = "https://developers.google.com/tink/design/access_control#accessing_partial_keys"
+    .end annotation
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Lcom/google/crypto/tink/hybrid/u;->b:Ly6/a;
+
+    .line 3
+    return-object v0
+.end method

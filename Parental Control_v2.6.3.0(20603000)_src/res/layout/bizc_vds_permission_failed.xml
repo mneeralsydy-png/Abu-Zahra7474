@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="160.0dip"
+        android:layout_height="104.0dip"
+        android:layout_marginBottom="20.0dip"
+        app:layout_constraintBottom_toTopOf="@id/tvVdsPermissionFailed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="report_error.json"
+        app:lottie_loop="true" />
+    <TextView
+        android:theme="@style/webrtc_connecting_title"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@id/tvVdsPermissionFailed"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:text="@string/am_screen_permission_failed"
+        android:layout_marginHorizontal="20.0dip"
+        app:layout_constraintBottom_toTopOf="@id/button_vds_permission_retry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintWidth_max="@dimen/tablet_max_width" />
+    <Button
+        android:textSize="16.0sp"
+        android:textColor="@color/white_ffffff"
+        android:id="@id/button_vds_permission_retry"
+        android:background="@drawable/kid_blue_button_style"
+        android:layout_width="0.0dip"
+        android:layout_height="44.0dip"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginBottom="30.0dip"
+        android:text="@string/bizc_screen_permission_request_again"
+        android:layout_marginHorizontal="20.0dip"
+        app:fontFamily="@font/font_family_semi_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_max="@dimen/tablet_max_width"
+        style="?android:borderlessButtonStyle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

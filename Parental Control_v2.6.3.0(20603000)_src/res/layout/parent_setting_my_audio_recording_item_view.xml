@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/rlItemRoot"
+    android:background="#ffffffff"
+    android:layout_width="fill_parent"
+    android:layout_height="76.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <CheckBox
+        android:id="@id/tbRecording"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:button="@drawable/select_app_box_style"
+        android:layout_marginStart="16.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/ivRecording"
+        android:layout_width="28.0dip"
+        android:layout_height="28.0dip"
+        android:layout_marginStart="20.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/recording_2" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/start_icon_end"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="ivRecording,tbRecording" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="#ff464f60"
+        android:ellipsize="end"
+        android:id="@id/tvFileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:text="@string/parent_my_recording_item_title"
+        android:maxLines="1"
+        android:layout_marginStart="14.0dip"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/ivDuration"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/start_icon_end"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/ivDuration"
+        android:layout_width="14.0dip"
+        android:layout_height="14.0dip"
+        android:src="@drawable/time_gray"
+        android:layout_marginStart="8.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/tvFileName"
+        app:layout_constraintEnd_toStartOf="@id/tvDuration"
+        app:layout_constraintStart_toEndOf="@id/tvFileName"
+        app:layout_constraintTop_toTopOf="@id/tvFileName" />
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="@color/gray_878d9a"
+        android:id="@id/tvDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:22"
+        android:layout_marginStart="4.0dip"
+        android:layout_marginEnd="10.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/tvFileName"
+        app:layout_constraintEnd_toStartOf="@id/ibRecordingFeature"
+        app:layout_constraintStart_toEndOf="@id/ivDuration"
+        app:layout_constraintTop_toTopOf="@id/tvFileName" />
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="#ffa4a8b3"
+        android:id="@id/tvCreateDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4.0dip"
+        android:text="2020年7月31日"
+        android:layout_alignParentEnd="true"
+        app:layout_constraintStart_toStartOf="@id/tvFileName"
+        app:layout_constraintTop_toBottomOf="@id/tvFileName" />
+    <ImageButton
+        android:id="@id/ibRecordingFeature"
+        android:background="#ffffffff"
+        android:layout_width="30.0dip"
+        android:layout_height="30.0dip"
+        android:src="@drawable/more_2_svg"
+        android:layout_marginEnd="20.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

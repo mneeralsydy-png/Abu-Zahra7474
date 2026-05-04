@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/box"
+        android:background="@drawable/bg_item_radius_16_top"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <FrameLayout
+            android:layout_gravity="center_horizontal"
+            android:background="@color/text_500"
+            android:layout_width="40.0dip"
+            android:layout_height="4.0dip"
+            android:layout_marginTop="10.0dip" />
+        <TextView
+            android:textSize="18.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_100"
+            android:layout_gravity="center_horizontal"
+            android:id="@id/snapshot_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:text="@string/kid_list_camera_title" />
+        <TextView
+            android:textSize="13.0sp"
+            android:textColor="@color/text_300"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:text="@string/Device_Snapshot_Quick_Operation"
+            android:layout_marginStart="20.0dip" />
+        <LinearLayout
+            android:id="@id/default_action"
+            android:background="@drawable/normal_item_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="48.0dip"
+            android:layout_marginTop="10.0dip">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:src="@drawable/snapshot_view"
+                android:contentDescription="@string/Device_Snapshot_Real_Time_View"
+                android:layout_marginStart="20.0dip" />
+            <TextView
+                android:textSize="15.0sp"
+                android:textColor="@color/text_100"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Device_Snapshot_Real_Time_View"
+                android:layout_marginStart="14.0dip" />
+            <FrameLayout
+                android:id="@id/default_action_space"
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0" />
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@id/default_action_pro_tag"
+                android:visibility="gone"
+                android:layout_width="36.0dip"
+                android:layout_height="10.0dip"
+                android:src="@drawable/tag_pro_2"
+                android:contentDescription="@null"
+                android:layout_marginEnd="20.0dip" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@id/get_back_camera"
+            android:background="@drawable/normal_item_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="48.0dip">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:src="@drawable/snapshot_camera_front"
+                android:contentDescription="@string/Device_Snapshot_Get_Snapshot_Rear"
+                android:layout_marginStart="20.0dip" />
+            <TextView
+                android:textSize="15.0sp"
+                android:textColor="@color/text_100"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Device_Snapshot_Get_Snapshot_Rear"
+                android:layout_weight="1.0"
+                android:layout_marginStart="14.0dip"
+                android:layout_marginEnd="10.0dip" />
+            <ProgressBar
+                android:layout_gravity="center_vertical"
+                android:id="@id/back_camera_progress"
+                android:visibility="gone"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:layout_marginEnd="20.0dip"
+                android:indeterminateTint="@color/text_500" />
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@id/backCameraProTag"
+                android:visibility="gone"
+                android:layout_width="36.0dip"
+                android:layout_height="10.0dip"
+                android:src="@drawable/tag_pro_2"
+                android:contentDescription="@null"
+                android:layout_marginEnd="20.0dip" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@id/get_front_camera"
+            android:background="@drawable/normal_item_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="48.0dip">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:src="@drawable/snapshot_camera_rear"
+                android:contentDescription="@string/Device_Snapshot_Get_Snapshot_Front"
+                android:layout_marginStart="20.0dip" />
+            <TextView
+                android:textSize="15.0sp"
+                android:textColor="@color/text_100"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Device_Snapshot_Get_Snapshot_Front"
+                android:layout_weight="1.0"
+                android:layout_marginStart="14.0dip"
+                android:layout_marginEnd="10.0dip" />
+            <ProgressBar
+                android:layout_gravity="center_vertical"
+                android:id="@id/front_camera_progress"
+                android:visibility="gone"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:layout_marginEnd="20.0dip"
+                android:indeterminateTint="@color/text_500" />
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@id/frontCameraProTag"
+                android:visibility="gone"
+                android:layout_width="36.0dip"
+                android:layout_height="10.0dip"
+                android:src="@drawable/tag_pro_2"
+                android:contentDescription="@null"
+                android:layout_marginEnd="20.0dip" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@id/screen_snapshot"
+            android:background="@drawable/normal_item_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="48.0dip">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:src="@drawable/snapshot_getsnapshot"
+                android:contentDescription="@string/Device_Snapshot_Get_Snapshot"
+                android:layout_marginStart="20.0dip" />
+            <TextView
+                android:textSize="15.0sp"
+                android:textColor="@color/text_100"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Device_Snapshot_Get_Snapshot"
+                android:layout_marginStart="14.0dip" />
+            <FrameLayout
+                android:id="@id/screen_snapshot_space"
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0" />
+            <ProgressBar
+                android:layout_gravity="center_vertical"
+                android:id="@id/screen_snapshot_progress"
+                android:visibility="gone"
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:layout_marginEnd="20.0dip"
+                android:indeterminateTint="@color/text_500" />
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@id/screenProTag"
+                android:visibility="gone"
+                android:layout_width="36.0dip"
+                android:layout_height="10.0dip"
+                android:src="@drawable/tag_pro_2"
+                android:contentDescription="@null"
+                android:layout_marginEnd="20.0dip" />
+        </LinearLayout>
+        <TextView
+            android:textSize="13.0sp"
+            android:textColor="@color/text_300"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:text="@string/Device_Snapshot_Manage_And_View"
+            android:layout_marginStart="20.0dip" />
+        <LinearLayout
+            android:id="@id/period_camera"
+            android:background="@drawable/normal_item_bg"
+            android:paddingTop="13.0dip"
+            android:paddingBottom="13.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:minHeight="48.0dip"
+            android:paddingVertical="13.0dip">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:src="@drawable/snapshot_timer"
+                android:contentDescription="@string/Device_Snapshot_Camera_Timed"
+                android:layout_marginStart="20.0dip" />
+            <TextView
+                android:textSize="15.0sp"
+                android:textColor="@color/text_100"
+                android:ellipsize="end"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/Device_Snapshot_Camera_Timed"
+                android:maxLines="3"
+                android:layout_weight="1.0"
+                android:layout_marginStart="14.0dip" />
+            <FrameLayout
+                android:id="@id/period_camera_space"
+                android:layout_width="10.0dip"
+                android:layout_height="0.0dip" />
+            <TextView
+                android:textSize="15.0sp"
+                android:textColor="@color/gray_878d9a"
+                android:ellipsize="end"
+                android:layout_gravity="center_vertical"
+                android:id="@id/period_camera_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="90.0dip"
+                android:text="@string/Kid_NSFW_disabled"
+                android:maxLines="3"
+                android:layout_marginStart="14.0dip"
+                android:layout_marginEnd="6.0dip" />
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@id/period_camera_arrow"
+                android:background="@drawable/more"
+                android:layout_width="12.0dip"
+                android:layout_height="12.0dip"
+                android:contentDescription="@string/Device_Snapshot_Camera_Timed"
+                android:layout_marginEnd="20.0dip" />
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@id/period_camera_pro_tag"
+                android:visibility="gone"
+                android:layout_width="36.0dip"
+                android:layout_height="10.0dip"
+                android:src="@drawable/tag_pro_2"
+                android:contentDescription="@null"
+                android:layout_marginEnd="20.0dip" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@id/period_snapshot"
+            android:background="@drawable/normal_item_bg"
+            android:paddingTop="13.0dip"
+            android:paddingBottom="13.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:minHeight="48.0dip"
+            android:paddingVertical="13.0dip">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:src="@drawable/snapshot_timer"
+                android:contentDescription="@string/Device_Snapshot_Screen_Timed"
+                android:layout_marginStart="20.0dip" />
+            <TextView
+                android:textSize="15.0sp"
+                android:textColor="@color/text_100"
+                android:ellipsize="end"
+                android:layout_gravity="center_vertical"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/Device_Snapshot_Screen_Timed"
+                android:maxLines="3"
+                android:layout_weight="1.0"
+                android:layout_marginStart="14.0dip" />
+            <FrameLayout
+                android:id="@id/period_snapshot_space"
+                android:layout_width="10.0dip"
+                android:layout_height="0.0dip" />
+            <TextView
+                android:textSize="15.0sp"
+                android:textColor="@color/gray_878d9a"
+                android:ellipsize="end"
+                android:layout_gravity="center_vertical"
+                android:id="@id/period_snapshot_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="90.0dip"
+                android:text="@string/Kid_NSFW_disabled"
+                android:maxLines="3"
+                android:layout_marginStart="14.0dip"
+                android:layout_marginEnd="6.0dip" />
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@id/period_snapshot_arrow"
+                android:background="@drawable/more"
+                android:layout_width="12.0dip"
+                android:layout_height="12.0dip"
+                android:contentDescription="@string/Device_Snapshot_Screen_Timed"
+                android:layout_marginEnd="20.0dip" />
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@id/period_snapshot_pro_tag"
+                android:visibility="gone"
+                android:layout_width="36.0dip"
+                android:layout_height="10.0dip"
+                android:src="@drawable/tag_pro_2"
+                android:contentDescription="@null"
+                android:layout_marginEnd="20.0dip" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@id/snapshot_album"
+            android:background="@drawable/normal_item_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="48.0dip">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="24.0dip"
+                android:layout_height="24.0dip"
+                android:src="@drawable/snapshot_album"
+                android:contentDescription="@string/Device_Snapshot_Album"
+                android:layout_marginStart="20.0dip" />
+            <TextView
+                android:textSize="15.0sp"
+                android:textColor="@color/text_100"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Device_Snapshot_Album"
+                android:layout_marginStart="14.0dip" />
+            <FrameLayout
+                android:id="@id/snapshot_album_space"
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0" />
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="@color/color_white"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:id="@id/snapshot_album_space_new_count"
+                android:background="@drawable/red_e13e3e_radius"
+                android:paddingLeft="4.0dip"
+                android:paddingRight="4.0dip"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="20.0dip"
+                android:minHeight="20.0dip"
+                android:layout_marginEnd="6.0dip"
+                android:paddingHorizontal="4.0dip" />
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/more"
+                android:layout_width="12.0dip"
+                android:layout_height="12.0dip"
+                android:contentDescription="@string/Device_Snapshot_Camera_Timed"
+                android:layout_marginEnd="20.0dip" />
+        </LinearLayout>
+        <FrameLayout
+            android:id="@id/bottom_padding"
+            android:layout_width="0.0dip"
+            android:layout_height="32.0dip" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@id/block_frame"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/box"
+        app:layout_constraintEnd_toEndOf="@id/box"
+        app:layout_constraintStart_toStartOf="@id/box"
+        app:layout_constraintTop_toTopOf="@id/box" />
+</androidx.constraintlayout.widget.ConstraintLayout>

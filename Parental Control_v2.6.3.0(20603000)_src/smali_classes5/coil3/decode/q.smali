@@ -1,0 +1,35 @@
+.class public final synthetic Lcoil3/decode/q;
+.super Ljava/lang/Object;
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Lcoil3/decode/s;
+
+
+# direct methods
+.method public synthetic constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method public final e(Ljava/lang/String;Lokio/n;)Z
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-static {p1, p2}, Lcoil3/decode/s;->d(Ljava/lang/String;Lokio/n;)Z
+
+    .line 4
+    move-result p1
+
+    .line 5
+    return p1
+.end method

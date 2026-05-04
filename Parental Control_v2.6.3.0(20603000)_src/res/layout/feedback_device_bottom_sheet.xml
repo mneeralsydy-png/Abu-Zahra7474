@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/bottom_sheet_dialog_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="20.0dip"
+    android:paddingEnd="20.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/bottomSheetMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:src="@drawable/bottom_sheet_mark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@id/btDeviceItemTitle"
+        android:background="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34.0dip"
+        android:text="@string/Parent_Device_Select_Title"
+        app:layout_constraintBottom_toTopOf="@id/rvDevices"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/bottom_sheet_title_style" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/topBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="bottomSheetMark,btDeviceItemTitle" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/bottomBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="btFeedBackItemOk,btFeedBackItemCancel" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/rvDevices"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        app:layout_constraintBottom_toTopOf="@id/bottomBarrier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topBarrier" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:id="@id/btFeedBackItemOk"
+        android:background="@drawable/kid_blue_button_style"
+        android:layout_width="0.0dip"
+        android:layout_height="44.0dip"
+        android:layout_marginTop="16.0dip"
+        android:text="@string/Common_OK2"
+        app:layout_constraintBottom_toTopOf="@id/btFeedBackItemCancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvDevices" />
+    <Button
+        android:textSize="16.0sp"
+        android:textColor="@color/gray_a4a8b3"
+        android:gravity="center"
+        android:id="@id/btFeedBackItemCancel"
+        android:background="@android:color/white"
+        android:layout_width="0.0dip"
+        android:layout_height="44.0dip"
+        android:layout_marginBottom="15.0dip"
+        android:text="@string/ad_cancel"
+        app:fontFamily="@font/font_family_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btFeedBackItemOk"
+        style="@style/ad_borderless_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>

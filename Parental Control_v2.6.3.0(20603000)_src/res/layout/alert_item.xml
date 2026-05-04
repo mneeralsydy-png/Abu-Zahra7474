@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/list_item_divider"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_start_percent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_end_percent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/clItem"
+        android:background="@drawable/e8e8e8_stroke_16_radius_bg"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:paddingEnd="16.0dip"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@id/ivIcon"
+            android:layout_width="28.0dip"
+            android:layout_height="28.0dip"
+            android:layout_marginTop="16.0dip"
+            android:src="@drawable/nav_ic_alerts_svg"
+            android:contentDescription="@null"
+            android:layout_marginStart="16.0dip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:textSize="15.0sp"
+            android:textColor="@color/black_ff282930"
+            android:ellipsize="end"
+            android:id="@id/tvTitle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dip"
+            android:maxLines="2"
+            android:layout_marginStart="14.0dip"
+            android:layout_marginEnd="10.0dip"
+            app:fontFamily="@font/font_family_semi_bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/tvTime"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/ivIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:textSize="13.0sp"
+            android:textColor="@color/gray_666b75"
+            android:id="@id/tvContent"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.0dip"
+            android:layout_marginBottom="16.0dip"
+            android:layout_marginEnd="10.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivAction"
+            app:layout_constraintStart_toStartOf="@id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/gray_a4a8b3"
+            android:id="@id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="16.0dip"
+            android:layout_marginTop="19.0dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@id/ivAction"
+            android:padding="3.0dip"
+            android:visibility="gone"
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="@id/tvContent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvContent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

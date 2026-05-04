@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/toolbar"
+    android:background="@drawable/background_transparent"
+    android:paddingTop="40.0dip"
+    android:paddingBottom="40.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="40.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_start_percent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_end_percent" />
+    <ImageView
+        android:id="@id/ivProfile"
+        android:layout_width="54.0dip"
+        android:layout_height="54.0dip"
+        android:src="@drawable/pic_avatar_default"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:textSize="18.0sp"
+        android:textColor="@color/black_282930"
+        android:ellipsize="end"
+        android:id="@id/tvProfileName"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:textDirection="locale"
+        android:layout_marginStart="22.0dip"
+        app:fontFamily="@font/font_family_semi_bold"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toEndOf="@id/ivProfile"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/black_282930"
+        android:ellipsize="end"
+        android:id="@id/tvProfileEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip"
+        android:lines="1"
+        android:drawablePadding="8.0dip"
+        android:textDirection="locale"
+        android:layout_marginStart="22.0dip"
+        app:drawableEndCompat="@drawable/device_ic_more"
+        app:fontFamily="@font/font_family_medium"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/ivProfile"
+        app:layout_constraintTop_toBottomOf="@id/tvProfileName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="20.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="20.0dip" />
+    <TextView
+        android:textSize="13.0sp"
+        android:id="@id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Parent_TodayEvent_Introduction"
+        android:layout_marginEnd="5.0dip"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/tvSeeAppDetail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_min="80.0dip" />
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="@color/blue_ff446efc"
+        android:id="@id/tvSeeAppDetail"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/common_see_details"
+        android:layout_marginStart="5.0dip"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toEndOf="@id/tvTitle"
+        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/item_app_detail_bg"
+        android:paddingTop="16.0dip"
+        android:paddingBottom="16.0dip"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:paddingVertical="16.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/glContentStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="20.0dip" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/glContentEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_end="20.0dip" />
+        <com.sand.airdroidkidp.ui.custom.AppItemPreference
+            android:id="@id/aipApp"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:textDirection="locale"
+            app:layout_constraintEnd_toEndOf="@id/glContentEnd"
+            app:layout_constraintStart_toStartOf="@id/glContentStart"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.sand.airdroidkidp.ui.custom.ParentAppDetailTextPreference
+            android:id="@id/appVersion"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dip"
+            app:layout_constraintEnd_toEndOf="@id/glContentEnd"
+            app:layout_constraintStart_toStartOf="@id/glContentStart"
+            app:layout_constraintTop_toBottomOf="@id/aipApp"
+            app:title="@string/Parent_TodayEvent_Version" />
+        <com.sand.airdroidkidp.ui.custom.ParentAppDetailTextPreference
+            android:id="@id/appType"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dip"
+            app:layout_constraintEnd_toEndOf="@id/glContentEnd"
+            app:layout_constraintStart_toStartOf="@id/glContentStart"
+            app:layout_constraintTop_toBottomOf="@id/appVersion"
+            app:title="@string/Parent_TodayEvent_Category" />
+        <com.sand.airdroidkidp.ui.custom.ParentAppDetailTextPreference
+            android:id="@id/ageType"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.0dip"
+            app:layout_constraintEnd_toEndOf="@id/glContentEnd"
+            app:layout_constraintStart_toStartOf="@id/glContentStart"
+            app:layout_constraintTop_toBottomOf="@id/appType"
+            app:title="@string/Parent_TodayEvent_Age_grading" />
+        <com.sand.airdroidkidp.ui.custom.ParentAppDetailTextPreference
+            android:id="@id/developer"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.0dip"
+            app:layout_constraintEnd_toEndOf="@id/glContentEnd"
+            app:layout_constraintStart_toStartOf="@id/glContentStart"
+            app:layout_constraintTop_toBottomOf="@id/ageType"
+            app:title="@string/Parent_TodayEvent_Developer" />
+        <com.sand.airdroidkidp.ui.custom.ParentAppDetailTextPreference
+            android:id="@id/installTime"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.0dip"
+            app:layout_constraintEnd_toEndOf="@id/glContentEnd"
+            app:layout_constraintStart_toStartOf="@id/glContentStart"
+            app:layout_constraintTop_toBottomOf="@id/developer"
+            app:title="@string/Parent_TodayEvent_Install_Time" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

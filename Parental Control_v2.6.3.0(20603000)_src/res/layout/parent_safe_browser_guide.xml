@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:paddingTop="10.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="20.0dip"
+    android:paddingEnd="20.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/imageView"
+        android:layout_width="240.0dip"
+        android:layout_height="178.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pic_web_introduce" />
+    <TextView
+        android:textSize="22.0sp"
+        android:textColor="@color/black_ff282930"
+        android:gravity="center"
+        android:id="@id/tvSafeBrowserTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:text="@string/Parent_Safe_Browser_Title"
+        android:drawablePadding="11.0dip"
+        app:fontFamily="@font/font_family_semi_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintWidth_max="@dimen/tablet_max_width" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/gray_464f60"
+        android:gravity="center"
+        android:id="@id/tvSafeBrowserDesc"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4.0dip"
+        android:text="@string/Parent_Safe_Browser_Desc"
+        app:layout_constraintEnd_toEndOf="@id/tvSafeBrowserTitle"
+        app:layout_constraintStart_toStartOf="@id/tvSafeBrowserTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvSafeBrowserTitle" />
+    <include
+        android:id="@id/safe_browser_layout"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="20.0dip"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tvSafeBrowserTitle"
+        app:layout_constraintStart_toStartOf="@id/tvSafeBrowserTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvSafeBrowserDesc"
+        layout="@layout/parent_safe_browser_intro" />
+</androidx.constraintlayout.widget.ConstraintLayout>

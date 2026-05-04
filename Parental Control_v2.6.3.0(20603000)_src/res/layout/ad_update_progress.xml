@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_gravity="center"
+    android:id="@id/cvDialog"
+    android:layout_width="@dimen/dialog_max_width"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/ad_actionbar_text"
+    app:cardCornerRadius="16.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/ad_dlg_padding">
+        <include
+            android:id="@id/topTitleBar"
+            layout="@layout/ad_dlg_top_title_bar" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dip"
+            android:layout_marginBottom="30.0dip">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12.0dip">
+                <TextView
+                    android:textSize="14.0sp"
+                    android:textColor="@color/ad_dlg_content"
+                    android:id="@id/tvMessage1"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/update_waiting"
+                    android:maxLines="3"
+                    android:layout_weight="1.0" />
+                <TextView
+                    android:textSize="14.0sp"
+                    android:textStyle="normal"
+                    android:textColor="@color/ad_dlg_content"
+                    android:id="@id/tvPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%" />
+            </LinearLayout>
+            <ProgressBar
+                android:id="@id/pbProgress"
+                android:layout_width="fill_parent"
+                android:layout_height="12.0dip"
+                android:layout_marginBottom="12.0dip"
+                android:progress="26"
+                style="@style/ad_uc_progress_bar" />
+            <TextView
+                android:textSize="13.0sp"
+                android:textColor="@color/ad_dlg_content"
+                android:gravity="start"
+                android:id="@id/tvMessage2"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:text="7.9MB/34MB"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@android:color/white"
+                android:id="@id/tvCancel"
+                android:background="@drawable/radius"
+                android:focusable="true"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:text="@string/ad_cancel"
+                app:fontFamily="@font/font_family_semi_bold"
+                style="@style/ad_dlg_base_btn_padding" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

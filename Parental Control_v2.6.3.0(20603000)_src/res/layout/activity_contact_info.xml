@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/clRoot"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@id/appBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/app_bar" />
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="@color/gray_878d9b"
+        android:gravity="center_horizontal"
+        android:id="@id/follow_us_qr"
+        android:layout_width="250.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18.0dip"
+        android:text="@string/contact_qrcode_follow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBar" />
+    <ImageView
+        android:id="@id/qr_code"
+        android:layout_width="150.0dip"
+        android:layout_height="150.0dip"
+        android:layout_marginTop="10.0dip"
+        android:src="@drawable/pic_service_qrcode"
+        android:contentDescription="@string/contact_qrcode_follow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/follow_us_qr" />
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="@color/gray_878d9b"
+        android:gravity="center_horizontal"
+        android:id="@id/tv_follow_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40.0dip"
+        android:text="@string/contact_follow"
+        app:layout_constraintStart_toStartOf="@id/follow_us_qr"
+        app:layout_constraintTop_toBottomOf="@id/qr_code" />
+    <TextView
+        android:textSize="15.0sp"
+        android:textColor="@color/gray_464f60"
+        android:id="@id/tv_follow_us_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/airdroid_const_name"
+        android:layout_marginStart="10.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/tv_follow_us"
+        app:layout_constraintStart_toEndOf="@id/tv_follow_us"
+        app:layout_constraintTop_toTopOf="@id/tv_follow_us" />
+    <ImageView
+        android:id="@id/iv_follow_us"
+        android:background="?selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/step_ic_copy"
+        android:layout_marginStart="10.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/tv_follow_us"
+        app:layout_constraintStart_toEndOf="@id/tv_follow_us_text"
+        app:layout_constraintTop_toTopOf="@id/tv_follow_us" />
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="@color/gray_878d9b"
+        android:gravity="center_horizontal"
+        android:id="@id/tv_contact_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:text="@string/contact_us"
+        app:layout_constraintStart_toStartOf="@id/follow_us_qr"
+        app:layout_constraintTop_toBottomOf="@id/tv_follow_us" />
+    <TextView
+        android:textSize="15.0sp"
+        android:textColor="@color/gray_464f60"
+        android:id="@id/tv_contact_us_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contact_us_email"
+        android:layout_marginStart="10.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/tv_contact_us"
+        app:layout_constraintStart_toEndOf="@id/tv_follow_us"
+        app:layout_constraintTop_toTopOf="@id/tv_contact_us" />
+    <ImageView
+        android:id="@id/iv_contact_us"
+        android:background="?selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/step_ic_copy"
+        android:layout_marginStart="10.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/tv_contact_us_text"
+        app:layout_constraintStart_toEndOf="@id/tv_contact_us_text"
+        app:layout_constraintTop_toTopOf="@id/tv_contact_us_text" />
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="@color/gray_a4a8b3"
+        android:id="@id/tvPolicy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginBottom="10.0dip"
+        android:text="@string/Common_copyright_info"
+        android:breakStrategy="simple"
+        android:layout_marginHorizontal="20.0dip"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_max="@dimen/tablet_max_width" />
+</androidx.constraintlayout.widget.ConstraintLayout>

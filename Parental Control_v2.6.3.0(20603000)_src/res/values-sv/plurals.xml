@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="other">Spola framåt %d sekunder</item>
+        <item quantity="one">Spola framåt %d sekund</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="other">Spola tillbaka %d sekunder</item>
+        <item quantity="one">Spola tillbaka %d sekund</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d nya aviseringar</item>
+        <item quantity="one">%d ny avisering</item>
+    </plurals>
+    <plurals name="place_details_photo_count">
+        <item quantity="other">%1$d foton</item>
+        <item quantity="one">%1$d foto</item>
+    </plurals>
+    <plurals name="place_details_ratings_content_description">
+        <item quantity="other">%1$s stjärnor</item>
+        <item quantity="one">%1$s stjärna</item>
+    </plurals>
+    <plurals name="place_details_review_count_a11y_label">
+        <item quantity="other">%1$d recensioner</item>
+        <item quantity="one">%1$d recension</item>
+    </plurals>
+</resources>

@@ -1,0 +1,371 @@
+.class final Landroidx/compose/material3/c4$b;
+.super Lkotlin/jvm/internal/Lambda;
+.source "MaterialTheme.kt"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function2;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/compose/material3/c4;->a(Landroidx/compose/material3/s0;Landroidx/compose/material3/q6;Landroidx/compose/material3/h9;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/v;II)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/Lambda;",
+        "Lkotlin/jvm/functions/Function2<",
+        "Landroidx/compose/runtime/v;",
+        "Ljava/lang/Integer;",
+        "Lkotlin/Unit;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0008\n\u0002\u0010\u0002\n\u0002\u0008\u0002\u0010\u0001\u001a\u00020\u0000H\u000b\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
+    }
+    d2 = {
+        "",
+        "d",
+        "(Landroidx/compose/runtime/v;I)V"
+    }
+    k = 0x3
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic d:Landroidx/compose/material3/s0;
+
+.field final synthetic e:Landroidx/compose/material3/q6;
+
+.field final synthetic f:Landroidx/compose/material3/h9;
+
+.field final synthetic l:Lkotlin/jvm/functions/Function2;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/functions/Function2<",
+            "Landroidx/compose/runtime/v;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method constructor <init>(Landroidx/compose/material3/s0;Landroidx/compose/material3/q6;Landroidx/compose/material3/h9;Lkotlin/jvm/functions/Function2;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/compose/material3/s0;",
+            "Landroidx/compose/material3/q6;",
+            "Landroidx/compose/material3/h9;",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Landroidx/compose/runtime/v;",
+            "-",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    iput-object p1, p0, Landroidx/compose/material3/c4$b;->d:Landroidx/compose/material3/s0;
+
+    .line 3
+    iput-object p2, p0, Landroidx/compose/material3/c4$b;->e:Landroidx/compose/material3/q6;
+
+    .line 5
+    iput-object p3, p0, Landroidx/compose/material3/c4$b;->f:Landroidx/compose/material3/h9;
+
+    .line 7
+    iput-object p4, p0, Landroidx/compose/material3/c4$b;->l:Lkotlin/jvm/functions/Function2;
+
+    .line 9
+    const/4 p1, 0x2
+
+    .line 10
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/Lambda;-><init>(I)V
+
+    .line 13
+    return-void
+.end method
+
+
+# virtual methods
+.method public final d(Landroidx/compose/runtime/v;I)V
+    .locals 22
+    .param p1    # Landroidx/compose/runtime/v;
+        .annotation build Ljj/m;
+        .end annotation
+    .end param
+    .annotation build Landroidx/compose/runtime/k;
+    .end annotation
+
+    .prologue
+    .line 1
+    move-object/from16 v0, p0
+
+    .line 3
+    move/from16 v1, p2
+
+    .line 5
+    and-int/lit8 v2, v1, 0x3
+
+    .line 7
+    const/4 v3, 0x2
+
+    .line 8
+    if-ne v2, v3, :cond_1
+
+    .line 10
+    invoke-interface/range {p1 .. p1}, Landroidx/compose/runtime/v;->l()Z
+
+    .line 13
+    move-result v2
+
+    .line 14
+    if-nez v2, :cond_0
+
+    .line 16
+    goto :goto_0
+
+    .line 17
+    :cond_0
+    invoke-interface/range {p1 .. p1}, Landroidx/compose/runtime/v;->A()V
+
+    .line 20
+    goto :goto_3
+
+    .line 21
+    :cond_1
+    :goto_0
+    invoke-static {}, Landroidx/compose/runtime/y;->c0()Z
+
+    .line 24
+    move-result v2
+
+    .line 25
+    if-eqz v2, :cond_2
+
+    .line 27
+    const/4 v2, -0x1
+
+    .line 28
+    const-string v3, "androidx.compose.material3.MaterialExpressiveTheme.<anonymous> (MaterialTheme.kt:143)"
+
+    .line 30
+    const v4, 0x7a3cdf9e
+
+    .line 33
+    invoke-static {v4, v1, v2, v3}, Landroidx/compose/runtime/y;->p0(IIILjava/lang/String;)V
+
+    .line 36
+    :cond_2
+    iget-object v1, v0, Landroidx/compose/material3/c4$b;->d:Landroidx/compose/material3/s0;
+
+    .line 38
+    if-nez v1, :cond_3
+
+    .line 40
+    invoke-static {}, Landroidx/compose/material3/t0;->h()Landroidx/compose/material3/s0;
+
+    .line 43
+    move-result-object v1
+
+    .line 44
+    :cond_3
+    move-object v2, v1
+
+    .line 45
+    iget-object v1, v0, Landroidx/compose/material3/c4$b;->e:Landroidx/compose/material3/q6;
+
+    .line 47
+    if-nez v1, :cond_4
+
+    .line 49
+    new-instance v1, Landroidx/compose/material3/q6;
+
+    .line 51
+    const/16 v9, 0x1f
+
+    .line 53
+    const/4 v10, 0x0
+
+    .line 54
+    const/4 v4, 0x0
+
+    .line 55
+    const/4 v5, 0x0
+
+    .line 56
+    const/4 v6, 0x0
+
+    .line 57
+    const/4 v7, 0x0
+
+    .line 58
+    const/4 v8, 0x0
+
+    .line 59
+    move-object v3, v1
+
+    .line 60
+    invoke-direct/range {v3 .. v10}, Landroidx/compose/material3/q6;-><init>(Landroidx/compose/foundation/shape/e;Landroidx/compose/foundation/shape/e;Landroidx/compose/foundation/shape/e;Landroidx/compose/foundation/shape/e;Landroidx/compose/foundation/shape/e;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    .line 63
+    goto :goto_1
+
+    .line 64
+    :cond_4
+    move-object v3, v1
+
+    .line 65
+    :goto_1
+    iget-object v1, v0, Landroidx/compose/material3/c4$b;->f:Landroidx/compose/material3/h9;
+
+    .line 67
+    if-nez v1, :cond_5
+
+    .line 69
+    new-instance v1, Landroidx/compose/material3/h9;
+
+    .line 71
+    move-object v4, v1
+
+    .line 72
+    const/16 v20, 0x7fff
+
+    .line 74
+    const/16 v21, 0x0
+
+    .line 76
+    const/4 v5, 0x0
+
+    .line 77
+    const/4 v6, 0x0
+
+    .line 78
+    const/4 v7, 0x0
+
+    .line 79
+    const/4 v8, 0x0
+
+    .line 80
+    const/4 v9, 0x0
+
+    .line 81
+    const/4 v10, 0x0
+
+    .line 82
+    const/4 v11, 0x0
+
+    .line 83
+    const/4 v12, 0x0
+
+    .line 84
+    const/4 v13, 0x0
+
+    .line 85
+    const/4 v14, 0x0
+
+    .line 86
+    const/4 v15, 0x0
+
+    .line 87
+    const/16 v16, 0x0
+
+    .line 89
+    const/16 v17, 0x0
+
+    .line 91
+    const/16 v18, 0x0
+
+    .line 93
+    const/16 v19, 0x0
+
+    .line 95
+    invoke-direct/range {v4 .. v21}, Landroidx/compose/material3/h9;-><init>(Landroidx/compose/ui/text/h1;Landroidx/compose/ui/text/h1;Landroidx/compose/ui/text/h1;Landroidx/compose/ui/text/h1;Landroidx/compose/ui/text/h1;Landroidx/compose/ui/text/h1;Landroidx/compose/ui/text/h1;Landroidx/compose/ui/text/h1;Landroidx/compose/ui/text/h1;Landroidx/compose/ui/text/h1;Landroidx/compose/ui/text/h1;Landroidx/compose/ui/text/h1;Landroidx/compose/ui/text/h1;Landroidx/compose/ui/text/h1;Landroidx/compose/ui/text/h1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    .line 98
+    goto :goto_2
+
+    .line 99
+    :cond_5
+    move-object v4, v1
+
+    .line 100
+    :goto_2
+    iget-object v5, v0, Landroidx/compose/material3/c4$b;->l:Lkotlin/jvm/functions/Function2;
+
+    .line 102
+    const/4 v7, 0x0
+
+    .line 103
+    const/4 v8, 0x0
+
+    .line 104
+    move-object/from16 v6, p1
+
+    .line 106
+    invoke-static/range {v2 .. v8}, Landroidx/compose/material3/c4;->b(Landroidx/compose/material3/s0;Landroidx/compose/material3/q6;Landroidx/compose/material3/h9;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/v;II)V
+
+    .line 109
+    invoke-static {}, Landroidx/compose/runtime/y;->c0()Z
+
+    .line 112
+    move-result v1
+
+    .line 113
+    if-eqz v1, :cond_6
+
+    .line 115
+    invoke-static {}, Landroidx/compose/runtime/y;->o0()V
+
+    .line 118
+    :cond_6
+    :goto_3
+    return-void
+.end method
+
+.method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .prologue
+    .line 1
+    check-cast p1, Landroidx/compose/runtime/v;
+
+    .line 3
+    check-cast p2, Ljava/lang/Number;
+
+    .line 5
+    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
+
+    .line 8
+    move-result p2
+
+    .line 9
+    invoke-virtual {p0, p1, p2}, Landroidx/compose/material3/c4$b;->d(Landroidx/compose/runtime/v;I)V
+
+    .line 12
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
+
+    .line 14
+    return-object p1
+.end method

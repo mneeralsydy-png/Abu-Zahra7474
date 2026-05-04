@@ -1,0 +1,85 @@
+.class final Lcom/annimon/stream/function/s$a$b;
+.super Ljava/lang/Object;
+.source "IndexedConsumer.java"
+
+# interfaces
+.implements Lcom/annimon/stream/function/s;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/annimon/stream/function/s$a;->a(Lcom/annimon/stream/function/h0;Lcom/annimon/stream/function/h;)Lcom/annimon/stream/function/s;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x8
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/annimon/stream/function/s<",
+        "TT;>;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/annimon/stream/function/h0;
+
+.field final synthetic b:Lcom/annimon/stream/function/h;
+
+
+# direct methods
+.method constructor <init>(Lcom/annimon/stream/function/h0;Lcom/annimon/stream/function/h;)V
+    .locals 0
+
+    .prologue
+    .line 1
+    iput-object p1, p0, Lcom/annimon/stream/function/s$a$b;->a:Lcom/annimon/stream/function/h0;
+
+    .line 3
+    iput-object p2, p0, Lcom/annimon/stream/function/s$a$b;->b:Lcom/annimon/stream/function/h;
+
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 8
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(ILjava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(ITT;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Lcom/annimon/stream/function/s$a$b;->a:Lcom/annimon/stream/function/h0;
+
+    .line 3
+    if-eqz v0, :cond_0
+
+    .line 5
+    invoke-interface {v0, p1}, Lcom/annimon/stream/function/h0;->f(I)V
+
+    .line 8
+    :cond_0
+    iget-object p1, p0, Lcom/annimon/stream/function/s$a$b;->b:Lcom/annimon/stream/function/h;
+
+    .line 10
+    if-eqz p1, :cond_1
+
+    .line 12
+    invoke-interface {p1, p2}, Lcom/annimon/stream/function/h;->accept(Ljava/lang/Object;)V
+
+    .line 15
+    :cond_1
+    return-void
+.end method

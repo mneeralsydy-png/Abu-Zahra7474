@@ -1,0 +1,1558 @@
+{
+  "parent_device_info": {
+    "code": 1,
+    "msg": "success",
+    "data": {
+      "id": "0",
+      "nickname": "cj",
+      "create_date": "2021-11-30 02:22:50",
+      "mail_verify": 1,
+      "country": "CN",
+      "avatar": {
+        "url": "",
+        "last_updated": "2021-11-30 02:22:50"
+      },
+      "device_id": "visitor",
+      "session": "b8a81dbc8ec924e0bea8",
+      "ptoken": "visitor",
+      "ptoken_expired": 43200,
+      "prefresh_token": "547782164751B0F4B45ECDFF2B12B90B625DB83E256220A1C61D1984BC6C6E50",
+      "prefresh_token_expired": 1209600,
+      "family": {
+        "owner": {
+          "vip": 1,
+          "account_id": 0,
+          "mail": "xuhb@test01.com"
+        },
+        "role": 1,
+        "fid": 25,
+        "bind_num": 1
+      },
+      "payment": {
+        "user_type": 2,
+        "vip": 1,
+        "vip_starttime": "2022-04-12 01:19:30",
+        "vip_endtime": "9999-09-08 05:47:13",
+        "device_limit": 2
+      },
+      "bind_num": 1
+    }
+  },
+  "user_info": {
+    "data": {
+      "family": {
+        "bind_num": 1,
+        "role": 1,
+        "owner": {
+          "vip": 1,
+          "account_id": 0,
+          "mail": "xuhb@test01.com"
+        },
+        "fid": 25
+      },
+      "account_id": 0,
+      "invite_total_limit": 10
+    },
+    "code": 1,
+    "msg": "success"
+  },
+  "payment_info": {
+    "code": 1,
+    "msg": "ok",
+    "data": {
+      "account_id": 0,
+      "mail": "xuhb@test01.com",
+      "vip": 1,
+      "user_type": 2,
+      "has_pay": 1,
+      "has_trial": 1,
+      "user_expire_type": 0,
+      "clear_status": 0,
+      "device_limit": 10,
+      "start_date": "2022-04-08 05:56:01",
+      "end_date": "9999-09-08 05:47:13",
+      "is_subscription": 1,
+      "subscription_month": 12,
+      "subscription_start": "",
+      "subscription_next_payment": "",
+      "subscription_fee": 0,
+      "subscription_currency": "",
+      "subscription_payment_method": "",
+      "subscription_payment_method_desc": "",
+      "trial_valid_time": 445302,
+      "is_subscription_trial": false
+    }
+  },
+  "kid_device_info": {
+    "code": 1,
+    "data": [
+      {
+        "account_id": 0,
+        "device_id": "visitor",
+        "unique_id": "da98bb165af642393aa225c94fb447cd",
+        "device_type": 71,
+        "name": "shishao-child",
+        "note": "mark information",
+        "bind_code": "11KHI5pEY",
+        "imei": "867271029753059",
+        "imei2": "",
+        "imsi": 0,
+        "imsi2": 0,
+        "android_id": "56f46f9c1b3b3a0e",
+        "model": "ONE A2001",
+        "manu": "OnePlus",
+        "pkey": "vrHY*&^*O!@#df",
+        "channel_token": "95e135fdf89f043b8d2317656a928376",
+        "logic_key": "933858da3cdc959d82134fbd0d8ee78d",
+        "net_opts": "",
+        "model_pic": "",
+        "os_version": "",
+        "vendor_system": null,
+        "sdk_api_level": 8,
+        "app_version": 70008,
+        "app_version_open": "",
+        "package_id": "com.sand.airdroid",
+        "last_connect_date": "1970-01-01 00:00:00",
+        "pubkey": "",
+        "last_update_pubkey": "0000-00-00 00:00:00",
+        "mac": "c0:ee:fb:46:5c:8f",
+        "fcm_id": "",
+        "um_id": "",
+        "updated_at": "2020-04-16 03:12:09",
+        "created_at": "2020-04-13 10:55:56",
+        "child_mark": {
+          "kd_id": 1,
+          "name": "Demo Device",
+          "avatar_url": "",
+          "mark": "因为内存表介意。\n虽然我们不会明文创建内存表，但所有的中间结果都会被数据库引擎存放在内存表。我们可以通过EXPLAIN或者SHOW STATUS可以查看MYSQL是否使用了内存表用来帮助完成某个操作。\n"
+        },
+        "bind_time": 1632289673
+      }
+    ]
+  },
+  "detect_apps": {
+    "msg": "success",
+    "data": [
+      {
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_e870c5d4-8c9c-439f-854b-ce498dfd26cf_1691999734701907330.png",
+        "lang_key": "tiktok",
+        "pkg_id": "com.zhiliaoapp.musically,com.ss.android.ugc.trill",
+        "pkg_describe": "侦测搜索内容、浏览和发布的文字内容",
+        "id": 6,
+        "pkg_name": "Tiktok",
+        "enabled": 1
+      },
+      {
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_4708e130-b40d-4f85-b249-9f3f90dc8563_1693126156707266801.png",
+        "lang_key": "whatsapp",
+        "pkg_id": "com.whatsapp",
+        "pkg_describe": "侦测消息中的对话内容",
+        "id": 4,
+        "pkg_name": "WhatsApp",
+        "enabled": 1
+      },
+      {
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_3c2eaf13-41b5-45bd-bd7c-5f99d61507c3_1658976140050855358.png",
+        "lang_key": "instagram",
+        "pkg_id": "com.instagram.android",
+        "pkg_describe": "侦测搜索内容、浏览的文字内容以及消息中的对话内容",
+        "id": 3,
+        "pkg_name": "Instagram",
+        "enabled": 1
+      },
+      {
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_c907e492-0819-43da-a43b-1b01ab536e23_1658972557295184654.png",
+        "lang_key": "youtube",
+        "pkg_id": "com.google.android.youtube",
+        "pkg_describe": "侦测搜索内容、观看和发布视频的标题内容",
+        "id": 1,
+        "pkg_name": "YouTube",
+        "enabled": 1
+      },
+      {
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_0e45bc49-157a-485d-b4fb-02efe5641f1d_1658973803878334877.png",
+        "lang_key": "facebook",
+        "pkg_id": "com.facebook.katana",
+        "pkg_describe": "侦测搜索内容、浏览和发布的文字内容",
+        "id": 2,
+        "pkg_name": "Facebook",
+        "enabled": 1
+      }
+    ],
+    "code": 1
+  },
+  "kid_permission": {
+    "code": 1,
+    "msg": "success",
+    "data": {
+      "visitor": {
+        "phone": 1,
+        "accessibility": 1,
+        "camera": 0,
+        "usage": 1,
+        "location": 1,
+        "view": 0,
+        "mic": 0,
+        "notification": 1,
+        "contacts": 1,
+        "call_log": 1,
+        "sms": 1,
+        "overlay": 1,
+        "device_manager": 1,
+        "battery": 1
+      }
+    }
+  },
+  "global_rule": {
+    "msg": "success",
+    "code": 1,
+    "data": {
+      "new_disable": 1,
+      "kd_id": 130664,
+      "deny_delete_apps": [
+        "com.google.android.dialer",
+        "com.sand.airdroidkids"
+      ],
+      "device_id": "visitor",
+      "all_disable": 0,
+      "always_allow_apps": [
+        "com.sand.aircast",
+        "com.sand.airmirror"
+      ],
+      "app_enabled": 1,
+      "screen_enabled": 1,
+      "updated_at": "**[ts]_0_0**",
+      "id": 129603
+    }
+  },
+  "screen_time_limit_rule": {
+    "msg": "success",
+    "data": [
+      {
+        "week_limit": "",
+        "enabled": 1,
+        "name": "Screen Time Limits",
+        "address": "",
+        "everyday_limit": "{\"limit_time\":3600,\"time_type\":1}",
+        "created_at": "**[ts]_0_0**",
+        "id": 12645,
+        "device_id": "visitor",
+        "address_enabled": 0,
+        "updated_at": "**[ts]_0_0**",
+        "kd_id": 130664,
+        "fid": 25,
+        "time_type": 1,
+        "day_type": 2
+      },
+      {
+        "created_at": "**[ts]_0_0**",
+        "everyday_limit": "{\"start_time\":\"07:00\",\"end_time\":\"18:00\",\"time_type\":2}",
+        "fid": 25,
+        "enabled": 1,
+        "device_id": "visitor",
+        "updated_at": "**[ts]_0_0**",
+        "week_limit": "",
+        "address_enabled": 0,
+        "kd_id": 130664,
+        "name": "Screen Timespan Limits",
+        "time_type": 2,
+        "id": 12646,
+        "day_type": 2,
+        "address": "{\"radius\":425,\"name\":\"Zhengzhou Industry and Business College (Zhengzhou Campus);Zhengdong New Area Qiancheng Avenue No.169, Zhongmu,Zhengzhou,Henan China\",\"lat\":\"34.79195\",\"lng\":\"113.890342\",\"coord_type\":\"COORD_TYPE_GCJ02\"}"
+      },
+      {
+        "created_at": "**[ts]_0_0**",
+        "everyday_limit": "",
+        "fid": 25,
+        "enabled": 1,
+        "device_id": "visitor",
+        "updated_at": "**[ts]_0_0**",
+        "week_limit": "{\"enable\":[1,1,1,1,1,1,1],\"time_type\":1,\"allow_time\":[3600,3600,3600,3600,3600,3600,3600]}",
+        "address_enabled": 0,
+        "kd_id": 130664,
+        "name": "Screen Time Limits",
+        "time_type": 1,
+        "id": 12648,
+        "day_type": 1,
+        "address": ""
+      }
+    ],
+    "code": 1
+  },
+  "app_time_limit_rule": {
+    "code": 1,
+    "msg": "success",
+    "data": [
+      {
+        "day_type": 2,
+        "fid": 25,
+        "enabled": 0,
+        "address_enabled": 0,
+        "app": "{\"categorys\":[],\"apps\":[],\"all\":1}",
+        "updated_at": "**[ts]_0_0**",
+        "kd_id": 130664,
+        "address": "",
+        "week_limit": "",
+        "name": "All apps and categories",
+        "everyday_limit": "{\"time_type\":1,\"limit_time\":3600}",
+        "device_id": "visitor",
+        "created_at": "**[ts]_0_0**",
+        "time_type": 1,
+        "id": 24530
+      },
+      {
+        "day_type": 2,
+        "fid": 25,
+        "enabled": 1,
+        "address_enabled": 0,
+        "app": "{\"apps\":[\"com.kiloo.subwaysurf\",\"com.moonactive.coinmaster\"],\"categorys\":[],\"all\":0}",
+        "updated_at": "**[ts]_0_0**",
+        "kd_id": 130664,
+        "address": "",
+        "week_limit": "",
+        "name": "Subway Surf、Coin Master",
+        "everyday_limit": "{\"end_time\":\"19:00\",\"time_type\":2,\"start_time\":\"07:00\"}",
+        "device_id": "visitor",
+        "created_at": "**[ts]_0_0**",
+        "time_type": 2,
+        "id": 24532
+      }
+    ]
+  },
+  "activity_log": {
+    "code": 1,
+    "msg": "success",
+    "data": {
+      "**[ts]_0_2**": {
+        "complete": 1,
+        "data": "{\"com.zhiliaoapp.musically\":{\"h\":2,\"count\":0,\"time\":300000,\"flow_wifi\":7408,\"flow_mobile\":16608000,\"time_stamp\":1672192800000,\"notification\":1},\"com.twitter.android\":{\"h\":2,\"count\":0,\"time\":260000,\"flow_wifi\":51242,\"flow_mobile\":18000000,\"time_stamp\":1672192800000,\"notification\":1},\"com.instagram.android\":{\"h\":2,\"count\":0,\"time\":400000,\"flow_wifi\":26380,\"flow_mobile\":0,\"time_stamp\":1672192800000,\"notification\":1}}",
+        "updated_at": "**[ts]_0_0**"
+      },
+      "**[ts]_3600_2**": {
+        "complete": 1,
+        "data": "{\"com.zhiliaoapp.musically\":{\"h\":1,\"count\":0,\"time\":280000,\"flow_wifi\":7408,\"flow_mobile\":28000000,\"time_stamp\":1672192800000,\"notification\":1},\"com.google.android.gm\":{\"h\":1,\"count\":0,\"time\":200000,\"flow_wifi\":51242,\"flow_mobile\":0,\"time_stamp\":1672192800000,\"notification\":1},\"com.facebook.katana\":{\"h\":1,\"count\":10,\"time\":1500000,\"flow_wifi\":45200643,\"flow_mobile\":9080000,\"time_stamp\":1672192800000,\"notification\":1},\"jp.naver.line.android\":{\"h\":1,\"count\":11,\"time\":408795,\"flow_wifi\":1231724,\"flow_mobile\":3200000,\"time_stamp\":1672192800000,\"notification\":1},\"com.whatsapp\":{\"h\":1,\"count\":11,\"time\":159526,\"flow_wifi\":1231724,\"flow_mobile\":0,\"time_stamp\":1672192800000,\"notification\":1}}",
+        "updated_at": "**[ts]_0_0**"
+      },
+      "**[ts]_7200_2**": {
+        "complete": 1,
+        "data": "{\"jp.naver.line.android\":{\"h\":0,\"count\":0,\"time\":280000,\"flow_wifi\":7408,\"flow_mobile\":10000000,\"time_stamp\":1672192800000,\"notification\":1},\"com.whatsapp\":{\"h\":0,\"count\":0,\"time\":160000,\"flow_wifi\":51242,\"flow_mobile\":0,\"time_stamp\":1672192800000,\"notification\":1},\"com.twitter.android\":{\"h\":0,\"count\":10,\"time\":360000,\"flow_wifi\":152643,\"flow_mobile\":4000000,\"time_stamp\":1672192800000,\"notification\":1},\"com.google.android.youtube\":{\"h\":0,\"count\":11,\"time\":408795,\"flow_wifi\":2231724,\"flow_mobile\":20000000,\"time_stamp\":1672192800000,\"notification\":1}}",
+        "updated_at": "**[ts]_0_0**"
+      }
+    }
+  },
+  "get_appswitch": {
+    "code": 1,
+    "msg": "success",
+    "data": {
+      "notification_global": 1,
+      "list": {
+        "com.google.android.gm": {
+          "notification": 1
+        },
+        "com.spotify.music": {
+          "notification": 1
+        },
+        "com.disney.disneyplus": {
+          "notification": 1
+        },
+        "com.instagram.android": {
+          "notification": 1
+        },
+        "com.sand.airmirror": {
+          "notification": 1
+        },
+        "com.facebook.katana": {
+          "notification": 1
+        },
+        "com.whatsapp": {
+          "notification": 1
+        },
+        "org.telegram.messenger": {
+          "notification": 1
+        },
+        "com.twitter.android": {
+          "notification": 1
+        },
+        "com.moonactive.coinmaster": {
+          "notification": 1
+        },
+        "com.netflix.mediaclient": {
+          "notification": 1
+        },
+        "com.kiloo.subwaysurf": {
+          "notification": 1
+        },
+        "jp.naver.line.android": {
+          "notification": 1
+        },
+        "com.zhiliaoapp.musically": {
+          "notification": 1
+        },
+        "com.sand.aircast": {
+          "notification": 1
+        }
+      }
+    }
+  },
+  "get_apps": {
+    "code": 1,
+    "msg": "success",
+    "request_time": 1640593667234,
+    "data": {
+      "data": [
+        {
+          "pkg_name": "Gmail",
+          "deleted": 0,
+          "install_time": "**[ts]_604800_0**",
+          "is_system": 1,
+          "is_icon": 1,
+          "update_time": "**[ts]_604800_0**",
+          "version_code": "62948716",
+          "pkg_id": "com.google.android.gm",
+          "version_name": ""
+        },
+        {
+          "deleted": 0,
+          "is_system": 0,
+          "update_time": "**[ts]_86400_0**",
+          "is_icon": 1,
+          "install_time": "**[ts]_86400_0**",
+          "version_name": "",
+          "version_code": "96997116",
+          "pkg_name": "Spotify",
+          "pkg_id": "com.spotify.music"
+        },
+        {
+          "pkg_id": "com.disney.disneyplus",
+          "version_name": "",
+          "is_icon": 1,
+          "install_time": "**[ts]_604800_0**",
+          "is_system": 0,
+          "version_code": "2301311",
+          "pkg_name": "Disney+",
+          "deleted": 0,
+          "update_time": "**[ts]_604800_0**"
+        },
+        {
+          "version_name": "",
+          "is_system": 0,
+          "install_time": "**[ts]_604800_0**",
+          "deleted": 0,
+          "update_time": "**[ts]_604800_0**",
+          "pkg_id": "com.instagram.android",
+          "version_code": "367007476",
+          "is_icon": 1,
+          "pkg_name": "Instagram"
+        },
+        {
+          "deleted": 0,
+          "is_system": 0,
+          "update_time": "**[ts]_604800_0**",
+          "is_icon": 1,
+          "install_time": "**[ts]_604800_0**",
+          "version_name": "",
+          "version_code": "70064",
+          "pkg_name": "AirMirror",
+          "pkg_id": "com.sand.airmirror"
+        },
+        {
+          "pkg_id": "com.facebook.katana",
+          "version_name": "",
+          "is_icon": 1,
+          "install_time": "**[ts]_604800_0**",
+          "is_system": 0,
+          "version_code": "319214973",
+          "pkg_name": "Facebook",
+          "deleted": 0,
+          "update_time": "**[ts]_604800_0**"
+        },
+        {
+          "deleted": 0,
+          "is_system": 0,
+          "update_time": "**[ts]_604800_0**",
+          "is_icon": 1,
+          "install_time": "**[ts]_604800_0**",
+          "version_name": "",
+          "version_code": "230111004",
+          "pkg_name": "WhatsApp",
+          "pkg_id": "com.whatsapp"
+        },
+        {
+          "version_name": "",
+          "is_system": 0,
+          "install_time": "**[ts]_86400_0**",
+          "deleted": 0,
+          "update_time": "**[ts]_86400_0**",
+          "pkg_id": "org.telegram.messenger",
+          "version_code": "29659",
+          "is_icon": 1,
+          "pkg_name": "Telegram"
+        },
+        {
+          "deleted": 0,
+          "is_system": 0,
+          "update_time": "**[ts]_604800_0**",
+          "is_icon": 1,
+          "install_time": "**[ts]_604800_0**",
+          "version_name": "",
+          "version_code": "29691000",
+          "pkg_name": "Twitter",
+          "pkg_id": "com.twitter.android"
+        },
+        {
+          "pkg_id": "com.moonactive.coinmaster",
+          "version_name": "",
+          "is_icon": 1,
+          "install_time": "**[ts]_86400_0**",
+          "is_system": 0,
+          "version_code": "331235",
+          "pkg_name": "Coin Master",
+          "deleted": 0,
+          "update_time": "**[ts]_86400_0**"
+        },
+        {
+          "deleted": 0,
+          "pkg_id": "com.netflix.mediaclient",
+          "update_time": "**[ts]_604800_0**",
+          "is_system": 0,
+          "install_time": "**[ts]_604800_0**",
+          "version_code": "50335",
+          "pkg_name": "Netflix",
+          "version_name": "",
+          "is_icon": 1
+        },
+        {
+          "install_time": "**[ts]_604800_0**",
+          "version_name": "",
+          "is_icon": 1,
+          "is_system": 0,
+          "version_code": "1533275584",
+          "pkg_name": "YouTube",
+          "update_time": "**[ts]_604800_0**",
+          "deleted": 0,
+          "pkg_id": "com.google.android.youtube"
+        },
+        {
+          "install_time": "**[ts]_604800_0**",
+          "version_name": "",
+          "is_icon": 1,
+          "is_system": 0,
+          "version_code": "46550",
+          "pkg_name": "Subway Surf",
+          "update_time": "**[ts]_604800_0**",
+          "deleted": 0,
+          "pkg_id": "com.kiloo.subwaysurf"
+        },
+        {
+          "version_name": "",
+          "is_system": 0,
+          "install_time": "**[ts]_604800_0**",
+          "deleted": 0,
+          "update_time": "**[ts]_604800_0**",
+          "pkg_id": "jp.naver.line.android",
+          "version_code": "122110063",
+          "is_icon": 1,
+          "pkg_name": "LINE"
+        },
+        {
+          "version_name": "",
+          "is_system": 0,
+          "install_time": "**[ts]_604800_0**",
+          "deleted": 0,
+          "update_time": "**[ts]_604800_0**",
+          "pkg_id": "com.zhiliaoapp.musically",
+          "version_code": "2022707020",
+          "is_icon": 1,
+          "pkg_name": "TikTok"
+        },
+        {
+          "deleted": 0,
+          "is_system": 0,
+          "update_time": "**[ts]_604800_0**",
+          "is_icon": 1,
+          "install_time": "**[ts]_604800_0**",
+          "version_name": "",
+          "version_code": "1060",
+          "pkg_name": "AirDroid Cast",
+          "pkg_id": "com.sand.aircast"
+        }
+      ],
+      "current_page": 1,
+      "last_page": 1,
+      "per_page": 100,
+      "total": 16
+    }
+  },
+  "app_type": {
+    "code": 1,
+    "msg": "",
+    "data": [
+      {
+        "status": 1,
+        "pkg_id": "com.google.android.gm",
+        "developer": "Google LLC",
+        "age_level": "Everyone",
+        "app_name": "Gmail",
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_b3ecb9f8-0ff0-4459-922c-996e2b0ad1a3_1674809593332718830.png",
+        "type_key": "COMMUNICATION",
+        "market_url": "https:\/\/play.google.com\/store\/apps\/details?id=com.google.android.gm&hl=en",
+        "in_version": "",
+        "market_type": 1
+      },
+      {
+        "app_name": "Spotify: Music, Podcasts, Lit",
+        "market_type": 1,
+        "status": 1,
+        "type_key": "MUSIC_AND_AUDIO",
+        "in_version": "",
+        "developer": "Spotify AB",
+        "market_url": "https:\/\/play.google.com\/store\/apps\/details?id=com.spotify.music&hl=en",
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_6132488a-8026-41cc-9719-073e975ff05d_1674817723101342968.png",
+        "pkg_id": "com.spotify.music",
+        "age_level": "Teen"
+      },
+      {
+        "app_name": "Disney+",
+        "market_type": 1,
+        "status": 1,
+        "type_key": "ENTERTAINMENT",
+        "in_version": "",
+        "developer": "Disney",
+        "market_url": "https:\/\/play.google.com\/store\/apps\/details?id=com.disney.disneyplus&hl=en",
+        "pkg_id": "com.disney.disneyplus",
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_06439407-a5dd-45f4-8966-0dd983b642d2_1674889184761003342.png",
+        "age_level": "Teen"
+      },
+      {
+        "app_name": "Instagram",
+        "market_type": 1,
+        "status": 1,
+        "type_key": "SOCIAL",
+        "in_version": "",
+        "developer": "Instagram",
+        "market_url": "https:\/\/play.google.com\/store\/apps\/details?id=com.instagram.android&hl=en",
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_157a559f-0239-4e46-933e-ffc528db9329_1674817395306108315.png",
+        "pkg_id": "com.instagram.android",
+        "age_level": "Teen"
+      },
+      {
+        "app_name": "AirMirror: Remote control",
+        "market_type": 1,
+        "status": 1,
+        "type_key": "TOOLS",
+        "in_version": "",
+        "developer": "SAND STUDIO",
+        "market_url": "https:\/\/play.google.com\/store\/apps\/details?id=com.sand.airmirror&hl=en",
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_6e7a0b37-aafa-4e68-b805-579e1f8f0c91_1674905039563429458.png",
+        "pkg_id": "com.sand.airmirror",
+        "age_level": "Everyone"
+      },
+      {
+        "app_name": "Facebook",
+        "market_type": 1,
+        "status": 1,
+        "type_key": "SOCIAL",
+        "in_version": "",
+        "developer": "Meta Platforms, Inc.",
+        "market_url": "https:\/\/play.google.com\/store\/apps\/details?id=com.facebook.katana&hl=en",
+        "pkg_id": "com.facebook.katana",
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_e9670044-a7ff-44f1-a804-b7c35f67619a_1674809027582606371.png",
+        "age_level": "Teen"
+      },
+      {
+        "app_name": "WhatsApp Messenger",
+        "market_type": 1,
+        "status": 1,
+        "type_key": "COMMUNICATION",
+        "in_version": "",
+        "developer": "WhatsApp LLC",
+        "market_url": "https:\/\/play.google.com\/store\/apps\/details?id=com.whatsapp&hl=en",
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_64a5d599-d7d5-413c-b2ab-3d1de922d803_1674808469637881321.png",
+        "pkg_id": "com.whatsapp",
+        "age_level": "Everyone"
+      },
+      {
+        "app_name": "Telegram",
+        "market_type": 1,
+        "status": 1,
+        "type_key": "COMMUNICATION",
+        "in_version": "",
+        "developer": "Telegram FZ-LLC",
+        "market_url": "https:\/\/play.google.com\/store\/apps\/details?id=org.telegram.messenger&hl=en",
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_eb263038-8143-4b52-aadc-8af51522ab26_1674842510101079065.png",
+        "pkg_id": "org.telegram.messenger",
+        "age_level": "Mature 17+"
+      },
+      {
+        "app_name": "Twitter",
+        "market_type": 1,
+        "status": 1,
+        "type_key": "SOCIAL",
+        "in_version": "",
+        "developer": "Twitter, Inc.",
+        "market_url": "https:\/\/play.google.com\/store\/apps\/details?id=com.twitter.android&hl=en",
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_7a930d9d-c1a0-4f82-aefa-0cb873e4f414_1674869099930041334.png",
+        "pkg_id": "com.twitter.android",
+        "age_level": "Mature 17+"
+      },
+      {
+        "app_name": "Coin Master",
+        "market_type": 1,
+        "status": 1,
+        "type_key": "GAME_CASUAL",
+        "in_version": "",
+        "developer": "Moon Active",
+        "market_url": "https:\/\/play.google.com\/store\/apps\/details?id=com.moonactive.coinmaster&hl=en",
+        "pkg_id": "com.moonactive.coinmaster",
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_898bb413-2af7-4402-8f30-54966b1025ea_1674924333510383704.png",
+        "age_level": "Teen"
+      },
+      {
+        "app_name": "Netflix",
+        "market_type": 1,
+        "status": 1,
+        "type_key": "ENTERTAINMENT",
+        "in_version": "",
+        "developer": "Netflix, Inc.",
+        "market_url": "https:\/\/play.google.com\/store\/apps\/details?id=com.netflix.mediaclient&hl=en",
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_15786998-6aae-4098-8043-e2bb2b9039c2_1674810074018287997.png",
+        "pkg_id": "com.netflix.mediaclient",
+        "age_level": "Teen"
+      },
+      {
+        "app_name": "YouTube",
+        "market_type": 1,
+        "status": 1,
+        "type_key": "VIDEO_PLAYERS",
+        "in_version": "",
+        "developer": "Google LLC",
+        "market_url": "https:\/\/play.google.com\/store\/apps\/details?id=com.google.android.youtube&hl=en",
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_426ff4fe-3fbd-4feb-88d2-03ede98fcd7d_1674808741641019794.png",
+        "pkg_id": "com.google.android.youtube",
+        "age_level": "Teen"
+      },
+      {
+        "app_name": "Subway Surfers",
+        "market_type": 1,
+        "status": 1,
+        "type_key": "GAME_ARCADE",
+        "in_version": "",
+        "developer": "SYBO Games",
+        "market_url": "https:\/\/play.google.com\/store\/apps\/details?id=com.kiloo.subwaysurf&hl=en",
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_f0c00928-93a2-4edd-8e14-1ca2c9eb52d9_1674881307090932135.png",
+        "pkg_id": "com.kiloo.subwaysurf",
+        "age_level": "Everyone 10+"
+      },
+      {
+        "app_name": "LINE: Calls & Messages",
+        "market_type": 1,
+        "status": 1,
+        "type_key": "COMMUNICATION",
+        "in_version": "",
+        "developer": "LINE Corporation",
+        "market_url": "https:\/\/play.google.com\/store\/apps\/details?id=jp.naver.line.android&hl=en",
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_65152547-7074-4f69-95a9-08d7c499125e_1674880384749641504.png",
+        "pkg_id": "jp.naver.line.android",
+        "age_level": "Everyone"
+      },
+      {
+        "app_name": "TikTok",
+        "market_type": 1,
+        "status": 1,
+        "type_key": "SOCIAL",
+        "in_version": "",
+        "developer": "TikTok Pte. Ltd.",
+        "market_url": "https:\/\/play.google.com\/store\/apps\/details?id=com.zhiliaoapp.musically&hl=en",
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_ed917fd6-1f54-4605-ac4d-2f2186e6d413_1674871433223115697.png",
+        "pkg_id": "com.zhiliaoapp.musically",
+        "age_level": "Teen"
+      },
+      {
+        "app_name": "AirDroid Cast-screen mirroring",
+        "market_type": 1,
+        "status": 1,
+        "type_key": "TOOLS",
+        "in_version": "",
+        "developer": "SAND STUDIO",
+        "market_url": "https:\/\/play.google.com\/store\/apps\/details?id=com.sand.aircast&hl=en",
+        "icon_url": "https:\/\/dl.airdroid.com\/app_icon\/app_icon_983a530c-ad64-4a57-919d-fd251a60f2e8_1674840910003645793.png",
+        "pkg_id": "com.sand.aircast",
+        "age_level": "Everyone"
+      }
+    ],
+    "extra": null
+  },
+  "bind_days": {
+    "code": 1,
+    "msg": "success",
+    "data": {
+      "bind_days": 7
+    }
+  },
+  "get_alert_count": {
+    "code": 1,
+    "data": {
+      "count": 13
+    },
+    "msg": "success"
+  },
+  "get_alert": {
+    "code": 1,
+    "msg": "success",
+    "data": [
+      {
+        "template": "install_new_app",
+        "title": "New App Install",
+        "status": 0,
+        "id": 53298,
+        "relation_id": 0,
+        "relation_detail": "com.moonactive.coinmaster",
+        "created_at": "**[ts]_0_0**",
+        "updated_at": "**[ts]_0_0**",
+        "table": "",
+        "alerttime": "**[ts]_0_0**",
+        "lang": "en",
+        "fid": 25,
+        "content": "Demo Device installed new app：Coin Master",
+        "device_id": "visitor"
+      },
+      {
+        "template": "access_be_closed",
+        "title": "Permission Off",
+        "status": 0,
+        "id": 53299,
+        "relation_id": 0,
+        "relation_detail": "",
+        "created_at": "**[ts]_600_0**",
+        "updated_at": "**[ts]_600_0**",
+        "table": "",
+        "alerttime": "**[ts]_600_0**",
+        "lang": "en",
+        "fid": 25,
+        "content": "Camera permission of Demo Device has been turned off. Please open AirDroid Kids on your child's device and follow the instruction to turn on the corresponding permission",
+        "device_id": "visitor"
+      },
+      {
+        "template": "access_be_closed",
+        "title": "Permission Off",
+        "status": 0,
+        "id": 53300,
+        "relation_id": 0,
+        "relation_detail": "",
+        "created_at": "**[ts]_800_0**",
+        "updated_at": "**[ts]_800_0**",
+        "table": "",
+        "alerttime": "**[ts]_800_0**",
+        "lang": "en",
+        "fid": 25,
+        "content": "Microphone Permission permission of Demo Device has been turned off. Please open AirDroid Kids on your child's device and follow the instruction to turn on the corresponding permission",
+        "device_id": "visitor"
+      },
+      {
+        "template": "access_be_closed",
+        "title": "Permission Off",
+        "status": 0,
+        "id": 53301,
+        "relation_id": 0,
+        "relation_detail": "",
+        "created_at": "**[ts]_900_0**",
+        "updated_at": "**[ts]_900_0**",
+        "table": "",
+        "alerttime": "**[ts]_900_0**",
+        "lang": "en",
+        "fid": 25,
+        "content": "Accessibility permission of Demo Device has been turned off. Please open AirDroid Kids on your child's device and follow the instruction to turn on the corresponding permission",
+        "device_id": "visitor"
+      },
+      {
+        "template": "device_restore_conn",
+        "title": "Device Online",
+        "status": 0,
+        "id": 53302,
+        "relation_id": 0,
+        "relation_detail": "",
+        "created_at": "**[ts]_6000_0**",
+        "updated_at": "**[ts]_6000_0**",
+        "table": "",
+        "alerttime": "**[ts]_6000_0**",
+        "lang": "en",
+        "fid": 25,
+        "content": "Device Demo Device data has been restored and updated",
+        "device_id": "visitor"
+      },
+      {
+        "template": "device_lose_conn",
+        "title": "Long Offline",
+        "status": 0,
+        "id": 53303,
+        "relation_id": 0,
+        "relation_detail": "",
+        "created_at": "**[ts]_7000_0**",
+        "updated_at": "**[ts]_7000_0**",
+        "table": "",
+        "alerttime": "**[ts]_7000_0**",
+        "lang": "en",
+        "fid": 25,
+        "content": "Not getting data of Demo Device for more than 3 hours. Please check your child's device to see if AirDroid Kids is working properly",
+        "device_id": "visitor"
+      },
+      {
+        "template": "bootup",
+        "title": "Device On",
+        "status": 0,
+        "id": 53304,
+        "relation_id": 0,
+        "relation_detail": "",
+        "created_at": "**[ts]_6600_0**",
+        "updated_at": "**[ts]_6600_0**",
+        "table": "",
+        "alerttime": "**[ts]_6600_0**",
+        "lang": "en",
+        "fid": 25,
+        "content": "Device Demo Device has turned on",
+        "device_id": "visitor"
+      },
+      {
+        "template": "low_electricity",
+        "title": "Low Battery",
+        "status": 0,
+        "id": 53305,
+        "relation_id": 0,
+        "relation_detail": "",
+        "created_at": "**[ts]_6800_0**",
+        "updated_at": "**[ts]_6800_0**",
+        "table": "",
+        "alerttime": "**[ts]_6800_0**",
+        "lang": "en",
+        "fid": 25,
+        "content": "Demo Device battery is below 20%",
+        "device_id": "visitor"
+      },
+      {
+        "template": "in_fence",
+        "title": "Enter Geofence",
+        "status": 0,
+        "id": 53306,
+        "relation_id": 0,
+        "relation_detail": "353",
+        "created_at": "**[ts]_1500_0**",
+        "updated_at": "**[ts]_1500_0**",
+        "table": "",
+        "alerttime": "**[ts]_1500_0**",
+        "lang": "en",
+        "fid": 25,
+        "content": "Demo Device enters area of the geofence: Visitor Geofencing",
+        "device_id": "visitor"
+      },
+      {
+        "template": "out_fence",
+        "title": "Leave Geofence",
+        "status": 0,
+        "id": 53307,
+        "relation_id": 0,
+        "relation_detail": "353",
+        "created_at": "**[ts]_0_0**",
+        "updated_at": "**[ts]_0_0**",
+        "table": "",
+        "alerttime": "**[ts]_0_0**",
+        "lang": "en",
+        "fid": 25,
+        "content": "Demo Device leaves area of the geofence: Visitor Geofencing",
+        "device_id": "visitor"
+      },
+      {
+        "template": "ask_use_app",
+        "title": "Received Request",
+        "status": 2,
+        "id": 53308,
+        "relation_id": 0,
+        "relation_detail": "",
+        "created_at": "**[ts]_1000_0**",
+        "updated_at": "**[ts]_1000_0**",
+        "table": "",
+        "alerttime": "**[ts]_1000_0**",
+        "lang": "en",
+        "fid": 25,
+        "content": "Demo Device requests to access the app: TikTok",
+        "device_id": "visitor"
+      },
+      {
+        "template": "ask_use_app",
+        "title": "Received Request",
+        "status": 1,
+        "id": 53309,
+        "relation_id": 0,
+        "relation_detail": "allow_always",
+        "created_at": "**[ts]_1200_0**",
+        "updated_at": "**[ts]_1200_0**",
+        "table": "",
+        "alerttime": "**[ts]_1200_0**",
+        "lang": "en",
+        "fid": 25,
+        "content": "Demo Device requests to access the app: Youtube",
+        "device_id": "visitor"
+      },
+      {
+        "template": "open_limited_app",
+        "title": "Alert",
+        "status": 0,
+        "id": 53310,
+        "relation_id": 0,
+        "relation_detail": "com.instagram.android",
+        "created_at": "**[ts]_1300_0**",
+        "updated_at": "**[ts]_1300_0**",
+        "table": "",
+        "alerttime": "**[ts]_1300_0**",
+        "lang": "en",
+        "fid": 25,
+        "content": "Demo Device tries to open the restricted app: Instagram",
+        "device_id": "visitor"
+      }
+    ],
+    "request_time": 1672280176969
+  },
+  "get_notification_count": {
+    "code": 1,
+    "data": {
+      "count": 12
+    },
+    "msg": "success"
+  },
+  "get_notification": {
+    "code": 1,
+    "msg": "success",
+    "data": {
+      "current_page": 1,
+      "data": [
+        {
+          "_id": "2",
+          "body": {
+            "content": "Charlotte just posted a new video.",
+            "id": 2,
+            "is_clearable": 1,
+            "is_clickable": 1,
+            "is_progress": 0,
+            "name": "TikTok",
+            "nid": "0|com.zhiliaoapp.musically|1307014|null|10145|1672049292161",
+            "package_id": "com.zhiliaoapp.musically",
+            "post_time": "**[ts]_0_1**",
+            "title": "Hi！Lucas",
+            "updated_time": "**[ts]_0_1**",
+            "code": 0,
+            "msg": ""
+          }
+        },
+        {
+          "_id": "3",
+          "body": {
+            "content": "Okay, I just emailed you",
+            "id": 3,
+            "is_clearable": 1,
+            "is_clickable": 1,
+            "is_progress": 0,
+            "name": "Twitter",
+            "nid": "0|com.twitter.android|1307014|null|10145|1672049292164",
+            "package_id": "com.twitter.android",
+            "post_time": "**[ts]_0_1**",
+            "title": "Ana",
+            "updated_time": "**[ts]_0_1**",
+            "code": 0,
+            "msg": ""
+          }
+        },
+        {
+          "_id": "4",
+          "body": {
+            "content": "Charlotte liked your post.",
+            "id": 4,
+            "is_clearable": 1,
+            "is_clickable": 1,
+            "is_progress": 0,
+            "name": "Instagram",
+            "nid": "0|com.instagram.android|1307014|null|10145|1672049292163",
+            "package_id": "com.instagram.android",
+            "post_time": "**[ts]_0_1**",
+            "title": "INSTAGRAM",
+            "updated_time": "**[ts]_0_1**",
+            "code": 0,
+            "msg": ""
+          }
+        },
+        {
+          "_id": "5",
+          "body": {
+            "content": "I'm so bored :(",
+            "id": 5,
+            "is_clearable": 1,
+            "is_clickable": 1,
+            "is_progress": 0,
+            "name": "TikTok",
+            "nid": "0|com.zhiliaoapp.musically|1307014|null|10145|1672049292162",
+            "package_id": "com.zhiliaoapp.musically",
+            "post_time": "**[ts]_3600_1**",
+            "title": "You got a new message.",
+            "updated_time": "**[ts]_3600_1**",
+            "code": 0,
+            "msg": ""
+          }
+        },
+        {
+          "_id": "6",
+          "body": {
+            "content": "Check it out! Here are 10 of the best new films to stream in this month!",
+            "id": 6,
+            "is_clearable": 1,
+            "is_clickable": 1,
+            "is_progress": 0,
+            "name": "Gmail",
+            "nid": "0|com.google.android.gm|1307014|null|10145|1672049292166",
+            "package_id": "com.google.android.gm",
+            "post_time": "**[ts]_3600_1**",
+            "title": "Ana",
+            "updated_time": "**[ts]_3600_1**",
+            "code": 0,
+            "msg": ""
+          }
+        },
+        {
+          "_id": "7",
+          "body": {
+            "content": "Evelyn commented on your photo.",
+            "id": 7,
+            "is_clearable": 1,
+            "is_clickable": 1,
+            "is_progress": 0,
+            "name": "Facebook",
+            "nid": "0|com.facebook.katana|1307014|null|10145|1672049292167",
+            "package_id": "com.facebook.katana",
+            "post_time": "**[ts]_3600_1**",
+            "title": "New Notification",
+            "updated_time": "**[ts]_3600_1**",
+            "code": 0,
+            "msg": ""
+          }
+        },
+        {
+          "_id": "8",
+          "body": {
+            "content": "sent a sticker.",
+            "id": 8,
+            "is_clearable": 1,
+            "is_clickable": 1,
+            "is_progress": 0,
+            "name": "LINE",
+            "nid": "0|jp.naver.line.android|1307014|null|10145|1672049292168",
+            "package_id": "jp.naver.line.android",
+            "post_time": "**[ts]_3600_1**",
+            "title": "Amy",
+            "updated_time": "**[ts]_3600_1**",
+            "code": 0,
+            "msg": ""
+          }
+        },
+        {
+          "_id": "9",
+          "body": {
+            "content": "Will be there in 10min",
+            "id": 9,
+            "is_clearable": 1,
+            "is_clickable": 1,
+            "is_progress": 0,
+            "name": "WhatsApp",
+            "nid": "0|com.whatsapp|1307014|null|10145|1672049292170",
+            "package_id": "com.whatsapp",
+            "post_time": "**[ts]_3600_1**",
+            "title": "Rick",
+            "updated_time": "**[ts]_3600_1**",
+            "code": 0,
+            "msg": ""
+          }
+        },
+        {
+          "_id": "10",
+          "body": {
+            "content": "meet you all at the restaurant!",
+            "id": 10,
+            "is_clearable": 1,
+            "is_clickable": 1,
+            "is_progress": 0,
+            "name": "LINE",
+            "nid": "0|jp.naver.line.android|1307014|null|10145|1672049292169",
+            "package_id": "jp.naver.line.android",
+            "post_time": "**[ts]_7200_1**",
+            "title": "Amy",
+            "updated_time": "**[ts]_7200_1**",
+            "code": 0,
+            "msg": ""
+          }
+        },
+        {
+          "_id": "11",
+          "body": {
+            "content": "Hi How are you?",
+            "id": 11,
+            "is_clearable": 1,
+            "is_clickable": 1,
+            "is_progress": 0,
+            "name": "Twitter",
+            "nid": "0|com.twitter.android|1307014|null|10145|1672049292165",
+            "package_id": "com.twitter.android",
+            "post_time": "**[ts]_7200_1**",
+            "title": "Jan Chong",
+            "updated_time": "**[ts]_7200_1**",
+            "code": 0,
+            "msg": ""
+          }
+        },
+        {
+          "_id": "12",
+          "body": {
+            "content": "Heading out！",
+            "id": 12,
+            "is_clearable": 1,
+            "is_clickable": 1,
+            "is_progress": 0,
+            "name": "WhatsApp",
+            "nid": "0|com.whatsapp|1307014|null|10145|1672049292171",
+            "package_id": "com.whatsapp",
+            "post_time": "**[ts]_7200_1**",
+            "title": "Rick",
+            "updated_time": "**[ts]_7200_1**",
+            "code": 0,
+            "msg": ""
+          }
+        },
+        {
+          "_id": "13",
+          "body": {
+            "content": "iDB and 2 more",
+            "id": 13,
+            "is_clearable": 1,
+            "is_clickable": 1,
+            "is_progress": 0,
+            "name": "YouTube",
+            "nid": "0|com.google.android.youtube|1307014|null|10145|1672049292172",
+            "package_id": "com.google.android.youtube",
+            "post_time": "**[ts]_7200_1**",
+            "title": "Scheduled digest",
+            "updated_time": "**[ts]_7200_1**",
+            "code": 0,
+            "msg": ""
+          }
+        }
+      ],
+      "first_page_url": "https:\/\/test-id-tmp-kid.airdroid.com\/parent\/childdata\/getnotifications?page=1",
+      "from": 1,
+      "last_page": 1,
+      "last_page_url": "https:\/\/test-id-tmp-kid.airdroid.com\/parent\/childdata\/getnotifications?page=1",
+      "next_page_url": null,
+      "path": "https:\/\/test-id-tmp-kid.airdroid.com\/parent\/childdata\/getnotifications",
+      "per_page": 100,
+      "prev_page_url": null,
+      "to": 1,
+      "total": 11
+    }
+  },
+  "get_realtime_location": {
+    "acc": "5.0",
+    "address": "123 Amphitheatre Pkwy, Mountain View, CA 94043, USA",
+    "ag": "0.0",
+    "coord_type": "COORD_TYPE_WGS84",
+    "lat": "37.423421",
+    "lng": "-122.078125",
+    "location_time": "**[ts]_0_1**",
+    "network": "1",
+    "speed": "0.0",
+    "time": "**[ts]_0_0**",
+    "type": "2"
+  },
+  "get_last_positions": {
+    "code": 1,
+    "msg": "success",
+    "data": [
+      {
+        "id": 2129,
+        "device_id": "visitor",
+        "type": 2,
+        "coord_type": "COORD_TYPE_WGS84",
+        "lng": "-122.078125",
+        "lat": "37.423421",
+        "address": "123 Amphitheatre Pkwy, Mountain View, CA 94043, USA",
+        "address_meta": "",
+        "kid_location_time": "2022-12-29 06:58:58",
+        "kid_updated_location_time": "2022-12-29 06:59:48",
+        "geo_fence": "",
+        "time": "**[ts]_0_0**"
+      }
+    ]
+  },
+  "get_Child_positions": {
+    "code": 1,
+    "msg": "success",
+    "data": {
+      "current_page": 1,
+      "last_page": 1,
+      "per_page": 1000,
+      "total": 7,
+      "data": [
+        {
+          "id": 2132,
+          "fid": 25,
+          "device_id": "visitor",
+          "lng": "-122.08250",
+          "lat": "37.41770",
+          "same_location_id": 0,
+          "type": 2,
+          "record_time": "2022-12-29 08:27:47",
+          "updated_time": "2022-12-29 08:27:47",
+          "test_time": "",
+          "address": "Parking lot, Mountain View, CA 94043, USA",
+          "address_meta": "",
+          "kid_location_time": "2022-12-29 08:27:41",
+          "kid_updated_location_time": "2022-12-29 08:27:41",
+          "speed": 1,
+          "has_snap": 0,
+          "is_snap_add": 0,
+          "ag": 180,
+          "distance": 159,
+          "acc": "5.0",
+          "updated_at": "2022-12-29 08:27:47",
+          "created_at": "2022-12-29 08:27:47",
+          "geo_fence": "{\"id\":353,\"name\":\"Visitor Geofencing\",\"status\":1}",
+          "coord_type": "COORD_TYPE_WGS84",
+          "time": "**[ts]_1500_0**"
+        },
+        {
+          "id": 2131,
+          "fid": 25,
+          "device_id": "visitor",
+          "lng": "-122.08298",
+          "lat": "37.41869",
+          "same_location_id": 0,
+          "type": 2,
+          "record_time": "2022-12-29 08:20:48",
+          "updated_time": "2022-12-29 08:21:36",
+          "test_time": "",
+          "address": "906 Huff Ave, Mountain View, CA 94043, USA",
+          "address_meta": "",
+          "kid_location_time": "2022-12-29 08:20:39",
+          "kid_updated_location_time": "2022-12-29 08:21:32",
+          "speed": 1,
+          "has_snap": 0,
+          "is_snap_add": 0,
+          "ag": 180,
+          "distance": 227,
+          "acc": "5.0",
+          "updated_at": "2022-12-29 08:21:36",
+          "created_at": "2022-12-29 08:20:54",
+          "geo_fence": "",
+          "coord_type": "COORD_TYPE_WGS84",
+          "time": "**[ts]_1200_0**"
+        },
+        {
+          "id": 2130,
+          "fid": 25,
+          "device_id": "visitor",
+          "lng": "-122.0829883",
+          "lat": "37.4201217",
+          "same_location_id": 0,
+          "type": 2,
+          "record_time": "2022-12-29 08:20:48",
+          "updated_time": "2022-12-29 08:21:36",
+          "test_time": "",
+          "address": "Mountain View, CA 94043, USA",
+          "address_meta": "",
+          "kid_location_time": "2022-12-29 08:20:39",
+          "kid_updated_location_time": "2022-12-29 08:21:32",
+          "speed": 1,
+          "has_snap": 0,
+          "is_snap_add": 0,
+          "ag": 180,
+          "distance": 227,
+          "acc": "5.0",
+          "updated_at": "2022-12-29 08:21:36",
+          "created_at": "2022-12-29 08:20:54",
+          "geo_fence": "",
+          "coord_type": "COORD_TYPE_WGS84",
+          "time": "**[ts]_900_0**"
+        },
+        {
+          "id": 2129,
+          "fid": 25,
+          "device_id": "visitor",
+          "lng": "-122.0835",
+          "lat": "37.4210983",
+          "same_location_id": 0,
+          "type": 2,
+          "record_time": "2022-12-29 06:59:04",
+          "updated_time": "2022-12-29 08:17:30",
+          "test_time": "",
+          "address": "Google Building 43, Twoface-Color, Mountain View, CA 94043, USA",
+          "address_meta": "",
+          "kid_location_time": "2022-12-29 06:58:58",
+          "kid_updated_location_time": "2022-12-29 08:17:24",
+          "speed": 0,
+          "has_snap": 0,
+          "is_snap_add": 0,
+          "ag": 111,
+          "distance": 0,
+          "acc": "5.0",
+          "updated_at": "2022-12-29 08:17:30",
+          "created_at": "2022-12-29 06:59:04",
+          "geo_fence": "",
+          "coord_type": "COORD_TYPE_WGS84",
+          "time": "**[ts]_720_0**"
+        },
+        {
+          "id": 2128,
+          "fid": 25,
+          "device_id": "visitor",
+          "lng": "-122.082890",
+          "lat": "37.423096",
+          "same_location_id": 0,
+          "type": 2,
+          "record_time": "2022-12-29 06:59:04",
+          "updated_time": "2022-12-29 08:17:30",
+          "test_time": "",
+          "address": "Mountain View, CA 94043, USA",
+          "address_meta": "",
+          "kid_location_time": "2022-12-29 06:58:58",
+          "kid_updated_location_time": "2022-12-29 08:17:24",
+          "speed": 0,
+          "has_snap": 0,
+          "is_snap_add": 0,
+          "ag": 111,
+          "distance": 0,
+          "acc": "5.0",
+          "updated_at": "2022-12-29 08:17:30",
+          "created_at": "2022-12-29 06:59:04",
+          "geo_fence": "",
+          "coord_type": "COORD_TYPE_WGS84",
+          "time": "**[ts]_500_0**"
+        },
+        {
+          "id": 2127,
+          "fid": 25,
+          "device_id": "visitor",
+          "lng": "-122.084",
+          "lat": "37.4219983",
+          "same_location_id": 0,
+          "type": 2,
+          "record_time": "2022-12-29 06:59:04",
+          "updated_time": "2022-12-29 08:17:30",
+          "test_time": "",
+          "address": "Mountain View, CA 94043, USA",
+          "address_meta": "",
+          "kid_location_time": "2022-12-29 06:58:58",
+          "kid_updated_location_time": "2022-12-29 08:17:24",
+          "speed": 0,
+          "has_snap": 0,
+          "is_snap_add": 0,
+          "ag": 111,
+          "distance": 0,
+          "acc": "5.0",
+          "updated_at": "2022-12-29 08:17:30",
+          "created_at": "2022-12-29 06:59:04",
+          "geo_fence": "",
+          "coord_type": "COORD_TYPE_WGS84",
+          "time": "**[ts]_280_0**"
+        },
+        {
+          "id": 2126,
+          "fid": 25,
+          "device_id": "visitor",
+          "lng": "-122.078125",
+          "lat": "37.423421",
+          "same_location_id": 0,
+          "type": 2,
+          "record_time": "2022-12-29 06:59:04",
+          "updated_time": "2022-12-29 08:17:30",
+          "test_time": "",
+          "address": "123 Amphitheatre Pkwy, Mountain View, CA 94043, USA",
+          "address_meta": "",
+          "kid_location_time": "2022-12-29 06:58:58",
+          "kid_updated_location_time": "2022-12-29 08:17:24",
+          "speed": 0,
+          "has_snap": 0,
+          "is_snap_add": 0,
+          "ag": 111,
+          "distance": 0,
+          "acc": "5.0",
+          "updated_at": "2022-12-29 08:17:30",
+          "created_at": "2022-12-29 06:59:04",
+          "geo_fence": "{\"id\":353,\"name\":\"Visitor Geofencing\",\"status\":0}",
+          "coord_type": "COORD_TYPE_WGS84",
+          "time": "**[ts]_0_0**"
+        }
+      ]
+    }
+  },
+  "get_geofence": {
+    "code": 1,
+    "msg": "success",
+    "data": [
+      {
+        "id": 353,
+        "kd_id": 1,
+        "device_id": "visitor",
+        "name": "Visitor Geofencing",
+        "address": "Mountain View, CA 94043, USA",
+        "lng": "-122.084",
+        "lat": "37.4219983",
+        "radius": 500,
+        "coord_type": "COORD_TYPE_WGS84",
+        "updated_at": "**[ts]_86400_0**"
+      }
+    ]
+  },
+  "get_geofence_locations": {
+    "code": 1,
+    "msg": "success",
+    "data": [
+      {
+        "id": 4849,
+        "geo_id": 353,
+        "geo_name": "Visitor Geofencing",
+        "address": "123 Amphitheatre Pkwy, Mountain View, CA 94043, USA",
+        "device_id": "visitor",
+        "status": 0,
+        "record_time": "**[ts]_0_0**",
+        "updated_at": "**[ts]_0_0**",
+        "end_lng": "-122.078125",
+        "end_lat": "37.423421",
+        "coord_type": "COORD_TYPE_WGS84"
+      },
+      {
+        "id": 4848,
+        "geo_id": 353,
+        "geo_name": "Visitor Geofencing",
+        "address": "Parking lot, Mountain View, CA 94043, USA",
+        "device_id": "visitor",
+        "status": 1,
+        "record_time": "**[ts]_1500_0**",
+        "updated_at": "**[ts]_1500_0**",
+        "end_lng": "-122.08250",
+        "end_lat": "37.41770",
+        "coord_type": "COORD_TYPE_WGS84"
+      }
+    ]
+  },
+  "content_alerts": {
+    "code": 1,
+    "msg": "success",
+    "data": []
+  },
+  "content_keyword_groups": {
+    "code": 1,
+    "msg": "success",
+    "data": []
+  },
+  "content_keywords": {
+    "code": 1,
+    "msg": "success",
+    "data": {
+      "textList": []
+    }
+  },
+  "default_result": "{\"code\":1,\"msg\":\"success\"}"
+}

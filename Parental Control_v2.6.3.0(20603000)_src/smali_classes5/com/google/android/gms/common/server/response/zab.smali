@@ -1,0 +1,50 @@
+.class final Lcom/google/android/gms/common/server/response/zab;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-base@@18.4.0"
+
+# interfaces
+.implements Lcom/google/android/gms/common/server/response/zai;
+
+
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic zaa(Lcom/google/android/gms/common/server/response/FastParser;Ljava/io/BufferedReader;)Ljava/lang/Object;
+    .locals 0
+    .annotation build Landroidx/annotation/q0;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/android/gms/common/server/response/FastParser$ParseException;,
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-static {p1, p2}, Lcom/google/android/gms/common/server/response/FastParser;->zad(Lcom/google/android/gms/common/server/response/FastParser;Ljava/io/BufferedReader;)J
+
+    .line 4
+    move-result-wide p1
+
+    .line 5
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    .line 8
+    move-result-object p1
+
+    .line 9
+    return-object p1
+.end method

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_gravity="center_horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sand.airdroidkidp.ui.custom.FeatureTitleItem
+        android:id="@id/ftiTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/Parental_Device_Content_Title" />
+    <com.sand.airdroidkidp.ui.custom.ClipBackgroundConstraintLayout
+        android:id="@id/clContent"
+        android:background="@drawable/bg_radius_16_stroke_1"
+        android:paddingTop="4.0dip"
+        android:paddingBottom="4.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12.0dip"
+        android:paddingVertical="4.0dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ftiTitle">
+        <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+            android:id="@id/fipNotify"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/notify"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:notifyVisible="false"
+            app:title="@string/Parent_TodayEvent_Notification_Title" />
+        <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+            android:id="@id/fipAppList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/app_list"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fipNotify"
+            app:title="@string/Parent_Device_Application_List_Title" />
+        <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+            android:id="@id/fipRemainingTime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/hourglass_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fipAppList"
+            app:title="@string/Parent_Today_Remaining_Time" />
+    </com.sand.airdroidkidp.ui.custom.ClipBackgroundConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

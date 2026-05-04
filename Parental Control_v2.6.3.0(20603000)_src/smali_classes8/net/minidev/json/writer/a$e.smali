@@ -1,0 +1,146 @@
+.class Lnet/minidev/json/writer/a$e;
+.super Lnet/minidev/json/writer/a;
+.source "ArraysMapper.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lnet/minidev/json/writer/a;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lnet/minidev/json/writer/a<",
+        "[",
+        "Ljava/lang/Double;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Lnet/minidev/json/writer/i;)V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-direct {p0, p1}, Lnet/minidev/json/writer/j;-><init>(Lnet/minidev/json/writer/i;)V
+
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method public bridge synthetic b(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-virtual {p0, p1}, Lnet/minidev/json/writer/a$e;->j(Ljava/lang/Object;)[Ljava/lang/Double;
+
+    .line 4
+    move-result-object p1
+
+    .line 5
+    return-object p1
+.end method
+
+.method public j(Ljava/lang/Object;)[Ljava/lang/Double;
+    .locals 4
+
+    .prologue
+    .line 1
+    check-cast p1, Ljava/util/List;
+
+    .line 3
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    .line 6
+    move-result v0
+
+    .line 7
+    new-array v0, v0, [Ljava/lang/Double;
+
+    .line 9
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    .line 12
+    move-result-object p1
+
+    .line 13
+    const/4 v1, 0x0
+
+    .line 14
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 17
+    move-result v2
+
+    .line 18
+    if-eqz v2, :cond_2
+
+    .line 20
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 23
+    move-result-object v2
+
+    .line 24
+    if-nez v2, :cond_0
+
+    .line 26
+    goto :goto_0
+
+    .line 27
+    :cond_0
+    instance-of v3, v2, Ljava/lang/Double;
+
+    .line 29
+    if-eqz v3, :cond_1
+
+    .line 31
+    check-cast v2, Ljava/lang/Double;
+
+    .line 33
+    aput-object v2, v0, v1
+
+    .line 35
+    goto :goto_1
+
+    .line 36
+    :cond_1
+    check-cast v2, Ljava/lang/Number;
+
+    .line 38
+    invoke-virtual {v2}, Ljava/lang/Number;->doubleValue()D
+
+    .line 41
+    move-result-wide v2
+
+    .line 42
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    .line 45
+    move-result-object v2
+
+    .line 46
+    aput-object v2, v0, v1
+
+    .line 48
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
+
+    .line 50
+    goto :goto_0
+
+    .line 51
+    :cond_2
+    return-object v0
+.end method

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/item_device"
+        android:id="@id/itemDevice"
+        android:title="@string/Parent_Tabbar_Device_Title" />
+    <item
+        android:icon="@drawable/item_family_message"
+        android:id="@id/itemFamilyMessage"
+        android:title="@string/parent_family_message" />
+    <item
+        android:id="@id/itemMap"
+        android:title=" " />
+    <item
+        android:icon="@drawable/item_support"
+        android:id="@id/itemSup"
+        android:title="@string/Parental_Tabbar_AI_Title" />
+    <item
+        android:icon="@drawable/item_setting"
+        android:id="@id/itemSetting"
+        android:title="@string/Parent_Tabbar_My_Title" />
+</menu>

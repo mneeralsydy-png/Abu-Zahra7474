@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/subscribe_mail_item_bg"
+    android:paddingLeft="16.0dip"
+    android:paddingTop="16.0dip"
+    android:paddingRight="16.0dip"
+    android:paddingBottom="16.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="74.0dip"
+    android:layout_marginTop="@dimen/list_item_divider"
+    android:paddingHorizontal="16.0dip"
+    android:paddingVertical="16.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/ivAvatar"
+        android:layout_width="34.0dip"
+        android:layout_height="34.0dip"
+        android:src="@drawable/ic_card_account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/clContent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/clContent"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivAvatar"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:textSize="15.0sp"
+            android:textColor="@color/black_282930"
+            android:ellipsize="end"
+            android:id="@id/tvTitle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textDirection="locale"
+            app:fontFamily="@font/font_family_medium"
+            app:layout_constraintBottom_toTopOf="@id/tvContent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/gray_878d9a"
+            android:ellipsize="end"
+            android:id="@id/tvContent"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.0dip"
+            android:maxLines="1"
+            android:textDirection="locale"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

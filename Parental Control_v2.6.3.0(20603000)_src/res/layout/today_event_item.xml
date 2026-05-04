@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_gravity="center_horizontal"
+    android:id="@id/clRoot"
+    android:background="@drawable/device_fragment_item_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:elevation="10.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@id/padBannerStart"
+        android:visibility="gone"
+        android:layout_width="500.0dip"
+        android:layout_height="126.0dip"
+        app:cardElevation="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/BottomLeftRoundedCardView">
+        <ImageView
+            android:id="@id/padBannerStartImage"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:contentDescription="@null" />
+    </com.google.android.material.card.MaterialCardView>
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="16.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="16.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@id/glTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="16.0dip" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="@color/device_fragment_black_text"
+        android:id="@id/tvTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/Parent_Device_TodayEvent_Title"
+        app:fontFamily="@font/font_family_semi_bold"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="@id/glTop" />
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@id/arrowAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="arrow_animation.json"
+        app:lottie_imageAssetsFolder="arrow"
+        app:lottie_loop="true" />
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="@color/gray_666b75"
+        android:id="@id/tvUsedTimeTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:text="@string/Parental_Device_Time_Online"
+        android:layout_marginEnd="10.0dip"
+        app:layout_constraintEnd_toStartOf="@id/arrowAnimation"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+    <ProgressBar
+        android:id="@id/progressBarTodayEvent"
+        android:layout_width="0.0dip"
+        android:layout_height="6.0dip"
+        android:layout_marginTop="6.0dip"
+        android:max="100"
+        android:progress="80"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/daily_event_progress_bar_green"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/tvUsedTimeTitle"
+        style="?android:progressBarStyleHorizontal" />
+    <TextView
+        android:textSize="22.0sp"
+        android:textColor="@color/device_fragment_black_text"
+        android:id="@id/tvUsedTime"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2.0dip"
+        android:layout_marginBottom="12.0dip"
+        app:fontFamily="@font/font_family_semi_bold"
+        app:layout_constraintBottom_toTopOf="@id/tvAppIconTitle"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/progressBarTodayEvent" />
+    <ImageView
+        android:id="@id/ivAppIcon"
+        android:background="@drawable/icon_app_bg"
+        android:padding="1.0dip"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:layout_marginTop="6.0dip"
+        android:src="@drawable/ic_noapp"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/tvAppIconTitle" />
+    <FrameLayout
+        android:id="@id/appIconPadding"
+        android:layout_width="0.0dip"
+        android:layout_height="16.0dip"
+        app:layout_constraintStart_toStartOf="@id/ivAppIcon"
+        app:layout_constraintTop_toBottomOf="@id/ivAppIcon" />
+    <ImageView
+        android:id="@id/ivDailyEvent"
+        android:layout_width="164.0dip"
+        android:layout_height="76.0dip"
+        android:layout_marginTop="2.0dip"
+        android:src="@drawable/pic_report"
+        android:scaleType="fitEnd"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@id/dailyImageBarrier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/dailyImageBarrier"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="appIconPadding,tvNoRecord" />
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="@color/gray_666b75"
+        android:id="@id/tvAppIconTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14.0dip"
+        android:text="@string/Parental_Device_Today_Most_Usage"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/tvUsedTime" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/black_ff282930"
+        android:ellipsize="end"
+        android:id="@id/tvAppName"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textDirection="locale"
+        android:layout_marginStart="8.0dip"
+        android:layout_marginEnd="10.0dip"
+        app:fontFamily="@font/font_family_semi_bold"
+        app:layout_constraintBottom_toBottomOf="@id/ivAppIcon"
+        app:layout_constraintEnd_toStartOf="@id/appNameEndBarrier"
+        app:layout_constraintStart_toEndOf="@id/ivAppIcon"
+        app:layout_constraintTop_toTopOf="@id/ivAppIcon" />
+    <androidx.constraintlayout.widget.Group
+        android:id="@id/groupAppUsedTime"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvUsedTimeTitle,progressBarTodayEvent,tvUsedTime,tvAppIconTitle,ivAppIcon,tvAppName,appIconPadding" />
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="@color/gray_a4a8b3"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@id/tvNoRecord"
+        android:paddingBottom="16.0dip"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="76.0dip"
+        android:text="@string/Parent_Device_TodayEvent_Subtitle"
+        android:maxLines="2"
+        android:layout_marginEnd="10.0dip"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/appNameEndBarrier"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/bottomBannerBarrier"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvNoRecord,appIconPadding" />
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@id/bannerViewPager"
+        android:layout_width="0.0dip"
+        android:layout_height="70.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginHorizontal="10.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottomBannerBarrier" />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@id/bannerTabLayout"
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="4.0dip"
+        android:layout_marginBottom="6.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/bannerViewPager"
+        app:layout_constraintEnd_toEndOf="@id/bannerViewPager"
+        app:layout_constraintStart_toStartOf="@id/bannerViewPager"
+        app:tabGravity="center"
+        app:tabIndicatorColor="@android:color/transparent"
+        app:tabIndicatorHeight="0.0dip"
+        app:tabMaxWidth="0.0dip"
+        app:tabMode="fixed"
+        app:tabPaddingEnd="3.0dip"
+        app:tabPaddingStart="3.0dip" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/bottomViewpagerBarrier"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="bannerPadViewPager,bannerViewPager" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/topViewpagerBarrier"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="bannerPadViewPager,bannerViewPager" />
+    <FrameLayout
+        android:id="@id/bannerPadding"
+        android:layout_width="0.0dip"
+        android:layout_height="10.0dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottomViewpagerBarrier" />
+    <ImageView
+        android:id="@id/smallBanner"
+        android:visibility="gone"
+        android:layout_width="164.0dip"
+        android:layout_height="76.0dip"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/topViewpagerBarrier"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@id/appNameEndBarrier"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="ivDailyEvent,smallBanner" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/clRoot"
+    android:background="@color/white_fff5f5f5"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:minHeight="?actionBarSize"
+        android:elevation="0.0dip"
+        app:contentInsetStartWithNavigation="0.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="@string/Parent_Safe_Browser_Manage_Title"
+        app:titleMargin="0.0dip"
+        app:titleTextAppearance="@style/CommonAppTheme.ToolBarTitleTextAppearance"
+        app:titleTextColor="@color/black_282930" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_start_percent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_end_percent" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/parent_safe_browser_item_bg"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+        <RadioGroup
+            android:orientation="vertical"
+            android:id="@id/rgMode"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <com.sand.airdroidkidp.ui.custom.ModeRadioButton
+                android:id="@id/mrbNoLimit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/Parent_Safe_Browser_Manage_No_Limit" />
+            <com.sand.airdroidkidp.ui.custom.ModeRadioButton
+                android:id="@id/mrbIntercept"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:summary="@string/Parent_Safe_Browser_Manage_Intercept_Summary"
+                app:title="@string/Parent_Safe_Browser_Manage_Intercept" />
+            <com.sand.airdroidkidp.ui.custom.ModeRadioButton
+                android:id="@id/mrbWhiteOnly"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:isShowDivider="false"
+                app:summary="@string/Parent_Safe_Browser_Manage_White_Only_Summary"
+                app:title="@string/Parent_Safe_Browser_Manage_White_Only" />
+        </RadioGroup>
+    </LinearLayout>
+    <ProgressBar
+        android:id="@id/progressBar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

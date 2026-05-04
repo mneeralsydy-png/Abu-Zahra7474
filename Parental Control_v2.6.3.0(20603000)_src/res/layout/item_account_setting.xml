@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/normal_item_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@id/glTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="12.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@id/glBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="12.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="14.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="14.0dip" />
+    <ImageView
+        android:id="@id/ivIcon"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:src="@drawable/ic_nickname"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@id/glBottom"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="@id/glTop" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="@color/black_282930"
+        android:gravity="start"
+        android:id="@id/tvTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:textDirection="locale"
+        android:layout_marginHorizontal="10.0dip"
+        app:fontFamily="@font/font_family_medium"
+        app:layout_constraintBottom_toBottomOf="@id/ivIcon"
+        app:layout_constraintEnd_toStartOf="@id/ivEnter"
+        app:layout_constraintStart_toEndOf="@id/ivIcon"
+        app:layout_constraintTop_toTopOf="@id/ivIcon" />
+    <ImageView
+        android:id="@id/ivEnter"
+        android:layout_width="14.0dip"
+        android:layout_height="14.0dip"
+        android:src="@drawable/more"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@id/ivIcon"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintTop_toTopOf="@id/ivIcon" />
+    <View
+        android:id="@id/vProfileDivider"
+        android:background="@color/grey_f4f4f4"
+        android:visibility="visible"
+        android:layout_width="0.0dip"
+        android:layout_height="1.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart" />
+</androidx.constraintlayout.widget.ConstraintLayout>

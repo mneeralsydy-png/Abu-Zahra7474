@@ -1,0 +1,74 @@
+.class public final synthetic Lcom/hivemq/client/internal/mqtt/handler/auth/e;
+.super Ljava/lang/Object;
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic b:Lcom/hivemq/client/internal/mqtt/handler/auth/h;
+
+.field public final synthetic d:Ljava/lang/Throwable;
+
+.field public final synthetic e:Ljava/util/function/BiConsumer;
+
+.field public final synthetic f:Ljava/lang/Boolean;
+
+.field public final synthetic l:Ljava/util/function/Consumer;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/hivemq/client/internal/mqtt/handler/auth/h;Ljava/lang/Throwable;Ljava/util/function/BiConsumer;Ljava/lang/Boolean;Ljava/util/function/Consumer;)V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Lcom/hivemq/client/internal/mqtt/handler/auth/e;->b:Lcom/hivemq/client/internal/mqtt/handler/auth/h;
+
+    .line 6
+    iput-object p2, p0, Lcom/hivemq/client/internal/mqtt/handler/auth/e;->d:Ljava/lang/Throwable;
+
+    .line 8
+    iput-object p3, p0, Lcom/hivemq/client/internal/mqtt/handler/auth/e;->e:Ljava/util/function/BiConsumer;
+
+    .line 10
+    iput-object p4, p0, Lcom/hivemq/client/internal/mqtt/handler/auth/e;->f:Ljava/lang/Boolean;
+
+    .line 12
+    iput-object p5, p0, Lcom/hivemq/client/internal/mqtt/handler/auth/e;->l:Ljava/util/function/Consumer;
+
+    .line 14
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 5
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Lcom/hivemq/client/internal/mqtt/handler/auth/e;->b:Lcom/hivemq/client/internal/mqtt/handler/auth/h;
+
+    .line 3
+    iget-object v1, p0, Lcom/hivemq/client/internal/mqtt/handler/auth/e;->d:Ljava/lang/Throwable;
+
+    .line 5
+    iget-object v2, p0, Lcom/hivemq/client/internal/mqtt/handler/auth/e;->e:Ljava/util/function/BiConsumer;
+
+    .line 7
+    iget-object v3, p0, Lcom/hivemq/client/internal/mqtt/handler/auth/e;->f:Ljava/lang/Boolean;
+
+    .line 9
+    iget-object v4, p0, Lcom/hivemq/client/internal/mqtt/handler/auth/e;->l:Ljava/util/function/Consumer;
+
+    .line 11
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/hivemq/client/internal/mqtt/handler/auth/h;->u(Lcom/hivemq/client/internal/mqtt/handler/auth/h;Ljava/lang/Throwable;Ljava/util/function/BiConsumer;Ljava/lang/Boolean;Ljava/util/function/Consumer;)V
+
+    .line 14
+    return-void
+.end method

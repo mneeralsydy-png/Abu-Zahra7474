@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/usage_limit_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RadioGroup
+        android:id="@id/rgLimitDays"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@drawable/radio_group_divider"
+        android:showDividers="middle"
+        android:paddingStart="16.0dip"
+        android:paddingEnd="16.0dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <RadioButton
+            android:textSize="15.0sp"
+            android:textColor="@color/black_282930"
+            android:id="@id/rbEveryday"
+            android:background="@color/ad_transparent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip"
+            android:layout_marginBottom="6.0dip"
+            android:checked="true"
+            android:button="@null"
+            android:text="@string/common_everyday"
+            android:drawableEnd="@drawable/select_app_box_style"
+            android:layout_marginVertical="6.0dip"
+            app:fontFamily="@font/font_family_medium" />
+        <RadioButton
+            android:textSize="15.0sp"
+            android:textColor="@color/black_282930"
+            android:id="@id/rbMondayToFriday"
+            android:background="@color/ad_transparent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip"
+            android:layout_marginBottom="6.0dip"
+            android:button="@null"
+            android:text="@string/Parent_UsageLimit_Workday"
+            android:drawableEnd="@drawable/select_app_box_style"
+            android:layout_marginVertical="6.0dip"
+            app:fontFamily="@font/font_family_medium" />
+        <RadioButton
+            android:textSize="15.0sp"
+            android:textColor="@color/black_282930"
+            android:id="@id/rbSaturdaySunday"
+            android:background="@color/ad_transparent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip"
+            android:layout_marginBottom="6.0dip"
+            android:button="@null"
+            android:text="@string/Parent_UsageLimit_Weekend"
+            android:drawableEnd="@drawable/select_app_box_style"
+            android:layout_marginVertical="6.0dip"
+            app:fontFamily="@font/font_family_medium" />
+        <RadioButton
+            android:textSize="15.0sp"
+            android:textColor="@color/black_282930"
+            android:id="@id/rbCustomDefine"
+            android:background="@color/ad_transparent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip"
+            android:layout_marginBottom="6.0dip"
+            android:button="@null"
+            android:text="@string/Customized_Downtime"
+            android:drawableEnd="@drawable/select_app_box_style"
+            android:layout_marginVertical="6.0dip"
+            app:fontFamily="@font/font_family_medium" />
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

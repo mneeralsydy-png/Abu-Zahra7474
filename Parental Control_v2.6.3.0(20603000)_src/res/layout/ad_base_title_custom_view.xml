@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:background="@drawable/ad_actionbar_item_selector"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:id="@id/llBack"
+        android:background="@drawable/ad_actionbar_item_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4.0dip">
+        <ImageView
+            android:id="@id/tvArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ad_actionbar_indicator"
+            android:layout_marginEnd="36.0dip" />
+        <TextView
+            android:textSize="20.0sp"
+            android:textStyle="normal"
+            android:textColor="@color/ad_actionbar_text"
+            android:ellipsize="end"
+            android:id="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bind"
+            android:singleLine="true"
+            android:paddingEnd="5.0dip" />
+        <TextView
+            android:textColor="@color/ad_main_config_title"
+            android:id="@id/tvConfigTitle"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <Spinner
+        android:id="@id/spNavigation"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="#ffe6e6e6"
+        android:spinnerMode="dropdown"
+        style="@style/ad_base_spinner" />
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/kid_network_failed_bg_normal" />
+    <item>
+        <shape
+            android:shape="rectangle">
+            <solid
+                android:color="#33ffffff" />
+            <corners
+                android:radius="41.0dip" />
+        </shape>
+    </item>
+</layer-list>

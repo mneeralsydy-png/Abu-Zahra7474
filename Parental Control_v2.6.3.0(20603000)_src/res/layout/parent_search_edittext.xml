@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/clParentToolbar"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/search_bar_height"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/clSearchBar"
+        android:background="@drawable/default_search_bg"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_marginEnd="16.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvCancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@id/ivSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_20"
+            android:layout_marginStart="12.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.sand.airdroidkidp.ui.base.ParentClearEditText
+            android:textSize="14.0sp"
+            android:textColor="@color/black_282930"
+            android:textColorHint="@color/gray_666b75"
+            android:id="@id/etSearchBar"
+            android:background="@null"
+            android:layout_width="0.0dip"
+            android:layout_height="36.0dip"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:hint="@string/common_search"
+            android:maxLines="1"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:layout_marginHorizontal="12.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivSearch"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="16.0sp"
+        android:textColor="@color/black_282930"
+        android:id="@id/tvCancel"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Common_Cancel"
+        android:layout_marginEnd="16.0dip"
+        app:fontFamily="@font/font_family_semi_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

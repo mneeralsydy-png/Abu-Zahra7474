@@ -1,0 +1,149 @@
+.class public final Lcom/bumptech/glide/load/resource/bitmap/k0;
+.super Ljava/lang/Object;
+.source "UnitBitmapDecoder.java"
+
+# interfaces
+.implements Lcom/bumptech/glide/load/k;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/bumptech/glide/load/resource/bitmap/k0$a;
+    }
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/bumptech/glide/load/k<",
+        "Landroid/graphics/Bitmap;",
+        "Landroid/graphics/Bitmap;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Ljava/lang/Object;Lcom/bumptech/glide/load/i;)Z
+    .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p2    # Lcom/bumptech/glide/load/i;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    check-cast p1, Landroid/graphics/Bitmap;
+
+    .line 3
+    const/4 p1, 0x1
+
+    .line 4
+    return p1
+.end method
+
+.method public b(Ljava/lang/Object;IILcom/bumptech/glide/load/i;)Lcom/bumptech/glide/load/engine/u;
+    .locals 0
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p4    # Lcom/bumptech/glide/load/i;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    check-cast p1, Landroid/graphics/Bitmap;
+
+    .line 3
+    new-instance p2, Lcom/bumptech/glide/load/resource/bitmap/k0$a;
+
+    .line 5
+    invoke-direct {p2, p1}, Lcom/bumptech/glide/load/resource/bitmap/k0$a;-><init>(Landroid/graphics/Bitmap;)V
+
+    .line 8
+    return-object p2
+.end method
+
+.method public c(Landroid/graphics/Bitmap;IILcom/bumptech/glide/load/i;)Lcom/bumptech/glide/load/engine/u;
+    .locals 0
+    .param p1    # Landroid/graphics/Bitmap;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p4    # Lcom/bumptech/glide/load/i;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/graphics/Bitmap;",
+            "II",
+            "Lcom/bumptech/glide/load/i;",
+            ")",
+            "Lcom/bumptech/glide/load/engine/u<",
+            "Landroid/graphics/Bitmap;",
+            ">;"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    new-instance p2, Lcom/bumptech/glide/load/resource/bitmap/k0$a;
+
+    .line 3
+    invoke-direct {p2, p1}, Lcom/bumptech/glide/load/resource/bitmap/k0$a;-><init>(Landroid/graphics/Bitmap;)V
+
+    .line 6
+    return-object p2
+.end method
+
+.method public d(Landroid/graphics/Bitmap;Lcom/bumptech/glide/load/i;)Z
+    .locals 0
+    .param p1    # Landroid/graphics/Bitmap;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p2    # Lcom/bumptech/glide/load/i;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+
+    .prologue
+    .line 1
+    const/4 p1, 0x1
+
+    .line 2
+    return p1
+.end method

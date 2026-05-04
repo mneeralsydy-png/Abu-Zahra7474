@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:paddingTop="30.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingStart="20.0dip"
+    android:paddingEnd="20.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/iv_icon"
+        android:layout_width="180.0dip"
+        android:layout_height="128.0dip"
+        android:src="@drawable/pic_web_delete"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:textSize="18.0sp"
+        android:textColor="@color/black_282930"
+        android:gravity="center"
+        android:id="@id/tvSafeBrowserDesc"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14.0dip"
+        android:text="@string/parent_browser_deleted"
+        app:fontFamily="@font/font_family_semi_bold"
+        app:layout_constraintEnd_toEndOf="@id/clGetGuideSteps"
+        app:layout_constraintStart_toStartOf="@id/clGetGuideSteps"
+        app:layout_constraintTop_toBottomOf="@id/iv_icon" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/clGetGuideSteps"
+        android:paddingBottom="10.0dip"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSafeBrowserDesc"
+        app:layout_constraintWidth_max="@dimen/tablet_max_width">
+        <ImageView
+            android:id="@id/ivStep1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvStep1_1"
+            app:srcCompat="@drawable/step1" />
+        <TextView
+            android:textSize="13.0sp"
+            android:textColor="@color/permission_tip"
+            android:id="@id/tvStep1_1"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/Parent_Safe_Browser_Get_Step1"
+            android:layout_marginStart="14.0dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivStep1"
+            app:layout_constraintTop_toTopOf="@id/ivStep1" />
+        <ImageView
+            android:id="@id/ivDivider1"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginBottom="8.0dip"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:layerType="software"
+            app:layout_constraintBottom_toTopOf="@id/ivStep2"
+            app:layout_constraintEnd_toEndOf="@id/ivStep1"
+            app:layout_constraintStart_toStartOf="@id/ivStep1"
+            app:layout_constraintTop_toBottomOf="@id/ivStep1"
+            app:srcCompat="@drawable/parent_binding_info_dash_line" />
+        <include
+            android:id="@id/layout_browser_download_url"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            app:layout_constraintEnd_toEndOf="@id/tvStep1_1"
+            app:layout_constraintStart_toStartOf="@id/tvStep1_1"
+            app:layout_constraintTop_toBottomOf="@id/tvStep1_1"
+            layout="@layout/parent_safe_browser_download" />
+        <ImageView
+            android:id="@id/ivStep2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            app:layout_constraintEnd_toEndOf="@id/ivStep1"
+            app:layout_constraintStart_toStartOf="@id/ivStep1"
+            app:layout_constraintTop_toTopOf="@id/tvStep2"
+            app:srcCompat="@drawable/step2" />
+        <TextView
+            android:textSize="13.0sp"
+            android:textColor="@color/permission_tip"
+            android:id="@id/tvStep2"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22.0dip"
+            android:text="@string/Parent_Safe_Browser_Get_Step2"
+            app:layout_constraintEnd_toEndOf="@id/tvStep1_1"
+            app:layout_constraintStart_toStartOf="@id/tvStep1_1"
+            app:layout_constraintTop_toBottomOf="@id/layout_browser_download_url" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

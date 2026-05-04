@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    android:id="@id/data_activity_navigation"
+    app:startDestination="@id/loadingFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment
+        android:name="com.sand.airdroidkidp.ui.fragment.ParentDataLoadingFragment"
+        android:id="@id/loadingFragment">
+        <action
+            android:id="@id/action_loadingFragment_to_parentDataEmptyFragment"
+            app:destination="@id/parentDataEmptyFragment"
+            app:popUpTo="@id/loadingFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@id/action_loadingFragment_to_parentDataListFragment"
+            app:destination="@id/parentDataListFragment"
+            app:popUpTo="@id/loadingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:name="com.sand.airdroidkidp.ui.fragment.ParentDataEmptyFragment"
+        android:id="@id/parentDataEmptyFragment">
+        <action
+            android:id="@id/action_parentDataEmptyFragment_to_parentDataListFragment"
+            app:destination="@id/parentDataListFragment"
+            app:popUpTo="@id/parentDataEmptyFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:name="com.sand.airdroidkidp.ui.fragment.ParentDataListWithSearchbarFragment"
+        android:id="@id/parentDataListFragment" />
+</navigation>

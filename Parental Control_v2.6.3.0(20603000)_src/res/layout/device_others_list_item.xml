@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sand.airdroidkidp.ui.custom.FeatureTitleItem
+        android:id="@id/ftiTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/Profile_Feedback_Type_Other" />
+    <com.sand.airdroidkidp.ui.custom.ClipBackgroundConstraintLayout
+        android:background="@drawable/bg_radius_16_stroke_1"
+        android:paddingTop="4.0dip"
+        android:paddingBottom="4.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12.0dip"
+        android:paddingVertical="4.0dip"
+        android:clipToOutline="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ftiTitle">
+        <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+            android:id="@id/fipPermission"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:dividerVisible="false"
+            app:icon="@drawable/examine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:notifyVisible="false"
+            app:title="@string/Parent_Permission_Check_Title" />
+        <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+            android:id="@id/fipIosKLocationSetting"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:dividerVisible="false"
+            app:icon="@drawable/address_color_282930"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fipPermission"
+            app:smallNotifyVisible="false"
+            app:title="@string/Parent_Location_Setting" />
+        <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+            android:id="@id/fipKidUpgrade"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:dividerVisible="false"
+            app:icon="@drawable/upgrade"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fipIosKLocationSetting"
+            app:smallNotifyVisible="false"
+            app:title="@string/Parental_Kid_Upgrade2" />
+        <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+            android:id="@id/fip_kid_unlock_kid_device_owner"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:dividerVisible="false"
+            app:icon="@drawable/ic_unlocks"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fipKidUpgrade"
+            app:smallNotifyVisible="false"
+            app:title="@string/Parent_Unlock_Enhanced_Supervision_Mode" />
+        <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+            android:id="@id/fipOpenKidGuide"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:dividerVisible="false"
+            app:icon="@drawable/tips"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fip_kid_unlock_kid_device_owner"
+            app:title="@string/Parent_Bind_Open_Kid_Text" />
+    </com.sand.airdroidkidp.ui.custom.ClipBackgroundConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

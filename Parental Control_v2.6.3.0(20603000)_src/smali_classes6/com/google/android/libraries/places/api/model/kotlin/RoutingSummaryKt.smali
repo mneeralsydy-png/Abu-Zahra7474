@@ -1,0 +1,79 @@
+.class public final Lcom/google/android/libraries/places/api/model/kotlin/RoutingSummaryKt;
+.super Ljava/lang/Object;
+.source "com.google.android.libraries.places:places@@5.0.0"
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0012\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010 \n\u0002\u0018\u0002\n\u0000\u001a\u0014\u0010\u0000\u001a\u00020\u00012\u000c\u0010\u0002\u001a\u0008\u0012\u0004\u0012\u00020\u00040\u0003\u00a8\u0006\u0005"
+    }
+    d2 = {
+        "routingSummary",
+        "Lcom/google/android/libraries/places/api/model/RoutingSummary;",
+        "legs",
+        "",
+        "Lcom/google/android/libraries/places/api/model/Leg;",
+        "java.com.google.android.libraries.places.api.model.kotlin_kotlin_3p"
+    }
+    k = 0x2
+    mv = {
+        0x2,
+        0x1,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# direct methods
+.method public static final routingSummary(Ljava/util/List;)Lcom/google/android/libraries/places/api/model/RoutingSummary;
+    .locals 1
+    .param p0    # Ljava/util/List;
+        .annotation build Landroidx/annotation/RecentlyNonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "+",
+            "Lcom/google/android/libraries/places/api/model/Leg;",
+            ">;)",
+            "Lcom/google/android/libraries/places/api/model/RoutingSummary;"
+        }
+    .end annotation
+
+    .annotation build Ljj/l;
+    .end annotation
+
+    .prologue
+    .line 1
+    const-string v0, "\u3bea"
+
+    invoke-static {v0}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 3
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 6
+    invoke-static {p0}, Lcom/google/android/libraries/places/api/model/RoutingSummary;->newInstance(Ljava/util/List;)Lcom/google/android/libraries/places/api/model/RoutingSummary;
+
+    .line 9
+    move-result-object p0
+
+    .line 10
+    const-string v0, "\u3beb"
+
+    invoke-static {v0}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 12
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->o(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 15
+    return-object p0
+.end method

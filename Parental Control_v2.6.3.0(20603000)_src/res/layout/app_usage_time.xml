@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/clAppUsageTime"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@id/dot"
+        android:background="@drawable/no_data_dot"
+        android:layout_width="8.0dip"
+        android:layout_height="8.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="12.0sp"
+        android:textColor="@color/black_ff464f60"
+        android:ellipsize="end"
+        android:id="@id/tvAppName"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/common_loading"
+        android:maxLines="1"
+        android:layout_marginStart="6.0dip"
+        android:layout_marginEnd="5.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/dot"
+        app:layout_constraintEnd_toStartOf="@id/tvUsageTime"
+        app:layout_constraintStart_toEndOf="@id/dot"
+        app:layout_constraintTop_toTopOf="@id/dot"
+        app:layout_constraintWidth_min="20.0dip" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="12.0sp"
+        android:textColor="@color/black_ff464f60"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:id="@id/tvUsageTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginStart="5.0dip"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvAppName"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

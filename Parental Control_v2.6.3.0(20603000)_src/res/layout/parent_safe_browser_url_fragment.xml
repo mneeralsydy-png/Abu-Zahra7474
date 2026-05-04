@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/grey_f4f4f4"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_start_percent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_end_percent" />
+    <include
+        android:id="@id/itemAddOptionLayout"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/add_url_option_layout" />
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="@color/gray_666b75"
+        android:id="@id/tvListTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:text="@string/Parenatl_Browser_Whitelist_Added"
+        android:layout_marginStart="20.0dip"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/itemAddOptionLayout" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/rvUrlList"
+        android:clipToPadding="false"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginBottom="10.0dip"
+        android:overScrollMode="never"
+        android:layout_marginVertical="10.0dip"
+        app:layout_constrainedHeight="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/tvListTitle"
+        app:layout_constraintVertical_bias="0.0" />
+    <include
+        android:id="@id/layoutEmptyData"
+        android:visibility="invisible"
+        android:clipToPadding="false"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40.0dip"
+        app:layout_constrainedHeight="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/tvListTitle"
+        app:layout_constraintVertical_bias="0.0"
+        layout="@layout/layout_empty_data_3" />
+    <ProgressBar
+        android:id="@id/progressBar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

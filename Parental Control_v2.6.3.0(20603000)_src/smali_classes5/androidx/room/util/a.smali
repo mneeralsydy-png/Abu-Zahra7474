@@ -1,0 +1,147 @@
+.class public final Landroidx/room/util/a;
+.super Ljava/lang/Object;
+.source "ByteArrayWrapper.kt"
+
+
+# annotations
+.annotation build Landroidx/annotation/c1;
+    value = {
+        .enum Landroidx/annotation/c1$a;->LIBRARY_GROUP_PREFIX:Landroidx/annotation/c1$a;
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000 \n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u0012\n\u0002\u0008\u0004\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0005\u0008\u0007\u0018\u00002\u00020\u0001B\u000f\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u00a2\u0006\u0004\u0008\u0004\u0010\u0005J\u001a\u0010\u0008\u001a\u00020\u00072\u0008\u0010\u0006\u001a\u0004\u0018\u00010\u0001H\u0096\u0002\u00a2\u0006\u0004\u0008\u0008\u0010\tJ\u000f\u0010\u000b\u001a\u00020\nH\u0016\u00a2\u0006\u0004\u0008\u000b\u0010\u000cR\u0014\u0010\u0003\u001a\u00020\u00028\u0006X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008\r\u0010\u000e\u00a8\u0006\u000f"
+    }
+    d2 = {
+        "Landroidx/room/util/a;",
+        "",
+        "",
+        "array",
+        "<init>",
+        "([B)V",
+        "other",
+        "",
+        "equals",
+        "(Ljava/lang/Object;)Z",
+        "",
+        "hashCode",
+        "()I",
+        "a",
+        "[B",
+        "room-runtime_release"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x0,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field public final a:[B
+    .annotation build Ljj/l;
+    .end annotation
+
+    .annotation build Lkotlin/jvm/JvmField;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>([B)V
+    .locals 1
+    .param p1    # [B
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+
+    .prologue
+    .line 1
+    const-string v0, "array"
+
+    .line 3
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->p(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 9
+    iput-object p1, p0, Landroidx/room/util/a;->a:[B
+
+    .line 11
+    return-void
+.end method
+
+
+# virtual methods
+.method public equals(Ljava/lang/Object;)Z
+    .locals 1
+    .param p1    # Ljava/lang/Object;
+        .annotation build Ljj/m;
+        .end annotation
+    .end param
+
+    .prologue
+    .line 1
+    if-ne p0, p1, :cond_0
+
+    .line 3
+    const/4 p1, 0x1
+
+    .line 4
+    return p1
+
+    .line 5
+    :cond_0
+    instance-of v0, p1, Landroidx/room/util/a;
+
+    .line 7
+    if-nez v0, :cond_1
+
+    .line 9
+    const/4 p1, 0x0
+
+    .line 10
+    return p1
+
+    .line 11
+    :cond_1
+    iget-object v0, p0, Landroidx/room/util/a;->a:[B
+
+    .line 13
+    check-cast p1, Landroidx/room/util/a;
+
+    .line 15
+    iget-object p1, p1, Landroidx/room/util/a;->a:[B
+
+    .line 17
+    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    .line 20
+    move-result p1
+
+    .line 21
+    return p1
+.end method
+
+.method public hashCode()I
+    .locals 1
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Landroidx/room/util/a;->a:[B
+
+    .line 3
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
+
+    .line 6
+    move-result v0
+
+    .line 7
+    return v0
+.end method

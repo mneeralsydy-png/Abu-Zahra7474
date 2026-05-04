@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@id/viewSearch"
+        android:background="@drawable/white_search_bg"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/search_bar_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvCancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/ivSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/search_20"
+        android:layout_marginStart="10.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/viewSearch"
+        app:layout_constraintStart_toStartOf="@id/viewSearch"
+        app:layout_constraintTop_toTopOf="@id/viewSearch" />
+    <com.sand.airdroidkid.common.ui.base.NewCleanableEditText
+        android:textSize="14.0sp"
+        android:textColor="@color/black_ff282930"
+        android:textColorHint="@color/gray_666b75"
+        android:id="@id/etSearch"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="4.0dip"
+        android:layout_marginBottom="4.0dip"
+        android:hint="@string/common_search"
+        android:maxLines="1"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        app:fontFamily="@font/font_family_medium"
+        app:isSearch="true"
+        app:layout_constraintBottom_toBottomOf="@id/viewSearch"
+        app:layout_constraintEnd_toEndOf="@id/viewSearch"
+        app:layout_constraintStart_toEndOf="@id/ivSearch"
+        app:layout_constraintTop_toTopOf="@id/viewSearch"
+        app:showBackground="false"
+        app:textPassword="false" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="@color/black_ff282930"
+        android:id="@id/tvCancel"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ad_cancel"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginEnd="16.0dip"
+        app:fontFamily="@font/font_family_semi_bold"
+        app:layout_constraintBottom_toBottomOf="@id/viewSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/viewSearch"
+        app:layout_constraintTop_toTopOf="@id/viewSearch" />
+</androidx.constraintlayout.widget.ConstraintLayout>

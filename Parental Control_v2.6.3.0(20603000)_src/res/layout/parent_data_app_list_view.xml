@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_start_percent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_end_percent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/clContent"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/glContentStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="16.0dip" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/glContentEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_end="16.0dip" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:id="@id/glContentTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="12.0dip" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:id="@id/glContentBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_end="12.0dip" />
+        <ImageView
+            android:id="@id/ivAppListIcon"
+            android:background="@drawable/icon_app_bg"
+            android:padding="1.0dip"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:src="@drawable/ic_noapp"
+            app:layout_constraintBottom_toBottomOf="@id/glContentBottom"
+            app:layout_constraintStart_toStartOf="@id/glContentStart"
+            app:layout_constraintTop_toTopOf="@id/glContentTop" />
+        <TextView
+            android:textSize="15.0sp"
+            android:textColor="@color/black_282930"
+            android:ellipsize="end"
+            android:id="@id/tvAppListName"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textDirection="locale"
+            android:layout_marginStart="10.0dip"
+            android:layout_marginEnd="18.0dip"
+            app:fontFamily="@font/font_family_medium"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/ivAppListIcon"
+            app:layout_constraintEnd_toStartOf="@id/tvAppInstallTime"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/ivAppListIcon"
+            app:layout_constraintTop_toTopOf="@id/ivAppListIcon" />
+        <TextView
+            android:textSize="13.0sp"
+            android:textColor="@color/gray_a4a8b3"
+            android:id="@id/tvAppInstallTime"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8.0dip"
+            app:layout_constraintBottom_toBottomOf="@id/ivAppListIcon"
+            app:layout_constraintEnd_toStartOf="@id/ivAppListRight"
+            app:layout_constraintTop_toTopOf="@id/ivAppListIcon" />
+        <ImageView
+            android:id="@id/ivAppListRight"
+            android:layout_width="12.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21.0dip"
+            android:layout_marginBottom="20.0dip"
+            android:src="@drawable/ic_more_right"
+            android:height="14.0dip"
+            android:width="14.0dip"
+            android:layout_alignParentEnd="true"
+            app:layout_constraintBottom_toBottomOf="@id/ivAppListIcon"
+            app:layout_constraintEnd_toEndOf="@id/glContentEnd"
+            app:layout_constraintTop_toTopOf="@id/ivAppListIcon" />
+        <View
+            android:id="@id/vDivider"
+            android:background="@color/ad_base_divider"
+            android:layout_width="0.0dip"
+            android:layout_height="1.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/glContentEnd"
+            app:layout_constraintStart_toStartOf="@id/glContentStart" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

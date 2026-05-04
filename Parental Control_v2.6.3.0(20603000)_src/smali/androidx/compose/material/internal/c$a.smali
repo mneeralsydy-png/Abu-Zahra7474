@@ -1,0 +1,304 @@
+.class public final Landroidx/compose/material/internal/c$a;
+.super Ljava/lang/Object;
+.source "Icons.kt"
+
+
+# annotations
+.annotation build Landroidx/compose/runtime/internal/u;
+    parameters = 0x0
+.end annotation
+
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/compose/material/internal/c;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "a"
+.end annotation
+
+.annotation system Ldalvik/annotation/SourceDebugExtension;
+    value = "SMAP\nIcons.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Icons.kt\nandroidx/compose/material/internal/Icons$Filled\n+ 2 Icons.kt\nandroidx/compose/material/internal/IconsKt\n+ 3 Dp.kt\nandroidx/compose/ui/unit/DpKt\n+ 4 ImageVector.kt\nandroidx/compose/ui/graphics/vector/ImageVectorKt\n+ 5 Vector.kt\nandroidx/compose/ui/graphics/vector/VectorKt\n*L\n1#1,87:1\n64#2:88\n57#2,3:89\n60#2,3:93\n67#2,15:96\n84#2:130\n65#2:131\n169#3:92\n710#4,2:111\n722#4,2:113\n724#4,11:119\n72#5,4:115\n*S KotlinDebug\n*F\n+ 1 Icons.kt\nandroidx/compose/material/internal/Icons$Filled\n*L\n38#1:88\n38#1:89,3\n38#1:93,3\n39#1:96,15\n39#1:130\n38#1:131\n38#1:92\n39#1:111,2\n39#1:113,2\n39#1:119,11\n39#1:115,4\n*E\n"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0007\u0008\u00c0\u0002\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003R\u0018\u0010\u0007\u001a\u0004\u0018\u00010\u00048\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008\u0005\u0010\u0006R\u0014\u0010\n\u001a\u00020\u00048@X\u0080\u0004\u00a2\u0006\u0006\u001a\u0004\u0008\u0008\u0010\t\u00a8\u0006\u000b"
+    }
+    d2 = {
+        "Landroidx/compose/material/internal/c$a;",
+        "",
+        "<init>",
+        "()V",
+        "Landroidx/compose/ui/graphics/vector/d;",
+        "b",
+        "Landroidx/compose/ui/graphics/vector/d;",
+        "_arrowDropDown",
+        "a",
+        "()Landroidx/compose/ui/graphics/vector/d;",
+        "ArrowDropDown",
+        "material_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+.annotation build Lkotlin/jvm/internal/SourceDebugExtension;
+    value = {
+        "SMAP\nIcons.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Icons.kt\nandroidx/compose/material/internal/Icons$Filled\n+ 2 Icons.kt\nandroidx/compose/material/internal/IconsKt\n+ 3 Dp.kt\nandroidx/compose/ui/unit/DpKt\n+ 4 ImageVector.kt\nandroidx/compose/ui/graphics/vector/ImageVectorKt\n+ 5 Vector.kt\nandroidx/compose/ui/graphics/vector/VectorKt\n*L\n1#1,87:1\n64#2:88\n57#2,3:89\n60#2,3:93\n67#2,15:96\n84#2:130\n65#2:131\n169#3:92\n710#4,2:111\n722#4,2:113\n724#4,11:119\n72#5,4:115\n*S KotlinDebug\n*F\n+ 1 Icons.kt\nandroidx/compose/material/internal/Icons$Filled\n*L\n38#1:88\n38#1:89,3\n38#1:93,3\n39#1:96,15\n39#1:130\n38#1:131\n38#1:92\n39#1:111,2\n39#1:113,2\n39#1:119,11\n39#1:115,4\n*E\n"
+    }
+.end annotation
+
+
+# static fields
+.field public static final a:Landroidx/compose/material/internal/c$a;
+    .annotation build Ljj/l;
+    .end annotation
+.end field
+
+.field private static b:Landroidx/compose/ui/graphics/vector/d; = null
+    .annotation build Ljj/m;
+    .end annotation
+.end field
+
+.field public static final c:I = 0x8
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .prologue
+    .line 1
+    new-instance v0, Landroidx/compose/material/internal/c$a;
+
+    .line 3
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    sput-object v0, Landroidx/compose/material/internal/c$a;->a:Landroidx/compose/material/internal/c$a;
+
+    .line 8
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Landroidx/compose/ui/graphics/vector/d;
+    .locals 18
+    .annotation build Ljj/l;
+    .end annotation
+
+    .prologue
+    .line 1
+    sget-object v0, Landroidx/compose/material/internal/c$a;->b:Landroidx/compose/ui/graphics/vector/d;
+
+    .line 3
+    if-eqz v0, :cond_0
+
+    .line 5
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->m(Ljava/lang/Object;)V
+
+    .line 8
+    return-object v0
+
+    .line 9
+    :cond_0
+    new-instance v0, Landroidx/compose/ui/graphics/vector/d$a;
+
+    .line 11
+    const/high16 v1, 0x41c00000    # 24.0f
+
+    .line 13
+    invoke-static {v1}, Landroidx/compose/ui/unit/h;->i(F)F
+
+    .line 16
+    move-result v3
+
+    .line 17
+    const/16 v11, 0xe0
+
+    .line 19
+    const/4 v12, 0x0
+
+    .line 20
+    const-string v2, "Filled.ArrowDropDown"
+
+    .line 22
+    const/high16 v4, 0x41c00000    # 24.0f
+
+    .line 24
+    const/high16 v5, 0x41c00000    # 24.0f
+
+    .line 26
+    const/high16 v6, 0x41c00000    # 24.0f
+
+    .line 28
+    const-wide/16 v7, 0x0
+
+    .line 30
+    const/4 v9, 0x0
+
+    .line 31
+    const/4 v10, 0x0
+
+    .line 32
+    move-object v1, v0
+
+    .line 33
+    invoke-direct/range {v1 .. v12}, Landroidx/compose/ui/graphics/vector/d$a;-><init>(Ljava/lang/String;FFFFJIZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    .line 36
+    invoke-static {}, Landroidx/compose/ui/graphics/vector/t;->c()I
+
+    .line 39
+    move-result v3
+
+    .line 40
+    new-instance v5, Landroidx/compose/ui/graphics/b7;
+
+    .line 42
+    sget-object v1, Landroidx/compose/ui/graphics/j2;->b:Landroidx/compose/ui/graphics/j2$a;
+
+    .line 44
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 47
+    invoke-static {}, Landroidx/compose/ui/graphics/j2;->a()J
+
+    .line 50
+    move-result-wide v1
+
+    .line 51
+    const/4 v4, 0x0
+
+    .line 52
+    invoke-direct {v5, v1, v2, v4}, Landroidx/compose/ui/graphics/b7;-><init>(JLkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    .line 55
+    sget-object v1, Landroidx/compose/ui/graphics/d7;->b:Landroidx/compose/ui/graphics/d7$a;
+
+    .line 57
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 60
+    invoke-static {}, Landroidx/compose/ui/graphics/d7;->a()I
+
+    .line 63
+    move-result v10
+
+    .line 64
+    sget-object v1, Landroidx/compose/ui/graphics/e7;->b:Landroidx/compose/ui/graphics/e7$a;
+
+    .line 66
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 69
+    invoke-static {}, Landroidx/compose/ui/graphics/e7;->a()I
+
+    .line 72
+    move-result v11
+
+    .line 73
+    const/high16 v1, 0x40e00000    # 7.0f
+
+    .line 75
+    const/high16 v2, 0x41200000    # 10.0f
+
+    .line 77
+    const/high16 v4, 0x40a00000    # 5.0f
+
+    .line 79
+    invoke-static {v1, v2, v4, v4}, Lz/b;->a(FFFF)Landroidx/compose/ui/graphics/vector/f;
+
+    .line 82
+    move-result-object v1
+
+    .line 83
+    const/high16 v2, -0x3f600000    # -5.0f
+
+    .line 85
+    invoke-virtual {v1, v4, v2}, Landroidx/compose/ui/graphics/vector/f;->j(FF)Landroidx/compose/ui/graphics/vector/f;
+
+    .line 88
+    invoke-virtual {v1}, Landroidx/compose/ui/graphics/vector/f;->c()Landroidx/compose/ui/graphics/vector/f;
+
+    .line 91
+    invoke-virtual {v1}, Landroidx/compose/ui/graphics/vector/f;->f()Ljava/util/List;
+
+    .line 94
+    move-result-object v2
+
+    .line 95
+    const/16 v16, 0x3800
+
+    .line 97
+    const/16 v17, 0x0
+
+    .line 99
+    const-string v4, ""
+
+    .line 101
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    .line 103
+    const/4 v7, 0x0
+
+    .line 104
+    const/high16 v8, 0x3f800000    # 1.0f
+
+    .line 106
+    const/high16 v9, 0x3f800000    # 1.0f
+
+    .line 108
+    const/high16 v12, 0x3f800000    # 1.0f
+
+    .line 110
+    const/4 v13, 0x0
+
+    .line 111
+    const/4 v14, 0x0
+
+    .line 112
+    const/4 v15, 0x0
+
+    .line 113
+    move-object v1, v0
+
+    .line 114
+    invoke-static/range {v1 .. v17}, Landroidx/compose/ui/graphics/vector/d$a;->d(Landroidx/compose/ui/graphics/vector/d$a;Ljava/util/List;ILjava/lang/String;Landroidx/compose/ui/graphics/z1;FLandroidx/compose/ui/graphics/z1;FFIIFFFFILjava/lang/Object;)Landroidx/compose/ui/graphics/vector/d$a;
+
+    .line 117
+    move-result-object v0
+
+    .line 118
+    invoke-virtual {v0}, Landroidx/compose/ui/graphics/vector/d$a;->f()Landroidx/compose/ui/graphics/vector/d;
+
+    .line 121
+    move-result-object v0
+
+    .line 122
+    sput-object v0, Landroidx/compose/material/internal/c$a;->b:Landroidx/compose/ui/graphics/vector/d;
+
+    .line 124
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->m(Ljava/lang/Object;)V
+
+    .line 127
+    return-object v0
+.end method

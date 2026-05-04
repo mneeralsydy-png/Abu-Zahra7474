@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    android:id="@id/content_detection_keyword_manage_navigation"
+    app:startDestination="@id/parentContentDetectionKeywordManageListFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment
+        android:name="com.sand.airdroidkidp.feature.content.detection.ParentContentDetectionKeywordManageEmptyFragment"
+        android:id="@id/parentContentDetectionKeywordManageEmptyFragment">
+        <action
+            android:id="@id/action_EmptyFragment_to_ListFragment"
+            app:destination="@id/parentContentDetectionKeywordManageListFragment"
+            app:popUpTo="@id/parentContentDetectionKeywordManageEmptyFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:name="com.sand.airdroidkidp.feature.content.detection.ParentContentDetectionKeywordManageFailedFragment"
+        android:id="@id/parentContentDetectionKeywordManageFailedFragment">
+        <argument
+            android:name="from"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@id/action_FailedFragment_to_ListFragment"
+            app:destination="@id/parentContentDetectionKeywordManageListFragment"
+            app:popUpTo="@id/parentContentDetectionKeywordManageFailedFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@id/action_FailedFragment_to_SubscribeFragment"
+            app:destination="@id/parentContentDetectionManagerSubscribeFragment"
+            app:popUpTo="@id/parentContentDetectionKeywordManageFailedFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:name="com.sand.airdroidkidp.feature.content.detection.ParentContentDetectionKeywordManageListFragment"
+        android:id="@id/parentContentDetectionKeywordManageListFragment">
+        <action
+            android:id="@id/action_ListFragment_to_FailedFragment"
+            app:destination="@id/parentContentDetectionKeywordManageFailedFragment"
+            app:popUpTo="@id/parentContentDetectionKeywordManageListFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@id/action_ListFragment_to_EmptyFragment"
+            app:destination="@id/parentContentDetectionKeywordManageEmptyFragment"
+            app:popUpTo="@id/parentContentDetectionKeywordManageListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:name="com.sand.airdroidkidp.feature.content.detection.ParentContentDetectionManagerSubscribeFragment"
+        android:id="@id/parentContentDetectionManagerSubscribeFragment">
+        <action
+            android:id="@id/action_SubscribeFragment_to_FailedFragment"
+            app:destination="@id/parentContentDetectionKeywordManageFailedFragment"
+            app:popUpTo="@id/parentContentDetectionManagerSubscribeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/location_dialog_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:maxWidth="@dimen/tablet_max_width"
+    android:paddingStart="20.0dip"
+    android:paddingEnd="20.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:src="@drawable/bottom_sheet_mark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@id/optionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34.0dip"
+        android:text="@string/Parent_Device_Alert_Allow_Time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/bottom_sheet_title_style" />
+    <RadioGroup
+        android:id="@id/optionGroup"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/optionTitle">
+        <com.sand.airdroidkid.common.ui.custom.BottomSheetDialogOptionRadioButton
+            android:id="@id/optionAlways"
+            android:layout_width="fill_parent"
+            android:text="@string/Request_Access_Always_Allowed"
+            style="@style/bottom_sheet_option_style" />
+        <com.sand.airdroidkid.common.ui.custom.BottomSheetDialogOptionRadioButton
+            android:id="@id/optionToday"
+            android:layout_width="fill_parent"
+            android:text="@string/Parent_Device_Alert_Today_Available"
+            style="@style/bottom_sheet_option_style" />
+        <com.sand.airdroidkid.common.ui.custom.BottomSheetDialogOptionRadioButton
+            android:id="@id/optionOneHour"
+            android:layout_width="fill_parent"
+            android:text="@string/Parent_Device_Alert_Hours"
+            style="@style/bottom_sheet_option_style" />
+        <com.sand.airdroidkid.common.ui.custom.BottomSheetDialogOptionRadioButton
+            android:id="@id/optionThirtyMin"
+            android:layout_width="fill_parent"
+            android:text="@string/Common_minutes"
+            style="@style/bottom_sheet_option_style" />
+        <com.sand.airdroidkid.common.ui.custom.BottomSheetDialogOptionRadioButton
+            android:id="@id/optionFifteenMin"
+            android:layout_width="fill_parent"
+            android:text="@string/Common_minutes"
+            style="@style/bottom_sheet_option_style" />
+        <com.sand.airdroidkid.common.ui.custom.BottomSheetDialogOptionRadioButton
+            android:id="@id/optionTenMin"
+            android:layout_width="fill_parent"
+            android:text="@string/Common_minutes"
+            style="@style/bottom_sheet_option_style" />
+        <com.sand.airdroidkid.common.ui.custom.BottomSheetDialogOptionRadioButton
+            android:id="@id/optionFiveMin"
+            android:layout_width="fill_parent"
+            android:text="@string/Common_minutes"
+            style="@style/bottom_sheet_option_style" />
+    </RadioGroup>
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:textColor="@color/gray_878d9a"
+        android:id="@id/cbApplyNow"
+        android:paddingLeft="6.0dip"
+        android:paddingRight="6.0dip"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:button="@drawable/ic_selected_check"
+        android:text="@string/Parental_AskUse_Effect_Immediately"
+        android:paddingHorizontal="6.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/optionGroup" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="@color/white_ffffff"
+        android:gravity="center"
+        android:id="@id/btnOk"
+        android:background="@drawable/kid_blue_button_style"
+        android:layout_width="0.0dip"
+        android:layout_height="44.0dip"
+        android:layout_marginTop="30.0dip"
+        android:text="@string/Common_OK2"
+        app:fontFamily="@font/font_family_semi_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbApplyNow" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="@color/gray_878d9a"
+        android:gravity="center"
+        android:id="@id/btnCancel"
+        android:layout_width="0.0dip"
+        android:layout_height="44.0dip"
+        android:layout_marginTop="6.0dip"
+        android:layout_marginBottom="12.0dip"
+        android:text="@string/ad_cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnOk" />
+</androidx.constraintlayout.widget.ConstraintLayout>

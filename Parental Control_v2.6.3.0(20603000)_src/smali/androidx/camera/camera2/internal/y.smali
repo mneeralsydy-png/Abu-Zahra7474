@@ -1,0 +1,50 @@
+.class public final synthetic Landroidx/camera/camera2/internal/y;
+.super Ljava/lang/Object;
+.source "R8$$SyntheticClass"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic b:Landroidx/camera/core/impl/r;
+
+.field public final synthetic d:I
+
+
+# direct methods
+.method public synthetic constructor <init>(Landroidx/camera/core/impl/r;I)V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Landroidx/camera/camera2/internal/y;->b:Landroidx/camera/core/impl/r;
+
+    .line 6
+    iput p2, p0, Landroidx/camera/camera2/internal/y;->d:I
+
+    .line 8
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Landroidx/camera/camera2/internal/y;->b:Landroidx/camera/core/impl/r;
+
+    .line 3
+    iget v1, p0, Landroidx/camera/camera2/internal/y;->d:I
+
+    .line 5
+    invoke-virtual {v0, v1}, Landroidx/camera/core/impl/r;->a(I)V
+
+    .line 8
+    return-void
+.end method

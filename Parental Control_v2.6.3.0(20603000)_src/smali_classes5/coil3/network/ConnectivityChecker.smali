@@ -1,0 +1,102 @@
+.class public interface abstract Lcoil3/network/ConnectivityChecker;
+.super Ljava/lang/Object;
+.source "ConnectivityChecker.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcoil3/network/ConnectivityChecker$a;
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0003\u0008\u00e7\u0080\u0001\u0018\u0000 \u00032\u00020\u0001:\u0001\u0003J\u000f\u0010\u0003\u001a\u00020\u0002H&\u00a2\u0006\u0004\u0008\u0003\u0010\u0004\u00f8\u0001\u0000\u0082\u0002\u0006\n\u0004\u0008!0\u0001\u00a8\u0006\u0005\u00c0\u0006\u0001"
+    }
+    d2 = {
+        "Lcoil3/network/ConnectivityChecker;",
+        "",
+        "",
+        "a",
+        "()Z",
+        "coil-network-core_release"
+    }
+    k = 0x1
+    mv = {
+        0x2,
+        0x0,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+.annotation build Ll4/b;
+.end annotation
+
+
+# static fields
+.field public static final a:Lcoil3/network/ConnectivityChecker$a;
+    .annotation build Ljj/l;
+    .end annotation
+.end field
+
+.field public static final b:Lcoil3/network/ConnectivityChecker;
+    .annotation build Ljj/l;
+    .end annotation
+
+    .annotation build Lkotlin/jvm/JvmField;
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .prologue
+    .line 1
+    sget-object v0, Lcoil3/network/ConnectivityChecker$a;->a:Lcoil3/network/ConnectivityChecker$a;
+
+    .line 3
+    sput-object v0, Lcoil3/network/ConnectivityChecker;->a:Lcoil3/network/ConnectivityChecker$a;
+
+    .line 5
+    new-instance v0, Lcoil3/network/d;
+
+    .line 7
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 10
+    sput-object v0, Lcoil3/network/ConnectivityChecker;->b:Lcoil3/network/ConnectivityChecker;
+
+    .line 12
+    return-void
+.end method
+
+.method public static b()Z
+    .locals 1
+
+    .prologue
+    .line 1
+    const/4 v0, 0x1
+
+    .line 2
+    return v0
+.end method
+
+.method private static c()Z
+    .locals 1
+
+    .prologue
+    .line 1
+    const/4 v0, 0x1
+
+    .line 2
+    return v0
+.end method
+
+
+# virtual methods
+.method public abstract a()Z
+.end method

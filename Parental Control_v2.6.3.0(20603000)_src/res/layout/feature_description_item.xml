@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="vertical"
+        android:id="@id/clContainer"
+        android:background="@drawable/feature_list_item_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:id="@id/glTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="8.0dip" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:id="@id/glBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_end="8.0dip" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/glImageStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="0.0dip" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/glImageEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_end="0.0dip" />
+        <ImageView
+            android:id="@id/ivIcon"
+            android:layout_width="28.0dip"
+            android:layout_height="28.0dip"
+            app:layout_constraintStart_toStartOf="@id/glImageStart"
+            app:layout_constraintTop_toTopOf="@id/glTop" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray_464f60"
+            android:id="@id/tvTitle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10.0dip"
+            android:layout_marginEnd="20.0dip"
+            app:layout_constraintEnd_toEndOf="@id/glImageEnd"
+            app:layout_constraintStart_toEndOf="@id/ivIcon"
+            app:layout_constraintTop_toTopOf="@id/ivIcon" />
+        <TextView
+            android:textSize="13.0sp"
+            android:textColor="@color/gray_878d9a"
+            android:id="@id/tvDescription"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.0dip"
+            app:layout_constraintBottom_toBottomOf="@id/glBottom"
+            app:layout_constraintEnd_toEndOf="@id/glImageEnd"
+            app:layout_constraintStart_toStartOf="@id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

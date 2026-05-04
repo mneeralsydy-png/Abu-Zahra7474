@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/white_f5f5f5"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/clSearchView"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.sand.airdroidkidp.ui.custom.ParentSearchEditText
+            android:id="@id/etSearchBar"
+            android:paddingBottom="16.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20.0dip"
+            android:layout_marginTop="16.0dip"
+            android:layout_marginRight="20.0dip"
+            android:layout_marginHorizontal="20.0dip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:searchBarBackground="@drawable/white_search_bg" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clSearchView">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/rvCategoryApp"
+                android:background="@drawable/app_limit_list_background"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginRight="20.0dip"
+                android:maxHeight="700.0dip"
+                android:layout_marginHorizontal="20.0dip"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/rvSearchApp"
+                android:background="@drawable/app_limit_list_background"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginRight="20.0dip"
+                android:maxHeight="700.0dip"
+                android:layout_marginHorizontal="20.0dip"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@id/ivSelectAppSearchEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pic_not_search"
+        app:layout_constraintBottom_toTopOf="@id/tvSelectAppSearchEmpty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clSearchView"
+        app:layout_constraintVertical_bias="0.45"
+        app:layout_constraintVertical_chainStyle="packed" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="12.0sp"
+        android:textColor="@color/gray_878d9a"
+        android:id="@id/tvSelectAppSearchEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:text="@string/Parent_UsageLimit_Select_None"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivSelectAppSearchEmpty"
+        app:layout_constraintVertical_bias="0.45"
+        app:layout_constraintVertical_chainStyle="packed" />
+    <androidx.constraintlayout.widget.Group
+        android:id="@id/groupSearchResultEmpty"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="ivSelectAppSearchEmpty,tvSelectAppSearchEmpty" />
+    <RelativeLayout
+        android:id="@id/loading_page"
+        android:background="@color/ad_list_selector_p"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

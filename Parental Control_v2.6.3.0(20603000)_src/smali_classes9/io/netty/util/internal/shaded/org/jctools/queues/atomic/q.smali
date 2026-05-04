@@ -1,0 +1,1060 @@
+.class public Lio/netty/util/internal/shaded/org/jctools/queues/atomic/q;
+.super Lio/netty/util/internal/shaded/org/jctools/queues/atomic/u;
+.source "MpscAtomicArrayQueue.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<E:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lio/netty/util/internal/shaded/org/jctools/queues/atomic/u<",
+        "TE;>;"
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>(I)V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-direct {p0, p1}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/u;-><init>(I)V
+
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method public bridge synthetic clear()V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-super {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->clear()V
+
+    .line 4
+    return-void
+.end method
+
+.method public drain(Lio/netty/util/internal/shaded/org/jctools/queues/s$a;)I
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lio/netty/util/internal/shaded/org/jctools/queues/s$a<",
+            "TE;>;)I"
+        }
+    .end annotation
+
+    .prologue
+    .line 17
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->capacity()I
+
+    move-result v0
+
+    invoke-virtual {p0, p1, v0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/q;->drain(Lio/netty/util/internal/shaded/org/jctools/queues/s$a;I)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public drain(Lio/netty/util/internal/shaded/org/jctools/queues/s$a;I)I
+    .locals 11
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lio/netty/util/internal/shaded/org/jctools/queues/s$a<",
+            "TE;>;I)I"
+        }
+    .end annotation
+
+    .prologue
+    if-eqz p1, :cond_4
+
+    if-ltz p2, :cond_3
+
+    const/4 v0, 0x0
+
+    if-nez p2, :cond_0
+
+    return v0
+
+    .line 1
+    :cond_0
+    iget-object v1, p0, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->buffer:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    .line 2
+    iget v2, p0, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->mask:I
+
+    .line 3
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/r;->lpConsumerIndex()J
+
+    move-result-wide v3
+
+    :goto_0
+    if-ge v0, p2, :cond_2
+
+    int-to-long v5, v0
+
+    add-long/2addr v5, v3
+
+    int-to-long v7, v2
+
+    .line 4
+    invoke-static {v5, v6, v7, v8}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->calcCircularRefElementOffset(JJ)I
+
+    move-result v7
+
+    .line 5
+    invoke-static {v1, v7}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->lvRefElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;I)Ljava/lang/Object;
+
+    move-result-object v8
+
+    if-nez v8, :cond_1
+
+    return v0
+
+    :cond_1
+    const/4 v9, 0x0
+
+    .line 6
+    invoke-static {v1, v7, v9}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->spRefElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILjava/lang/Object;)V
+
+    const-wide/16 v9, 0x1
+
+    add-long/2addr v5, v9
+
+    .line 7
+    invoke-virtual {p0, v5, v6}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/r;->soConsumerIndex(J)V
+
+    .line 8
+    invoke-interface {p1, v8}, Lio/netty/util/internal/shaded/org/jctools/queues/s$a;->accept(Ljava/lang/Object;)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return p2
+
+    .line 9
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "\ua063\u0001"
+
+    invoke-static {v0}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 10
+    invoke-static {v0, p2}, Landroid/support/v4/media/a;->a(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object p2
+
+    .line 11
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 12
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "\ua064\u0001"
+
+    invoke-static {p2}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public drain(Lio/netty/util/internal/shaded/org/jctools/queues/s$a;Lio/netty/util/internal/shaded/org/jctools/queues/s$d;Lio/netty/util/internal/shaded/org/jctools/queues/s$b;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lio/netty/util/internal/shaded/org/jctools/queues/s$a<",
+            "TE;>;",
+            "Lio/netty/util/internal/shaded/org/jctools/queues/s$d;",
+            "Lio/netty/util/internal/shaded/org/jctools/queues/s$b;",
+            ")V"
+        }
+    .end annotation
+
+    .prologue
+    .line 18
+    invoke-static {p0, p1, p2, p3}, Lio/netty/util/internal/shaded/org/jctools/queues/t;->drain(Lio/netty/util/internal/shaded/org/jctools/queues/s;Lio/netty/util/internal/shaded/org/jctools/queues/s$a;Lio/netty/util/internal/shaded/org/jctools/queues/s$d;Lio/netty/util/internal/shaded/org/jctools/queues/s$b;)V
+
+    return-void
+.end method
+
+.method public final failFastOffer(Ljava/lang/Object;)I
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TE;)I"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    if-eqz p1, :cond_3
+
+    .line 3
+    iget v0, p0, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->mask:I
+
+    .line 5
+    add-int/lit8 v1, v0, 0x1
+
+    .line 7
+    int-to-long v1, v1
+
+    .line 8
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/w;->lvProducerIndex()J
+
+    .line 11
+    move-result-wide v3
+
+    .line 12
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/x;->lvProducerLimit()J
+
+    .line 15
+    move-result-wide v5
+
+    .line 16
+    cmp-long v5, v3, v5
+
+    .line 18
+    if-ltz v5, :cond_1
+
+    .line 20
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/r;->lvConsumerIndex()J
+
+    .line 23
+    move-result-wide v5
+
+    .line 24
+    add-long/2addr v5, v1
+
+    .line 25
+    cmp-long v1, v3, v5
+
+    .line 27
+    if-ltz v1, :cond_0
+
+    .line 29
+    const/4 p1, 0x1
+
+    .line 30
+    return p1
+
+    .line 31
+    :cond_0
+    invoke-virtual {p0, v5, v6}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/x;->soProducerLimit(J)V
+
+    .line 34
+    :cond_1
+    const-wide/16 v1, 0x1
+
+    .line 36
+    add-long/2addr v1, v3
+
+    .line 37
+    invoke-virtual {p0, v3, v4, v1, v2}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/w;->casProducerIndex(JJ)Z
+
+    .line 40
+    move-result v1
+
+    .line 41
+    if-nez v1, :cond_2
+
+    .line 43
+    const/4 p1, -0x1
+
+    .line 44
+    return p1
+
+    .line 45
+    :cond_2
+    int-to-long v0, v0
+
+    .line 46
+    invoke-static {v3, v4, v0, v1}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->calcCircularRefElementOffset(JJ)I
+
+    .line 49
+    move-result v0
+
+    .line 50
+    iget-object v1, p0, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->buffer:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    .line 52
+    invoke-static {v1, v0, p1}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->soRefElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILjava/lang/Object;)V
+
+    .line 55
+    const/4 p1, 0x0
+
+    .line 56
+    return p1
+
+    .line 57
+    :cond_3
+    const/4 p1, 0x0
+
+    .line 58
+    throw p1
+.end method
+
+.method public fill(Lio/netty/util/internal/shaded/org/jctools/queues/s$c;)I
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lio/netty/util/internal/shaded/org/jctools/queues/s$c<",
+            "TE;>;)I"
+        }
+    .end annotation
+
+    .prologue
+    .line 19
+    invoke-static {p0, p1}, Lio/netty/util/internal/shaded/org/jctools/queues/t;->fillBounded(Lio/netty/util/internal/shaded/org/jctools/queues/s;Lio/netty/util/internal/shaded/org/jctools/queues/s$c;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public fill(Lio/netty/util/internal/shaded/org/jctools/queues/s$c;I)I
+    .locals 13
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lio/netty/util/internal/shaded/org/jctools/queues/s$c<",
+            "TE;>;I)I"
+        }
+    .end annotation
+
+    .prologue
+    if-eqz p1, :cond_6
+
+    if-ltz p2, :cond_5
+
+    const/4 v0, 0x0
+
+    if-nez p2, :cond_0
+
+    return v0
+
+    .line 1
+    :cond_0
+    iget v1, p0, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->mask:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    int-to-long v2, v2
+
+    .line 2
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/x;->lvProducerLimit()J
+
+    move-result-wide v4
+
+    .line 3
+    :cond_1
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/w;->lvProducerIndex()J
+
+    move-result-wide v6
+
+    sub-long v8, v4, v6
+
+    const-wide/16 v10, 0x0
+
+    cmp-long v12, v8, v10
+
+    if-gtz v12, :cond_3
+
+    .line 4
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/r;->lvConsumerIndex()J
+
+    move-result-wide v4
+
+    add-long/2addr v4, v2
+
+    sub-long v8, v4, v6
+
+    cmp-long v10, v8, v10
+
+    if-gtz v10, :cond_2
+
+    return v0
+
+    .line 5
+    :cond_2
+    invoke-virtual {p0, v4, v5}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/x;->soProducerLimit(J)V
+
+    :cond_3
+    long-to-int v8, v8
+
+    .line 6
+    invoke-static {v8, p2}, Ljava/lang/Math;->min(II)I
+
+    move-result v8
+
+    int-to-long v9, v8
+
+    add-long/2addr v9, v6
+
+    .line 7
+    invoke-virtual {p0, v6, v7, v9, v10}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/w;->casProducerIndex(JJ)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_1
+
+    .line 8
+    iget-object p2, p0, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->buffer:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    :goto_0
+    if-ge v0, v8, :cond_4
+
+    int-to-long v2, v0
+
+    add-long/2addr v2, v6
+
+    int-to-long v4, v1
+
+    .line 9
+    invoke-static {v2, v3, v4, v5}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->calcCircularRefElementOffset(JJ)I
+
+    move-result v2
+
+    .line 10
+    invoke-interface {p1}, Lio/netty/util/internal/shaded/org/jctools/queues/s$c;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-static {p2, v2, v3}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->soRefElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILjava/lang/Object;)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    return v8
+
+    .line 11
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "\ua065\u0001"
+
+    invoke-static {v0}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 12
+    invoke-static {v0, p2}, Landroid/support/v4/media/a;->a(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object p2
+
+    .line 13
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 14
+    :cond_6
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "\ua066\u0001"
+
+    invoke-static {p2}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public fill(Lio/netty/util/internal/shaded/org/jctools/queues/s$c;Lio/netty/util/internal/shaded/org/jctools/queues/s$d;Lio/netty/util/internal/shaded/org/jctools/queues/s$b;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lio/netty/util/internal/shaded/org/jctools/queues/s$c<",
+            "TE;>;",
+            "Lio/netty/util/internal/shaded/org/jctools/queues/s$d;",
+            "Lio/netty/util/internal/shaded/org/jctools/queues/s$b;",
+            ")V"
+        }
+    .end annotation
+
+    .prologue
+    .line 20
+    invoke-static {p0, p1, p2, p3}, Lio/netty/util/internal/shaded/org/jctools/queues/t;->fill(Lio/netty/util/internal/shaded/org/jctools/queues/s;Lio/netty/util/internal/shaded/org/jctools/queues/s$c;Lio/netty/util/internal/shaded/org/jctools/queues/s$d;Lio/netty/util/internal/shaded/org/jctools/queues/s$b;)V
+
+    return-void
+.end method
+
+.method public offer(Ljava/lang/Object;)Z
+    .locals 10
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TE;)Z"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    if-eqz p1, :cond_3
+
+    .line 3
+    iget v0, p0, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->mask:I
+
+    .line 5
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/x;->lvProducerLimit()J
+
+    .line 8
+    move-result-wide v1
+
+    .line 9
+    :cond_0
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/w;->lvProducerIndex()J
+
+    .line 12
+    move-result-wide v3
+
+    .line 13
+    cmp-long v5, v3, v1
+
+    .line 15
+    const-wide/16 v6, 0x1
+
+    .line 17
+    if-ltz v5, :cond_2
+
+    .line 19
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/r;->lvConsumerIndex()J
+
+    .line 22
+    move-result-wide v1
+
+    .line 23
+    int-to-long v8, v0
+
+    .line 24
+    add-long/2addr v1, v8
+
+    .line 25
+    add-long/2addr v1, v6
+
+    .line 26
+    cmp-long v5, v3, v1
+
+    .line 28
+    if-ltz v5, :cond_1
+
+    .line 30
+    const/4 p1, 0x0
+
+    .line 31
+    return p1
+
+    .line 32
+    :cond_1
+    invoke-virtual {p0, v1, v2}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/x;->soProducerLimit(J)V
+
+    .line 35
+    :cond_2
+    add-long/2addr v6, v3
+
+    .line 36
+    invoke-virtual {p0, v3, v4, v6, v7}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/w;->casProducerIndex(JJ)Z
+
+    .line 39
+    move-result v5
+
+    .line 40
+    if-eqz v5, :cond_0
+
+    .line 42
+    int-to-long v0, v0
+
+    .line 43
+    invoke-static {v3, v4, v0, v1}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->calcCircularRefElementOffset(JJ)I
+
+    .line 46
+    move-result v0
+
+    .line 47
+    iget-object v1, p0, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->buffer:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    .line 49
+    invoke-static {v1, v0, p1}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->soRefElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILjava/lang/Object;)V
+
+    .line 52
+    const/4 p1, 0x1
+
+    .line 53
+    return p1
+
+    .line 54
+    :cond_3
+    const/4 p1, 0x0
+
+    .line 55
+    throw p1
+.end method
+
+.method public offerIfBelowThreshold(Ljava/lang/Object;I)Z
+    .locals 11
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TE;I)Z"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    if-eqz p1, :cond_3
+
+    .line 3
+    iget v0, p0, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->mask:I
+
+    .line 5
+    add-int/lit8 v1, v0, 0x1
+
+    .line 7
+    int-to-long v1, v1
+
+    .line 8
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/x;->lvProducerLimit()J
+
+    .line 11
+    move-result-wide v3
+
+    .line 12
+    :cond_0
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/w;->lvProducerIndex()J
+
+    .line 15
+    move-result-wide v5
+
+    .line 16
+    sub-long v7, v3, v5
+
+    .line 18
+    sub-long v7, v1, v7
+
+    .line 20
+    int-to-long v9, p2
+
+    .line 21
+    cmp-long v7, v7, v9
+
+    .line 23
+    if-ltz v7, :cond_2
+
+    .line 25
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/r;->lvConsumerIndex()J
+
+    .line 28
+    move-result-wide v3
+
+    .line 29
+    sub-long v7, v5, v3
+
+    .line 31
+    cmp-long v7, v7, v9
+
+    .line 33
+    if-ltz v7, :cond_1
+
+    .line 35
+    const/4 p1, 0x0
+
+    .line 36
+    return p1
+
+    .line 37
+    :cond_1
+    add-long/2addr v3, v1
+
+    .line 38
+    invoke-virtual {p0, v3, v4}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/x;->soProducerLimit(J)V
+
+    .line 41
+    :cond_2
+    const-wide/16 v7, 0x1
+
+    .line 43
+    add-long/2addr v7, v5
+
+    .line 44
+    invoke-virtual {p0, v5, v6, v7, v8}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/w;->casProducerIndex(JJ)Z
+
+    .line 47
+    move-result v7
+
+    .line 48
+    if-eqz v7, :cond_0
+
+    .line 50
+    int-to-long v0, v0
+
+    .line 51
+    invoke-static {v5, v6, v0, v1}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->calcCircularRefElementOffset(JJ)I
+
+    .line 54
+    move-result p2
+
+    .line 55
+    iget-object v0, p0, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->buffer:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    .line 57
+    invoke-static {v0, p2, p1}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->soRefElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILjava/lang/Object;)V
+
+    .line 60
+    const/4 p1, 0x1
+
+    .line 61
+    return p1
+
+    .line 62
+    :cond_3
+    const/4 p1, 0x0
+
+    .line 63
+    throw p1
+.end method
+
+.method public peek()Ljava/lang/Object;
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TE;"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->buffer:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    .line 3
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/r;->lpConsumerIndex()J
+
+    .line 6
+    move-result-wide v1
+
+    .line 7
+    iget v3, p0, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->mask:I
+
+    .line 9
+    int-to-long v3, v3
+
+    .line 10
+    invoke-static {v1, v2, v3, v4}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->calcCircularRefElementOffset(JJ)I
+
+    .line 13
+    move-result v3
+
+    .line 14
+    invoke-static {v0, v3}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->lvRefElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;I)Ljava/lang/Object;
+
+    .line 17
+    move-result-object v4
+
+    .line 18
+    if-nez v4, :cond_2
+
+    .line 20
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/w;->lvProducerIndex()J
+
+    .line 23
+    move-result-wide v4
+
+    .line 24
+    cmp-long v1, v1, v4
+
+    .line 26
+    if-eqz v1, :cond_1
+
+    .line 28
+    :cond_0
+    invoke-static {v0, v3}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->lvRefElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;I)Ljava/lang/Object;
+
+    .line 31
+    move-result-object v4
+
+    .line 32
+    if-eqz v4, :cond_0
+
+    .line 34
+    goto :goto_0
+
+    .line 35
+    :cond_1
+    const/4 v0, 0x0
+
+    .line 36
+    return-object v0
+
+    .line 37
+    :cond_2
+    :goto_0
+    return-object v4
+.end method
+
+.method public poll()Ljava/lang/Object;
+    .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TE;"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/r;->lpConsumerIndex()J
+
+    .line 4
+    move-result-wide v0
+
+    .line 5
+    iget v2, p0, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->mask:I
+
+    .line 7
+    int-to-long v2, v2
+
+    .line 8
+    invoke-static {v0, v1, v2, v3}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->calcCircularRefElementOffset(JJ)I
+
+    .line 11
+    move-result v2
+
+    .line 12
+    iget-object v3, p0, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->buffer:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    .line 14
+    invoke-static {v3, v2}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->lvRefElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;I)Ljava/lang/Object;
+
+    .line 17
+    move-result-object v4
+
+    .line 18
+    const/4 v5, 0x0
+
+    .line 19
+    if-nez v4, :cond_2
+
+    .line 21
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/w;->lvProducerIndex()J
+
+    .line 24
+    move-result-wide v6
+
+    .line 25
+    cmp-long v4, v0, v6
+
+    .line 27
+    if-eqz v4, :cond_1
+
+    .line 29
+    :cond_0
+    invoke-static {v3, v2}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->lvRefElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;I)Ljava/lang/Object;
+
+    .line 32
+    move-result-object v4
+
+    .line 33
+    if-eqz v4, :cond_0
+
+    .line 35
+    goto :goto_0
+
+    .line 36
+    :cond_1
+    return-object v5
+
+    .line 37
+    :cond_2
+    :goto_0
+    invoke-static {v3, v2, v5}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->spRefElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILjava/lang/Object;)V
+
+    .line 40
+    const-wide/16 v2, 0x1
+
+    .line 42
+    add-long/2addr v0, v2
+
+    .line 43
+    invoke-virtual {p0, v0, v1}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/r;->soConsumerIndex(J)V
+
+    .line 46
+    return-object v4
+.end method
+
+.method public relaxedOffer(Ljava/lang/Object;)Z
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TE;)Z"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-virtual {p0, p1}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/q;->offer(Ljava/lang/Object;)Z
+
+    .line 4
+    move-result p1
+
+    .line 5
+    return p1
+.end method
+
+.method public relaxedPeek()Ljava/lang/Object;
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TE;"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->buffer:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    .line 3
+    iget v1, p0, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->mask:I
+
+    .line 5
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/r;->lpConsumerIndex()J
+
+    .line 8
+    move-result-wide v2
+
+    .line 9
+    int-to-long v4, v1
+
+    .line 10
+    invoke-static {v2, v3, v4, v5}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->calcCircularRefElementOffset(JJ)I
+
+    .line 13
+    move-result v1
+
+    .line 14
+    invoke-static {v0, v1}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->lvRefElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;I)Ljava/lang/Object;
+
+    .line 17
+    move-result-object v0
+
+    .line 18
+    return-object v0
+.end method
+
+.method public relaxedPoll()Ljava/lang/Object;
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TE;"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->buffer:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    .line 3
+    invoke-virtual {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/r;->lpConsumerIndex()J
+
+    .line 6
+    move-result-wide v1
+
+    .line 7
+    iget v3, p0, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->mask:I
+
+    .line 9
+    int-to-long v3, v3
+
+    .line 10
+    invoke-static {v1, v2, v3, v4}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->calcCircularRefElementOffset(JJ)I
+
+    .line 13
+    move-result v3
+
+    .line 14
+    invoke-static {v0, v3}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->lvRefElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;I)Ljava/lang/Object;
+
+    .line 17
+    move-result-object v4
+
+    .line 18
+    const/4 v5, 0x0
+
+    .line 19
+    if-nez v4, :cond_0
+
+    .line 21
+    return-object v5
+
+    .line 22
+    :cond_0
+    invoke-static {v0, v3, v5}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/a;->spRefElement(Ljava/util/concurrent/atomic/AtomicReferenceArray;ILjava/lang/Object;)V
+
+    .line 25
+    const-wide/16 v5, 0x1
+
+    .line 27
+    add-long/2addr v1, v5
+
+    .line 28
+    invoke-virtual {p0, v1, v2}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/r;->soConsumerIndex(J)V
+
+    .line 31
+    return-object v4
+.end method
+
+.method public bridge synthetic toString()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 1
+    invoke-super {p0}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/b;->toString()Ljava/lang/String;
+
+    .line 4
+    move-result-object v0
+
+    .line 5
+    return-object v0
+.end method
+
+.method public weakOffer(Ljava/lang/Object;)I
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TE;)I"
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-virtual {p0, p1}, Lio/netty/util/internal/shaded/org/jctools/queues/atomic/q;->failFastOffer(Ljava/lang/Object;)I
+
+    .line 4
+    move-result p1
+
+    .line 5
+    return p1
+.end method

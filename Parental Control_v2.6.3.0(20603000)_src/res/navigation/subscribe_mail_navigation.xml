@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    android:id="@id/subscribe_mail_navigation"
+    app:startDestination="@id/loadingFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment
+        android:name="com.sand.airdroidkidp.feature.subscribemail.ParentSubscribeMailLoadingFragment"
+        android:id="@id/loadingFragment">
+        <action
+            android:id="@id/action_LoadingFragment_to_LoadingFailedFragment"
+            app:destination="@id/loadingFailedFragment"
+            app:popUpTo="@id/loadingFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@id/action_LoadingFragment_to_SubscribeMailListFragment"
+            app:destination="@id/subscribeMailListFragment"
+            app:popUpTo="@id/loadingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:name="com.sand.airdroidkidp.feature.subscribemail.ParentSubscribeMailFailedFragment"
+        android:id="@id/loadingFailedFragment">
+        <action
+            android:id="@id/action_loadingFailedFragment_to_loadingFragment2"
+            app:destination="@id/loadingFragment"
+            app:popUpTo="@id/loadingFailedFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:name="com.sand.airdroidkidp.feature.subscribemail.ParentSubscribeItemListFragment"
+        android:id="@id/subscribeMailListFragment">
+        <action
+            android:id="@id/action_subscribeMailListFragment_to_subscribeMailSettingFragment"
+            app:destination="@id/subscribeMailSettingFragment" />
+    </fragment>
+    <fragment
+        android:name="com.sand.airdroidkidp.feature.subscribemail.ParentSubscribeMailSettingFragment"
+        android:id="@id/subscribeMailSettingFragment" />
+    <action
+        android:id="@id/action_to_loadingFragment"
+        app:destination="@id/loadingFragment"
+        app:popUpTo="@id/loadingFragment"
+        app:popUpToInclusive="true" />
+</navigation>

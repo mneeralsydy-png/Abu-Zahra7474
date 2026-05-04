@@ -1,0 +1,32 @@
+.class interface abstract annotation Lcom/google/common/base/k;
+.super Ljava/lang/Object;
+.source "ElementTypesAreNonnullByDefault.java"
+
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
+
+
+# annotations
+.annotation build Lcom/google/common/annotations/b;
+.end annotation
+
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
+.end annotation
+
+.annotation runtime Ljava/lang/annotation/Target;
+    value = {
+        .enum Ljava/lang/annotation/ElementType;->TYPE:Ljava/lang/annotation/ElementType;
+    }
+.end annotation
+
+.annotation runtime Ljh/g;
+.end annotation
+
+.annotation runtime Llh/d;
+    value = {
+        .enum Ljava/lang/annotation/ElementType;->FIELD:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->METHOD:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->PARAMETER:Ljava/lang/annotation/ElementType;
+    }
+.end annotation

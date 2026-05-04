@@ -1,0 +1,25 @@
+.class public final synthetic Lb0/a;
+.super Ljava/lang/Object;
+.source "R8$$SyntheticClass"
+
+
+# direct methods
+.method public static a(Landroidx/compose/ui/graphics/vector/f;FFFF)Ljava/util/List;
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroidx/compose/ui/graphics/vector/f;->p(FFFF)Landroidx/compose/ui/graphics/vector/f;
+
+    .line 4
+    invoke-virtual {p0}, Landroidx/compose/ui/graphics/vector/f;->c()Landroidx/compose/ui/graphics/vector/f;
+
+    .line 7
+    invoke-virtual {p0}, Landroidx/compose/ui/graphics/vector/f;->f()Ljava/util/List;
+
+    .line 10
+    move-result-object p0
+
+    .line 11
+    return-object p0
+.end method

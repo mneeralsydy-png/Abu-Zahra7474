@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/clRoot"
+    android:background="@color/white_f5f5f5"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar
+        android:theme="@style/ToolBarStyle"
+        android:id="@id/toolbar"
+        android:background="@color/white_f5f5f5"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:minHeight="?actionBarSize"
+        android:elevation="0.0dip"
+        app:contentInsetStartWithNavigation="0.0dip"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="@string/Parent_Keyword_Detect_Record"
+        app:titleMargin="0.0dip"
+        app:titleTextAppearance="@style/CommonAppTheme.ToolBarTitleTextAppearance"
+        app:titleTextColor="@color/black_282930" />
+    <include
+        android:id="@id/parentSearchView"
+        android:background="@drawable/white_search_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/search_bar_height"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:paddingStart="12.0dip"
+        android:paddingEnd="12.0dip"
+        android:layout_marginHorizontal="20.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        layout="@layout/parent_white_search_bar_layout" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@id/swipeRefresh"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="10.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parentSearchView">
+        <androidx.recyclerview.widget.RecyclerView
+            android:scrollbarStyle="outsideOverlay"
+            android:id="@id/rvDetectionRecordList"
+            android:background="@color/white_f4f4f4"
+            android:paddingLeft="20.0dip"
+            android:paddingRight="20.0dip"
+            android:scrollbars="vertical"
+            android:clipToPadding="false"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingHorizontal="20.0dip" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <RelativeLayout
+        android:id="@id/layoutDateParent"
+        android:background="@color/white_f5f5f5"
+        android:paddingLeft="20.0dip"
+        android:paddingRight="20.0dip"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:paddingHorizontal="20.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parentSearchView">
+        <include
+            android:id="@id/layoutDateHeader"
+            layout="@layout/content_alert_header" />
+    </RelativeLayout>
+    <View
+        android:id="@id/vShadow"
+        android:background="@drawable/bg_bottom_shadow"
+        android:visibility="invisible"
+        android:layout_width="fill_parent"
+        android:layout_height="10.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutDateParent" />
+    <ProgressBar
+        android:id="@id/pbRefresh"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parentSearchView" />
+    <include
+        android:id="@id/layoutEmptyData"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parentSearchView"
+        layout="@layout/layout_empty_detection_data" />
+    <include
+        android:id="@id/layoutNoNetwork"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parentSearchView"
+        layout="@layout/layout_no_network" />
+</androidx.constraintlayout.widget.ConstraintLayout>

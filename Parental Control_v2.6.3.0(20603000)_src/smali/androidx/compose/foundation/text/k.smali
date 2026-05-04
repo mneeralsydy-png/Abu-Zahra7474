@@ -1,0 +1,329 @@
+.class public final Landroidx/compose/foundation/text/k;
+.super Ljava/lang/Object;
+.source "BasicTextField.kt"
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    k = 0x3
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final a:Landroidx/compose/foundation/text/k;
+    .annotation build Ljj/l;
+    .end annotation
+.end field
+
+.field public static b:Lkotlin/jvm/functions/Function3;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/functions/Function3<",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Landroidx/compose/runtime/v;",
+            "-",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;",
+            "Landroidx/compose/runtime/v;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Ljj/l;
+    .end annotation
+.end field
+
+.field public static c:Lkotlin/jvm/functions/Function3;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/functions/Function3<",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Landroidx/compose/runtime/v;",
+            "-",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;",
+            "Landroidx/compose/runtime/v;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Ljj/l;
+    .end annotation
+.end field
+
+.field public static d:Lkotlin/jvm/functions/Function3;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/functions/Function3<",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Landroidx/compose/runtime/v;",
+            "-",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;",
+            "Landroidx/compose/runtime/v;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Ljj/l;
+    .end annotation
+.end field
+
+.field public static e:Lkotlin/jvm/functions/Function3;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lkotlin/jvm/functions/Function3<",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Landroidx/compose/runtime/v;",
+            "-",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;",
+            "Landroidx/compose/runtime/v;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Ljj/l;
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    .prologue
+    .line 1
+    new-instance v0, Landroidx/compose/foundation/text/k;
+
+    .line 3
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    sput-object v0, Landroidx/compose/foundation/text/k;->a:Landroidx/compose/foundation/text/k;
+
+    .line 8
+    const v0, 0x3b79c49c
+
+    .line 11
+    sget-object v1, Landroidx/compose/foundation/text/k$a;->d:Landroidx/compose/foundation/text/k$a;
+
+    .line 13
+    const/4 v2, 0x0
+
+    .line 14
+    invoke-static {v0, v2, v1}, Landroidx/compose/runtime/internal/c;->c(IZLjava/lang/Object;)Landroidx/compose/runtime/internal/a;
+
+    .line 17
+    move-result-object v0
+
+    .line 18
+    sput-object v0, Landroidx/compose/foundation/text/k;->b:Lkotlin/jvm/functions/Function3;
+
+    .line 20
+    sget-object v0, Landroidx/compose/foundation/text/k$b;->d:Landroidx/compose/foundation/text/k$b;
+
+    .line 22
+    new-instance v1, Landroidx/compose/runtime/internal/b;
+
+    .line 24
+    const v3, 0x7d8127ef
+
+    .line 27
+    invoke-direct {v1, v3, v2, v0}, Landroidx/compose/runtime/internal/b;-><init>(IZLjava/lang/Object;)V
+
+    .line 30
+    sput-object v1, Landroidx/compose/foundation/text/k;->c:Lkotlin/jvm/functions/Function3;
+
+    .line 32
+    sget-object v0, Landroidx/compose/foundation/text/k$c;->d:Landroidx/compose/foundation/text/k$c;
+
+    .line 34
+    new-instance v1, Landroidx/compose/runtime/internal/b;
+
+    .line 36
+    const v3, 0x19e074df
+
+    .line 39
+    invoke-direct {v1, v3, v2, v0}, Landroidx/compose/runtime/internal/b;-><init>(IZLjava/lang/Object;)V
+
+    .line 42
+    sput-object v1, Landroidx/compose/foundation/text/k;->d:Lkotlin/jvm/functions/Function3;
+
+    .line 44
+    sget-object v0, Landroidx/compose/foundation/text/k$d;->d:Landroidx/compose/foundation/text/k$d;
+
+    .line 46
+    new-instance v1, Landroidx/compose/runtime/internal/b;
+
+    .line 48
+    const v3, -0x213864e
+
+    .line 51
+    invoke-direct {v1, v3, v2, v0}, Landroidx/compose/runtime/internal/b;-><init>(IZLjava/lang/Object;)V
+
+    .line 54
+    sput-object v1, Landroidx/compose/foundation/text/k;->e:Lkotlin/jvm/functions/Function3;
+
+    .line 56
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lkotlin/jvm/functions/Function3;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lkotlin/jvm/functions/Function3<",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Landroidx/compose/runtime/v;",
+            "-",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;",
+            "Landroidx/compose/runtime/v;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Ljj/l;
+    .end annotation
+
+    .prologue
+    .line 1
+    sget-object v0, Landroidx/compose/foundation/text/k;->b:Lkotlin/jvm/functions/Function3;
+
+    .line 3
+    return-object v0
+.end method
+
+.method public final b()Lkotlin/jvm/functions/Function3;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lkotlin/jvm/functions/Function3<",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Landroidx/compose/runtime/v;",
+            "-",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;",
+            "Landroidx/compose/runtime/v;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Ljj/l;
+    .end annotation
+
+    .prologue
+    .line 1
+    sget-object v0, Landroidx/compose/foundation/text/k;->c:Lkotlin/jvm/functions/Function3;
+
+    .line 3
+    return-object v0
+.end method
+
+.method public final c()Lkotlin/jvm/functions/Function3;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lkotlin/jvm/functions/Function3<",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Landroidx/compose/runtime/v;",
+            "-",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;",
+            "Landroidx/compose/runtime/v;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Ljj/l;
+    .end annotation
+
+    .prologue
+    .line 1
+    sget-object v0, Landroidx/compose/foundation/text/k;->d:Lkotlin/jvm/functions/Function3;
+
+    .line 3
+    return-object v0
+.end method
+
+.method public final d()Lkotlin/jvm/functions/Function3;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lkotlin/jvm/functions/Function3<",
+            "Lkotlin/jvm/functions/Function2<",
+            "-",
+            "Landroidx/compose/runtime/v;",
+            "-",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;",
+            "Landroidx/compose/runtime/v;",
+            "Ljava/lang/Integer;",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Ljj/l;
+    .end annotation
+
+    .prologue
+    .line 1
+    sget-object v0, Landroidx/compose/foundation/text/k;->e:Lkotlin/jvm/functions/Function3;
+
+    .line 3
+    return-object v0
+.end method

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/root"
+    android:background="@drawable/payment_event_background"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:background="@drawable/pic_subscription"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundedImageView" />
+    <ImageView
+        android:id="@id/ivIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/device_ic_subscription"
+        android:layout_marginStart="16.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/tvHint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvHint"
+        app:layout_constraintVertical_bias="0.2" />
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="@color/yellow_ffd680"
+        android:id="@id/tvHint"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4.0dip"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginRight="4.0dip"
+        android:text="@string/Payment_Trial_Subscribe"
+        android:layout_marginStart="4.0dip"
+        android:layout_marginEnd="4.0dip"
+        android:layout_marginHorizontal="4.0dip"
+        app:layout_constraintEnd_toStartOf="@id/ivArrow"
+        app:layout_constraintStart_toEndOf="@id/ivIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/ivArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_subscription_more"
+        android:layout_marginEnd="16.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/tvHint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvHint" />
+    <View
+        android:id="@id/vDivider"
+        android:background="@color/blue_3a4b88"
+        android:layout_width="0.0dip"
+        android:layout_height="1.0dip"
+        android:layout_marginTop="16.0dip"
+        app:layout_constraintEnd_toEndOf="@id/ivArrow"
+        app:layout_constraintStart_toStartOf="@id/ivIcon"
+        app:layout_constraintTop_toBottomOf="@id/tvHint" />
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="@color/yellow_ffd680"
+        android:id="@id/tvStatus"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12.0dip"
+        android:layout_marginBottom="20.0dip"
+        android:text="@string/Payment_Sub_Will_Expire"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/ivArrow"
+        app:layout_constraintStart_toStartOf="@id/ivIcon"
+        app:layout_constraintTop_toBottomOf="@id/vDivider" />
+</androidx.constraintlayout.widget.ConstraintLayout>

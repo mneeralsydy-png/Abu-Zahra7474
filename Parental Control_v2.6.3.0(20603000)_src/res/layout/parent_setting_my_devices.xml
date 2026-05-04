@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/clRoot"
+    android:background="@color/white_fff5f5f5"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/llEmpty"
+        android:background="@android:color/white"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:id="@id/glLayoutEmptyStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.25" />
+        <ImageView
+            android:id="@id/ivEmptyIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pic_device_empty"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/glLayoutEmptyStart" />
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="#ff878d9a"
+            android:gravity="center_horizontal"
+            android:id="@id/tvEmptyTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.0dip"
+            android:text="@string/parent_my_device_not_ready_yet_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivEmptyIcon" />
+        <Button
+            android:textSize="16.0sp"
+            android:textColor="@android:color/white"
+            android:ellipsize="end"
+            android:layout_gravity="center"
+            android:id="@id/btAddDevice"
+            android:background="@drawable/kid_blue_button_style"
+            android:padding="10.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46.0dip"
+            android:minWidth="196.0dip"
+            android:minHeight="40.0dip"
+            android:text="@string/parent_add_device_content"
+            android:maxLines="1"
+            android:layout_marginStart="25.0dip"
+            android:layout_marginEnd="25.0dip"
+            app:fontFamily="@font/font_family_semi_bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEmptyTip" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <include
+        android:id="@id/networkFailedLayout"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        layout="@layout/parent_network_failed_fragment" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/rvDeviceList"
+        android:background="@android:color/transparent"
+        android:paddingBottom="20.0dip"
+        android:visibility="gone"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="12.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+    <com.sand.airdroidkidp.ui.custom.ParentProfileToolbar
+        android:id="@id/toolbar"
+        android:background="@color/white_fff5f5f5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        app:isDividerVisible="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/Parent_Setting_My_Devices"
+        app:toolbarMode="1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

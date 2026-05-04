@@ -1,0 +1,477 @@
+.class public interface abstract Landroidx/compose/foundation/layout/g1;
+.super Ljava/lang/Object;
+.source "FlowLayout.kt"
+
+# interfaces
+.implements Landroidx/compose/foundation/layout/t2;
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u0007\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0011\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0015\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0008`\u0018\u00002\u00020\u0001J\u0013\u0010\u0004\u001a\u00020\u0003*\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u0004\u0010\u0005J\u0013\u0010\u0006\u001a\u00020\u0003*\u00020\u0002H\u0016\u00a2\u0006\u0004\u0008\u0006\u0010\u0005J=\u0010\u000e\u001a\u00020\r2\u0006\u0010\u0007\u001a\u00020\u00032\u0006\u0010\u0008\u001a\u00020\u00032\u0006\u0010\t\u001a\u00020\u00032\u0006\u0010\n\u001a\u00020\u00032\u0006\u0010\u000c\u001a\u00020\u000bH\u0016\u00f8\u0001\u0000\u00f8\u0001\u0001\u00a2\u0006\u0004\u0008\u000e\u0010\u000fJi\u0010\u001e\u001a\u00020\u001d2\u000e\u0010\u0011\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00020\u00102\u0006\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0014\u001a\u00020\u00032\u0006\u0010\u0016\u001a\u00020\u00152\u0006\u0010\u0017\u001a\u00020\u00032\u0006\u0010\u0018\u001a\u00020\u00032\u0008\u0010\u0019\u001a\u0004\u0018\u00010\u00152\u0006\u0010\u001a\u001a\u00020\u00032\u0006\u0010\u001b\u001a\u00020\u00032\u0006\u0010\u001c\u001a\u00020\u0003H\u0016\u00a2\u0006\u0004\u0008\u001e\u0010\u001fJ9\u0010%\u001a\u00020\u00032\u0006\u0010 \u001a\u00020\u00022\u0008\u0010\"\u001a\u0004\u0018\u00010!2\u0006\u0010\u0018\u001a\u00020\u00032\u0006\u0010$\u001a\u00020#2\u0006\u0010\u0014\u001a\u00020\u0003H\u0016\u00a2\u0006\u0004\u0008%\u0010&J/\u0010)\u001a\u00020(2\u0006\u0010\u0017\u001a\u00020\u00032\u0006\u0010\'\u001a\u00020\u00152\u0006\u0010\u0016\u001a\u00020\u00152\u0006\u0010\u0013\u001a\u00020\u0012H\u0016\u00a2\u0006\u0004\u0008)\u0010*R\u0014\u0010-\u001a\u00020\u000b8&X\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u0008+\u0010,R\u0014\u00101\u001a\u00020.8&X\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u0008/\u00100R\u0014\u00105\u001a\u0002028&X\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u00083\u00104R\u0014\u00109\u001a\u0002068&X\u00a6\u0004\u00a2\u0006\u0006\u001a\u0004\u00087\u00108\u00f8\u0001\u0002\u0082\u0002\u0011\n\u0002\u0008!\n\u0005\u0008\u00a1\u001e0\u0001\n\u0004\u0008!0\u0001\u00a8\u0006:\u00c0\u0006\u0001"
+    }
+    d2 = {
+        "Landroidx/compose/foundation/layout/g1;",
+        "Landroidx/compose/foundation/layout/t2;",
+        "Landroidx/compose/ui/layout/p1;",
+        "",
+        "k",
+        "(Landroidx/compose/ui/layout/p1;)I",
+        "h",
+        "mainAxisMin",
+        "crossAxisMin",
+        "mainAxisMax",
+        "crossAxisMax",
+        "",
+        "isPrioritizing",
+        "Landroidx/compose/ui/unit/b;",
+        "f",
+        "(IIIIZ)J",
+        "",
+        "placeables",
+        "Landroidx/compose/ui/layout/t0;",
+        "measureScope",
+        "beforeCrossAxisAlignmentLine",
+        "",
+        "mainAxisPositions",
+        "mainAxisLayoutSize",
+        "crossAxisLayoutSize",
+        "crossAxisOffset",
+        "currentLineIndex",
+        "startIndex",
+        "endIndex",
+        "Landroidx/compose/ui/layout/s0;",
+        "j",
+        "([Landroidx/compose/ui/layout/p1;Landroidx/compose/ui/layout/t0;I[III[IIII)Landroidx/compose/ui/layout/s0;",
+        "placeable",
+        "Landroidx/compose/foundation/layout/y2;",
+        "rowColumnParentData",
+        "Landroidx/compose/ui/unit/w;",
+        "layoutDirection",
+        "q",
+        "(Landroidx/compose/ui/layout/p1;Landroidx/compose/foundation/layout/y2;ILandroidx/compose/ui/unit/w;I)I",
+        "childrenMainAxisSize",
+        "",
+        "g",
+        "(I[I[ILandroidx/compose/ui/layout/t0;)V",
+        "i",
+        "()Z",
+        "isHorizontal",
+        "Landroidx/compose/foundation/layout/i$e;",
+        "s",
+        "()Landroidx/compose/foundation/layout/i$e;",
+        "horizontalArrangement",
+        "Landroidx/compose/foundation/layout/i$m;",
+        "o",
+        "()Landroidx/compose/foundation/layout/i$m;",
+        "verticalArrangement",
+        "Landroidx/compose/foundation/layout/k0;",
+        "l",
+        "()Landroidx/compose/foundation/layout/k0;",
+        "crossAxisAlignment",
+        "foundation-layout_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# virtual methods
+.method public f(IIIIZ)J
+    .locals 1
+
+    .prologue
+    .line 1
+    invoke-interface {p0}, Landroidx/compose/foundation/layout/g1;->i()Z
+
+    .line 4
+    move-result v0
+
+    .line 5
+    if-eqz v0, :cond_0
+
+    .line 7
+    invoke-static {p5, p1, p2, p3, p4}, Landroidx/compose/foundation/layout/z2;->b(ZIIII)J
+
+    .line 10
+    move-result-wide p1
+
+    .line 11
+    goto :goto_0
+
+    .line 12
+    :cond_0
+    invoke-static {p5, p1, p2, p3, p4}, Landroidx/compose/foundation/layout/t;->c(ZIIII)J
+
+    .line 15
+    move-result-wide p1
+
+    .line 16
+    :goto_0
+    return-wide p1
+.end method
+
+.method public g(I[I[ILandroidx/compose/ui/layout/t0;)V
+    .locals 7
+    .param p2    # [I
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+    .param p3    # [I
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+    .param p4    # Landroidx/compose/ui/layout/t0;
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+
+    .prologue
+    .line 1
+    invoke-interface {p0}, Landroidx/compose/foundation/layout/g1;->i()Z
+
+    .line 4
+    move-result v0
+
+    .line 5
+    if-eqz v0, :cond_0
+
+    .line 7
+    invoke-interface {p0}, Landroidx/compose/foundation/layout/g1;->s()Landroidx/compose/foundation/layout/i$e;
+
+    .line 10
+    move-result-object v1
+
+    .line 11
+    invoke-interface {p4}, Landroidx/compose/ui/layout/v;->getLayoutDirection()Landroidx/compose/ui/unit/w;
+
+    .line 14
+    move-result-object v5
+
+    .line 15
+    move-object v2, p4
+
+    .line 16
+    move v3, p1
+
+    .line 17
+    move-object v4, p2
+
+    .line 18
+    move-object v6, p3
+
+    .line 19
+    invoke-interface/range {v1 .. v6}, Landroidx/compose/foundation/layout/i$e;->c(Landroidx/compose/ui/unit/d;I[ILandroidx/compose/ui/unit/w;[I)V
+
+    .line 22
+    goto :goto_0
+
+    .line 23
+    :cond_0
+    invoke-interface {p0}, Landroidx/compose/foundation/layout/g1;->o()Landroidx/compose/foundation/layout/i$m;
+
+    .line 26
+    move-result-object v0
+
+    .line 27
+    invoke-interface {v0, p4, p1, p2, p3}, Landroidx/compose/foundation/layout/i$m;->f(Landroidx/compose/ui/unit/d;I[I[I)V
+
+    .line 30
+    :goto_0
+    return-void
+.end method
+
+.method public h(Landroidx/compose/ui/layout/p1;)I
+    .locals 1
+    .param p1    # Landroidx/compose/ui/layout/p1;
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+
+    .prologue
+    .line 1
+    invoke-interface {p0}, Landroidx/compose/foundation/layout/g1;->i()Z
+
+    .line 4
+    move-result v0
+
+    .line 5
+    if-eqz v0, :cond_0
+
+    .line 7
+    invoke-virtual {p1}, Landroidx/compose/ui/layout/p1;->p0()I
+
+    .line 10
+    move-result p1
+
+    .line 11
+    goto :goto_0
+
+    .line 12
+    :cond_0
+    invoke-virtual {p1}, Landroidx/compose/ui/layout/p1;->c0()I
+
+    .line 15
+    move-result p1
+
+    .line 16
+    :goto_0
+    return p1
+.end method
+
+.method public abstract i()Z
+.end method
+
+.method public j([Landroidx/compose/ui/layout/p1;Landroidx/compose/ui/layout/t0;I[III[IIII)Landroidx/compose/ui/layout/s0;
+    .locals 14
+    .param p1    # [Landroidx/compose/ui/layout/p1;
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/compose/ui/layout/t0;
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+    .param p4    # [I
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+    .param p7    # [I
+        .annotation build Ljj/m;
+        .end annotation
+    .end param
+    .annotation build Ljj/l;
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-interface {p0}, Landroidx/compose/foundation/layout/g1;->i()Z
+
+    .line 4
+    move-result v0
+
+    .line 5
+    if-eqz v0, :cond_0
+
+    .line 7
+    move/from16 v0, p5
+
+    .line 9
+    move/from16 v1, p6
+
+    .line 11
+    goto :goto_0
+
+    .line 12
+    :cond_0
+    move/from16 v1, p5
+
+    .line 14
+    move/from16 v0, p6
+
+    .line 16
+    :goto_0
+    new-instance v13, Landroidx/compose/foundation/layout/g1$a;
+
+    .line 18
+    move-object v2, v13
+
+    .line 19
+    move-object/from16 v3, p7
+
+    .line 21
+    move/from16 v4, p8
+
+    .line 23
+    move/from16 v5, p9
+
+    .line 25
+    move/from16 v6, p10
+
+    .line 27
+    move-object v7, p1
+
+    .line 28
+    move-object v8, p0
+
+    .line 29
+    move/from16 v9, p6
+
+    .line 31
+    move-object/from16 v10, p2
+
+    .line 33
+    move/from16 v11, p3
+
+    .line 35
+    move-object/from16 v12, p4
+
+    .line 37
+    invoke-direct/range {v2 .. v12}, Landroidx/compose/foundation/layout/g1$a;-><init>([IIII[Landroidx/compose/ui/layout/p1;Landroidx/compose/foundation/layout/g1;ILandroidx/compose/ui/layout/t0;I[I)V
+
+    .line 40
+    const/4 v2, 0x4
+
+    .line 41
+    const/4 v3, 0x0
+
+    .line 42
+    const/4 v4, 0x0
+
+    .line 43
+    move-object/from16 p1, p2
+
+    .line 45
+    move/from16 p2, v0
+
+    .line 47
+    move/from16 p3, v1
+
+    .line 49
+    move-object/from16 p4, v4
+
+    .line 51
+    move-object/from16 p5, v13
+
+    .line 53
+    move/from16 p6, v2
+
+    .line 55
+    move-object/from16 p7, v3
+
+    .line 57
+    invoke-static/range {p1 .. p7}, Landroidx/compose/ui/layout/t0;->d5(Landroidx/compose/ui/layout/t0;IILjava/util/Map;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Landroidx/compose/ui/layout/s0;
+
+    .line 60
+    move-result-object v0
+
+    .line 61
+    return-object v0
+.end method
+
+.method public k(Landroidx/compose/ui/layout/p1;)I
+    .locals 1
+    .param p1    # Landroidx/compose/ui/layout/p1;
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+
+    .prologue
+    .line 1
+    invoke-interface {p0}, Landroidx/compose/foundation/layout/g1;->i()Z
+
+    .line 4
+    move-result v0
+
+    .line 5
+    if-eqz v0, :cond_0
+
+    .line 7
+    invoke-virtual {p1}, Landroidx/compose/ui/layout/p1;->c0()I
+
+    .line 10
+    move-result p1
+
+    .line 11
+    goto :goto_0
+
+    .line 12
+    :cond_0
+    invoke-virtual {p1}, Landroidx/compose/ui/layout/p1;->p0()I
+
+    .line 15
+    move-result p1
+
+    .line 16
+    :goto_0
+    return p1
+.end method
+
+.method public abstract l()Landroidx/compose/foundation/layout/k0;
+    .annotation build Ljj/l;
+    .end annotation
+.end method
+
+.method public abstract o()Landroidx/compose/foundation/layout/i$m;
+    .annotation build Ljj/l;
+    .end annotation
+.end method
+
+.method public q(Landroidx/compose/ui/layout/p1;Landroidx/compose/foundation/layout/y2;ILandroidx/compose/ui/unit/w;I)I
+    .locals 1
+    .param p1    # Landroidx/compose/ui/layout/p1;
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/compose/foundation/layout/y2;
+        .annotation build Ljj/m;
+        .end annotation
+    .end param
+    .param p4    # Landroidx/compose/ui/unit/w;
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+
+    .prologue
+    .line 1
+    if-eqz p2, :cond_0
+
+    .line 3
+    invoke-virtual {p2}, Landroidx/compose/foundation/layout/y2;->g()Landroidx/compose/foundation/layout/k0;
+
+    .line 6
+    move-result-object p2
+
+    .line 7
+    if-nez p2, :cond_1
+
+    .line 9
+    :cond_0
+    invoke-interface {p0}, Landroidx/compose/foundation/layout/g1;->l()Landroidx/compose/foundation/layout/k0;
+
+    .line 12
+    move-result-object p2
+
+    .line 13
+    :cond_1
+    invoke-interface {p0, p1}, Landroidx/compose/foundation/layout/g1;->h(Landroidx/compose/ui/layout/p1;)I
+
+    .line 16
+    move-result v0
+
+    .line 17
+    sub-int/2addr p3, v0
+
+    .line 18
+    invoke-interface {p0}, Landroidx/compose/foundation/layout/g1;->i()Z
+
+    .line 21
+    move-result v0
+
+    .line 22
+    if-eqz v0, :cond_2
+
+    .line 24
+    sget-object p4, Landroidx/compose/ui/unit/w;->Ltr:Landroidx/compose/ui/unit/w;
+
+    .line 26
+    :cond_2
+    invoke-virtual {p2, p3, p4, p1, p5}, Landroidx/compose/foundation/layout/k0;->d(ILandroidx/compose/ui/unit/w;Landroidx/compose/ui/layout/p1;I)I
+
+    .line 29
+    move-result p1
+
+    .line 30
+    return p1
+.end method
+
+.method public abstract s()Landroidx/compose/foundation/layout/i$e;
+    .annotation build Ljj/l;
+    .end annotation
+.end method

@@ -1,0 +1,232 @@
+.class public Lorg/apache/commons/io/output/n;
+.super Ljava/io/Writer;
+.source "StringBuilderWriter.java"
+
+# interfaces
+.implements Ljava/io/Serializable;
+
+
+# instance fields
+.field private final b:Ljava/lang/StringBuilder;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Ljava/io/Writer;-><init>()V
+
+    .line 2
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iput-object v0, p0, Lorg/apache/commons/io/output/n;->b:Ljava/lang/StringBuilder;
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 1
+
+    .prologue
+    .line 3
+    invoke-direct {p0}, Ljava/io/Writer;-><init>()V
+
+    .line 4
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, p1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    iput-object v0, p0, Lorg/apache/commons/io/output/n;->b:Ljava/lang/StringBuilder;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/StringBuilder;)V
+    .locals 0
+
+    .prologue
+    .line 5
+    invoke-direct {p0}, Ljava/io/Writer;-><init>()V
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    .line 6
+    :cond_0
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    :goto_0
+    iput-object p1, p0, Lorg/apache/commons/io/output/n;->b:Ljava/lang/StringBuilder;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()Ljava/lang/StringBuilder;
+    .locals 1
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Lorg/apache/commons/io/output/n;->b:Ljava/lang/StringBuilder;
+
+    .line 3
+    return-object v0
+.end method
+
+.method public append(C)Ljava/io/Writer;
+    .locals 1
+
+    .prologue
+    .line 4
+    iget-object v0, p0, Lorg/apache/commons/io/output/n;->b:Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    return-object p0
+.end method
+
+.method public append(Ljava/lang/CharSequence;)Ljava/io/Writer;
+    .locals 1
+
+    .prologue
+    .line 5
+    iget-object v0, p0, Lorg/apache/commons/io/output/n;->b:Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
+
+    return-object p0
+.end method
+
+.method public append(Ljava/lang/CharSequence;II)Ljava/io/Writer;
+    .locals 1
+
+    .prologue
+    .line 6
+    iget-object v0, p0, Lorg/apache/commons/io/output/n;->b:Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1, p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic append(C)Ljava/lang/Appendable;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-virtual {p0, p1}, Lorg/apache/commons/io/output/n;->append(C)Ljava/io/Writer;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    .line 2
+    invoke-virtual {p0, p1}, Lorg/apache/commons/io/output/n;->append(Ljava/lang/CharSequence;)Ljava/io/Writer;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic append(Ljava/lang/CharSequence;II)Ljava/lang/Appendable;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    .line 3
+    invoke-virtual {p0, p1, p2, p3}, Lorg/apache/commons/io/output/n;->append(Ljava/lang/CharSequence;II)Ljava/io/Writer;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public close()V
+    .locals 0
+
+    .prologue
+    .line 1
+    return-void
+.end method
+
+.method public flush()V
+    .locals 0
+
+    .prologue
+    .line 1
+    return-void
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Lorg/apache/commons/io/output/n;->b:Ljava/lang/StringBuilder;
+
+    .line 3
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 6
+    move-result-object v0
+
+    .line 7
+    return-object v0
+.end method
+
+.method public write(Ljava/lang/String;)V
+    .locals 1
+
+    .prologue
+    if-eqz p1, :cond_0
+
+    .line 1
+    iget-object v0, p0, Lorg/apache/commons/io/output/n;->b:Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_0
+    return-void
+.end method
+
+.method public write([CII)V
+    .locals 1
+
+    .prologue
+    if-eqz p1, :cond_0
+
+    .line 2
+    iget-object v0, p0, Lorg/apache/commons/io/output/n;->b:Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1, p2, p3}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
+
+    :cond_0
+    return-void
+.end method

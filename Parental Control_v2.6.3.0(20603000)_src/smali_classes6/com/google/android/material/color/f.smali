@@ -1,0 +1,19 @@
+.class public final synthetic Lcom/google/android/material/color/f;
+.super Ljava/lang/Object;
+.source "R8$$SyntheticClass"
+
+
+# direct methods
+.method public static bridge synthetic a(Ljava/lang/String;I)Ljava/io/FileDescriptor;
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-static {p0, p1}, Landroid/system/Os;->memfd_create(Ljava/lang/String;I)Ljava/io/FileDescriptor;
+
+    .line 4
+    move-result-object p0
+
+    .line 5
+    return-object p0
+.end method

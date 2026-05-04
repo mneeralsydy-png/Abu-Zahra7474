@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/llRoot"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="@color/gray_666b75"
+        android:id="@id/tvMainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Parent_TodayEvent_Usage_Flow_Title"
+        android:layout_marginStart="16.0dip" />
+    <RelativeLayout
+        android:background="@drawable/e8e8e8_stroke_16_radius_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/bandwidth_block"
+            android:paddingTop="16.0dip"
+            android:paddingBottom="20.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/llSubTitle"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16.0dip">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="13.0sp"
+                        android:textColor="@color/gray_878d9a"
+                        android:id="@id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5.0dip" />
+                    <TextView
+                        android:textSize="13.0sp"
+                        android:textColor="@color/gray_878d9a"
+                        android:id="@id/tvTime2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20.0dip" />
+                </LinearLayout>
+                <TextView
+                    android:textSize="22.0sp"
+                    android:textColor="@color/black_282930"
+                    android:id="@id/tvSubTitle_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    app:fontFamily="@font/font_family_semi_bold" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6.0dip"
+                    android:layout_marginBottom="9.0dip">
+                    <TextView
+                        android:textSize="13.0sp"
+                        android:textColor="@color/gray_ff878d9a"
+                        android:id="@id/tvSubTitle3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="3.0dip"
+                        app:layout_constrainedWidth="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/tvSubIcon3"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@id/tvSubIcon3"
+                        android:layout_width="14.0dip"
+                        android:layout_height="14.0dip"
+                        android:layout_marginStart="8.0dip"
+                        app:layout_constraintBottom_toBottomOf="@id/tvSubMessage3"
+                        app:layout_constraintEnd_toStartOf="@id/tvSubMessage3"
+                        app:layout_constraintStart_toEndOf="@id/tvSubTitle3"
+                        app:layout_constraintTop_toTopOf="@id/tvSubMessage3" />
+                    <TextView
+                        android:textSize="12.0sp"
+                        android:id="@id/tvSubMessage3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4.0dip"
+                        app:fontFamily="@font/font_family_semi_bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tvSubIcon3"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@id/bcContent"
+                android:layout_width="fill_parent"
+                android:layout_height="100.0dip"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginBottom="16.0dip"
+                android:layout_marginStart="5.0dip"
+                android:layout_marginEnd="10.0dip" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/llShowWeekTotal"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16.0dip"
+                android:paddingEnd="16.0dip">
+                <ImageView
+                    android:background="@color/gray_ececee"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.0dip">
+                    <TextView
+                        android:textSize="14.0sp"
+                        android:textColor="@color/black_ff464f60"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Parent_TodayEvent_Total_Usage_Flow"
+                        android:layout_weight="1.0" />
+                    <TextView
+                        android:textSize="14.0sp"
+                        android:textColor="@color/gray_ff878d9a"
+                        android:layout_gravity="center_vertical"
+                        android:id="@id/tvWeekTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10.0dip"
+                        android:layout_marginEnd="20.0dip"
+                        android:layout_alignParentEnd="true" />
+                </LinearLayout>
+                <ImageView
+                    android:background="@color/gray_ececee"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_marginTop="16.0dip" />
+            </LinearLayout>
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="@color/gray_666b75"
+                android:id="@id/tvDataUsageSubTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:layout_marginBottom="4.0dip"
+                android:text="@string/Parent_TodayEvent_Usage_Flow_Subtitle"
+                android:layout_marginStart="16.0dip"
+                android:layout_marginEnd="20.0dip" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@id/llContent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="13.0sp"
+                android:textColor="@color/color_main_text"
+                android:layout_gravity="center"
+                android:id="@id/tvShowMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16.0dip"
+                android:layout_marginBottom="16.0dip"
+                android:text="@string/Parent_TodayEvent_Look_More" />
+        </LinearLayout>
+        <include
+            android:id="@id/proTag"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            layout="@layout/daily_pro_tag" />
+    </RelativeLayout>
+</LinearLayout>

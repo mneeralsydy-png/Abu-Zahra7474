@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_start_percent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_end_percent" />
+    <androidx.core.widget.NestedScrollView
+        android:id="@id/scrollView"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:textSize="13.0sp"
+                android:textColor="@color/gray_666b75"
+                android:id="@id/tvHint"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginRight="16.0dip"
+                android:text="@string/Parent_Keyword_Detect_Tip"
+                android:layout_marginHorizontal="16.0dip"
+                app:layout_constraintBottom_toTopOf="@id/clContentDetectionManage"
+                app:layout_constraintEnd_toEndOf="@id/clContentDetectionManage"
+                app:layout_constraintStart_toStartOf="@id/clContentDetectionManage"
+                app:layout_constraintTop_toTopOf="parent" />
+            <com.sand.airdroidkidp.ui.custom.ClipBackgroundConstraintLayout
+                android:id="@id/clContentDetectionManage"
+                android:background="@drawable/usage_limit_bg"
+                android:paddingTop="4.0dip"
+                android:paddingBottom="4.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:paddingVertical="4.0dip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHint">
+                <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+                    android:id="@id/fiDetectedAppManage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:dividerVisible="false"
+                    app:icon="@drawable/device_ic_app_manage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:title="@string/Parent_Keyword_App_Manage" />
+                <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+                    android:id="@id/fiKeywordManage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:dividerVisible="false"
+                    app:icon="@drawable/device_ic_keyword_manage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fiDetectedAppManage"
+                    app:title="@string/Parent_Keyword_Manage" />
+                <com.sand.airdroidkidp.ui.custom.FeatureItemPreference
+                    android:id="@id/fiAlertWithScreenShot"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    app:dividerVisible="false"
+                    app:enterVisible="false"
+                    app:icon="@drawable/alert_screenshot"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fiKeywordManage"
+                    app:switchVisible="false"
+                    app:title="@string/Device_Keyword_Detect_With_Screenshot" />
+            </com.sand.airdroidkidp.ui.custom.ClipBackgroundConstraintLayout>
+            <TextView
+                android:textSize="13.0sp"
+                android:textColor="@color/gray_666b75"
+                android:id="@id/tvRecentRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:text="@string/Parent_Keyword_Recent_Alert"
+                android:layout_marginStart="16.0dip"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toStartOf="@id/tvSeeMore"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clContentDetectionManage" />
+            <TextView
+                android:textSize="13.0sp"
+                android:textColor="@color/blue_ff446efc"
+                android:gravity="end"
+                android:id="@id/tvSeeMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Parent_TodayEvent_Look_More"
+                android:layout_marginEnd="16.0dip"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBottom_toBottomOf="@id/tvRecentRecord"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/tvRecentRecord"
+                app:layout_constraintTop_toTopOf="@id/tvRecentRecord"
+                app:layout_constraintWidth_min="90.0dip" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@id/rvKeywordDetectionList"
+                android:scrollbars="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRecentRecord"
+                app:layout_constraintVertical_bias="0.0" />
+            <include
+                android:id="@id/layoutEmptyData"
+                android:visibility="gone"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="86.0dip"
+                android:layout_marginBottom="86.0dip"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRecentRecord"
+                layout="@layout/layout_empty_detection_data" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <ProgressBar
+        android:id="@id/progressBar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:id="@id/vShadow"
+        android:background="@drawable/bg_bottom_shadow"
+        android:visibility="invisible"
+        android:layout_width="0.0dip"
+        android:layout_height="2.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/scrollView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

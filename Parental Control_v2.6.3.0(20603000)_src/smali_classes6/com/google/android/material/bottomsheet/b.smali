@@ -1,0 +1,19 @@
+.class public final synthetic Lcom/google/android/material/bottomsheet/b;
+.super Ljava/lang/Object;
+.source "R8$$SyntheticClass"
+
+
+# direct methods
+.method public static bridge synthetic a(Landroid/view/RoundedCorner;)I
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-virtual {p0}, Landroid/view/RoundedCorner;->getRadius()I
+
+    .line 4
+    move-result p0
+
+    .line 5
+    return p0
+.end method

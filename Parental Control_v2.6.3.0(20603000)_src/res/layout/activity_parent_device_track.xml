@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/clRoot"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/ivMapGrid"
+        android:background="@drawable/bg_map_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <FrameLayout
+        android:id="@id/mapViewFrameLayout"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:id="@id/rlControl"
+        android:padding="20.0dip"
+        android:visibility="visible"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31.0dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/clBack"
+            android:background="@drawable/bg_map_action"
+            android:layout_width="wrap_content"
+            android:layout_height="36.0dip"
+            android:elevation="2.0dip">
+            <ImageView
+                android:id="@id/ivBack"
+                android:layout_width="18.0dip"
+                android:layout_height="18.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:src="@drawable/ic_back"
+                android:layout_marginHorizontal="10.0dip"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@drawable/bg_map_action"
+            android:layout_width="wrap_content"
+            android:layout_height="36.0dip"
+            android:layout_alignParentEnd="true"
+            android:elevation="2.0dip">
+            <ImageView
+                android:id="@id/ivPrevious"
+                android:padding="4.0dip"
+                android:layout_width="22.0dip"
+                android:layout_height="22.0dip"
+                android:src="@drawable/ic_more_left"
+                android:layout_marginStart="10.0dip"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black_282930" />
+            <View
+                android:id="@id/divider1"
+                android:background="@color/gray_ececee"
+                android:layout_width="1.0dip"
+                android:layout_height="20.0dip"
+                android:layout_marginStart="6.0dip"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivPrevious"
+                app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:id="@id/llCalendar"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginStart="10.0dip"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/divider1"
+                app:layout_constraintTop_toTopOf="parent">
+                <TextView
+                    android:textSize="15.0sp"
+                    android:textColor="@color/black_282930"
+                    android:id="@id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/font_family_semi_bold" />
+                <ImageView
+                    android:id="@id/ivDate"
+                    android:layout_width="18.0dip"
+                    android:layout_height="18.0dip"
+                    android:src="@drawable/ic_calendar"
+                    android:layout_marginStart="8.0dip" />
+            </LinearLayout>
+            <View
+                android:id="@id/divider2"
+                android:background="@color/gray_ececee"
+                android:layout_width="1.0dip"
+                android:layout_height="20.0dip"
+                android:layout_marginStart="10.0dip"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/llCalendar"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@id/ivFollowing"
+                android:padding="4.0dip"
+                android:layout_width="22.0dip"
+                android:layout_height="22.0dip"
+                android:src="@drawable/ic_more_right"
+                android:layout_marginStart="6.0dip"
+                android:layout_marginEnd="10.0dip"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/divider2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black_282930" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <include
+            android:layout_gravity="bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/location_track_bottom_sheet" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <include
+        android:id="@id/subscribeBanner"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginHorizontal="20.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rlControl"
+        layout="@layout/subscribe_banner" />
+</androidx.constraintlayout.widget.ConstraintLayout>

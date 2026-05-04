@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/location_dialog_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:maxWidth="@dimen/tablet_max_width"
+    android:paddingStart="20.0dip"
+    android:paddingEnd="20.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:src="@drawable/bottom_sheet_mark"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/bottom_sheet_title_style" />
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="@color/gray_464f60"
+        android:gravity="center"
+        android:id="@id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14.0dip"
+        app:fontFamily="@font/font_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+    <RadioGroup
+        android:id="@id/rgOption"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription">
+        <com.sand.airdroidkid.common.ui.custom.BottomSheetDialogOptionRadioButton
+            android:id="@id/rbOption0"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            style="@style/bottom_sheet_option_style" />
+        <com.sand.airdroidkid.common.ui.custom.BottomSheetDialogOptionRadioButton
+            android:id="@id/rbOption1"
+            android:layout_width="fill_parent"
+            style="@style/bottom_sheet_option_style" />
+        <com.sand.airdroidkid.common.ui.custom.BottomSheetDialogOptionRadioButton
+            android:id="@id/rbOption2"
+            android:layout_width="fill_parent"
+            style="@style/bottom_sheet_option_style" />
+        <com.sand.airdroidkid.common.ui.custom.BottomSheetDialogOptionRadioButton
+            android:id="@id/rbOption3"
+            android:layout_width="fill_parent"
+            style="@style/bottom_sheet_option_style" />
+        <com.sand.airdroidkid.common.ui.custom.BottomSheetDialogOptionRadioButton
+            android:id="@id/rbOption4"
+            android:layout_width="fill_parent"
+            style="@style/bottom_sheet_option_style" />
+    </RadioGroup>
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="@color/white_ffffff"
+        android:gravity="center"
+        android:id="@id/tvOk"
+        android:background="@drawable/kid_blue_button_style"
+        android:layout_width="0.0dip"
+        android:layout_height="44.0dip"
+        android:layout_marginTop="30.0dip"
+        android:text="@string/Common_OK2"
+        app:fontFamily="@font/font_family_semi_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgOption" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="@color/gray_878d9a"
+        android:gravity="center"
+        android:id="@id/tvCancel"
+        android:layout_width="0.0dip"
+        android:layout_height="44.0dip"
+        android:layout_marginTop="6.0dip"
+        android:layout_marginBottom="12.0dip"
+        android:text="@string/ad_cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOk" />
+</androidx.constraintlayout.widget.ConstraintLayout>

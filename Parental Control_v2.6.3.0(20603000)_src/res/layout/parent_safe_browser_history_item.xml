@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_start_percent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_end_percent" />
+    <Space
+        android:id="@id/spaceTop"
+        android:background="@color/ad_transparent"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="12.0dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="13.0sp"
+        android:textColor="@color/gray_666b75"
+        android:id="@id/tvStickyHeader"
+        android:background="@color/ad_transparent"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:layoutDirection="ltr"
+        android:layout_marginStart="16.0dip"
+        app:layout_constraintStart_toStartOf="@id/clContent"
+        app:layout_constraintTop_toBottomOf="@id/spaceTop" />
+    <View
+        android:id="@id/vDivider"
+        android:background="@color/ad_transparent"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginTop="12.0dip"
+        app:layout_constraintTop_toBottomOf="@id/tvStickyHeader" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/clContent"
+        android:padding="16.0dip"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/vDivider">
+        <ImageView
+            android:id="@id/ivCheck"
+            android:visibility="gone"
+            android:layout_width="16.0dip"
+            android:layout_height="16.0dip"
+            android:layout_marginTop="4.0dip"
+            android:contentDescription="@null"
+            android:layout_marginEnd="10.0dip"
+            app:layout_constraintEnd_toStartOf="@id/ivWebIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/select_nor" />
+        <ImageView
+            android:id="@id/ivWebIcon"
+            android:background="@drawable/bg_transparent_stroke_1_radius_6"
+            android:padding="1.0dip"
+            android:visibility="visible"
+            android:layout_width="22.0dip"
+            android:layout_height="22.0dip"
+            android:scaleType="fitCenter"
+            android:contentDescription="@null"
+            android:layout_marginEnd="10.0dip"
+            app:layout_constraintEnd_toStartOf="@id/tvName"
+            app:layout_constraintStart_toEndOf="@id/ivCheck"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/default_web_svg" />
+        <TextView
+            android:textSize="15.0sp"
+            android:textColor="@color/black_ff282930"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:id="@id/tvName"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textAlignment="viewStart"
+            android:layout_marginEnd="20.0dip"
+            app:fontFamily="@font/font_family_medium"
+            app:layout_constraintEnd_toStartOf="@id/tvDateTime"
+            app:layout_constraintStart_toEndOf="@id/ivWebIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/grey_a4a8b3"
+            android:id="@id/tvDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/tvName"
+            app:layout_constraintEnd_toEndOf="@id/ivMenu"
+            app:layout_constraintTop_toTopOf="@id/tvName" />
+        <HorizontalScrollView
+            android:id="@id/hsUrl"
+            android:scrollbars="none"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dip"
+            android:layout_marginEnd="10.0dip"
+            app:layout_constraintEnd_toStartOf="@id/ivMenu"
+            app:layout_constraintStart_toStartOf="@id/ivWebIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            app:layout_goneMarginBottom="12.0dip">
+            <TextView
+                android:textSize="13.0sp"
+                android:textColor="@color/gray_878d9a"
+                android:id="@id/tvUrl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAlignment="viewStart" />
+        </HorizontalScrollView>
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/white_ffffff"
+            android:id="@id/tvUrlType"
+            android:paddingLeft="6.0dip"
+            android:paddingTop="1.0dip"
+            android:paddingRight="6.0dip"
+            android:paddingBottom="1.0dip"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9.0dip"
+            android:paddingHorizontal="6.0dip"
+            android:paddingVertical="1.0dip"
+            app:layout_constraintStart_toStartOf="@id/hsUrl"
+            app:layout_constraintTop_toBottomOf="@id/hsUrl" />
+        <ImageView
+            android:id="@id/ivMenu"
+            android:layout_width="18.0dip"
+            android:layout_height="18.0dip"
+            android:src="@drawable/more_2_gray_svg"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="@id/hsUrl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/hsUrl" />
+        <ImageView
+            android:id="@id/ivOpenUrl"
+            android:padding="3.0dip"
+            android:visibility="gone"
+            android:layout_width="20.0dip"
+            android:layout_height="20.0dip"
+            android:src="@drawable/open"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="@id/hsUrl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/hsUrl" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@id/ivDivider"
+        android:background="@color/ad_base_divider"
+        android:layout_width="0.0dip"
+        android:layout_height="@dimen/divider"
+        android:layout_marginLeft="16.0dip"
+        android:layout_marginRight="16.0dip"
+        android:contentDescription="@null"
+        android:layout_marginHorizontal="16.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart" />
+</androidx.constraintlayout.widget.ConstraintLayout>

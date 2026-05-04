@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/clRoot"
+    android:background="@color/white_f5f5f5"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@id/llEmpty"
+        android:background="@color/white_f5f5f5"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@id/ivEmptyIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pic_not_notification"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toTopOf="@id/tvEmptyTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/black_464F60"
+            android:gravity="center_horizontal"
+            android:id="@id/tvEmptyTitle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginTop="24.0dip"
+            android:layout_marginRight="30.0dip"
+            android:text="@string/Parent_Notification_Expired_Title"
+            android:layout_marginHorizontal="30.0dip"
+            app:layout_constraintBottom_toTopOf="@id/tvEmptyTip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivEmptyIcon" />
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@color/gray_878d9a"
+            android:gravity="center_horizontal"
+            android:id="@id/tvEmptyTip"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginTop="7.0dip"
+            android:layout_marginRight="30.0dip"
+            android:text="@string/Common_no_data"
+            android:layout_marginHorizontal="30.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEmptyTitle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_start_percent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_end_percent" />
+    <include
+        android:id="@id/parentSearchView"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        layout="@layout/parent_white_search_bar_layout" />
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@id/rvAppRightList"
+        android:background="@color/white_f5f5f5"
+        android:paddingBottom="16.0dip"
+        android:clipToPadding="false"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="4.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parentSearchView" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@id/toolbar"
+        android:background="@color/white_f5f5f5"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:minHeight="?actionBarSize"
+        android:elevation="0.0dip"
+        app:contentInsetStartWithNavigation="0.0dip"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:titleMargin="0.0dip"
+        app:titleTextAppearance="@style/CommonAppTheme.ToolBarTitleTextAppearance"
+        app:titleTextColor="@color/black_ff282930" />
+    <include
+        android:id="@id/layoutSearchNoResult"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parentSearchView"
+        app:layout_constraintVertical_bias="0.41"
+        layout="@layout/search_no_result" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:gravity="center"
+        android:id="@id/clLoadingPanel"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@id/viewNoNetwork"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parentSearchView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,289 @@
+.class public final Lcom/google/android/material/transition/platform/d;
+.super Ljava/lang/Object;
+.source "FadeProvider.java"
+
+# interfaces
+.implements Lcom/google/android/material/transition/platform/x;
+
+
+# annotations
+.annotation build Landroidx/annotation/x0;
+    value = 0x15
+.end annotation
+
+
+# instance fields
+.field private a:F
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    .line 6
+    iput v0, p0, Lcom/google/android/material/transition/platform/d;->a:F
+
+    .line 8
+    return-void
+.end method
+
+.method private static c(Landroid/view/View;FFFFF)Landroid/animation/Animator;
+    .locals 8
+    .param p3    # F
+        .annotation build Landroidx/annotation/x;
+            from = 0.0
+            to = 1.0
+        .end annotation
+    .end param
+    .param p4    # F
+        .annotation build Landroidx/annotation/x;
+            from = 0.0
+            to = 1.0
+        .end annotation
+    .end param
+
+    .prologue
+    .line 1
+    const/4 v0, 0x2
+
+    .line 2
+    new-array v0, v0, [F
+
+    .line 4
+    fill-array-data v0, :array_0
+
+    .line 7
+    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    .line 10
+    move-result-object v0
+
+    .line 11
+    new-instance v7, Lcom/google/android/material/transition/platform/d$a;
+
+    .line 13
+    move-object v1, v7
+
+    .line 14
+    move-object v2, p0
+
+    .line 15
+    move v3, p1
+
+    .line 16
+    move v4, p2
+
+    .line 17
+    move v5, p3
+
+    .line 18
+    move v6, p4
+
+    .line 19
+    invoke-direct/range {v1 .. v6}, Lcom/google/android/material/transition/platform/d$a;-><init>(Landroid/view/View;FFFF)V
+
+    .line 22
+    invoke-virtual {v0, v7}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    .line 25
+    new-instance p1, Lcom/google/android/material/transition/platform/d$b;
+
+    .line 27
+    invoke-direct {p1, p0, p5}, Lcom/google/android/material/transition/platform/d$b;-><init>(Landroid/view/View;F)V
+
+    .line 30
+    invoke-virtual {v0, p1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    .line 33
+    return-object v0
+
+    .line 4
+    nop
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+.end method
+
+
+# virtual methods
+.method public a(Landroid/view/ViewGroup;Landroid/view/View;)Landroid/animation/Animator;
+    .locals 6
+    .param p1    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/q0;
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-virtual {p2}, Landroid/view/View;->getAlpha()F
+
+    .line 4
+    move-result p1
+
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    cmpl-float p1, p1, v0
+
+    .line 8
+    if-nez p1, :cond_0
+
+    .line 10
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    .line 12
+    :goto_0
+    move v5, p1
+
+    .line 13
+    goto :goto_1
+
+    .line 14
+    :cond_0
+    invoke-virtual {p2}, Landroid/view/View;->getAlpha()F
+
+    .line 17
+    move-result p1
+
+    .line 18
+    goto :goto_0
+
+    .line 19
+    :goto_1
+    const/4 v3, 0x0
+
+    .line 20
+    const/high16 v4, 0x3f800000    # 1.0f
+
+    .line 22
+    const/4 v2, 0x0
+
+    .line 23
+    move-object v0, p2
+
+    .line 24
+    move v1, v5
+
+    .line 25
+    invoke-static/range {v0 .. v5}, Lcom/google/android/material/transition/platform/d;->c(Landroid/view/View;FFFFF)Landroid/animation/Animator;
+
+    .line 28
+    move-result-object p1
+
+    .line 29
+    return-object p1
+.end method
+
+.method public b(Landroid/view/ViewGroup;Landroid/view/View;)Landroid/animation/Animator;
+    .locals 6
+    .param p1    # Landroid/view/ViewGroup;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p2    # Landroid/view/View;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/q0;
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-virtual {p2}, Landroid/view/View;->getAlpha()F
+
+    .line 4
+    move-result p1
+
+    .line 5
+    const/4 v0, 0x0
+
+    .line 6
+    cmpl-float p1, p1, v0
+
+    .line 8
+    if-nez p1, :cond_0
+
+    .line 10
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    .line 12
+    :goto_0
+    move v5, p1
+
+    .line 13
+    goto :goto_1
+
+    .line 14
+    :cond_0
+    invoke-virtual {p2}, Landroid/view/View;->getAlpha()F
+
+    .line 17
+    move-result p1
+
+    .line 18
+    goto :goto_0
+
+    .line 19
+    :goto_1
+    const/4 v3, 0x0
+
+    .line 20
+    iget v4, p0, Lcom/google/android/material/transition/platform/d;->a:F
+
+    .line 22
+    const/4 v1, 0x0
+
+    .line 23
+    move-object v0, p2
+
+    .line 24
+    move v2, v5
+
+    .line 25
+    invoke-static/range {v0 .. v5}, Lcom/google/android/material/transition/platform/d;->c(Landroid/view/View;FFFFF)Landroid/animation/Animator;
+
+    .line 28
+    move-result-object p1
+
+    .line 29
+    return-object p1
+.end method
+
+.method public d()F
+    .locals 1
+
+    .prologue
+    .line 1
+    iget v0, p0, Lcom/google/android/material/transition/platform/d;->a:F
+
+    .line 3
+    return v0
+.end method
+
+.method public e(F)V
+    .locals 0
+
+    .prologue
+    .line 1
+    iput p1, p0, Lcom/google/android/material/transition/platform/d;->a:F
+
+    .line 3
+    return-void
+.end method

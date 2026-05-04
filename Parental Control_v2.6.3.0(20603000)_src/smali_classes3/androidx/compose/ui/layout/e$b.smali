@@ -1,0 +1,88 @@
+.class final Landroidx/compose/ui/layout/e$b;
+.super Ljava/lang/Object;
+.source "ApproachLayoutModifierNode.kt"
+
+# interfaces
+.implements Landroidx/compose/ui/node/k1$a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/compose/ui/layout/e;->B2(Landroidx/compose/ui/layout/c;Landroidx/compose/ui/layout/u;I)I
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x18
+    name = null
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\u0010\u0006\u001a\u00020\u0005*\u00020\u00002\u0006\u0010\u0002\u001a\u00020\u00012\u0006\u0010\u0004\u001a\u00020\u0003H\n\u00a2\u0006\u0004\u0008\u0006\u0010\u0007"
+    }
+    d2 = {
+        "Landroidx/compose/ui/layout/g;",
+        "Landroidx/compose/ui/layout/q0;",
+        "intrinsicMeasurable",
+        "Landroidx/compose/ui/unit/b;",
+        "constraints",
+        "Landroidx/compose/ui/layout/s0;",
+        "a",
+        "(Landroidx/compose/ui/layout/g;Landroidx/compose/ui/layout/q0;J)Landroidx/compose/ui/layout/s0;"
+    }
+    k = 0x3
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Landroidx/compose/ui/layout/e;
+
+
+# direct methods
+.method constructor <init>(Landroidx/compose/ui/layout/e;)V
+    .locals 0
+
+    .prologue
+    .line 1
+    iput-object p1, p0, Landroidx/compose/ui/layout/e$b;->a:Landroidx/compose/ui/layout/e;
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Landroidx/compose/ui/layout/g;Landroidx/compose/ui/layout/q0;J)Landroidx/compose/ui/layout/s0;
+    .locals 1
+    .param p1    # Landroidx/compose/ui/layout/g;
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+    .param p2    # Landroidx/compose/ui/layout/q0;
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+    .annotation build Ljj/l;
+    .end annotation
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Landroidx/compose/ui/layout/e$b;->a:Landroidx/compose/ui/layout/e;
+
+    .line 3
+    invoke-interface {v0, p1, p2, p3, p4}, Landroidx/compose/ui/layout/e;->T1(Landroidx/compose/ui/layout/g;Landroidx/compose/ui/layout/q0;J)Landroidx/compose/ui/layout/s0;
+
+    .line 6
+    move-result-object p1
+
+    .line 7
+    return-object p1
+.end method

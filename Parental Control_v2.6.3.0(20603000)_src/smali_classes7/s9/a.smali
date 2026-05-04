@@ -1,0 +1,26 @@
+.class public interface abstract Ls9/a;
+.super Ljava/lang/Object;
+.source "Mqtt3PubRec.java"
+
+# interfaces
+.implements Lj9/a;
+
+
+# annotations
+.annotation build Ln8/b;
+.end annotation
+
+
+# virtual methods
+.method public getType()Lj9/b;
+    .locals 1
+    .annotation build Ljj/l;
+    .end annotation
+
+    .prologue
+    .line 1
+    sget-object v0, Lj9/b;->PUBREC:Lj9/b;
+
+    .line 3
+    return-object v0
+.end method

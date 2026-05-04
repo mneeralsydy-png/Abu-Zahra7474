@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    android:gravity="center_vertical"
+    android:background="@null"
+    android:layout_width="fill_parent"
+    android:layout_height="45.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@id/dropDownAnchor"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip" />
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:paddingStart="12.0dip"
+        android:paddingEnd="12.0dip">
+        <ImageView
+            android:id="@id/icon"
+            android:visibility="gone"
+            android:clickable="false"
+            android:layout_width="15.0dip"
+            android:layout_height="15.0dip"
+            android:layout_marginTop="3.0dip"
+            android:layout_marginBottom="3.0dip"
+            android:scaleType="center"
+            android:layout_marginEnd="12.0dip" />
+        <AutoCompleteTextView
+            android:textSize="14.0sp"
+            android:textColor="@color/black_ff282930"
+            android:textColorHint="@color/gray_a4a8b3"
+            android:ellipsize="end"
+            android:id="@id/content"
+            android:background="@null"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:text=""
+            android:lines="1"
+            android:selectAllOnFocus="true"
+            android:completionThreshold="1"
+            android:layout_weight="1.0"
+            android:dropDownAnchor="@id/dropDownAnchor"
+            android:imeOptions="actionDone"
+            android:dropDownVerticalOffset="10.0dip"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:textDirection="locale"
+            android:textAlignment="viewStart" />
+        <CheckBox
+            android:id="@id/ivShowPassword"
+            android:background="@drawable/parent_password_edittext_selector_background"
+            android:focusable="true"
+            android:visibility="gone"
+            android:clickable="true"
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:button="@null"
+            android:scaleType="fitXY"
+            android:layout_marginStart="12.0dip" />
+        <ImageView
+            android:id="@id/clear"
+            android:focusable="true"
+            android:visibility="gone"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/clear"
+            android:scaleType="fitXY"
+            android:layout_marginStart="18.0dip" />
+        <TextView
+            android:textSize="13.0sp"
+            android:textColor="@color/blue_4996e5"
+            android:id="@id/tvCountdown"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ad_verify_mail_resend"
+            android:layout_marginStart="12.0dip"
+            android:layout_alignStart="@id/clear" />
+    </LinearLayout>
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="@color/ad_edittext_red"
+        android:id="@id/description"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip"
+        android:text="@string/ad_password_strong_error"
+        android:layout_below="@id/container"
+        android:layout_marginStart="20.0dip"
+        android:layout_alignStart="@id/content" />
+</merge>

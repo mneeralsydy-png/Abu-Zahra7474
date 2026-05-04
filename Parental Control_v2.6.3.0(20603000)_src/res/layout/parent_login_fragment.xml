@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/ivMenu"
+        android:padding="8.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13.0dip"
+        android:contentDescription="@null"
+        android:layout_marginEnd="13.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_more_2" />
+    <ImageView
+        android:id="@id/ivBack"
+        android:padding="8.0dip"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13.0dip"
+        android:contentDescription="@null"
+        android:layout_marginStart="13.0dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back" />
+    <ScrollView
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivMenu"
+        app:layout_constraintWidth_max="@dimen/tablet_max_width">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@android:color/white"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:id="@id/glStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.05" />
+            <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:id="@id/gtEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.95" />
+            <androidx.constraintlayout.widget.Guideline
+                android:orientation="horizontal"
+                android:id="@id/glTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_begin="20.0dip" />
+            <androidx.constraintlayout.widget.Guideline
+                android:orientation="horizontal"
+                android:id="@id/glButtom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_end="33.0dip" />
+            <TextView
+                android:textSize="22.0sp"
+                android:textColor="@color/black_282930"
+                android:id="@id/tvTitle"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/Parent_Signin_Title"
+                app:fontFamily="@font/font_family_semi_bold"
+                app:layout_constraintEnd_toStartOf="@id/gtEnd"
+                app:layout_constraintStart_toStartOf="@id/glStart"
+                app:layout_constraintTop_toTopOf="@id/glTop" />
+            <TextView
+                android:textSize="13.0sp"
+                android:textColor="@color/gray_666b75"
+                android:id="@id/tvHint"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.0dip"
+                android:text="@string/Parent_Signin_Subtitle1"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toStartOf="@id/gtEnd"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@id/glStart"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textStyle="bold"
+                android:textColor="@color/permission_tip"
+                android:id="@id/tvEmail"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30.0dip"
+                android:text="@string/Parent_Email_Title"
+                app:layout_constraintStart_toStartOf="@id/glStart"
+                app:layout_constraintTop_toBottomOf="@id/tvHint"
+                app:layout_constraintVertical_chainStyle="packed" />
+            <com.sand.airdroidkid.common.ui.base.NewCleanableEditText
+                android:id="@id/etEmail"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip"
+                android:hint="@string/Profile_Feedback_EnterEmail"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toStartOf="@id/gtEnd"
+                app:layout_constraintStart_toStartOf="@id/glStart"
+                app:layout_constraintTop_toBottomOf="@id/tvEmail"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:textPassword="false" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textStyle="bold"
+                android:textColor="@color/permission_tip"
+                android:id="@id/tvPassword"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24.0dip"
+                android:text="@string/lg_pwd_hint"
+                app:layout_constraintStart_toStartOf="@id/glStart"
+                app:layout_constraintTop_toBottomOf="@id/etEmail"
+                app:layout_constraintVertical_chainStyle="packed" />
+            <com.sand.airdroidkid.common.ui.base.NewCleanableEditText
+                android:id="@id/etPassword"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip"
+                android:hint="@string/Account_Password_Placeholder"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toStartOf="@id/gtEnd"
+                app:layout_constraintStart_toStartOf="@id/glStart"
+                app:layout_constraintTop_toBottomOf="@id/tvPassword"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:maxChars="48"
+                app:textPassword="true" />
+            <TextView
+                android:textSize="13.0sp"
+                android:textColor="@color/blue_446efc"
+                android:id="@id/tvForget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="@string/ad_setting_account_change_pw_forget"
+                app:layout_constraintEnd_toStartOf="@id/gtEnd"
+                app:layout_constraintTop_toBottomOf="@id/etPassword" />
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="@android:color/white"
+                android:id="@id/ivNext"
+                android:background="@drawable/kid_blue_button_style"
+                android:padding="10.0dip"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40.0dip"
+                android:layout_marginBottom="30.0dip"
+                android:minHeight="36.0dip"
+                android:text="@string/Account_Signin_Button"
+                app:fontFamily="@font/font_family_semi_bold"
+                app:layout_constraintBottom_toTopOf="@id/clThirdPartLogin"
+                app:layout_constraintEnd_toStartOf="@id/gtEnd"
+                app:layout_constraintStart_toStartOf="@id/glStart"
+                app:layout_constraintTop_toBottomOf="@id/tvForget"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintWidth_min="110.0dip"
+                style="?android:borderlessButtonStyle" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@id/clThirdPartLogin"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/glButtom"
+                app:layout_constraintEnd_toStartOf="@id/gtEnd"
+                app:layout_constraintStart_toStartOf="@id/glStart">
+                <TextView
+                    android:textSize="13.0sp"
+                    android:textColor="@color/gray_a4a8b3"
+                    android:id="@id/tvDivider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="or"
+                    android:layout_marginStart="8.0dip"
+                    android:layout_marginEnd="8.0dip"
+                    app:layout_constraintEnd_toStartOf="@id/vDividerRight"
+                    app:layout_constraintStart_toEndOf="@id/vDividerLeft"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <View
+                    android:id="@id/vDividerLeft"
+                    android:background="@color/grey_e8e8e8"
+                    android:layout_width="0.0dip"
+                    android:layout_height="1.0dip"
+                    app:layout_constraintBottom_toBottomOf="@id/tvDivider"
+                    app:layout_constraintEnd_toStartOf="@id/tvDivider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvDivider" />
+                <View
+                    android:id="@id/vDividerRight"
+                    android:background="@color/grey_e8e8e8"
+                    android:layout_width="0.0dip"
+                    android:layout_height="1.0dip"
+                    app:layout_constraintBottom_toBottomOf="@id/tvDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvDivider"
+                    app:layout_constraintTop_toTopOf="@id/tvDivider" />
+                <androidx.compose.ui.platform.ComposeView
+                    android:id="@id/composeBindSecondButton"
+                    android:layout_width="0.0dip"
+                    android:layout_height="44.0dip"
+                    android:layout_marginTop="20.0dip"
+                    android:layout_marginStart="12.0dip"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/composeBindFirstButton"
+                    app:layout_constraintTop_toBottomOf="@id/tvDivider" />
+                <androidx.compose.ui.platform.ComposeView
+                    android:id="@id/composeBindFirstButton"
+                    android:layout_width="0.0dip"
+                    android:layout_height="44.0dip"
+                    android:layout_marginTop="20.0dip"
+                    app:layout_constraintEnd_toStartOf="@id/composeBindSecondButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvDivider" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

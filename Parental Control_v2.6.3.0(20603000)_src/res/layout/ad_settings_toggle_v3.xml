@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@id/rl_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@id/rl_dot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28.0dip"
+                    android:layout_alignParentTop="true">
+                    <ImageView
+                        android:id="@id/iv_dot"
+                        android:layout_width="6.0dip"
+                        android:layout_height="6.0dip"
+                        android:src="@drawable/gray_7e848f_dot"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true" />
+                    <ImageView
+                        android:id="@id/iv_icon"
+                        android:visibility="gone"
+                        android:layout_width="18.0dip"
+                        android:layout_height="18.0dip"
+                        android:src="@drawable/telephone_full"
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@id/rl_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true">
+                    <ToggleButton
+                        android:id="@id/toggle"
+                        android:background="@drawable/toggle_button"
+                        android:visibility="visible"
+                        android:saveEnabled="false"
+                        android:layout_width="42.0dip"
+                        android:layout_height="24.0dip"
+                        android:checked="false"
+                        android:textOn=""
+                        android:textOff=""
+                        android:layout_marginStart="8.0dip"
+                        android:layout_marginEnd="2.0dip" />
+                    <ImageView
+                        android:id="@id/iv_pass"
+                        android:visibility="gone"
+                        android:layout_width="20.0dip"
+                        android:layout_height="20.0dip"
+                        android:src="@drawable/selected"
+                        android:layout_marginStart="8.0dip"
+                        android:layout_marginEnd="2.0dip" />
+                    <ImageView
+                        android:id="@id/iv_warning"
+                        android:visibility="gone"
+                        android:layout_width="20.0dip"
+                        android:layout_height="20.0dip"
+                        android:src="@drawable/btn_abnormal"
+                        android:layout_marginStart="8.0dip"
+                        android:layout_marginEnd="2.0dip" />
+                    <TextView
+                        android:textSize="12.0sp"
+                        android:textColor="@color/colorPrimary"
+                        android:gravity="center"
+                        android:id="@id/iv_more"
+                        android:background="@drawable/ad_radius_orange"
+                        android:paddingTop="4.0dip"
+                        android:paddingBottom="4.0dip"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="6.0dip"
+                        android:paddingEnd="6.0dip"
+                        android:layout_marginStart="8.0dip"
+                        android:layout_marginEnd="2.0dip" />
+                    <ImageView
+                        android:id="@id/image_more"
+                        android:visibility="gone"
+                        android:layout_width="20.0dip"
+                        android:layout_height="20.0dip"
+                        android:src="@drawable/ic_view"
+                        android:layout_marginStart="8.0dip"
+                        android:layout_marginEnd="2.0dip" />
+                    <TextView
+                        android:textSize="12.0sp"
+                        android:textColor="@color/colorPrimary"
+                        android:gravity="center"
+                        android:id="@id/tvGoSetting"
+                        android:background="@drawable/permission_go_setting_bg"
+                        android:paddingLeft="10.0dip"
+                        android:paddingRight="10.0dip"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="28.0dip"
+                        android:text="@string/Common_go_settings"
+                        android:paddingHorizontal="10.0dip" />
+                </RelativeLayout>
+                <TextView
+                    android:textSize="15.0sp"
+                    android:textColor="@color/gray_464f60"
+                    android:id="@id/title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Preference"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10.0dip"
+                    android:layout_marginEnd="20.0dip"
+                    android:layout_toStartOf="@id/rl_toggle"
+                    android:layout_toEndOf="@id/rl_dot"
+                    app:fontFamily="@font/font_family_medium" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_title">
+                <TextView
+                    android:textSize="13.0sp"
+                    android:textColor="#ff878d9a"
+                    android:id="@id/summary"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preference Summary"
+                    android:layout_marginStart="14.0dip" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

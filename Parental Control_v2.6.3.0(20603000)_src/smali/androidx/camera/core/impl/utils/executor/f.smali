@@ -1,0 +1,135 @@
+.class final Landroidx/camera/core/impl/utils/executor/f;
+.super Ljava/lang/Object;
+.source "HighPriorityExecutor.java"
+
+# interfaces
+.implements Ljava/util/concurrent/Executor;
+
+
+# static fields
+.field private static volatile d:Ljava/util/concurrent/Executor;
+
+
+# instance fields
+.field private final b:Ljava/util/concurrent/ExecutorService;
+
+
+# direct methods
+.method constructor <init>()V
+    .locals 1
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    new-instance v0, Landroidx/camera/core/impl/utils/executor/f$a;
+
+    .line 6
+    invoke-direct {v0, p0}, Landroidx/camera/core/impl/utils/executor/f$a;-><init>(Landroidx/camera/core/impl/utils/executor/f;)V
+
+    .line 9
+    invoke-static {v0}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+
+    .line 12
+    move-result-object v0
+
+    .line 13
+    iput-object v0, p0, Landroidx/camera/core/impl/utils/executor/f;->b:Ljava/util/concurrent/ExecutorService;
+
+    .line 15
+    return-void
+.end method
+
+.method static a()Ljava/util/concurrent/Executor;
+    .locals 2
+
+    .prologue
+    .line 1
+    sget-object v0, Landroidx/camera/core/impl/utils/executor/f;->d:Ljava/util/concurrent/Executor;
+
+    .line 3
+    if-eqz v0, :cond_0
+
+    .line 5
+    sget-object v0, Landroidx/camera/core/impl/utils/executor/f;->d:Ljava/util/concurrent/Executor;
+
+    .line 7
+    return-object v0
+
+    .line 8
+    :cond_0
+    const-class v0, Landroidx/camera/core/impl/utils/executor/f;
+
+    .line 10
+    monitor-enter v0
+
+    .line 11
+    :try_start_0
+    sget-object v1, Landroidx/camera/core/impl/utils/executor/f;->d:Ljava/util/concurrent/Executor;
+
+    .line 13
+    if-nez v1, :cond_1
+
+    .line 15
+    new-instance v1, Landroidx/camera/core/impl/utils/executor/f;
+
+    .line 17
+    invoke-direct {v1}, Landroidx/camera/core/impl/utils/executor/f;-><init>()V
+
+    .line 20
+    sput-object v1, Landroidx/camera/core/impl/utils/executor/f;->d:Ljava/util/concurrent/Executor;
+
+    .line 22
+    goto :goto_0
+
+    .line 23
+    :catchall_0
+    move-exception v1
+
+    .line 24
+    goto :goto_1
+
+    .line 25
+    :cond_1
+    :goto_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 26
+    sget-object v0, Landroidx/camera/core/impl/utils/executor/f;->d:Ljava/util/concurrent/Executor;
+
+    .line 28
+    return-object v0
+
+    .line 29
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 30
+    throw v1
+.end method
+
+
+# virtual methods
+.method public execute(Ljava/lang/Runnable;)V
+    .locals 1
+    .param p1    # Ljava/lang/Runnable;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Landroidx/camera/core/impl/utils/executor/f;->b:Ljava/util/concurrent/ExecutorService;
+
+    .line 3
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    .line 6
+    return-void
+.end method

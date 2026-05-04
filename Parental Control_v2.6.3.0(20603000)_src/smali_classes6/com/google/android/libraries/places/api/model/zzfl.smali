@@ -1,0 +1,106 @@
+.class final Lcom/google/android/libraries/places/api/model/zzfl;
+.super Lcom/google/android/libraries/places/api/model/zzca;
+.source "com.google.android.libraries.places:places@@5.0.0"
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lcom/google/android/libraries/places/api/model/zzfl;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .prologue
+    .line 1
+    new-instance v0, Lcom/google/android/libraries/places/api/model/zzfk;
+
+    .line 3
+    invoke-direct {v0}, Lcom/google/android/libraries/places/api/model/zzfk;-><init>()V
+
+    .line 6
+    sput-object v0, Lcom/google/android/libraries/places/api/model/zzfl;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    .line 8
+    return-void
+.end method
+
+.method constructor <init>(Lcom/google/android/libraries/places/api/model/LocalDate;Lcom/google/android/libraries/places/api/model/DayOfWeek;Lcom/google/android/libraries/places/api/model/LocalTime;Z)V
+    .locals 0
+    .param p1    # Lcom/google/android/libraries/places/api/model/LocalDate;
+        .annotation build Landroidx/annotation/q0;
+        .end annotation
+    .end param
+
+    .prologue
+    .line 1
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/android/libraries/places/api/model/zzca;-><init>(Lcom/google/android/libraries/places/api/model/LocalDate;Lcom/google/android/libraries/places/api/model/DayOfWeek;Lcom/google/android/libraries/places/api/model/LocalTime;Z)V
+
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    .prologue
+    .line 1
+    const/4 v0, 0x0
+
+    .line 2
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    .prologue
+    .line 1
+    invoke-virtual {p0}, Lcom/google/android/libraries/places/api/model/zzca;->getDate()Lcom/google/android/libraries/places/api/model/LocalDate;
+
+    .line 4
+    move-result-object v0
+
+    .line 5
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    .line 8
+    invoke-virtual {p0}, Lcom/google/android/libraries/places/api/model/zzca;->getDay()Lcom/google/android/libraries/places/api/model/DayOfWeek;
+
+    .line 11
+    move-result-object v0
+
+    .line 12
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    .line 15
+    invoke-virtual {p0}, Lcom/google/android/libraries/places/api/model/zzca;->getTime()Lcom/google/android/libraries/places/api/model/LocalTime;
+
+    .line 18
+    move-result-object v0
+
+    .line 19
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    .line 22
+    invoke-virtual {p0}, Lcom/google/android/libraries/places/api/model/zzca;->isTruncated()Z
+
+    .line 25
+    move-result p2
+
+    .line 26
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 29
+    return-void
+.end method

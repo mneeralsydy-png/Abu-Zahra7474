@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/ll_webrtc_connecting"
+    android:background="@color/white_ffffff"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@id/lavConnecting"
+        android:layout_width="160.0dip"
+        android:layout_height="104.0dip"
+        android:layout_marginBottom="20.0dip"
+        app:layout_constraintBottom_toTopOf="@id/connectGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="In_progress.json"
+        app:lottie_loop="true" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/connectGroup"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginHorizontal="20.0dip"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+        <TextView
+            android:theme="@style/webrtc_connecting_title"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/tvConnectTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Common_connect_to_device"
+            android:maxLines="1" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/black_ff464f60"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@id/tvConnectContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.0dip"
+            android:text="@string/AirMirror_Connecting_Text" />
+    </LinearLayout>
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="@color/red_ff475b"
+        android:gravity="bottom"
+        android:id="@id/tvLogInfo"
+        android:scrollbars="vertical"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:maxLines="1000"
+        android:singleLine="false"
+        android:layout_marginHorizontal="20.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/connectGroup" />
+</androidx.constraintlayout.widget.ConstraintLayout>

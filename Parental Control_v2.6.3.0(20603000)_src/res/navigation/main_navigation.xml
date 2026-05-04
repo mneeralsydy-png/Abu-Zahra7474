@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    android:id="@id/main_navigation"
+    app:startDestination="@id/parentDeviceFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <action
+        android:id="@id/action_to_parentDeviceFragment"
+        app:destination="@id/parentDeviceFragment"
+        app:popUpTo="@id/parentDeviceFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@id/action_to_chatRoomListFragment"
+        app:destination="@id/chatRoomListFragment"
+        app:popUpTo="@id/chatRoomListFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@id/action_to_mapFragment"
+        app:destination="@id/mapFragment"
+        app:popUpTo="@id/mapFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@id/action_to_amapMapFragment"
+        app:destination="@id/amapMapFragment"
+        app:popUpTo="@id/amapMapFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@id/action_to_parentSettingFragment"
+        app:destination="@id/parentSettingFragment"
+        app:popUpTo="@id/parentSettingFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@id/action_to_supportFragment"
+        app:destination="@id/supportFragment"
+        app:popUpTo="@id/supportFragment"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:label="ParentDeviceFragment"
+        android:name="com.sand.airdroidkidp.ui.fragment.device.ParentDeviceFragment"
+        android:id="@id/parentDeviceFragment" />
+    <fragment
+        android:label="ChatRoomListFragment"
+        android:name="com.sand.airdroidkid.common.ui.chatroom.ChatRoomListFragment"
+        android:id="@id/chatRoomListFragment" />
+    <fragment
+        android:label="MapFragment"
+        android:name="com.sand.airdroidkidp.ui.fragment.MapFragment"
+        android:id="@id/mapFragment" />
+    <fragment
+        android:label="AMapFragment"
+        android:name="com.sand.airdroidkidp.ui.fragment.amap.MapFragment"
+        android:id="@id/amapMapFragment" />
+    <fragment
+        android:label="ParentSettingFragment"
+        android:name="com.sand.airdroidkidp.ui.fragment.ParentSettingFragment"
+        android:id="@id/parentSettingFragment" />
+    <fragment
+        android:label="SupportFragment"
+        android:name="com.sand.airdroidkidp.ui.fragment.ParentSupportFragment"
+        android:id="@id/supportFragment" />
+</navigation>

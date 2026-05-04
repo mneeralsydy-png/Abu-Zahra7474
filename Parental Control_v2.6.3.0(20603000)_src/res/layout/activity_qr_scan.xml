@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/capture_containter"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <SurfaceView
+            android:id="@id/capture_preview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <ImageView
+            android:id="@id/top_mask"
+            android:background="@drawable/qr_code_scan_mask"
+            android:layout_width="fill_parent"
+            android:layout_height="181.0dip"
+            android:minHeight="?actionBarSize"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintTop_toTopOf="parent" />
+        <RelativeLayout
+            android:id="@id/capture_crop_layout"
+            android:background="@drawable/qr_code_capture"
+            android:layout_width="270.0dip"
+            android:layout_height="270.0dip"
+            android:layout_below="@id/top_mask"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_mask">
+            <ImageView
+                android:id="@id/capture_scan_line"
+                android:background="@drawable/qr_code_scan_line"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:layout_alignParentTop="true"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+        <ImageView
+            android:id="@id/bottom_mask"
+            android:background="@drawable/qr_code_scan_mask"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_below="@id/capture_crop_layout"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/capture_crop_layout"
+            app:layout_constraintVertical_bias="0.0" />
+        <ImageView
+            android:id="@id/left_mask"
+            android:background="@drawable/qr_code_scan_mask"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:layout_above="@id/bottom_mask"
+            android:layout_below="@id/top_mask"
+            android:contentDescription="@string/app_name"
+            android:layout_toStartOf="@id/capture_crop_layout"
+            android:layout_alignParentStart="true"
+            app:layout_constraintBottom_toBottomOf="@id/capture_crop_layout"
+            app:layout_constraintEnd_toStartOf="@id/capture_crop_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_mask" />
+        <ImageView
+            android:id="@id/right_mask"
+            android:background="@drawable/qr_code_scan_mask"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:layout_above="@id/bottom_mask"
+            android:layout_below="@id/top_mask"
+            android:contentDescription="@string/app_name"
+            android:layout_toEndOf="@id/capture_crop_layout"
+            android:layout_alignParentEnd="true"
+            app:layout_constraintBottom_toBottomOf="@id/capture_crop_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/capture_crop_layout"
+            app:layout_constraintTop_toBottomOf="@id/top_mask" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="#fff2f4f5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dip"
+            android:text="Scan AirDroid Kid Bind Code"
+            android:layout_below="@id/capture_crop_layout"
+            android:layout_centerHorizontal="true"
+            app:layout_constraintEnd_toEndOf="@id/capture_preview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/capture_crop_layout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <include
+        layout="@layout/app_bar_transparent" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

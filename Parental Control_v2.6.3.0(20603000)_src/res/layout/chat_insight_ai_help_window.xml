@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:paddingLeft="20.0dip"
+    android:paddingRight="20.0dip"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="20.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Space
+        android:id="@id/spaceTop"
+        android:layout_width="1.0dip"
+        android:layout_height="60.0dip"
+        app:layout_constraintBottom_toTopOf="@id/ivBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:textColor="@color/black_ff282930"
+        android:gravity="center"
+        android:id="@id/tvHelpMsgRight"
+        android:background="@drawable/pic_tips_bg"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/need_more_help"
+        android:layout_marginEnd="30.0dip"
+        app:layout_constraintBottom_toTopOf="@id/ivBackground"
+        app:layout_constraintEnd_toEndOf="@id/ivBackground" />
+    <TextView
+        android:textColor="@color/black_ff282930"
+        android:gravity="center"
+        android:id="@id/tvHelpMsgLeft"
+        android:background="@drawable/pic_tips_bg_left"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/need_more_help"
+        android:layout_marginStart="30.0dip"
+        app:layout_constraintBottom_toTopOf="@id/ivBackground"
+        app:layout_constraintStart_toStartOf="@id/ivBackground" />
+    <ImageView
+        android:id="@id/ivBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_avatar_bg" />
+    <ImageView
+        android:id="@id/ivChatInsightHelp"
+        android:layout_width="42.0dip"
+        android:layout_height="42.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/ivBackground"
+        app:layout_constraintEnd_toEndOf="@id/ivBackground"
+        app:layout_constraintStart_toStartOf="@id/ivBackground"
+        app:layout_constraintTop_toTopOf="@id/ivBackground"
+        app:layout_constraintVertical_bias="0.36"
+        app:srcCompat="@drawable/pic_chat_ai_avatar_default" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/profileItemLayout"
+    android:background="@drawable/normal_item_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@id/glTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="12.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@id/glBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="12.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glImageStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="16.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glImageEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="16.0dip" />
+    <ImageView
+        android:id="@id/ivProfileIcon"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:src="@drawable/device_ic_alerts"
+        app:layout_constraintStart_toStartOf="@id/glImageStart"
+        app:layout_constraintTop_toTopOf="@id/glTop" />
+    <TextView
+        android:textSize="16.0sp"
+        android:textColor="#ff282930"
+        android:id="@id/tvProfileTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1.0dip"
+        android:layout_marginStart="14.0dip"
+        android:layout_marginEnd="20.0dip"
+        app:fontFamily="@font/font_family_medium"
+        app:layout_constraintEnd_toStartOf="@id/tvSubContent"
+        app:layout_constraintStart_toEndOf="@id/ivProfileIcon"
+        app:layout_constraintTop_toTopOf="@id/glTop" />
+    <ProgressBar
+        android:id="@id/pbProfileDays"
+        android:layout_width="122.0dip"
+        android:layout_height="4.0dip"
+        android:layout_marginTop="3.0dip"
+        android:max="365"
+        android:progress="307"
+        android:layout_marginStart="8.0dip"
+        app:layout_constraintStart_toEndOf="@id/ivProfileIcon"
+        app:layout_constraintTop_toBottomOf="@id/tvProfileTitle"
+        style="@style/parent_profile_progress_bar" />
+    <TextView
+        android:textSize="11.0sp"
+        android:textColor="#ff878d9a"
+        android:id="@id/tvProfileContent"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7.0dip"
+        android:layout_marginEnd="20.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/glBottom"
+        app:layout_constraintEnd_toStartOf="@id/tvSubContent"
+        app:layout_constraintStart_toStartOf="@id/tvProfileTitle"
+        app:layout_constraintTop_toBottomOf="@id/pbProfileDays" />
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="#ff878d9a"
+        android:gravity="center"
+        android:id="@id/tvSubContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6.0dip"
+        app:layout_constraintEnd_toStartOf="@id/ivProfileSubIcon"
+        app:layout_constraintTop_toTopOf="@id/tvProfileTitle" />
+    <ImageView
+        android:id="@id/ivProfileSubIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/more"
+        app:layout_constraintBottom_toBottomOf="@id/tvSubContent"
+        app:layout_constraintEnd_toEndOf="@id/glImageEnd"
+        app:layout_constraintTop_toTopOf="@id/tvSubContent" />
+    <ImageView
+        android:id="@id/ivProTag"
+        android:visibility="gone"
+        android:layout_width="36.0dip"
+        android:layout_height="10.0dip"
+        android:src="@drawable/tag_pro_2"
+        app:layout_constraintBottom_toBottomOf="@id/tvSubContent"
+        app:layout_constraintEnd_toEndOf="@id/glImageEnd"
+        app:layout_constraintTop_toTopOf="@id/tvSubContent" />
+    <View
+        android:id="@id/vProfileDivider"
+        android:background="#fff4f4f4"
+        android:visibility="visible"
+        android:layout_width="0.0dip"
+        android:layout_height="1.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/glImageEnd"
+        app:layout_constraintStart_toStartOf="@id/glImageStart" />
+</androidx.constraintlayout.widget.ConstraintLayout>

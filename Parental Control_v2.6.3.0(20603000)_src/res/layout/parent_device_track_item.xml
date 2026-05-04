@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/white_ffffff"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/clMarkerParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2.0dip"
+        app:layout_constraintEnd_toEndOf="@id/vDivider"
+        app:layout_constraintStart_toStartOf="@id/vDivider"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@id/ivMarker"
+            android:visibility="gone"
+            android:layout_width="8.0dip"
+            android:layout_height="8.0dip"
+            android:layout_marginTop="4.0dip"
+            android:src="@drawable/ic_move_point_nor"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@id/ivMidMarker"
+            android:visibility="gone"
+            android:layout_width="16.0dip"
+            android:layout_height="16.0dip"
+            android:layout_marginTop="2.0dip"
+            android:src="@drawable/address_svg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@id/ivLargeMarker"
+            android:visibility="gone"
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            android:src="@drawable/ic_fenced_entry"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@id/vDivider"
+        android:background="@drawable/device_track_dash_line_divide"
+        android:layout_width="wrap_content"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="4.0dip"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvLocation"
+        app:layout_constraintHeight_min="24.0dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clMarkerParent" />
+    <TextView
+        android:textSize="12.0sp"
+        android:textColor="@color/gray_878d9a"
+        android:gravity="end"
+        android:id="@id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:paddingEnd="20.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/tvLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvLocation"
+        app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/black_282930"
+        android:id="@id/tvLocation"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2.0dip"
+        android:text="@string/Parent_Position_Not_Obtained"
+        android:layout_below="@id/tvTime"
+        android:layout_marginStart="46.0dip"
+        android:layout_marginEnd="16.0dip"
+        app:fontFamily="@font/font_family_medium"
+        app:layout_constraintBottom_toTopOf="@id/tvGeofence"
+        app:layout_constraintEnd_toStartOf="@id/tvTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginBottom="24.0dip" />
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="@color/gray_ff878d9a"
+        android:id="@id/tvGeofence"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4.0dip"
+        android:layout_marginBottom="24.0dip"
+        android:layout_below="@id/tvTime"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvLocation"
+        app:layout_constraintTop_toBottomOf="@id/tvLocation"
+        app:layout_goneMarginBottom="24.0dip" />
+</androidx.constraintlayout.widget.ConstraintLayout>

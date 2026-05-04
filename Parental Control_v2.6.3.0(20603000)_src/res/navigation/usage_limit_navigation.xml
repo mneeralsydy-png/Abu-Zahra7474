@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    android:id="@id/usage_limit_navigation"
+    app:startDestination="@id/loadingFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <action
+        android:id="@id/action_to_parentSelectAppFragment"
+        app:destination="@id/parentSelectAppFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@id/action_to_parentTimeLimitFragment"
+        app:destination="@id/parentTimeLimitFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@id/action_to_parentAllowAppsFragment"
+        app:destination="@id/parentAllowAppsFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@id/action_to_parentAlwaysAllowFragment"
+        app:destination="@id/parentAlwaysAllowFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@id/action_to_parentUsageTimeFragment"
+        app:destination="@id/parentUsageTimeFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@id/action_to_parentUsageLimitAddGeofenceFragment"
+        app:destination="@id/parentUsageLimitAddGeofenceFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@id/action_to_parentUsageLimitSearchGeofenceFragment"
+        app:destination="@id/parentUsageLimitSearchGeofenceFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@id/action_to_parentUsageLimitGeofenceSelectFragment"
+        app:destination="@id/parentUsageLimitGeofenceSelectFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@id/action_to_parentUsageLimitGeofenceListFragment"
+        app:destination="@id/parentUsageLimitGeofenceListFragment"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:name="com.sand.airdroidkidp.feature.usagetime.ParentLoadingFragment"
+        android:id="@id/loadingFragment" />
+    <fragment
+        android:label="GeofenceFragment"
+        android:name="com.sand.airdroidkidp.ui.fragment.ParentUsageLimitGeofenceListFragment"
+        android:id="@id/parentUsageLimitGeofenceListFragment">
+        <action
+            android:id="@id/action_parentUsageLimitGeofenceListFragment_to_parentUsageLimitAddGeofenceFragment"
+            app:destination="@id/parentUsageLimitAddGeofenceFragment"
+            app:popUpTo="@id/parentUsageLimitAddGeofenceFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:label="ParentSelectAppFragment"
+        android:name="com.sand.airdroidkidp.feature.usagetime.ParentSelectAppFragment"
+        android:id="@id/parentSelectAppFragment" />
+    <fragment
+        android:label="ParentTimeLimitFragment"
+        android:name="com.sand.airdroidkidp.feature.usagetime.ParentTimeLimitFragment"
+        android:id="@id/parentTimeLimitFragment" />
+    <fragment
+        android:label="ParentAllowAppsFragment"
+        android:name="com.sand.airdroidkidp.feature.usagetime.ParentAllowAppsFragment"
+        android:id="@id/parentAllowAppsFragment" />
+    <fragment
+        android:label="ParentAlwaysAllowFragment"
+        android:name="com.sand.airdroidkidp.feature.content.detection.ParentAlwaysAllowFragment"
+        android:id="@id/parentAlwaysAllowFragment" />
+    <fragment
+        android:label="parent_usage_time_fragment"
+        android:name="com.sand.airdroidkidp.feature.usagetime.ParentUsageTimeFragment"
+        android:id="@id/parentUsageTimeFragment" />
+    <fragment
+        android:label="ParentUsageLimitAddGeofenceFragment"
+        android:name="com.sand.airdroidkidp.ui.fragment.ParentUsageLimitAddGeofenceFragment"
+        android:id="@id/parentUsageLimitAddGeofenceFragment" />
+    <fragment
+        android:label="ParentUsageLimitSearchGeofenceFragment"
+        android:name="com.sand.airdroidkidp.ui.fragment.ParentUsageLimitSearchGeofenceFragment"
+        android:id="@id/parentUsageLimitSearchGeofenceFragment">
+        <action
+            android:id="@id/action_parentUsageLimitSearchGeofenceFragment_to_parentUsageLimitAddGeofenceFragment"
+            app:destination="@id/parentUsageLimitAddGeofenceFragment"
+            app:popUpTo="@id/parentUsageLimitAddGeofenceFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <dialog
+        android:label="Dialog"
+        android:name="com.sand.airdroidkidp.ui.dialog.HasAlwaysAllowDialogFragment"
+        android:id="@id/hasAlwaysAllowAppDialog" />
+</navigation>

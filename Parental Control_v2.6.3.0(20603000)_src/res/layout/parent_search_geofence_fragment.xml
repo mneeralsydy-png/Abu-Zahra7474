@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View
+        android:id="@id/mockStatusBarHeight"
+        android:layout_width="fill_parent"
+        android:layout_height="24.0dip"
+        app:layout_constraintTop_toTopOf="parent" />
+    <include
+        android:id="@id/geofenceSearchView"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="20.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginHorizontal="10.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivSearchGeofenceBack"
+        app:layout_constraintTop_toBottomOf="@id/mockStatusBarHeight"
+        layout="@layout/parent_search_bar_layout" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/rvSearchResult"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginTop="21.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/geofenceSearchView" />
+    <ImageView
+        android:id="@id/ivSearchGeofenceBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/geofenceSearchView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/geofenceSearchView"
+        app:srcCompat="@drawable/ic_back" />
+    <ImageView
+        android:id="@id/ivSearchResultEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.46"
+        app:srcCompat="@drawable/pic_not_search" />
+    <TextView
+        android:id="@id/tvSearchResultEmptyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:text="@string/Parent_Position_Search_None"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivSearchResultEmpty" />
+    <androidx.constraintlayout.widget.Group
+        android:id="@id/groupSearchResultEmpty"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="ivSearchResultEmpty,tvSearchResultEmptyTitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/kid_dlg_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:maxWidth="@dimen/dialog_max_width"
+    android:minWidth="@dimen/dialog_max_width"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="20.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="20.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@id/glTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="20.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@id/glBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="6.0dip" />
+    <TextView
+        android:textSize="18.0sp"
+        android:textStyle="bold"
+        android:textColor="@color/gray_464f60"
+        android:gravity="center"
+        android:id="@id/tvTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="@string/Parent_FamilyMember_Invite_Title"
+        app:layout_constraintEnd_toStartOf="@id/pbLoading"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="@id/glTop" />
+    <com.sand.airdroidkid.common.ui.base.NewCleanableEditText
+        android:id="@id/etEmail"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:minHeight="48.0dip"
+        android:hint="@string/Parent_FamilyMember_Invite_Placeholder"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:maxChars="48" />
+    <include
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30.0dip"
+        app:layout_constraintBottom_toTopOf="@id/glBottom"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
+        layout="@layout/ad_dlg_bottom_btn_bar2" />
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@id/pbLoading"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:indicatorColor="@color/gray_ffcfd4df"
+        app:indicatorSize="18.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        app:layout_constraintTop_toTopOf="@id/glTop"
+        app:trackThickness="2.0dip" />
+</androidx.constraintlayout.widget.ConstraintLayout>

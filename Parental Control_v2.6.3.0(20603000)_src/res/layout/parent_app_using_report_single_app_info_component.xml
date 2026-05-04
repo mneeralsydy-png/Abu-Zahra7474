@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@id/llFirstThreeContent"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="@color/gray_666b75"
+        android:id="@id/tvMainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Parent_TodayEvent_Device_Usage_Time"
+        android:layout_marginStart="16.0dip" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/app_using_item_bg"
+        android:paddingTop="16.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@id/llSubTitle"
+            android:paddingLeft="16.0dip"
+            android:paddingRight="16.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16.0dip">
+            <TextView
+                android:textSize="22.0sp"
+                android:textColor="@color/black_282930"
+                android:id="@id/tvSubTitle_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fontFamily="@font/font_family_semi_bold" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.0dip">
+                <TextView
+                    android:textSize="13.0sp"
+                    android:textColor="@color/gray_ff878d9a"
+                    android:id="@id/tvSubTitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3.0dip"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvSubIcon2"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <ImageView
+                    android:id="@id/tvSubIcon2"
+                    android:layout_width="14.0dip"
+                    android:layout_height="14.0dip"
+                    android:layout_marginStart="8.0dip"
+                    app:layout_constraintBottom_toBottomOf="@id/tvSubContent2"
+                    app:layout_constraintEnd_toStartOf="@id/tvSubContent2"
+                    app:layout_constraintStart_toEndOf="@id/tvSubTitle2"
+                    app:layout_constraintTop_toTopOf="@id/tvSubContent2" />
+                <TextView
+                    android:textSize="12.0sp"
+                    android:id="@id/tvSubContent2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4.0dip"
+                    app:fontFamily="@font/font_family_semi_bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tvSubIcon2"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@id/bcContent"
+            android:layout_width="fill_parent"
+            android:layout_height="100.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginBottom="16.0dip"
+            android:layout_marginStart="5.0dip"
+            android:layout_marginEnd="10.0dip" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingLeft="16.0dip"
+            android:paddingRight="16.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16.0dip">
+            <include
+                android:id="@id/show_time_info"
+                layout="@layout/parent_app_using_report_info_list_item" />
+            <include
+                android:id="@id/show_notification_info"
+                layout="@layout/parent_app_using_report_info_list_item" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

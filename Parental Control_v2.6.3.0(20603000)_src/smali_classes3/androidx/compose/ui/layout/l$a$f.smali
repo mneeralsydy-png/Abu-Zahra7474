@@ -1,0 +1,126 @@
+.class public final Landroidx/compose/ui/layout/l$a$f;
+.super Ljava/lang/Object;
+.source "ContentScale.kt"
+
+# interfaces
+.implements Landroidx/compose/ui/layout/l;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/compose/ui/layout/l$a;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0019\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003*\u0001\u0000\u0008\n\u0018\u00002\u00020\u0001J\"\u0010\u0006\u001a\u00020\u00052\u0006\u0010\u0003\u001a\u00020\u00022\u0006\u0010\u0004\u001a\u00020\u0002H\u0016\u00f8\u0001\u0000\u00a2\u0006\u0004\u0008\u0006\u0010\u0007\u0082\u0002\u0007\n\u0005\u0008\u00a1\u001e0\u0001\u00a8\u0006\u0008"
+    }
+    d2 = {
+        "androidx/compose/ui/layout/l$a$f",
+        "Landroidx/compose/ui/layout/l;",
+        "Lp0/o;",
+        "srcSize",
+        "dstSize",
+        "Landroidx/compose/ui/layout/x1;",
+        "a",
+        "(JJ)J",
+        "ui_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(JJ)J
+    .locals 2
+
+    .prologue
+    .line 1
+    invoke-static {p1, p2}, Lp0/o;->t(J)F
+
+    .line 4
+    move-result v0
+
+    .line 5
+    invoke-static {p3, p4}, Lp0/o;->t(J)F
+
+    .line 8
+    move-result v1
+
+    .line 9
+    cmpg-float v0, v0, v1
+
+    .line 11
+    if-gtz v0, :cond_0
+
+    .line 13
+    invoke-static {p1, p2}, Lp0/o;->m(J)F
+
+    .line 16
+    move-result v0
+
+    .line 17
+    invoke-static {p3, p4}, Lp0/o;->m(J)F
+
+    .line 20
+    move-result v1
+
+    .line 21
+    cmpg-float v0, v0, v1
+
+    .line 23
+    if-gtz v0, :cond_0
+
+    .line 25
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    .line 27
+    invoke-static {p1, p1}, Landroidx/compose/ui/layout/y1;->a(FF)J
+
+    .line 30
+    move-result-wide p1
+
+    .line 31
+    goto :goto_0
+
+    .line 32
+    :cond_0
+    invoke-static {p1, p2, p3, p4}, Landroidx/compose/ui/layout/m;->c(JJ)F
+
+    .line 35
+    move-result p1
+
+    .line 36
+    invoke-static {p1, p1}, Landroidx/compose/ui/layout/y1;->a(FF)J
+
+    .line 39
+    move-result-wide p1
+
+    .line 40
+    :goto_0
+    return-wide p1
+.end method

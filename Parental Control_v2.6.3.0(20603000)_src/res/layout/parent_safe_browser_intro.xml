@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sand.airdroidkidp.ui.custom.FeatureDescriptionItem
+        android:id="@id/fdiRemote"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:description="@string/Parent_Safe_Browser_Feature_Remote_Desc"
+        app:icon="@drawable/broswer_svg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/Parent_Safe_Browser_Feature_Remote" />
+    <com.sand.airdroidkidp.ui.custom.FeatureDescriptionItem
+        android:id="@id/feiFilter"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:description="@string/Parent_Safe_Browser_Feature_Content_Filter_Desc"
+        app:icon="@drawable/restriction_svg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fdiRemote"
+        app:title="@string/Parent_Safe_Browser_Feature_Content_Filter" />
+    <com.sand.airdroidkidp.ui.custom.FeatureDescriptionItem
+        android:id="@id/feiKeyword"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:description="@string/Parent_Safe_Browser_Feature_Keyword_Desc"
+        app:icon="@drawable/website_list_svg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/feiFilter"
+        app:title="@string/Parent_Safe_Browser_Feature_Keyword" />
+    <com.sand.airdroidkidp.ui.custom.FeatureDescriptionItem
+        android:id="@id/feiHistory"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:description="@string/Parent_Safe_Browser_Feature_History_Desc"
+        app:icon="@drawable/time_limit_svg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/feiKeyword"
+        app:title="@string/Parent_Safe_Browser_Feature_History" />
+</androidx.constraintlayout.widget.ConstraintLayout>

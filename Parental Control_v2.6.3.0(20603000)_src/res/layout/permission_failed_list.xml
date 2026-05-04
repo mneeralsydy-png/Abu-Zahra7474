@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/bg_radius_16_stroke_1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sand.airdroidkidp.ui.custom.PermissionMultiFailedItemPreference
+        android:id="@id/itemUsageLimit"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_prohibited_use"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/Parent_UsageLimit_Title" />
+    <com.sand.airdroidkidp.ui.custom.PermissionFailedItemPreference
+        android:id="@id/itemContentDetect"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:content="@string/Parent_Permission_Accessibility_Not_Auth"
+        app:icon="@drawable/detect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemUsageLimit"
+        app:title="@string/Parent_Keyword_Detect" />
+    <com.sand.airdroidkidp.ui.custom.PermissionFailedItemPreference
+        android:id="@id/itemBrowser"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:content="@string/Parent_Permission_Accessibility_Not_Auth"
+        app:icon="@drawable/web_protection"
+        app:iconTint="@color/black_282930"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemContentDetect"
+        app:title="@string/Parental_Device_Browser" />
+    <com.sand.airdroidkidp.ui.custom.PermissionMultiFailedItemPreference
+        android:id="@id/itemCommunicationSecurity"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/communication_safe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemBrowser"
+        app:title="@string/Parent_Communicate_Safe_Title" />
+    <com.sand.airdroidkidp.ui.custom.PermissionFailedItemPreference
+        android:id="@id/itemLocation"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:content="@string/Parent_Permission_Location_No_Auth"
+        app:icon="@drawable/address_svg"
+        app:iconTint="@color/black_282930"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemCommunicationSecurity"
+        app:title="@string/Parent_Permission_Location" />
+    <com.sand.airdroidkidp.ui.custom.PermissionFailedItemPreference
+        android:id="@id/itemHistoryLocation"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:content="@string/Parent_Permission_Location_No_Auth"
+        app:icon="@drawable/ic_track"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemLocation"
+        app:title="@string/Parent_Permission_Track" />
+    <com.sand.airdroidkidp.ui.custom.PermissionFailedItemPreference
+        android:id="@id/itemGeoFencing"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:content="@string/Parent_Permission_Location_No_Auth"
+        app:icon="@drawable/ic_fence"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemHistoryLocation"
+        app:title="@string/pc_biz_intro_feature4_title" />
+    <com.sand.airdroidkidp.ui.custom.PermissionMultiFailedItemPreference
+        android:id="@id/itemAppList"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/app_list"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemGeoFencing"
+        app:title="@string/Parent_Permission_App_And_Notification" />
+    <com.sand.airdroidkidp.ui.custom.PermissionMultiFailedItemPreference
+        android:id="@id/itemRemoteCamera"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/camera_svg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemAppList"
+        app:title="@string/Parent_Device_Remote_Camera_Title" />
+    <com.sand.airdroidkidp.ui.custom.PermissionFailedItemPreference
+        android:id="@id/itemScreenMirror"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:content="@string/Parent_Permission_ScreenMirror_No_Auth"
+        app:icon="@drawable/ic_screen_mirroring"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemRemoteCamera"
+        app:title="@string/Parent_Device_Screenshot_Title" />
+    <com.sand.airdroidkidp.ui.custom.PermissionFailedItemPreference
+        android:id="@id/itemAudio"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:content="@string/Parent_Permission_Microphone_No_Auth"
+        app:icon="@drawable/ic_sound_on"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemScreenMirror"
+        app:title="@string/kid_list_listen_title" />
+    <com.sand.airdroidkidp.ui.custom.PermissionMultiFailedItemPreference
+        android:id="@id/itemTodayEvent"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_report"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemAudio"
+        app:title="@string/Parent_Device_TodayEvent_Title" />
+    <com.sand.airdroidkidp.ui.custom.PermissionMultiFailedItemPreference
+        android:id="@id/itemDeviceInfoUpdate"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_device_information"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemTodayEvent"
+        app:title="@string/Parent_Permission_Device_Manager" />
+    <com.sand.airdroidkidp.ui.custom.PermissionMultiFailedItemPreference
+        android:id="@id/itemImageDetection"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/image_detection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemDeviceInfoUpdate"
+        app:title="@string/Kid_NSFW_title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

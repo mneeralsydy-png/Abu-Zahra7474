@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/parent_my_device_border"
+    android:paddingTop="16.0dip"
+    android:paddingBottom="16.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12.0dip"
+    android:minHeight="90.0dip"
+    android:paddingVertical="16.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/ivGeofenceItemIcon"
+        android:layout_width="34.0dip"
+        android:layout_height="34.0dip"
+        android:layout_marginStart="16.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/card_fence_svg" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ivGeofenceListItemArrow"
+        app:layout_constraintStart_toEndOf="@id/ivGeofenceItemIcon"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@color/black_282930"
+            android:ellipsize="end"
+            android:id="@id/tvGeofenceName"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_marginStart="14.0dip"
+            app:fontFamily="@font/font_family_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:textSize="12.0sp"
+            android:textColor="@color/gray_878d9a"
+            android:id="@id/tvGeofenceAddress"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvGeofenceName"
+            app:layout_constraintTop_toBottomOf="@id/tvGeofenceName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@id/ivGeofenceListItemArrow"
+        android:layout_width="14.0dip"
+        android:layout_height="14.0dip"
+        android:layout_marginEnd="16.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_more_right" />
+</androidx.constraintlayout.widget.ConstraintLayout>

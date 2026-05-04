@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/white_ffffff"
+    android:paddingLeft="20.0dip"
+    android:paddingRight="20.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingHorizontal="20.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView
+        android:id="@id/nestedScrollView"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_marginBottom="10.0dip"
+        app:layout_constraintBottom_toTopOf="@id/generateKeywordBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="@color/text_200"
+                android:id="@id/tvDetectionKeywordGroupDesc"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:text="@string/Parent_Keyword_Manage_Enabled_Tip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_max="@dimen/tablet_max_width_2" />
+            <View
+                android:id="@id/vMark"
+                android:background="@drawable/bg_blue_radius_2"
+                android:layout_width="4.0dip"
+                android:layout_height="14.0dip"
+                app:layout_constraintBottom_toBottomOf="@id/tvKeywordCategory"
+                app:layout_constraintStart_toStartOf="@id/tvDetectionKeywordGroupDesc"
+                app:layout_constraintTop_toTopOf="@id/tvKeywordCategory" />
+            <TextView
+                android:textSize="14.0sp"
+                android:textColor="@color/black_282930"
+                android:id="@id/tvKeywordCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:text="@string/Parent_Keyword_Manage_Category1"
+                android:layout_marginStart="10.0dip"
+                app:fontFamily="@font/font_family_medium"
+                app:layout_constraintStart_toEndOf="@id/vMark"
+                app:layout_constraintTop_toBottomOf="@id/tvDetectionKeywordGroupDesc" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:scrollbarStyle="outsideOverlay"
+                android:id="@id/rvDetectionKeywordGroupList"
+                android:scrollbars="vertical"
+                android:clipToPadding="false"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10.0dip"
+                android:maxHeight="600.0dip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKeywordCategory"
+                app:layout_constraintWidth_max="@dimen/tablet_max_width_2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <include
+        android:id="@id/generateKeywordBox"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginBottom="8.0dip"
+        android:layout_marginHorizontal="20.0dip"
+        app:layout_constraintBottom_toTopOf="@id/customKeywordBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_min="44.0dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nestedScrollView"
+        layout="@layout/generate_keyword_button" />
+    <include
+        android:id="@id/customKeywordBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_min="44.0dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/generateKeywordBox"
+        layout="@layout/custom_keyword_button" />
+    <ProgressBar
+        android:id="@id/pbLoading"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/bg_radius_16"
+    android:padding="6.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/white_f5f5f5"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/ivHintIcon"
+        android:layout_width="28.0dip"
+        android:layout_height="28.0dip"
+        android:src="@drawable/upgrade_tips"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/feature_item_title_color"
+        android:ellipsize="end"
+        android:id="@id/tvHintText"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:text="@string/Parental_Kid_Upgrade1"
+        android:layout_marginStart="14.0dip"
+        android:layout_marginEnd="6.0dip"
+        app:fontFamily="@font/font_family_medium"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/tvSubtitleText"
+        app:layout_constraintEnd_toStartOf="@id/ivArrowIcon"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@id/ivHintIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginBottom="10.0dip"
+        app:layout_goneMarginStart="0.0dip" />
+    <ImageView
+        android:id="@id/ivSubtitleTime"
+        android:visibility="gone"
+        android:layout_width="16.0dip"
+        android:layout_height="16.0dip"
+        android:src="@drawable/time_gray"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@id/tvSubtitleText"
+        app:layout_constraintStart_toStartOf="@id/tvHintText"
+        app:layout_constraintTop_toTopOf="@id/tvSubtitleText"
+        app:tint="@color/text_300" />
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="@color/text_300"
+        android:id="@id/tvSubtitleText"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4.0dip"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginStart="5.0dip"
+        app:fontFamily="@font/font_family_regular"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tvHintText"
+        app:layout_constraintStart_toEndOf="@id/ivSubtitleTime"
+        app:layout_constraintTop_toBottomOf="@id/tvHintText" />
+    <ImageView
+        android:id="@id/ivArrowIcon"
+        android:background="@drawable/more"
+        android:layout_width="12.0dip"
+        android:layout_height="12.0dip"
+        android:contentDescription="@null"
+        android:layout_marginEnd="8.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

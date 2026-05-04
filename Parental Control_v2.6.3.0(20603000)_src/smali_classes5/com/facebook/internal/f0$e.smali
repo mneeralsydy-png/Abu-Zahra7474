@@ -1,0 +1,154 @@
+.class public final Lcom/facebook/internal/f0$e;
+.super Ljava/lang/Object;
+.source "FileLruCache.kt"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/facebook/internal/f0;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "e"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0010\u0008\n\u0002\u0008\u000b\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003R*\u0010\u000b\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00048\u0006@FX\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u0006\u0010\u0007\u001a\u0004\u0008\u0006\u0010\u0008\"\u0004\u0008\t\u0010\nR*\u0010\u000e\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u00048\u0006@FX\u0086\u000e\u00a2\u0006\u0012\n\u0004\u0008\u000c\u0010\u0007\u001a\u0004\u0008\u000c\u0010\u0008\"\u0004\u0008\r\u0010\n\u00a8\u0006\u000f"
+    }
+    d2 = {
+        "Lcom/facebook/internal/f0$e;",
+        "",
+        "<init>",
+        "()V",
+        "",
+        "value",
+        "a",
+        "I",
+        "()I",
+        "c",
+        "(I)V",
+        "byteCount",
+        "b",
+        "d",
+        "fileCount",
+        "facebook-core_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x5,
+        0x1
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field private a:I
+
+.field private b:I
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    const/high16 v0, 0x100000
+
+    .line 6
+    iput v0, p0, Lcom/facebook/internal/f0$e;->a:I
+
+    .line 8
+    const/16 v0, 0x400
+
+    .line 10
+    iput v0, p0, Lcom/facebook/internal/f0$e;->b:I
+
+    .line 12
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()I
+    .locals 1
+
+    .prologue
+    .line 1
+    iget v0, p0, Lcom/facebook/internal/f0$e;->a:I
+
+    .line 3
+    return v0
+.end method
+
+.method public final b()I
+    .locals 1
+
+    .prologue
+    .line 1
+    iget v0, p0, Lcom/facebook/internal/f0$e;->b:I
+
+    .line 3
+    return v0
+.end method
+
+.method public final c(I)V
+    .locals 1
+
+    .prologue
+    .line 1
+    if-ltz p1, :cond_0
+
+    .line 3
+    iput p1, p0, Lcom/facebook/internal/f0$e;->a:I
+
+    .line 5
+    return-void
+
+    .line 6
+    :cond_0
+    new-instance p1, Ljava/security/InvalidParameterException;
+
+    .line 8
+    const-string v0, "Cache byte-count limit must be >= 0"
+
+    .line 10
+    invoke-direct {p1, v0}, Ljava/security/InvalidParameterException;-><init>(Ljava/lang/String;)V
+
+    .line 13
+    throw p1
+.end method
+
+.method public final d(I)V
+    .locals 1
+
+    .prologue
+    .line 1
+    if-ltz p1, :cond_0
+
+    .line 3
+    iput p1, p0, Lcom/facebook/internal/f0$e;->b:I
+
+    .line 5
+    return-void
+
+    .line 6
+    :cond_0
+    new-instance p1, Ljava/security/InvalidParameterException;
+
+    .line 8
+    const-string v0, "Cache file count limit must be >= 0"
+
+    .line 10
+    invoke-direct {p1, v0}, Ljava/security/InvalidParameterException;-><init>(Ljava/lang/String;)V
+
+    .line 13
+    throw p1
+.end method

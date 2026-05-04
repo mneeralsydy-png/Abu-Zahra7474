@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/grey_f4f4f4"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@id/llEmpty"
+        android:background="@android:color/white"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbMultiSelect">
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:id="@id/ivEmptyIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/not_recording"
+            android:contentDescription="@null" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/black_666B75"
+            android:gravity="center_horizontal"
+            android:id="@id/tvEmptyTip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginTop="24.0dip"
+            android:layout_marginRight="30.0dip"
+            android:text="@string/Common_no_data"
+            android:layout_marginHorizontal="30.0dip" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/rvMultiList"
+        android:background="@android:color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbMultiSelect" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@id/llMultiFeature"
+        android:visibility="gone"
+        android:layout_width="0.0dip"
+        android:layout_height="66.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/rvMultiList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <View
+            android:id="@id/shadow"
+            android:background="@drawable/bg_top_shadow"
+            android:layout_width="fill_parent"
+            android:layout_height="10.0dip" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="56.0dip"
+            android:weightSum="2.0">
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="@color/black_464F60"
+                android:gravity="center"
+                android:id="@id/tvMultiShare"
+                android:paddingTop="8.0dip"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/common_share"
+                android:drawablePadding="3.0dip"
+                android:layout_weight="1.0"
+                app:drawableTopCompat="@drawable/share_2" />
+            <TextView
+                android:textSize="12.0sp"
+                android:textColor="@color/black_464F60"
+                android:gravity="center"
+                android:id="@id/tvMultiDelete"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:text="@string/Parent_Setting_Records_Delete"
+                android:drawablePadding="3.0dip"
+                android:layout_weight="1.0"
+                app:drawableTopCompat="@drawable/delete" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.sand.airdroidkidp.ui.custom.ParentProfileToolbar
+        android:id="@id/tbMultiSelect"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rightText="@string/Common_Cancel"
+        app:title="@string/Parent_Setting_Records_Select_All"
+        app:toolbarMode="3" />
+</androidx.constraintlayout.widget.ConstraintLayout>

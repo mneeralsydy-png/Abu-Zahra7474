@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="horizontal"
+    android:id="@id/ll_main"
+    android:background="@android:color/black"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/iv_full_srceen"
+        android:tag="down"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ad_airmirror_full_screen_down"
+        android:layout_centerHorizontal="true" />
+    <RelativeLayout
+        android:id="@id/rl_full_srceen"
+        android:tag="down"
+        android:visibility="gone"
+        android:layout_width="120.0dip"
+        android:layout_height="70.0dip"
+        android:layout_centerHorizontal="true" />
+    <RelativeLayout
+        android:id="@id/ll_surfaceview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/vfNavigation"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+        <org.webrtc.SurfaceViewRenderer
+            android:id="@id/surfaceView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <ViewFlipper
+        android:id="@id/vfNavigation"
+        android:background="@android:color/black"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+        <include
+            android:id="@id/webrtcCameraNavigation"
+            layout="@layout/kid_webrtc_camera_navigation" />
+        <include
+            android:id="@id/webrtcVdsNavigation"
+            layout="@layout/kid_webrtc_vds_navigation" />
+    </ViewFlipper>
+    <RelativeLayout
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/vfNavigation"
+        android:layout_alignParentEnd="true">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@id/ll_more"
+            android:background="@drawable/camera_more_action_bg"
+            android:paddingLeft="15.0dip"
+            android:paddingTop="20.0dip"
+            android:paddingRight="15.0dip"
+            android:paddingBottom="20.0dip"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5.0dip"
+            android:layout_marginEnd="8.0dip"
+            android:layout_alignParentEnd="true"
+            android:paddingHorizontal="15.0dip"
+            android:paddingVertical="20.0dip">
+            <ImageView
+                android:id="@id/bt_voice_ca"
+                android:background="@null"
+                android:padding="3.0dip"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:src="@drawable/ic_sound_off"
+                android:contentDescription="@null"
+                android:alpha="1.0"
+                app:tint="@color/white_ffffff" />
+            <ImageView
+                android:id="@id/bt_flash"
+                android:background="@null"
+                android:padding="3.0dip"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_marginTop="17.0dip"
+                android:src="@drawable/ic_flashlight"
+                android:contentDescription="@null"
+                android:alpha="1.0"
+                app:tint="@color/white_ffffff" />
+        </LinearLayout>
+    </RelativeLayout>
+    <com.sand.airdroid.stat.WebrtcStatView
+        android:id="@id/webrtcStatView"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

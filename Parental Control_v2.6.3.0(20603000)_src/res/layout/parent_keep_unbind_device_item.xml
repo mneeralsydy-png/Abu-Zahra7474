@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@id/llContent"
+    android:background="@drawable/parent_unbind_device_item_bg"
+    android:padding="16.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ToggleButton
+        android:id="@id/tbMultiSelect"
+        android:background="@drawable/parent_setting_audio_recording_multi_selector"
+        android:clickable="false"
+        android:layout_width="20.0dip"
+        android:layout_height="20.0dip"
+        android:checked="false"
+        android:button="@drawable/parent_setting_audio_recording_multi_selector" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/black_ff464f60"
+        android:id="@id/tvName"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:text="bn hch"
+        android:layout_weight="1.0"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="8.0dip" />
+</LinearLayout>

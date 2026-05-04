@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/clRoot"
+    android:background="@color/white_ffffff"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.sand.airdroidkidp.ui.custom.ParentProfileToolbar
+        android:id="@id/tbSingleSelect"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        app:isDividerVisible="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/Parent_MailSubscribe_Title"
+        app:toolbarMode="1" />
+    <androidx.fragment.app.FragmentContainerView
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:id="@id/nav_host_fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbSingleSelect"
+        app:navGraph="@navigation/subscribe_mail_navigation" />
+    <include
+        android:id="@id/subscribeBanner"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginHorizontal="20.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbSingleSelect"
+        layout="@layout/subscribe_banner" />
+</androidx.constraintlayout.widget.ConstraintLayout>

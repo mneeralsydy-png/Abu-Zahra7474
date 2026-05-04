@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:paddingLeft="20.0dip"
+    android:paddingRight="20.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="76.0dip"
+    android:paddingHorizontal="20.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/ivSearchGeofenceItemIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_posation" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/clGeofenceSearchCard"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="16.0dip"
+        android:layout_marginStart="14.0dip"
+        android:layout_marginVertical="16.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivSearchGeofenceItemIcon"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:textSize="15.0sp"
+            android:textColor="@color/black_282930"
+            android:id="@id/tvSearchGeofenceName"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:textDirection="locale"
+            app:fontFamily="@font/font_family_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:textColor="@color/gray_666b75"
+            android:id="@id/tvSearchGeofenceAddress"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.0dip"
+            android:textDirection="locale"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvSearchGeofenceName"
+            app:layout_constraintTop_toBottomOf="@id/tvSearchGeofenceName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@id/ivDividerSearchItem"
+        android:background="@color/gray_ececee"
+        android:layout_width="0.0dip"
+        android:layout_height="1.0dip"
+        android:layout_marginTop="16.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clGeofenceSearchCard" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:textColor="#ff000000"
+    android:gravity="center_vertical"
+    android:id="@id/emaildroplist"
+    android:layout_width="fill_parent"
+    android:layout_height="45.0dip"
+    android:singleLine="true"
+    android:paddingStart="12.0dip"
+    style="@style/SandDropDownListViewStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

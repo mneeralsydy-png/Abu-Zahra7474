@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    android:id="@id/geofence_navigation"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment
+        android:label="GeofenceFragment"
+        android:name="com.sand.airdroidkidp.ui.fragment.ParentGeofenceListFragment"
+        android:id="@id/parentGeofenceFragment">
+        <action
+            android:id="@id/action_parentGeofenceFragment_to_parentAddGeofenceFragment"
+            app:destination="@id/parentAddGeofenceFragment" />
+        <action
+            android:id="@id/action_parentGeofenceFragment_to_parentDeviceGeofenceTrackFragment"
+            app:destination="@id/parentDeviceGeofenceTrackFragment" />
+        <action
+            android:id="@id/action_parentGeofenceFragment_to_amapParentDeviceGeofenceTrackFragment"
+            app:destination="@id/amapParentDeviceGeofenceTrackFragment" />
+    </fragment>
+    <fragment
+        android:label="ParentAddGeofenceFragment"
+        android:name="com.sand.airdroidkidp.ui.fragment.ParentAddGeofenceFragment"
+        android:id="@id/parentAddGeofenceFragment">
+        <action
+            android:id="@id/action_parentAddGeofenceFragment_to_parentSearchGeofenceFragment"
+            app:destination="@id/parentSearchGeofenceFragment" />
+        <action
+            android:id="@id/action_parentAddGeofenceFragment_to_parentGeofenceFragment"
+            app:destination="@id/parentGeofenceFragment"
+            app:popUpTo="@id/parentGeofenceFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:label="ParentSearchGeofenceFragment"
+        android:name="com.sand.airdroidkidp.ui.fragment.ParentSearchGeofenceFragment"
+        android:id="@id/parentSearchGeofenceFragment">
+        <action
+            android:id="@id/action_parentSearchGeofenceFragment_to_parentAddGeofenceFragment"
+            app:destination="@id/parentAddGeofenceFragment"
+            app:popUpTo="@id/parentAddGeofenceFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <dialog
+        android:label="ProgressDialogFragment"
+        android:name="com.sand.airdroidkid.common.ui.base.dialog.ProgressDialogFragment"
+        android:id="@id/progressDialogFragment" />
+    <fragment
+        android:label="ParentDeviceGeofenceTrackFragment"
+        android:name="com.sand.airdroidkidp.ui.fragment.ParentDeviceGeofenceTrackFragment"
+        android:id="@id/parentDeviceGeofenceTrackFragment">
+        <action
+            android:id="@id/action_parentDeviceGeofenceTrackFragment_to_parentGeofenceFragment"
+            app:destination="@id/parentGeofenceFragment"
+            app:popUpTo="@id/parentGeofenceFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:label="ParentDeviceGeofenceTrackFragment"
+        android:name="com.sand.airdroidkidp.ui.fragment.amap.ParentDeviceGeofenceTrackFragment"
+        android:id="@id/amapParentDeviceGeofenceTrackFragment">
+        <action
+            android:id="@id/action_amapParentDeviceGeofenceTrackFragment_to_parentGeofenceFragment"
+            app:destination="@id/parentGeofenceFragment"
+            app:popUpTo="@id/parentGeofenceFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

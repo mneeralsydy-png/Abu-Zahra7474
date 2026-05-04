@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="51.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@id/ivCategoryIcon"
+        android:background="@drawable/ic_noapp"
+        android:layout_width="30.0dip"
+        android:layout_height="30.0dip"
+        android:layout_marginStart="16.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:textSize="15.0sp"
+        android:textColor="@color/black_282930"
+        android:ellipsize="end"
+        android:id="@id/tvCategory"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginStart="16.0dip"
+        app:fontFamily="@font/font_family_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/remove"
+        app:layout_constraintStart_toEndOf="@id/ivCategoryIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/remove"
+        android:paddingTop="15.0dip"
+        android:paddingBottom="15.0dip"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:src="@drawable/prohibit"
+        android:paddingVertical="15.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:background="@color/ad_base_divider"
+        android:layout_width="0.0dip"
+        android:layout_height="1.0dip"
+        android:layout_marginEnd="16.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvCategory" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="50.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:textSize="15.0sp"
+        android:textColor="@color/black_282930"
+        android:id="@id/cbCategory"
+        android:background="@android:color/transparent"
+        android:focusable="false"
+        android:layout_width="20.0dip"
+        android:layout_height="20.0dip"
+        android:button="@drawable/select_app_box_style"
+        android:layout_marginStart="16.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:textSize="15.0sp"
+        android:textColor="@color/black_282930"
+        android:ellipsize="end"
+        android:id="@id/tvCategory"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_marginStart="14.0dip"
+        android:layout_marginEnd="10.0dip"
+        app:fontFamily="@font/font_family_medium"
+        app:layout_constraintBottom_toBottomOf="@id/cbCategory"
+        app:layout_constraintEnd_toStartOf="@id/tvSelectCount"
+        app:layout_constraintStart_toEndOf="@id/cbCategory"
+        app:layout_constraintTop_toTopOf="@id/cbCategory" />
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="@color/kid_gray_tip"
+        android:id="@id/tvSelectCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ivRightArrow"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/ivRightArrow"
+        android:layout_width="12.0dip"
+        android:layout_height="12.0dip"
+        android:src="@drawable/more"
+        android:contentDescription="@null"
+        android:layout_marginEnd="16.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:background="@color/ad_base_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

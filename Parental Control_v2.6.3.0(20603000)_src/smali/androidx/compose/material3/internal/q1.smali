@@ -1,0 +1,486 @@
+.class public final Landroidx/compose/material3/internal/q1;
+.super Ljava/lang/Object;
+.source "InternalMutatorMutex.kt"
+
+
+# annotations
+.annotation build Landroidx/compose/runtime/l5;
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/compose/material3/internal/q1$a;
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000X\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\u0008\u0001\u0018\u00002\u00020\u0001:\u0001\u001dB\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0002\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J>\u0010\u000f\u001a\u00028\u0000\"\u0004\u0008\u0000\u0010\t2\u0008\u0008\u0002\u0010\u000b\u001a\u00020\n2\u001c\u0010\u000e\u001a\u0018\u0008\u0001\u0012\n\u0012\u0008\u0012\u0004\u0012\u00028\u00000\r\u0012\u0006\u0012\u0004\u0018\u00010\u00010\u000cH\u0086@\u00a2\u0006\u0004\u0008\u000f\u0010\u0010JW\u0010\u0015\u001a\u00028\u0001\"\u0004\u0008\u0000\u0010\u0011\"\u0004\u0008\u0001\u0010\t2\u0006\u0010\u0012\u001a\u00028\u00002\u0008\u0008\u0002\u0010\u000b\u001a\u00020\n2\'\u0010\u000e\u001a#\u0008\u0001\u0012\u0004\u0012\u00028\u0000\u0012\n\u0012\u0008\u0012\u0004\u0012\u00028\u00010\r\u0012\u0006\u0012\u0004\u0018\u00010\u00010\u0013\u00a2\u0006\u0002\u0008\u0014H\u0086@\u00a2\u0006\u0004\u0008\u0015\u0010\u0016J\u001b\u0010\u0019\u001a\u00020\u00182\u000c\u0010\u000e\u001a\u0008\u0012\u0004\u0012\u00020\u00060\u0017\u00a2\u0006\u0004\u0008\u0019\u0010\u001aR(\u0010\u001f\u001a\u0016\u0012\u0006\u0012\u0004\u0018\u00010\u00040\u001bj\n\u0012\u0006\u0012\u0004\u0018\u00010\u0004`\u001c8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u001d\u0010\u001eR\u0014\u0010#\u001a\u00020 8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008!\u0010\"\u00a8\u0006$"
+    }
+    d2 = {
+        "Landroidx/compose/material3/internal/q1;",
+        "",
+        "<init>",
+        "()V",
+        "Landroidx/compose/material3/internal/q1$a;",
+        "mutator",
+        "",
+        "i",
+        "(Landroidx/compose/material3/internal/q1$a;)V",
+        "R",
+        "Landroidx/compose/foundation/g2;",
+        "priority",
+        "Lkotlin/Function1;",
+        "Lkotlin/coroutines/Continuation;",
+        "block",
+        "d",
+        "(Landroidx/compose/foundation/g2;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
+        "T",
+        "receiver",
+        "Lkotlin/Function2;",
+        "Lkotlin/ExtensionFunctionType;",
+        "f",
+        "(Ljava/lang/Object;Landroidx/compose/foundation/g2;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
+        "Lkotlin/Function0;",
+        "",
+        "h",
+        "(Lkotlin/jvm/functions/Function0;)Z",
+        "Ljava/util/concurrent/atomic/AtomicReference;",
+        "Landroidx/compose/material3/internal/InternalAtomicReference;",
+        "a",
+        "Ljava/util/concurrent/atomic/AtomicReference;",
+        "currentMutator",
+        "Lkotlinx/coroutines/sync/a;",
+        "b",
+        "Lkotlinx/coroutines/sync/a;",
+        "mutex",
+        "material3_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final c:I
+
+
+# instance fields
+.field private final a:Ljava/util/concurrent/atomic/AtomicReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/atomic/AtomicReference<",
+            "Landroidx/compose/material3/internal/q1$a;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Ljj/l;
+    .end annotation
+.end field
+
+.field private final b:Lkotlinx/coroutines/sync/a;
+    .annotation build Ljj/l;
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 0
+
+    .prologue
+    .line 1
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 3
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+
+    .line 6
+    const/4 v1, 0x0
+
+    .line 7
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    .line 10
+    iput-object v0, p0, Landroidx/compose/material3/internal/q1;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    .line 12
+    const/4 v0, 0x0
+
+    .line 13
+    const/4 v2, 0x1
+
+    .line 14
+    invoke-static {v0, v2, v1}, Lkotlinx/coroutines/sync/g;->b(ZILjava/lang/Object;)Lkotlinx/coroutines/sync/a;
+
+    .line 17
+    move-result-object v0
+
+    .line 18
+    iput-object v0, p0, Landroidx/compose/material3/internal/q1;->b:Lkotlinx/coroutines/sync/a;
+
+    .line 20
+    return-void
+.end method
+
+.method public static final synthetic a(Landroidx/compose/material3/internal/q1;)Ljava/util/concurrent/atomic/AtomicReference;
+    .locals 0
+
+    .prologue
+    .line 1
+    iget-object p0, p0, Landroidx/compose/material3/internal/q1;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    .line 3
+    return-object p0
+.end method
+
+.method public static final synthetic b(Landroidx/compose/material3/internal/q1;)Lkotlinx/coroutines/sync/a;
+    .locals 0
+
+    .prologue
+    .line 1
+    iget-object p0, p0, Landroidx/compose/material3/internal/q1;->b:Lkotlinx/coroutines/sync/a;
+
+    .line 3
+    return-object p0
+.end method
+
+.method public static final synthetic c(Landroidx/compose/material3/internal/q1;Landroidx/compose/material3/internal/q1$a;)V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-direct {p0, p1}, Landroidx/compose/material3/internal/q1;->i(Landroidx/compose/material3/internal/q1$a;)V
+
+    .line 4
+    return-void
+.end method
+
+.method public static synthetic e(Landroidx/compose/material3/internal/q1;Landroidx/compose/foundation/g2;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .prologue
+    .line 1
+    and-int/lit8 p4, p4, 0x1
+
+    .line 3
+    if-eqz p4, :cond_0
+
+    .line 5
+    sget-object p1, Landroidx/compose/foundation/g2;->Default:Landroidx/compose/foundation/g2;
+
+    .line 7
+    :cond_0
+    invoke-virtual {p0, p1, p2, p3}, Landroidx/compose/material3/internal/q1;->d(Landroidx/compose/foundation/g2;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    .line 10
+    move-result-object p0
+
+    .line 11
+    return-object p0
+.end method
+
+.method public static synthetic g(Landroidx/compose/material3/internal/q1;Ljava/lang/Object;Landroidx/compose/foundation/g2;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .prologue
+    .line 1
+    and-int/lit8 p5, p5, 0x2
+
+    .line 3
+    if-eqz p5, :cond_0
+
+    .line 5
+    sget-object p2, Landroidx/compose/foundation/g2;->Default:Landroidx/compose/foundation/g2;
+
+    .line 7
+    :cond_0
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroidx/compose/material3/internal/q1;->f(Ljava/lang/Object;Landroidx/compose/foundation/g2;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    .line 10
+    move-result-object p0
+
+    .line 11
+    return-object p0
+.end method
+
+.method private final i(Landroidx/compose/material3/internal/q1$a;)V
+    .locals 2
+
+    .prologue
+    .line 1
+    :cond_0
+    iget-object v0, p0, Landroidx/compose/material3/internal/q1;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    .line 3
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    .line 6
+    move-result-object v0
+
+    .line 7
+    check-cast v0, Landroidx/compose/material3/internal/q1$a;
+
+    .line 9
+    if-eqz v0, :cond_2
+
+    .line 11
+    invoke-virtual {p1, v0}, Landroidx/compose/material3/internal/q1$a;->a(Landroidx/compose/material3/internal/q1$a;)Z
+
+    .line 14
+    move-result v1
+
+    .line 15
+    if-eqz v1, :cond_1
+
+    .line 17
+    goto :goto_0
+
+    .line 18
+    :cond_1
+    new-instance p1, Ljava/util/concurrent/CancellationException;
+
+    .line 20
+    const-string v0, "Current mutation had a higher priority"
+
+    .line 22
+    invoke-direct {p1, v0}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+
+    .line 25
+    throw p1
+
+    .line 26
+    :cond_2
+    :goto_0
+    iget-object v1, p0, Landroidx/compose/material3/internal/q1;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    .line 28
+    invoke-static {v1, v0, p1}, Landroidx/compose/animation/core/r1;->a(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    .line 31
+    move-result v1
+
+    .line 32
+    if-eqz v1, :cond_0
+
+    .line 34
+    if-eqz v0, :cond_3
+
+    .line 36
+    invoke-virtual {v0}, Landroidx/compose/material3/internal/q1$a;->b()V
+
+    .line 39
+    :cond_3
+    return-void
+.end method
+
+
+# virtual methods
+.method public final d(Landroidx/compose/foundation/g2;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 2
+    .param p1    # Landroidx/compose/foundation/g2;
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+    .param p2    # Lkotlin/jvm/functions/Function1;
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+    .param p3    # Lkotlin/coroutines/Continuation;
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<R:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroidx/compose/foundation/g2;",
+            "Lkotlin/jvm/functions/Function1<",
+            "-",
+            "Lkotlin/coroutines/Continuation<",
+            "-TR;>;+",
+            "Ljava/lang/Object;",
+            ">;",
+            "Lkotlin/coroutines/Continuation<",
+            "-TR;>;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .annotation build Ljj/m;
+    .end annotation
+
+    .prologue
+    .line 1
+    new-instance v0, Landroidx/compose/material3/internal/q1$b;
+
+    .line 3
+    const/4 v1, 0x0
+
+    .line 4
+    invoke-direct {v0, p1, p0, p2, v1}, Landroidx/compose/material3/internal/q1$b;-><init>(Landroidx/compose/foundation/g2;Landroidx/compose/material3/internal/q1;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)V
+
+    .line 7
+    invoke-static {v0, p3}, Lkotlinx/coroutines/s0;->g(Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    .line 10
+    move-result-object p1
+
+    .line 11
+    return-object p1
+.end method
+
+.method public final f(Ljava/lang/Object;Landroidx/compose/foundation/g2;Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 7
+    .param p2    # Landroidx/compose/foundation/g2;
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+    .param p3    # Lkotlin/jvm/functions/Function2;
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+    .param p4    # Lkotlin/coroutines/Continuation;
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            "R:",
+            "Ljava/lang/Object;",
+            ">(TT;",
+            "Landroidx/compose/foundation/g2;",
+            "Lkotlin/jvm/functions/Function2<",
+            "-TT;-",
+            "Lkotlin/coroutines/Continuation<",
+            "-TR;>;+",
+            "Ljava/lang/Object;",
+            ">;",
+            "Lkotlin/coroutines/Continuation<",
+            "-TR;>;)",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .annotation build Ljj/m;
+    .end annotation
+
+    .prologue
+    .line 1
+    new-instance v6, Landroidx/compose/material3/internal/q1$c;
+
+    .line 3
+    const/4 v5, 0x0
+
+    .line 4
+    move-object v0, v6
+
+    .line 5
+    move-object v1, p2
+
+    .line 6
+    move-object v2, p0
+
+    .line 7
+    move-object v3, p3
+
+    .line 8
+    move-object v4, p1
+
+    .line 9
+    invoke-direct/range {v0 .. v5}, Landroidx/compose/material3/internal/q1$c;-><init>(Landroidx/compose/foundation/g2;Landroidx/compose/material3/internal/q1;Lkotlin/jvm/functions/Function2;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
+
+    .line 12
+    invoke-static {v6, p4}, Lkotlinx/coroutines/s0;->g(Lkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    .line 15
+    move-result-object p1
+
+    .line 16
+    return-object p1
+.end method
+
+.method public final h(Lkotlin/jvm/functions/Function0;)Z
+    .locals 3
+    .param p1    # Lkotlin/jvm/functions/Function0;
+        .annotation build Ljj/l;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lkotlin/jvm/functions/Function0<",
+            "Lkotlin/Unit;",
+            ">;)Z"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Landroidx/compose/material3/internal/q1;->b:Lkotlinx/coroutines/sync/a;
+
+    .line 3
+    const/4 v1, 0x0
+
+    .line 4
+    const/4 v2, 0x1
+
+    .line 5
+    invoke-static {v0, v1, v2, v1}, Lkotlinx/coroutines/sync/a$a;->c(Lkotlinx/coroutines/sync/a;Ljava/lang/Object;ILjava/lang/Object;)Z
+
+    .line 8
+    move-result v0
+
+    .line 9
+    if-eqz v0, :cond_0
+
+    .line 11
+    :try_start_0
+    invoke-interface {p1}, Lkotlin/jvm/functions/Function0;->invoke()Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 14
+    iget-object p1, p0, Landroidx/compose/material3/internal/q1;->b:Lkotlinx/coroutines/sync/a;
+
+    .line 16
+    invoke-static {p1, v1, v2, v1}, Lkotlinx/coroutines/sync/a$a;->d(Lkotlinx/coroutines/sync/a;Ljava/lang/Object;ILjava/lang/Object;)V
+
+    .line 19
+    goto :goto_0
+
+    .line 20
+    :catchall_0
+    move-exception p1
+
+    .line 21
+    iget-object v0, p0, Landroidx/compose/material3/internal/q1;->b:Lkotlinx/coroutines/sync/a;
+
+    .line 23
+    invoke-static {v0, v1, v2, v1}, Lkotlinx/coroutines/sync/a$a;->d(Lkotlinx/coroutines/sync/a;Ljava/lang/Object;ILjava/lang/Object;)V
+
+    .line 26
+    throw p1
+
+    .line 27
+    :cond_0
+    :goto_0
+    return v0
+.end method

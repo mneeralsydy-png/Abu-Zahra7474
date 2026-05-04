@@ -1,0 +1,168 @@
+.class final Lcom/google/android/gms/internal/measurement/zzma;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-measurement-base@@22.1.0"
+
+# interfaces
+.implements Lcom/google/android/gms/internal/measurement/zzmi;
+
+
+# instance fields
+.field private zza:[Lcom/google/android/gms/internal/measurement/zzmi;
+
+
+# direct methods
+.method varargs constructor <init>([Lcom/google/android/gms/internal/measurement/zzmi;)V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzma;->zza:[Lcom/google/android/gms/internal/measurement/zzmi;
+
+    .line 6
+    return-void
+.end method
+
+
+# virtual methods
+.method public final zza(Ljava/lang/Class;)Lcom/google/android/gms/internal/measurement/zzmj;
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)",
+            "Lcom/google/android/gms/internal/measurement/zzmj;"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzma;->zza:[Lcom/google/android/gms/internal/measurement/zzmi;
+
+    .line 3
+    array-length v1, v0
+
+    .line 4
+    const/4 v2, 0x0
+
+    .line 5
+    :goto_0
+    if-ge v2, v1, :cond_1
+
+    .line 7
+    aget-object v3, v0, v2
+
+    .line 9
+    invoke-interface {v3, p1}, Lcom/google/android/gms/internal/measurement/zzmi;->zzb(Ljava/lang/Class;)Z
+
+    .line 12
+    move-result v4
+
+    .line 13
+    if-eqz v4, :cond_0
+
+    .line 15
+    invoke-interface {v3, p1}, Lcom/google/android/gms/internal/measurement/zzmi;->zza(Ljava/lang/Class;)Lcom/google/android/gms/internal/measurement/zzmj;
+
+    .line 18
+    move-result-object p1
+
+    .line 19
+    return-object p1
+
+    .line 20
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    .line 22
+    goto :goto_0
+
+    .line 23
+    :cond_1
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    .line 25
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    .line 28
+    move-result-object p1
+
+    .line 29
+    const-string v1, "\u2322"
+
+    invoke-static {v1}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 31
+    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    .line 34
+    move-result-object p1
+
+    .line 35
+    invoke-direct {v0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    .line 38
+    throw v0
+.end method
+
+.method public final zzb(Ljava/lang/Class;)Z
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)Z"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzma;->zza:[Lcom/google/android/gms/internal/measurement/zzmi;
+
+    .line 3
+    array-length v1, v0
+
+    .line 4
+    const/4 v2, 0x0
+
+    .line 5
+    move v3, v2
+
+    .line 6
+    :goto_0
+    if-ge v3, v1, :cond_1
+
+    .line 8
+    aget-object v4, v0, v3
+
+    .line 10
+    invoke-interface {v4, p1}, Lcom/google/android/gms/internal/measurement/zzmi;->zzb(Ljava/lang/Class;)Z
+
+    .line 13
+    move-result v4
+
+    .line 14
+    if-eqz v4, :cond_0
+
+    .line 16
+    const/4 p1, 0x1
+
+    .line 17
+    return p1
+
+    .line 18
+    :cond_0
+    add-int/lit8 v3, v3, 0x1
+
+    .line 20
+    goto :goto_0
+
+    .line 21
+    :cond_1
+    return v2
+.end method

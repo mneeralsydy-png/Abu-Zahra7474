@@ -1,0 +1,1035 @@
+.class public final Landroidx/core/os/t;
+.super Ljava/lang/Object;
+.source "ParcelCompat.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/core/os/t$c;,
+        Landroidx/core/os/t$b;,
+        Landroidx/core/os/t$a;
+    }
+.end annotation
+
+
+# direct methods
+.method private constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    return-void
+.end method
+
+.method public static a(Landroid/os/Parcel;Ljava/lang/ClassLoader;Ljava/lang/Class;)[Ljava/lang/Object;
+    .locals 2
+    .param p0    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/q0;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "ArrayReturn",
+            "NullableCollection"
+        }
+    .end annotation
+
+    .annotation build Landroidx/annotation/q0;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/os/Parcel;",
+            "Ljava/lang/ClassLoader;",
+            "Ljava/lang/Class<",
+            "TT;>;)[",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 3
+    const/16 v1, 0x22
+
+    .line 5
+    if-lt v0, v1, :cond_0
+
+    .line 7
+    invoke-static {p0, p1, p2}, Landroidx/core/os/t$c;->a(Landroid/os/Parcel;Ljava/lang/ClassLoader;Ljava/lang/Class;)[Ljava/lang/Object;
+
+    .line 10
+    move-result-object p0
+
+    .line 11
+    return-object p0
+
+    .line 12
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/os/Parcel;->readArray(Ljava/lang/ClassLoader;)[Ljava/lang/Object;
+
+    .line 15
+    move-result-object p0
+
+    .line 16
+    return-object p0
+.end method
+
+.method public static b(Landroid/os/Parcel;Ljava/lang/ClassLoader;Ljava/lang/Class;)Ljava/util/ArrayList;
+    .locals 2
+    .param p0    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/q0;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "ConcreteCollection",
+            "NullableCollection"
+        }
+    .end annotation
+
+    .annotation build Landroidx/annotation/q0;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/os/Parcel;",
+            "Ljava/lang/ClassLoader;",
+            "Ljava/lang/Class<",
+            "+TT;>;)",
+            "Ljava/util/ArrayList<",
+            "TT;>;"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 3
+    const/16 v1, 0x22
+
+    .line 5
+    if-lt v0, v1, :cond_0
+
+    .line 7
+    invoke-static {p0, p1, p2}, Landroidx/core/os/t$c;->b(Landroid/os/Parcel;Ljava/lang/ClassLoader;Ljava/lang/Class;)Ljava/util/ArrayList;
+
+    .line 10
+    move-result-object p0
+
+    .line 11
+    return-object p0
+
+    .line 12
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/os/Parcel;->readArrayList(Ljava/lang/ClassLoader;)Ljava/util/ArrayList;
+
+    .line 15
+    move-result-object p0
+
+    .line 16
+    return-object p0
+.end method
+
+.method public static c(Landroid/os/Parcel;)Z
+    .locals 0
+    .param p0    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+
+    .prologue
+    .line 1
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
+
+    .line 4
+    move-result p0
+
+    .line 5
+    if-eqz p0, :cond_0
+
+    .line 7
+    const/4 p0, 0x1
+
+    .line 8
+    goto :goto_0
+
+    .line 9
+    :cond_0
+    const/4 p0, 0x0
+
+    .line 10
+    :goto_0
+    return p0
+.end method
+
+.method public static d(Landroid/os/Parcel;Ljava/lang/ClassLoader;Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/HashMap;
+    .locals 2
+    .param p0    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/q0;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "ConcreteCollection",
+            "NullableCollection"
+        }
+    .end annotation
+
+    .annotation build Landroidx/annotation/q0;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<K:",
+            "Ljava/lang/Object;",
+            "V:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/os/Parcel;",
+            "Ljava/lang/ClassLoader;",
+            "Ljava/lang/Class<",
+            "+TK;>;",
+            "Ljava/lang/Class<",
+            "+TV;>;)",
+            "Ljava/util/HashMap<",
+            "TK;TV;>;"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 3
+    const/16 v1, 0x22
+
+    .line 5
+    if-lt v0, v1, :cond_0
+
+    .line 7
+    invoke-static {p0, p1, p2, p3}, Landroidx/core/os/t$c;->c(Landroid/os/Parcel;Ljava/lang/ClassLoader;Ljava/lang/Class;Ljava/lang/Class;)Ljava/util/HashMap;
+
+    .line 10
+    move-result-object p0
+
+    .line 11
+    return-object p0
+
+    .line 12
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/os/Parcel;->readHashMap(Ljava/lang/ClassLoader;)Ljava/util/HashMap;
+
+    .line 15
+    move-result-object p0
+
+    .line 16
+    return-object p0
+.end method
+
+.method public static e(Landroid/os/Parcel;Ljava/util/List;Ljava/lang/ClassLoader;Ljava/lang/Class;)V
+    .locals 2
+    .param p0    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p1    # Ljava/util/List;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/q0;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/os/Parcel;",
+            "Ljava/util/List<",
+            "-TT;>;",
+            "Ljava/lang/ClassLoader;",
+            "Ljava/lang/Class<",
+            "TT;>;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 3
+    const/16 v1, 0x22
+
+    .line 5
+    if-lt v0, v1, :cond_0
+
+    .line 7
+    invoke-static {p0, p1, p2, p3}, Landroidx/core/os/t$c;->d(Landroid/os/Parcel;Ljava/util/List;Ljava/lang/ClassLoader;Ljava/lang/Class;)V
+
+    .line 10
+    goto :goto_0
+
+    .line 11
+    :cond_0
+    invoke-virtual {p0, p1, p2}, Landroid/os/Parcel;->readList(Ljava/util/List;Ljava/lang/ClassLoader;)V
+
+    .line 14
+    :goto_0
+    return-void
+.end method
+
+.method public static f(Landroid/os/Parcel;Ljava/util/Map;Ljava/lang/ClassLoader;Ljava/lang/Class;Ljava/lang/Class;)V
+    .locals 2
+    .param p0    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p1    # Ljava/util/Map;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/q0;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p4    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<K:",
+            "Ljava/lang/Object;",
+            "V:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/os/Parcel;",
+            "Ljava/util/Map<",
+            "-TK;-TV;>;",
+            "Ljava/lang/ClassLoader;",
+            "Ljava/lang/Class<",
+            "TK;>;",
+            "Ljava/lang/Class<",
+            "TV;>;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 3
+    const/16 v1, 0x22
+
+    .line 5
+    if-lt v0, v1, :cond_0
+
+    .line 7
+    invoke-static {p0, p1, p2, p3, p4}, Landroidx/core/os/t$c;->e(Landroid/os/Parcel;Ljava/util/Map;Ljava/lang/ClassLoader;Ljava/lang/Class;Ljava/lang/Class;)V
+
+    .line 10
+    goto :goto_0
+
+    .line 11
+    :cond_0
+    invoke-virtual {p0, p1, p2}, Landroid/os/Parcel;->readMap(Ljava/util/Map;Ljava/lang/ClassLoader;)V
+
+    .line 14
+    :goto_0
+    return-void
+.end method
+
+.method public static g(Landroid/os/Parcel;Ljava/lang/ClassLoader;Ljava/lang/Class;)Landroid/os/Parcelable;
+    .locals 2
+    .param p0    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/q0;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/q0;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T::",
+            "Landroid/os/Parcelable;",
+            ">(",
+            "Landroid/os/Parcel;",
+            "Ljava/lang/ClassLoader;",
+            "Ljava/lang/Class<",
+            "TT;>;)TT;"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 3
+    const/16 v1, 0x22
+
+    .line 5
+    if-lt v0, v1, :cond_0
+
+    .line 7
+    invoke-static {p0, p1, p2}, Landroidx/core/os/t$c;->f(Landroid/os/Parcel;Ljava/lang/ClassLoader;Ljava/lang/Class;)Landroid/os/Parcelable;
+
+    .line 10
+    move-result-object p0
+
+    .line 11
+    return-object p0
+
+    .line 12
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
+
+    .line 15
+    move-result-object p0
+
+    .line 16
+    if-eqz p0, :cond_2
+
+    .line 18
+    invoke-virtual {p2, p0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
+
+    .line 21
+    move-result p1
+
+    .line 22
+    if-eqz p1, :cond_1
+
+    .line 24
+    goto :goto_0
+
+    .line 25
+    :cond_1
+    new-instance p1, Landroid/os/BadParcelableException;
+
+    .line 27
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 29
+    const-string v1, "Parcelable "
+
+    .line 31
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 34
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 37
+    move-result-object p0
+
+    .line 38
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    .line 41
+    const-string p0, " is not a subclass of required class "
+
+    .line 43
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 46
+    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    .line 49
+    move-result-object p0
+
+    .line 50
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 53
+    const-string p0, " provided in the parameter"
+
+    .line 55
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 58
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 61
+    move-result-object p0
+
+    .line 62
+    invoke-direct {p1, p0}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
+
+    .line 65
+    throw p1
+
+    .line 66
+    :cond_2
+    :goto_0
+    return-object p0
+.end method
+
+.method public static h(Landroid/os/Parcel;Ljava/lang/ClassLoader;Ljava/lang/Class;)[Ljava/lang/Object;
+    .locals 2
+    .param p0    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/q0;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "ArrayReturn",
+            "NullableCollection"
+        }
+    .end annotation
+
+    .annotation build Landroidx/annotation/q0;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/os/Parcel;",
+            "Ljava/lang/ClassLoader;",
+            "Ljava/lang/Class<",
+            "TT;>;)[TT;"
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .prologue
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 3
+    const/16 v1, 0x22
+
+    .line 5
+    if-lt v0, v1, :cond_0
+
+    .line 7
+    invoke-static {p0, p1, p2}, Landroidx/core/os/t$c;->g(Landroid/os/Parcel;Ljava/lang/ClassLoader;Ljava/lang/Class;)[Ljava/lang/Object;
+
+    .line 10
+    move-result-object p0
+
+    .line 11
+    return-object p0
+
+    .line 12
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/os/Parcel;->readParcelableArray(Ljava/lang/ClassLoader;)[Landroid/os/Parcelable;
+
+    .line 15
+    move-result-object p0
+
+    .line 16
+    const-class p1, Landroid/os/Parcelable;
+
+    .line 18
+    invoke-virtual {p2, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    .line 21
+    move-result p1
+
+    .line 22
+    if-eqz p1, :cond_1
+
+    .line 24
+    return-object p0
+
+    .line 25
+    :cond_1
+    array-length p1, p0
+
+    .line 26
+    invoke-static {p2, p1}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
+
+    .line 29
+    move-result-object p1
+
+    .line 30
+    check-cast p1, [Ljava/lang/Object;
+
+    .line 32
+    const/4 v0, 0x0
+
+    .line 33
+    :goto_0
+    array-length v1, p0
+
+    .line 34
+    if-ge v0, v1, :cond_2
+
+    .line 36
+    :try_start_0
+    aget-object v1, p0, v0
+
+    .line 38
+    invoke-virtual {p2, v1}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 41
+    move-result-object v1
+
+    .line 42
+    aput-object v1, p1, v0
+    :try_end_0
+    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 44
+    add-int/lit8 v0, v0, 0x1
+
+    .line 46
+    goto :goto_0
+
+    .line 47
+    :catch_0
+    new-instance p0, Landroid/os/BadParcelableException;
+
+    .line 49
+    const-string p1, "Parcelable at index "
+
+    .line 51
+    const-string v1, " is not a subclass of required class "
+
+    .line 53
+    invoke-static {p1, v0, v1}, Landroidx/camera/camera2/internal/p3;->a(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 56
+    move-result-object p1
+
+    .line 57
+    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    .line 60
+    move-result-object p2
+
+    .line 61
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 64
+    const-string p2, " provided in the parameter"
+
+    .line 66
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 69
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 72
+    move-result-object p1
+
+    .line 73
+    invoke-direct {p0, p1}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
+
+    .line 76
+    throw p0
+
+    .line 77
+    :cond_2
+    return-object p1
+.end method
+
+.method public static i(Landroid/os/Parcel;Ljava/lang/ClassLoader;Ljava/lang/Class;)[Landroid/os/Parcelable;
+    .locals 2
+    .param p0    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/q0;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "ArrayReturn",
+            "NullableCollection"
+        }
+    .end annotation
+
+    .annotation build Landroidx/annotation/q0;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/os/Parcel;",
+            "Ljava/lang/ClassLoader;",
+            "Ljava/lang/Class<",
+            "TT;>;)[",
+            "Landroid/os/Parcelable;"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 3
+    const/16 v1, 0x22
+
+    .line 5
+    if-lt v0, v1, :cond_0
+
+    .line 7
+    invoke-static {p0, p1, p2}, Landroidx/core/os/t$c;->g(Landroid/os/Parcel;Ljava/lang/ClassLoader;Ljava/lang/Class;)[Ljava/lang/Object;
+
+    .line 10
+    move-result-object p0
+
+    .line 11
+    check-cast p0, [Landroid/os/Parcelable;
+
+    .line 13
+    return-object p0
+
+    .line 14
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/os/Parcel;->readParcelableArray(Ljava/lang/ClassLoader;)[Landroid/os/Parcelable;
+
+    .line 17
+    move-result-object p0
+
+    .line 18
+    return-object p0
+.end method
+
+.method public static j(Landroid/os/Parcel;Ljava/lang/ClassLoader;Ljava/lang/Class;)Landroid/os/Parcelable$Creator;
+    .locals 2
+    .param p0    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/q0;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/q0;
+    .end annotation
+
+    .annotation build Landroidx/annotation/x0;
+        value = 0x1e
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/os/Parcel;",
+            "Ljava/lang/ClassLoader;",
+            "Ljava/lang/Class<",
+            "TT;>;)",
+            "Landroid/os/Parcelable$Creator<",
+            "TT;>;"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 3
+    const/16 v1, 0x22
+
+    .line 5
+    if-lt v0, v1, :cond_0
+
+    .line 7
+    invoke-static {p0, p1, p2}, Landroidx/core/os/t$c;->h(Landroid/os/Parcel;Ljava/lang/ClassLoader;Ljava/lang/Class;)Landroid/os/Parcelable$Creator;
+
+    .line 10
+    move-result-object p0
+
+    .line 11
+    return-object p0
+
+    .line 12
+    :cond_0
+    invoke-static {p0, p1}, Landroidx/core/os/t$b;->a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroid/os/Parcelable$Creator;
+
+    .line 15
+    move-result-object p0
+
+    .line 16
+    return-object p0
+.end method
+
+.method public static k(Landroid/os/Parcel;Ljava/util/List;Ljava/lang/ClassLoader;Ljava/lang/Class;)Ljava/util/List;
+    .locals 2
+    .param p0    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p1    # Ljava/util/List;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/q0;
+        .end annotation
+    .end param
+    .param p3    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/o0;
+    .end annotation
+
+    .annotation build Landroidx/annotation/x0;
+        api = 0x1d
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/os/Parcel;",
+            "Ljava/util/List<",
+            "TT;>;",
+            "Ljava/lang/ClassLoader;",
+            "Ljava/lang/Class<",
+            "TT;>;)",
+            "Ljava/util/List<",
+            "TT;>;"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 3
+    const/16 v1, 0x22
+
+    .line 5
+    if-lt v0, v1, :cond_0
+
+    .line 7
+    invoke-static {p0, p1, p2, p3}, Landroidx/core/os/t$c;->i(Landroid/os/Parcel;Ljava/util/List;Ljava/lang/ClassLoader;Ljava/lang/Class;)Ljava/util/List;
+
+    .line 10
+    move-result-object p0
+
+    .line 11
+    return-object p0
+
+    .line 12
+    :cond_0
+    invoke-static {p0, p1, p2}, Landroidx/core/os/t$a;->a(Landroid/os/Parcel;Ljava/util/List;Ljava/lang/ClassLoader;)Ljava/util/List;
+
+    .line 15
+    move-result-object p0
+
+    .line 16
+    return-object p0
+.end method
+
+.method public static l(Landroid/os/Parcel;Ljava/lang/ClassLoader;Ljava/lang/Class;)Ljava/io/Serializable;
+    .locals 2
+    .param p0    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/q0;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/q0;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T::",
+            "Ljava/io/Serializable;",
+            ">(",
+            "Landroid/os/Parcel;",
+            "Ljava/lang/ClassLoader;",
+            "Ljava/lang/Class<",
+            "TT;>;)TT;"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 3
+    const/16 v1, 0x21
+
+    .line 5
+    if-lt v0, v1, :cond_0
+
+    .line 7
+    invoke-static {p0, p1, p2}, Landroidx/core/os/t$c;->j(Landroid/os/Parcel;Ljava/lang/ClassLoader;Ljava/lang/Class;)Ljava/io/Serializable;
+
+    .line 10
+    move-result-object p0
+
+    .line 11
+    return-object p0
+
+    .line 12
+    :cond_0
+    invoke-virtual {p0}, Landroid/os/Parcel;->readSerializable()Ljava/io/Serializable;
+
+    .line 15
+    move-result-object p0
+
+    .line 16
+    return-object p0
+.end method
+
+.method public static m(Landroid/os/Parcel;Ljava/lang/ClassLoader;Ljava/lang/Class;)Landroid/util/SparseArray;
+    .locals 2
+    .param p0    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .param p1    # Ljava/lang/ClassLoader;
+        .annotation build Landroidx/annotation/q0;
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Class;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+    .annotation build Landroidx/annotation/q0;
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/os/Parcel;",
+            "Ljava/lang/ClassLoader;",
+            "Ljava/lang/Class<",
+            "+TT;>;)",
+            "Landroid/util/SparseArray<",
+            "TT;>;"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 3
+    const/16 v1, 0x22
+
+    .line 5
+    if-lt v0, v1, :cond_0
+
+    .line 7
+    invoke-static {p0, p1, p2}, Landroidx/core/os/t$c;->k(Landroid/os/Parcel;Ljava/lang/ClassLoader;Ljava/lang/Class;)Landroid/util/SparseArray;
+
+    .line 10
+    move-result-object p0
+
+    .line 11
+    return-object p0
+
+    .line 12
+    :cond_0
+    invoke-virtual {p0, p1}, Landroid/os/Parcel;->readSparseArray(Ljava/lang/ClassLoader;)Landroid/util/SparseArray;
+
+    .line 15
+    move-result-object p0
+
+    .line 16
+    return-object p0
+.end method
+
+.method public static n(Landroid/os/Parcel;Z)V
+    .locals 0
+    .param p0    # Landroid/os/Parcel;
+        .annotation build Landroidx/annotation/o0;
+        .end annotation
+    .end param
+
+    .prologue
+    .line 1
+    invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 4
+    return-void
+.end method

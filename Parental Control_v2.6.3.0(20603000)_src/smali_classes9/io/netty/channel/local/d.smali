@@ -1,0 +1,52 @@
+.class public Lio/netty/channel/local/d;
+.super Lio/netty/channel/w0;
+.source "LocalEventLoopGroup.java"
+
+
+# annotations
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Lio/netty/channel/w0;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 0
+
+    .prologue
+    .line 2
+    invoke-direct {p0, p1}, Lio/netty/channel/w0;-><init>(I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(ILjava/util/concurrent/ThreadFactory;)V
+    .locals 0
+
+    .prologue
+    .line 4
+    invoke-direct {p0, p1, p2}, Lio/netty/channel/w0;-><init>(ILjava/util/concurrent/ThreadFactory;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/concurrent/ThreadFactory;)V
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 3
+    invoke-direct {p0, v0, p1}, Lio/netty/channel/w0;-><init>(ILjava/util/concurrent/ThreadFactory;)V
+
+    return-void
+.end method

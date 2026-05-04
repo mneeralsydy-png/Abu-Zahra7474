@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/normal_item_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="14.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="14.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@id/glTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="12.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@id/glBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="12.0dip" />
+    <ImageView
+        android:id="@id/ivIcon"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/glBottom"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="@id/glTop" />
+    <TextView
+        android:textSize="15.0sp"
+        android:textColor="@color/black_282930"
+        android:id="@id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14.0dip"
+        android:layout_marginEnd="10.0dip"
+        app:fontFamily="@font/font_family_medium"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/ivIcon"
+        app:layout_constraintEnd_toStartOf="@id/tvSummary"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@id/ivIcon"
+        app:layout_constraintTop_toTopOf="@id/ivIcon" />
+    <TextView
+        android:textSize="13.0sp"
+        android:textColor="@color/gray_878d9a"
+        android:gravity="end"
+        android:id="@id/tvSummary"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6.0dip"
+        app:fontFamily="@font/font_family_regular"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/ivIcon"
+        app:layout_constraintEnd_toStartOf="@id/ivMore"
+        app:layout_constraintStart_toEndOf="@id/tvTitle"
+        app:layout_constraintTop_toTopOf="@id/ivIcon"
+        app:layout_constraintWidth_min="90.0dip" />
+    <ImageView
+        android:id="@id/ivMore"
+        android:layout_width="12.0dip"
+        android:layout_height="12.0dip"
+        android:src="@drawable/more"
+        app:layout_constraintBottom_toBottomOf="@id/ivIcon"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintTop_toTopOf="@id/ivIcon" />
+    <View
+        android:id="@id/vDivider"
+        android:background="@color/white_f5f5f5"
+        android:layout_width="0.0dip"
+        android:layout_height="1.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart" />
+</androidx.constraintlayout.widget.ConstraintLayout>

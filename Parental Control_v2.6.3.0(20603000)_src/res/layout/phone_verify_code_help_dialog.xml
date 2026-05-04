@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:scrollbars="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/dialog_max_width">
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/glStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="24.0dip" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/glEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_end="24.0dip" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:id="@id/glTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="30.0dip" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:id="@id/glBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_end="8.0dip" />
+        <TextView
+            android:textSize="18.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/black_ff282930"
+            android:gravity="center"
+            android:id="@id/tvTitle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/AirMirror_VerifyCode_Get_Failed"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintTop_toTopOf="@id/glTop" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/gray_464f60"
+            android:id="@id/tvStep1"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14.0dip"
+            android:text="@string/AirMirror_VerifyCode_Failed_Step1"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/gray_464f60"
+            android:id="@id/tvStep2"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dip"
+            android:text="@string/AirMirror_VerifyCode_Failed_Step2"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintTop_toBottomOf="@id/tvStep1" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/gray_464f60"
+            android:textColorLink="@color/blue_446efc"
+            android:id="@id/tvStep3"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dip"
+            android:text="@string/AirMirror_Verify_Failed_Step3"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintTop_toBottomOf="@id/tvStep2" />
+        <include
+            android:id="@id/includeButton"
+            android:padding="8.0dip"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28.0dip"
+            android:layout_marginBottom="10.0dip"
+            app:layout_constraintBottom_toBottomOf="@id/glBottom"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintTop_toBottomOf="@id/tvStep3"
+            layout="@layout/ad_dlg_bottom_btn_bar2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

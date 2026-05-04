@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:orientation="vertical"
+    android:id="@id/clRoot"
+    android:background="@color/ad_cloud_bg_white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_start_percent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="@dimen/global_end_percent" />
+    <com.sand.airdroidkidp.ui.custom.ParentProfileToolbar
+        android:id="@id/tbAccount"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?actionBarSize"
+        app:isDividerVisible="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/Parent_Profile_Account"
+        app:toolbarMode="1" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@id/clAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30.0dip"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/tbAccount">
+        <ImageView
+            android:id="@id/ivAvatar"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_margin="5.0dip"
+            android:src="@drawable/account_default"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@id/ivCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/modify_avatar"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@id/accountProfileTitle"
+        android:background="@drawable/ic_title_line"
+        android:layout_width="4.0dip"
+        android:layout_height="14.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/tvAccountProfileTitle"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="@id/tvAccountProfileTitle" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/black_282930"
+        android:gravity="start"
+        android:id="@id/tvAccountProfileTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24.0dip"
+        android:text="@string/Parent_Profile_Info"
+        android:layout_marginStart="10.0dip"
+        app:fontFamily="@font/font_family_semi_bold"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toEndOf="@id/accountProfileTitle"
+        app:layout_constraintTop_toBottomOf="@id/clAvatar" />
+    <com.sand.airdroidkidp.ui.custom.ClipBackgroundConstraintLayout
+        android:id="@id/clAccountProfile"
+        android:background="@drawable/bg_radius_10_stroke_1"
+        android:paddingTop="4.0dip"
+        android:paddingBottom="4.0dip"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12.0dip"
+        android:paddingVertical="4.0dip"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountProfileTitle">
+        <com.sand.airdroidkidp.ui.custom.AccountSettingItem
+            android:id="@id/asiNickname"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_nickname"
+            app:isShowDivider="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.sand.airdroidkidp.ui.custom.AccountSettingItem
+            android:id="@id/asiEmail"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/ic_email"
+            app:isShowDivider="false"
+            app:isShowEnterIcon="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/asiNickname" />
+    </com.sand.airdroidkidp.ui.custom.ClipBackgroundConstraintLayout>
+    <View
+        android:id="@id/accountTitle"
+        android:background="@drawable/ic_title_line"
+        android:layout_width="4.0dip"
+        android:layout_height="14.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/tvAccountTitle"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toTopOf="@id/tvAccountTitle" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/black_282930"
+        android:gravity="start"
+        android:id="@id/tvAccountTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24.0dip"
+        android:text="@string/Parent_Profile_Account_Setting"
+        android:layout_marginStart="10.0dip"
+        app:fontFamily="@font/font_family_semi_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/accountTitle"
+        app:layout_constraintTop_toBottomOf="@id/clAccountProfile" />
+    <com.sand.airdroidkidp.ui.custom.ClipBackgroundConstraintLayout
+        android:id="@id/clAccount"
+        android:background="@drawable/bg_radius_10_stroke_1"
+        android:paddingTop="4.0dip"
+        android:paddingBottom="4.0dip"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:paddingVertical="4.0dip"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountTitle">
+        <com.sand.airdroidkidp.ui.custom.AccountSettingItem
+            android:id="@id/asiChangePassword"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/icon_password"
+            app:isShowDivider="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/asiDeleteAccount" />
+        <com.sand.airdroidkidp.ui.custom.AccountSettingItem
+            android:id="@id/asiDeleteAccount"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/delete"
+            app:isShowDivider="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/Parent_Profile_Delete_Account" />
+    </com.sand.airdroidkidp.ui.custom.ClipBackgroundConstraintLayout>
+    <ProgressBar
+        android:id="@id/progressBar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@drawable/dialog_radius"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="@dimen/dialog_max_width"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="20.0dip" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@id/glEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="20.0dip" />
+    <ImageView
+        android:id="@id/ivCloseIcon"
+        android:padding="4.0dip"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:src="@drawable/close"
+        android:contentDescription="@null"
+        android:layout_marginEnd="10.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/black_ff282930"
+        android:gravity="center"
+        android:id="@id/tvTitle"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30.0dip"
+        android:layout_marginTop="30.0dip"
+        android:layout_marginRight="30.0dip"
+        android:text="@string/Parental_JoinAlways_WebLimit_Alert"
+        android:layout_marginHorizontal="30.0dip"
+        app:fontFamily="@font/font_family_semi_bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@id/rvUrl"
+        android:background="@color/white_f5f5f5"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        app:layout_constraintHeight_max="250.0dip"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+    <include
+        android:id="@id/llBtnPane"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30.0dip"
+        android:layout_marginBottom="12.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/glEnd"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintTop_toBottomOf="@id/rvUrl"
+        layout="@layout/ad_dlg_bottom_btn_bar2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

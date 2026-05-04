@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/clRoot"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/ivMapGrid"
+        android:background="@drawable/bg_map_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <FrameLayout
+        android:id="@id/mapViewFrameLayout"
+        android:visibility="visible"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="@id/glMapViewBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@id/glMapViewBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.65" />
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="horizontal"
+        android:id="@id/MapScaleBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.6" />
+    <RelativeLayout
+        android:id="@id/rlControl"
+        android:padding="20.0dip"
+        android:visibility="visible"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41.0dip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@id/clBack"
+            android:background="@drawable/bg_map_action"
+            android:layout_width="36.0dip"
+            android:layout_height="36.0dip"
+            android:minWidth="88.0dip"
+            android:layout_alignParentStart="true"
+            android:elevation="2.0dip">
+            <ImageView
+                android:id="@id/ivBack"
+                android:layout_width="18.0dip"
+                android:layout_height="18.0dip"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@id/ivRemoveGeofence"
+            android:background="@drawable/bg_map_action"
+            android:padding="9.0dip"
+            android:layout_width="36.0dip"
+            android:layout_height="36.0dip"
+            android:layout_alignParentEnd="true"
+            android:elevation="2.0dip"
+            app:srcCompat="@drawable/delete"
+            app:tint="@color/red_e13e3e" />
+    </RelativeLayout>
+    <com.github.pengrad.mapscaleview.MapScaleView
+        android:id="@id/scaleViewGeofenceTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16.0dip"
+        android:layout_marginStart="16.0dip"
+        app:layout_constraintBottom_toTopOf="@id/MapScaleBottom"
+        app:layout_constraintStart_toStartOf="@id/ivMapGrid"
+        app:scale_expandRtl="true"
+        app:scale_maxWidth="50.0dip"
+        app:scale_miles="false"
+        app:scale_outline="true"
+        app:scale_textSize="10.0sp" />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@id/coordinatorLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <include
+            android:layout_gravity="bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/geofence_track_bottom_sheet" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

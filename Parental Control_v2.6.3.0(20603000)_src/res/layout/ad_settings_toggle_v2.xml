@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:id="@id/llRoot"
+    android:background="@drawable/ad_base_list_item_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@id/llContent"
+        android:background="@drawable/ad_base_list_item_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@id/include"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            layout="@layout/ad_settings_pref_content_vertical" />
+        <ToggleButton
+            android:id="@id/toggle"
+            android:background="@drawable/toggle_button"
+            android:padding="2.0dip"
+            android:focusable="true"
+            android:saveEnabled="false"
+            android:layout_width="42.0dip"
+            android:layout_height="24.0dip"
+            android:checked="false"
+            android:textOn=""
+            android:textOff="" />
+    </LinearLayout>
+    <View
+        android:id="@id/divider"
+        android:background="#ffe6e6e6"
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginStart="16.0dip" />
+</LinearLayout>

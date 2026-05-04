@@ -1,0 +1,371 @@
+.class public final enum Lcom/google/zxing/f;
+.super Ljava/lang/Enum;
+.source "EncodeHintType.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum<",
+        "Lcom/google/zxing/f;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field private static final synthetic $VALUES:[Lcom/google/zxing/f;
+
+.field public static final enum AZTEC_LAYERS:Lcom/google/zxing/f;
+
+.field public static final enum CHARACTER_SET:Lcom/google/zxing/f;
+
+.field public static final enum DATA_MATRIX_SHAPE:Lcom/google/zxing/f;
+
+.field public static final enum ERROR_CORRECTION:Lcom/google/zxing/f;
+
+.field public static final enum GS1_FORMAT:Lcom/google/zxing/f;
+
+.field public static final enum MARGIN:Lcom/google/zxing/f;
+
+.field public static final enum MAX_SIZE:Lcom/google/zxing/f;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
+
+.field public static final enum MIN_SIZE:Lcom/google/zxing/f;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
+
+.field public static final enum PDF417_COMPACT:Lcom/google/zxing/f;
+
+.field public static final enum PDF417_COMPACTION:Lcom/google/zxing/f;
+
+.field public static final enum PDF417_DIMENSIONS:Lcom/google/zxing/f;
+
+.field public static final enum QR_MASK_PATTERN:Lcom/google/zxing/f;
+
+.field public static final enum QR_VERSION:Lcom/google/zxing/f;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 15
+
+    .prologue
+    .line 1
+    new-instance v0, Lcom/google/zxing/f;
+
+    .line 3
+    const-string v1, "\u9254"
+
+    invoke-static {v1}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 5
+    const/4 v2, 0x0
+
+    .line 6
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 9
+    sput-object v0, Lcom/google/zxing/f;->ERROR_CORRECTION:Lcom/google/zxing/f;
+
+    .line 11
+    new-instance v1, Lcom/google/zxing/f;
+
+    .line 13
+    const-string v2, "\u9255"
+
+    invoke-static {v2}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 15
+    const/4 v3, 0x1
+
+    .line 16
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 19
+    sput-object v1, Lcom/google/zxing/f;->CHARACTER_SET:Lcom/google/zxing/f;
+
+    .line 21
+    new-instance v2, Lcom/google/zxing/f;
+
+    .line 23
+    const-string v3, "\u9256"
+
+    invoke-static {v3}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 25
+    const/4 v4, 0x2
+
+    .line 26
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 29
+    sput-object v2, Lcom/google/zxing/f;->DATA_MATRIX_SHAPE:Lcom/google/zxing/f;
+
+    .line 31
+    new-instance v3, Lcom/google/zxing/f;
+
+    .line 33
+    const-string v4, "\u9257"
+
+    invoke-static {v4}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 35
+    const/4 v5, 0x3
+
+    .line 36
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 39
+    sput-object v3, Lcom/google/zxing/f;->MIN_SIZE:Lcom/google/zxing/f;
+
+    .line 41
+    new-instance v4, Lcom/google/zxing/f;
+
+    .line 43
+    const-string v5, "\u9258"
+
+    invoke-static {v5}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 45
+    const/4 v6, 0x4
+
+    .line 46
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 49
+    sput-object v4, Lcom/google/zxing/f;->MAX_SIZE:Lcom/google/zxing/f;
+
+    .line 51
+    new-instance v5, Lcom/google/zxing/f;
+
+    .line 53
+    const-string v6, "\u9259"
+
+    invoke-static {v6}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    .line 55
+    const/4 v7, 0x5
+
+    .line 56
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 59
+    sput-object v5, Lcom/google/zxing/f;->MARGIN:Lcom/google/zxing/f;
+
+    .line 61
+    new-instance v6, Lcom/google/zxing/f;
+
+    .line 63
+    const-string v7, "\u925a"
+
+    invoke-static {v7}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    .line 65
+    const/4 v8, 0x6
+
+    .line 66
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 69
+    sput-object v6, Lcom/google/zxing/f;->PDF417_COMPACT:Lcom/google/zxing/f;
+
+    .line 71
+    new-instance v7, Lcom/google/zxing/f;
+
+    .line 73
+    const-string v8, "\u925b"
+
+    invoke-static {v8}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    .line 75
+    const/4 v9, 0x7
+
+    .line 76
+    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 79
+    sput-object v7, Lcom/google/zxing/f;->PDF417_COMPACTION:Lcom/google/zxing/f;
+
+    .line 81
+    new-instance v8, Lcom/google/zxing/f;
+
+    .line 83
+    const-string v9, "\u925c"
+
+    invoke-static {v9}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v9
+
+    .line 85
+    const/16 v10, 0x8
+
+    .line 87
+    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 90
+    sput-object v8, Lcom/google/zxing/f;->PDF417_DIMENSIONS:Lcom/google/zxing/f;
+
+    .line 92
+    new-instance v9, Lcom/google/zxing/f;
+
+    .line 94
+    const-string v10, "\u925d"
+
+    invoke-static {v10}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v10
+
+    .line 96
+    const/16 v11, 0x9
+
+    .line 98
+    invoke-direct {v9, v10, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 101
+    sput-object v9, Lcom/google/zxing/f;->AZTEC_LAYERS:Lcom/google/zxing/f;
+
+    .line 103
+    new-instance v10, Lcom/google/zxing/f;
+
+    .line 105
+    const-string v11, "\u925e"
+
+    invoke-static {v11}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v11
+
+    .line 107
+    const/16 v12, 0xa
+
+    .line 109
+    invoke-direct {v10, v11, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 112
+    sput-object v10, Lcom/google/zxing/f;->QR_VERSION:Lcom/google/zxing/f;
+
+    .line 114
+    new-instance v11, Lcom/google/zxing/f;
+
+    .line 116
+    const-string v12, "\u925f"
+
+    invoke-static {v12}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v12
+
+    .line 118
+    const/16 v13, 0xb
+
+    .line 120
+    invoke-direct {v11, v12, v13}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 123
+    sput-object v11, Lcom/google/zxing/f;->QR_MASK_PATTERN:Lcom/google/zxing/f;
+
+    .line 125
+    new-instance v12, Lcom/google/zxing/f;
+
+    .line 127
+    const-string v13, "\u9260"
+
+    invoke-static {v13}, Lcom/sand/airdroidkidp/domain/app/ProtectedSandApp;->s(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v13
+
+    .line 129
+    const/16 v14, 0xc
+
+    .line 131
+    invoke-direct {v12, v13, v14}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 134
+    sput-object v12, Lcom/google/zxing/f;->GS1_FORMAT:Lcom/google/zxing/f;
+
+    .line 136
+    filled-new-array/range {v0 .. v12}, [Lcom/google/zxing/f;
+
+    .line 139
+    move-result-object v0
+
+    .line 140
+    sput-object v0, Lcom/google/zxing/f;->$VALUES:[Lcom/google/zxing/f;
+
+    .line 142
+    return-void
+.end method
+
+.method private constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
+
+    .prologue
+    .line 1
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    .line 4
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcom/google/zxing/f;
+    .locals 1
+
+    .prologue
+    .line 1
+    const-class v0, Lcom/google/zxing/f;
+
+    .line 3
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    .line 6
+    move-result-object p0
+
+    .line 7
+    check-cast p0, Lcom/google/zxing/f;
+
+    .line 9
+    return-object p0
+.end method
+
+.method public static values()[Lcom/google/zxing/f;
+    .locals 1
+
+    .prologue
+    .line 1
+    sget-object v0, Lcom/google/zxing/f;->$VALUES:[Lcom/google/zxing/f;
+
+    .line 3
+    invoke-virtual {v0}, [Lcom/google/zxing/f;->clone()Ljava/lang/Object;
+
+    .line 6
+    move-result-object v0
+
+    .line 7
+    check-cast v0, [Lcom/google/zxing/f;
+
+    .line 9
+    return-object v0
+.end method

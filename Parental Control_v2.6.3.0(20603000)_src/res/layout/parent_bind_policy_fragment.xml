@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivMenu"
+        app:layout_constraintWidth_max="@dimen/tablet_max_width">
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/glStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="20.0dip" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@id/glEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_end="20.0dip" />
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="horizontal"
+            android:id="@id/glTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="70.0dip" />
+        <androidx.core.widget.NestedScrollView
+            android:scrollbarThumbVertical="@drawable/scrollbar_drawable"
+            android:id="@id/scroll_view"
+            android:scrollbars="vertical"
+            android:layout_width="0.0dip"
+            android:layout_height="0.0dip"
+            android:layout_marginBottom="30.0dip"
+            android:fillViewport="true"
+            android:fadeScrollbars="true"
+            app:layout_constraintBottom_toTopOf="@id/ivNext"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintTop_toTopOf="parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginEnd="5.0dip">
+                <ImageView
+                    android:id="@id/ivStep"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30.0dip"
+                    android:contentDescription="@string/Parent_Bind_Step1_Title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/pic_agree" />
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:id="@id/tvTitle"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.0dip"
+                    android:text="@string/Parent_Bind_Privacy_Title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivStep"
+                    style="@style/binding_page_title" />
+                <TextView
+                    android:textSize="14.0sp"
+                    android:textColor="@color/black_464F60"
+                    android:gravity="start"
+                    android:id="@id/tvDetail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14.0dip"
+                    android:text="@string/Parent_Bind_Privacy_Detail"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+                <TextView
+                    android:textSize="13.0sp"
+                    android:textColor="@color/gray_878d9a"
+                    android:id="@id/tvContent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    app:layout_constraintTop_toBottomOf="@id/tvDetail" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:id="@id/ivNext"
+            android:background="@drawable/kid_blue_button_style"
+            android:paddingLeft="20.0dip"
+            android:paddingTop="10.0dip"
+            android:paddingRight="20.0dip"
+            android:paddingBottom="10.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="44.0dip"
+            android:layout_marginBottom="30.0dip"
+            android:minWidth="110.0dip"
+            android:text="@string/Parent_Bind_Privacy_Agree"
+            android:paddingHorizontal="20.0dip"
+            android:paddingVertical="10.0dip"
+            app:fontFamily="@font/font_family_semi_bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/glEnd" />
+        <TextView
+            android:textColor="@color/black_282930"
+            android:id="@id/tvSkip"
+            android:padding="6.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Parent_No_Continue_Title"
+            app:fontFamily="@font/font_family_medium"
+            app:layout_constraintBottom_toBottomOf="@id/ivNext"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintTop_toTopOf="@id/ivNext" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@id/ivMenu"
+        android:padding="8.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13.0dip"
+        android:layout_marginEnd="13.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_more_2" />
+    <View
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@id/viewJoinFamilyRemind"
+        android:background="@drawable/red_e13e3e_radius"
+        android:visibility="gone"
+        android:layout_width="8.0dip"
+        android:layout_height="8.0dip"
+        android:layout_marginTop="16.0dip"
+        android:contentDescription="@null"
+        android:layout_marginEnd="20.0dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/white_ffffff"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="160.0dip"
+            android:layout_height="104.0dip"
+            android:layout_marginBottom="20.0dip"
+            app:layout_constraintBottom_toTopOf="@id/tvPermissionTimeoutTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="report_error.json"
+            app:lottie_loop="true" />
+        <TextView
+            android:textSize="18.0sp"
+            android:textColor="@color/black_282930"
+            android:gravity="center"
+            android:id="@id/tvPermissionTimeoutTitle"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20.0dip"
+            android:layout_marginRight="20.0dip"
+            android:layout_marginBottom="14.0dip"
+            android:text="@string/Parent_Permission_Check_Timeout_Title"
+            android:layout_marginHorizontal="20.0dip"
+            app:fontFamily="@font/font_family_semi_bold"
+            app:layout_constraintBottom_toTopOf="@id/tvPermissionTimeoutSummary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_max="@dimen/tablet_max_width" />
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/gray_464f60"
+            android:gravity="center"
+            android:id="@id/tvPermissionTimeoutSummary"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20.0dip"
+            android:layout_marginRight="20.0dip"
+            android:text="@string/Parent_Permission_Check_Timeout_Text"
+            android:breakStrategy="simple"
+            android:layout_marginHorizontal="20.0dip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_max="@dimen/tablet_max_width" />
+        <TextView
+            android:textSize="16.0sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:id="@id/tvCheckPermissionRetry"
+            android:background="@drawable/kid_blue_button_style"
+            android:layout_width="0.0dip"
+            android:layout_height="44.0dip"
+            android:layout_marginLeft="20.0dip"
+            android:layout_marginTop="40.0dip"
+            android:layout_marginRight="20.0dip"
+            android:text="@string/ad_share_retry"
+            android:layout_marginHorizontal="20.0dip"
+            app:fontFamily="@font/font_family_semi_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPermissionTimeoutSummary"
+            app:layout_constraintWidth_max="196.0dip" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

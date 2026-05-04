@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper
+    android:id="@id/vfContent"
+    android:background="@color/white_ffffff"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+        android:id="@id/myAudioLayout"
+        layout="@layout/parent_setting_my_audio_recording" />
+    <include
+        android:id="@id/myAudioMultiLayout"
+        layout="@layout/parent_setting_my_audio_recording_multi" />
+</ViewFlipper>

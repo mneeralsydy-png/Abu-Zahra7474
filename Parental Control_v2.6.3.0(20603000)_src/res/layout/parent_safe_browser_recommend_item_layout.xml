@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@id/clRoot"
+    android:background="@drawable/bg_blue_474c91_radius_16"
+    android:paddingTop="16.0dip"
+    android:paddingBottom="16.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="52.0dip"
+    android:paddingVertical="16.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/ivStar"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:src="@drawable/star_full"
+        android:contentDescription="@null"
+        android:layout_marginStart="16.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="@color/text_600"
+        android:id="@id/tvHint"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:text="@string/parental_safe_browser_recommend_airdroid_browser_msg"
+        android:textAlignment="viewStart"
+        android:layout_marginHorizontal="10.0dip"
+        app:fontFamily="@font/font_family_medium"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ivClose"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/ivStar"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@id/ivClose"
+        android:padding="3.0dip"
+        android:layout_width="20.0dip"
+        android:layout_height="20.0dip"
+        android:src="@drawable/close"
+        android:contentDescription="@null"
+        android:layout_marginEnd="9.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/color_white" />
+</androidx.constraintlayout.widget.ConstraintLayout>

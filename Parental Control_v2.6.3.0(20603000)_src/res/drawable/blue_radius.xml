@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:shape="rectangle">
+            <solid
+                android:color="@color/kid_btn_blue_p" />
+            <corners
+                android:radius="41.0dip" />
+        </shape>
+    </item>
+    <item>
+        <shape
+            android:shape="rectangle">
+            <solid
+                android:color="#80ffffff" />
+            <corners
+                android:radius="41.0dip" />
+        </shape>
+    </item>
+</layer-list>
